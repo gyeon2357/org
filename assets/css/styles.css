@@ -215,7 +215,6 @@ th {
 [class*=" w-icon-"],
 [class^="w-icon-"] {
   font-family: webflow-icons !important;
-  speak: none;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
@@ -2261,8 +2260,13 @@ body {
 a {
   background-color: transparent;
   color: #000;
-  font-size: 16px;
+
   line-height: 100%;
+  text-decoration: underline;
+}
+
+.menu-home,
+.menu-work {
   text-decoration: none;
 }
 
@@ -2786,7 +2790,7 @@ a {
   z-index: 1;
   display: block;
   overflow: hidden;
-  max-width: 10vw;
+  max-width: 3vw;
   min-width: 100px;
   margin: 20px auto;
   -webkit-box-flex: 1;
@@ -2797,7 +2801,8 @@ a {
   -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
 
-  z-index: 10001 !important;
+  z-index: 1001 !important;
+  filter: grayscale(1);
 }
 
 .video-grid-wrapper {
@@ -3079,6 +3084,8 @@ a {
   color: #000;
   font-size: 24px;
   line-height: 120%;
+
+  text-decoration: none;
 }
 
 .left-content {
@@ -3138,10 +3145,6 @@ a {
     font-size: 1vw;
     min-width: 50ch;
     width: 50vw;
-  }
-
-  a {
-    font-size: 20px;
   }
 
   .subtitle {
@@ -3212,10 +3215,6 @@ a {
   .h2 {
     margin-bottom: 24px;
     font-size: 24px;
-  }
-
-  a {
-    font-size: 16px;
   }
 
   .contact {
