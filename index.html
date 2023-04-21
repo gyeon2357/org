@@ -148,7 +148,7 @@
     >
       <div class="title-grid mobile--first-title">
         <div
-          id="w-node-_6f9f1287-4dd0-ff09-e4b1-11167dc3864e-2293e354"
+          id="wtf-title-box"
           style="
             -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
               rotateX(null) rotateY(null) rotateZ(0.6deg) skew(0, 0);
@@ -167,17 +167,26 @@
           <p>
             <b>.wtf</b> is a
             <a
-              href="/wiki/Generic_top-level_domain"
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Generic_top-level_domain"
               title="Generic top-level domain"
               >generic top-level domain</a
             >
             (gTLD) run by
-            <a href="/wiki/Donuts_(company)" title="Donuts (company)">Donuts</a
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Donuts_(company)"
+              title="Donuts (company)"
+              >Donuts</a
             >, a gTLD
-            <a href="/wiki/Domain_name_registry" title="Domain name registry"
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Domain_name_registry"
+              title="Domain name registry"
               >registry</a
             >. It is derived from "<a
-              href="/wiki/WTF_(Internet_slang)"
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/WTF_(Internet_slang)"
               class="mw-redirect"
               title="WTF (Internet slang)"
               >WTF</a
@@ -186,10 +195,7 @@
         </div>
       </div>
       <div data-w-id="4b9e4b80-34ba-5015-cdf9-0ba0407c2faa" class="sticky-grid">
-        <div
-          id="w-node-_4b9e4b80-34ba-5015-cdf9-0ba0407c2fb6-2293e354"
-          class="right-content"
-        >
+        <div id="wtf-lottie-box" class="right-content">
           <div
             data-is-ix2-target="1"
             class="lottie-animation"
@@ -206,7 +212,7 @@
         </div>
 
         <div
-          id="w-node-_49c13f8b-4aea-269a-6749-d58b8fbe1bcf-2293e354"
+          id="wtf-main-content-box"
           data-w-id="49c13f8b-4aea-269a-6749-d58b8fbe1bcf"
           style="
             opacity: 0;
@@ -222,7 +228,7 @@
           class="left-content"
         >
           <!-- <div
-            id="w-node-_4b9e4b80-34ba-5015-cdf9-0ba0407c2fab-2293e354"
+            id="wtf-main-content"
             data-w-id="4b9e4b80-34ba-5015-cdf9-0ba0407c2fab"
             style="
               opacity: 0;
@@ -249,7 +255,7 @@
           </div> -->
 
           <div
-            id="w-node-_4b9e4b80-34ba-5015-cdf9-0ba0407c2fab-2293e354"
+            id="wtf-main-content"
             data-w-id="4b9e4b80-34ba-5015-cdf9-0ba0407c2fab"
             style="
               opacity: 0;
@@ -306,7 +312,7 @@
 
       <div class="contact">
         <div
-          id="w-node-_81152e41-8f13-5362-e9d4-a20ffef1b701-2293e354"
+          id="wtf-contact-box"
           style="
             -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
               rotateX(null) rotateY(null) rotateZ(0.6deg) skew(0, 0);
@@ -331,7 +337,7 @@
           </p>
         </div>
         <div
-          id="w-node-_81152e41-8f13-5362-e9d4-a20ffef1b6e5-2293e354"
+          id="wtf-mail-box"
           data-w-id="81152e41-8f13-5362-e9d4-a20ffef1b6e5"
           style="
             opacity: 0;
@@ -359,7 +365,7 @@
           </p>
         </div>
         <div
-          id="w-node-_173c9d2b-7c03-b8e4-74a6-936475553f92-2293e354"
+          id="wtf-footer-box"
           data-w-id="173c9d2b-7c03-b8e4-74a6-936475553f92"
           style="
             opacity: 0;
@@ -547,11 +553,7 @@
     // skew
 
     let proxy = {skew: 0},
-      skewSetter = gsap.quickSetter(
-        "#w-node-_4b9e4b80-34ba-5015-cdf9-0ba0407c2fab-2293e354",
-        "skewY",
-        "deg"
-      ), // fast
+      skewSetter = gsap.quickSetter("#wtf-main-content", "skewY", "deg"), // fast
       clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
 
     ScrollTrigger.create({
@@ -572,7 +574,7 @@
     });
 
     // make the right edge "stick" to the scroll bar. force3D: true improves performance
-    gsap.set("#w-node-_4b9e4b80-34ba-5015-cdf9-0ba0407c2fab-2293e354", {
+    gsap.set("#wtf-main-content", {
       transformOrigin: "center center",
       force3D: true,
     });
