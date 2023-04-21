@@ -2451,6 +2451,7 @@ a {
 }
 
 .slash {
+  font-size: 90%;
   margin: 0 0.625rem;
 }
 
@@ -2467,7 +2468,7 @@ a {
   position: relative;
   display: -ms-grid;
   display: grid;
-  margin: 12% 4% 64px;
+  margin: 12% 4% 4rem;
   justify-items: start;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -2853,7 +2854,7 @@ a {
 }
 
 .email-footer.space-right-64 {
-  margin-right: 64px;
+  margin-right: 4rem;
 }
 
 .email-footer {
