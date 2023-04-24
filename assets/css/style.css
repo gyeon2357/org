@@ -42,7 +42,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,
 body {
   height: auto;
   min-height: 100%;
@@ -185,10 +184,10 @@ html[data-w-dynpage] [data-w-cloak] {
   color: #aaadb0 !important;
   background-color: #fff !important;
   border-radius: 3px !important;
-  padding: 6px 8px 6px 6px !important;
+  padding: 6px 0.5rem 6px 6px !important;
   font-size: 0.75rem !important;
   opacity: 1 !important;
-  line-height: 14px !important;
+  line-height: 0.875rem !important;
   text-decoration: none !important;
   transform: none !important;
   margin: 0 !important;
@@ -218,8 +217,8 @@ h6 {
 }
 
 h1 {
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 2.375rem;
+  line-height: 2.75rem;
   margin-top: 1.25rem;
 }
 
@@ -231,7 +230,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  line-height: 30px;
+  line-height: 1.875rem;
   margin-top: 1.25rem;
 }
 
@@ -242,7 +241,7 @@ h4 {
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   margin-top: 0.625rem;
 }
@@ -261,9 +260,9 @@ p {
 blockquote {
   margin: 0 0 0.625rem;
   padding: 0.625rem 1.25rem;
-  border-left: 5px solid #e2e2e2;
+  border-left: 0.3125rem solid #e2e2e2;
   font-size: 1.125rem;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 figure {
@@ -271,7 +270,7 @@ figure {
 }
 
 figcaption {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   text-align: center;
 }
 
@@ -279,7 +278,7 @@ ol,
 ul {
   margin-top: 0;
   margin-bottom: 0.625rem;
-  padding-left: 40px;
+  padding-left: 2.5rem;
 }
 
 .w-list-unstyled {
@@ -335,7 +334,7 @@ button {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-weight: 700;
 }
 
@@ -343,10 +342,10 @@ label {
 .w-select {
   display: block;
   width: 100%;
-  height: 38px;
-  padding: 8px 0.75rem;
+  height: 2.375rem;
+  padding: 0.5rem 0.75rem;
   margin-bottom: 0.625rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.42857143;
   color: #333;
   vertical-align: middle;
@@ -421,7 +420,7 @@ textarea.w-select {
 
 .w-radio {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   padding-left: 1.25rem;
 }
 
@@ -480,11 +479,11 @@ textarea.w-select {
 
 .w-file-upload-uploading-btn {
   display: flex;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   cursor: pointer;
   margin: 0;
-  padding: 8px 0.75rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
   background-color: #fafafa;
 }
@@ -494,13 +493,13 @@ textarea.w-select {
   flex-grow: 1;
   justify-content: space-between;
   margin: 0;
-  padding: 8px 9px 8px 11px;
+  padding: 0.5rem 9px 0.5rem 0.6875rem;
   border: 1px solid #ccc;
   background-color: #fafafa;
 }
 
 .w-file-upload-file-name {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   display: block;
 }
@@ -528,17 +527,17 @@ textarea.w-select {
 
 .w-file-upload-info {
   display: inline-block;
-  line-height: 38px;
+  line-height: 2.375rem;
   padding: 0 0.75rem;
 }
 
 .w-file-upload-label {
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   cursor: pointer;
   margin: 0;
-  padding: 8px 0.75rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
   background-color: #fafafa;
 }
@@ -546,7 +545,7 @@ textarea.w-select {
 .w-icon-file-upload-icon,
 .w-icon-file-upload-uploading {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   width: 1.25rem;
 }
 
@@ -924,7 +923,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim .w-widget-twitter-count-inner {
   position: relative;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 0.75rem;
   text-align: center;
   color: #999;
@@ -947,8 +946,8 @@ textarea.w-select {
 }
 
 .w-widget-twitter-count-shim:not(.w--vertical) {
-  margin-left: 5px;
-  margin-right: 8px;
+  margin-left: 0.3125rem;
+  margin-right: 0.5rem;
 }
 
 .w-widget-twitter-count-shim:not(.w--vertical).w--large {
@@ -976,7 +975,7 @@ textarea.w-select {
 }
 
 .w-widget-twitter-count-shim:not(.w--vertical).w--large:before {
-  border-width: 5px;
+  border-width: 0.3125rem;
   margin-left: -0.625rem;
   margin-top: -5px;
 }
@@ -990,7 +989,7 @@ textarea.w-select {
 }
 
 .w-widget-twitter-count-shim:not(.w--vertical).w--large:after {
-  border-width: 5px;
+  border-width: 0.3125rem;
   margin-left: -9px;
   margin-top: -5px;
 }
@@ -998,7 +997,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim.w--vertical {
   width: 61px;
   height: 33px;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .w-widget-twitter-count-shim.w--vertical:after,
@@ -1016,7 +1015,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim.w--vertical:before {
   border-color: rgba(117, 134, 150, 0);
   border-top-color: #5d6c7b;
-  border-width: 5px;
+  border-width: 0.3125rem;
   margin-left: -5px;
 }
 
@@ -1029,7 +1028,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim.w--vertical .w-widget-twitter-count-inner {
   font-size: 1.125rem;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 .w-widget-twitter-count-shim.w--vertical.w--large {
@@ -1076,7 +1075,7 @@ textarea.w-select {
   left: 0;
   margin: auto;
   padding-top: 0.625rem;
-  height: 40px;
+  height: 2.5rem;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1146,7 +1145,7 @@ textarea.w-select {
   cursor: pointer;
   overflow: hidden;
   color: #333;
-  font-size: 40px;
+  font-size: 2.5rem;
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
@@ -1233,7 +1232,7 @@ textarea.w-select {
   user-select: none;
   display: inline-block;
   cursor: pointer;
-  padding-right: 40px;
+  padding-right: 2.5rem;
 }
 
 .w-dropdown-toggle:focus {
@@ -1471,7 +1470,7 @@ textarea.w-select {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
-  padding: 9px 30px;
+  padding: 9px 1.875rem;
   text-align: left;
   cursor: pointer;
   color: #222;
@@ -1572,7 +1571,7 @@ body {
   flex-direction: column;
   font-family: "defalut", "pretendard-regular", sans-serif;
   color: #333;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   cursor: auto;
 }
@@ -1698,7 +1697,7 @@ a {
   opacity: 0.6;
   font-family: "defalut", "pretendard-regular", sans-serif;
   color: #333;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   cursor: default;
 
@@ -1851,6 +1850,7 @@ a {
   margin-right: 2%;
   font-size: 0.875rem;
   line-height: 100%;
+  text-decoration: underline;
 }
 
 .slash {
@@ -2175,11 +2175,11 @@ a {
 
 .image-8,
 .logo-nav {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .logo-nav img {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .title-grid {
