@@ -1855,6 +1855,7 @@ a {
 sub {
   font-size: 75%;
   bottom: 0.125rem;
+  text-transform: lowercase;
 }
 
 .slash:hover {
