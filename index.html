@@ -470,7 +470,10 @@
           </p>
 
           <p>
-            <a class="slash" href="https://gyeon2357.github.io/" target="_blank"
+            <a
+              class="slash"
+              href="https://gyeon2357.github.io/anchor"
+              target="_blank"
               >anchor</a
             ><sup>20. 10. 27.</sup>
           </p>
@@ -598,8 +601,7 @@
           "
           class="email-footer"
         >
-          <p>Park jeong-gyeon.</p>
-          <p>Seoul, Korea.</p>
+          Seoul, Korea.
         </div>
       </div>
     </div>
@@ -628,6 +630,18 @@
       }
     </style>
   </body>
+
+  <script>
+    $(function () {
+      $("img[rel='modal:open']").click(function () {
+        $("html").css("overflow", "hidden");
+      });
+
+      $("img[rel='modal:close']").click(function () {
+        $("html").css("overflow", "auto");
+      });
+    });
+  </script>
 
   <!-- <script>
     if (location.protocol != "https:") {
