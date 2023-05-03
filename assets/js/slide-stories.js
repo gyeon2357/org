@@ -60,11 +60,3 @@ class SlideStories {
 }
 
 new SlideStories("slide01");
-new SlideStories("slide02");
-new SlideStories("slide03");
-new SlideStories("slide04");
-new SlideStories("slide05");
-new SlideStories("slide06");
-new SlideStories("slide07");
-new SlideStories("slide08");
-new SlideStories("slide09");

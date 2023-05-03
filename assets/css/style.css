@@ -1687,7 +1687,6 @@ a {
 }
 
 .tags {
-  opacity: 0.6;
   font-family: "defalut", "pretendard-regular", sans-serif;
   color: #333;
   font-size: 0.875rem;
@@ -2032,6 +2031,8 @@ sup {
   grid-template-rows: auto auto auto;
 }
 
+/* thumbnail image */
+
 .vignette {
   position: relative;
   display: -webkit-box;
@@ -2049,26 +2050,15 @@ sup {
   align-items: center;
   cursor: pointer;
 
-  max-height: 700px;
+  max-width: 280px;
+  max-height: 200px;
+
+  transition: opacity 0.25s;
+  opacity: 0.5;
 }
 
-.vignette__work {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  max-height: 700px;
+.vignette:hover {
+  opacity: 1;
 }
 
 /* modal.slide */
