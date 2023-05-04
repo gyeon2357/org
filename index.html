@@ -6,34 +6,62 @@
 >
   <head>
     <meta charset="UTF-8" />
-    <title>2357.wtf</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2357</title>
 
     <link href="./assets/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preload" href="./assets/css/style.css" as="style" />
     <link
-      href="./assets/css/scrolleffect.css"
+      href="./assets/css/style.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+      type="text/css"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
     />
 
     <!-- Tags for social media links -->
-    <meta name="description" content="2357.wtf" />
-    <meta name="keywords" content="2, 3, 5, 7, wtf" />
-    <meta itemprop="name" content="2357.wtf" />
-    <meta itemprop="description" content="2357.wtf" />
+    <meta
+      name="description"
+      content="“2, 3, 5, 7” are prime numbers within 10."
+    />
+    <meta
+      name="keywords"
+      content="2, 3, 5, 7, prime numbers, typography, web publishing, product design"
+    />
+    <meta itemprop="name" content="2357" />
+    <meta
+      itemprop="description"
+      content="“2, 3, 5, 7” are prime numbers within 10."
+    />
     <meta itemprop="image" content="https://2357.wtf/assets/img/og-image.jpg" />
     <meta property="og:url" content="https://2357.wtf" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="2357.wtf" />
-    <meta property="og:description" content="2357.wtf" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="2357" />
+    <meta property="og:title" content="2357" />
+    <meta
+      property="og:description"
+      content="“2, 3, 5, 7” are prime numbers within 10."
+    />
     <meta
       property="og:image"
       content="https://2357.wtf/assets/img/og-image.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="2357.wtf" />
-    <meta name="twitter:description" content="2357.wtf" />
+    <meta name="twitter:title" content="2357" />
+    <meta
+      name="twitter:description"
+      content="“2, 3, 5, 7” are prime numbers within 10."
+    />
     <meta
       name="twitter:image"
       content="https://2357.wtf/assets/img/og-image.jpg"
@@ -57,15 +85,9 @@
       href="./assets/img/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/img/site.webmanifest" />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
-    <script type="text/javascript">
+    <script>
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
@@ -105,7 +127,12 @@
     </script>
   </head>
 
-  <body class="body-3">
+  <body>
+    <div class="status">
+      <div class="status-fill"></div>
+      <progress class="counter"><p class="status-text"></p></progress>
+    </div>
+
     <div
       data-w-id="156f40e8-1d95-f87a-54aa-f448dbc90b0f"
       style="opacity: 0"
@@ -113,14 +140,14 @@
     >
       <div class="email-footer">
         <p class="nav-link">
-          <a href="/" class="menu-home link">2357</a>
+          <a href="/" class="menu-home link c-hover">2357</a>
         </p>
         <div class="link_underline"></div>
       </div>
 
       <div class="email-footer">
         <p class="nav-link">
-          <a href="#" class="menu-work link"></a>
+          <a href="#" class="menu-work link c-hover"></a>
         </p>
         <div class="link_underline"></div>
       </div>
@@ -130,7 +157,7 @@
       data-is-ix2-target="1"
       class="bigtitle"
       data-animation-type="lottie"
-      data-src="./assets/img/ring.json"
+      data-src="./assets/img/loader.json"
       data-loop="0"
       data-direction="1"
       data-autoplay="0"
@@ -172,11 +199,11 @@
         >
           <span class="subtitle">About</span>
 
-          <p>
+          <p lang="ko">
             모든 자연수는 소수로 분해되며, 모든 물질은 원자로 분해된다. 모든
-            수를 수의 원자 상태인 소수로 분해한 것을 소인수분해라고 한다. “2, 3,
-            5, 7”은 10 이내의 소수이다. “2, 3, 5, 7”은 어떠한 감정이 포함되지
-            않은 진실한 수이다.
+            수를 수의 원자 상태인 소수로 분해할 수 있다. “2, 3, 5, 7”은 10
+            이내의 소수이다. “2, 3, 5, 7”은 어떠한 감정이 포함되지 않은 진실한
+            수이다.
           </p>
         </div>
       </div>
@@ -210,89 +237,307 @@
                 data-w-id="8259611e-38f8-a343-ac38-72984cf93f06"
                 class="vignette"
               >
-                <a href="#thumb" rel="modal:open">
+                <a href="#thumb" rel="modal:open" class="c-hover">
                   <img
-                    src="./assets/img/thumb/thumbnails-13.jpg"
-                    loading="lazy"
+                    src="./assets/img/thumb/self-introduction.jpg"
                     data-w-id="47ffb1a4-a2bf-5e6e-348e-399d92beeaca"
-                    alt=""
+                    alt="thumbnail"
                     sizes="(max-width: 767px) 92vw, (max-width: 991px) 43vw, 27vw"
                     class="cover content-move-up"
                   />
                 </a>
               </div>
               <p data-w-id="8f9f6449-19d9-4caa-4b51-60066f3cada6" class="tags">
-                thumbnails
+                image gallery
               </p>
 
               <div id="thumb" class="modal">
-                <div data-slide="slide01" class="slide">
+                <div data-slide="slide-1" class="slide">
                   <div class="slide-items">
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-1.jpg" />
-                      <figcaption>1 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/pizza.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/pizza.jpg"
+                        alt="pizza"
+                      />
+                      <figcaption>1 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-2.jpg" />
-                      <figcaption>2 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/font-scape.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/font-scape.jpg"
+                        alt="font-scape"
+                      />
+                      <figcaption>2 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-3.jpg" />
-                      <figcaption>3 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/orange-1.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/orange-1.jpg"
+                        alt="orange"
+                      />
+                      <figcaption>3 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-4.jpg" />
-                      <figcaption>4 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/orange-2.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/orange-2.jpg"
+                        alt="orange"
+                      />
+                      <figcaption>4 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-5.jpg" />
-                      <figcaption>5 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/walbaum-didot.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/walbaum-didot.jpg"
+                        alt="walbaum-didot"
+                      />
+                      <figcaption>5 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-6.jpg" />
-                      <figcaption>6 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/book-cover.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/book-cover.jpg"
+                        alt="self-introduction-cover"
+                      />
+                      <figcaption>6 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-7.jpg" />
-                      <figcaption>7 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/boooooom.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/boooooom.jpg"
+                        alt="boooooom-cover"
+                      />
+                      <figcaption>7 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-8.jpg" />
-                      <figcaption>8 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/team2200.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/team2200.jpg"
+                        alt="team2200-cover"
+                      />
+                      <figcaption>8 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-9.jpg" />
-                      <figcaption>9 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/april.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/april.jpg"
+                        alt="calendar-april"
+                      />
+                      <figcaption>9 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-10.jpg" />
-                      <figcaption>10 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/geometry-circle.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/geometry-circle.jpg"
+                        alt="geometry-circle"
+                      />
+                      <figcaption>10 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-11.jpg" />
-                      <figcaption>11 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/verythings.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/verythings.jpg"
+                        alt="verythings-cover"
+                      />
+                      <figcaption>11 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-12.jpg" />
-                      <figcaption>12 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/calendar.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/calendar.jpg"
+                        alt="calendar-exhibition"
+                      />
+                      <figcaption>12 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-13.jpg" />
-                      <figcaption>13 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/doosung-jip.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/doosung-jip.jpg"
+                        alt="doosung-jip-figure"
+                      />
+                      <figcaption>13 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-14.jpg" />
-                      <figcaption>14 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/arduino.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/arduino.jpg"
+                        alt="my-first-arduino"
+                      />
+                      <figcaption>14 / 31</figcaption>
                     </figure>
                     <figure>
-                      <img src="./assets/img/thumb/thumbnails-15.jpg" />
-                      <figcaption>15 / 15</figcaption>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/variable-font-stick.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/variable-font-stick.jpg"
+                        alt="font-stick"
+                      />
+                      <figcaption>15 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/font-letter.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/font-letter.jpg"
+                        alt="font-letter"
+                      />
+                      <figcaption>16 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/georges-perec.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/georges-perec.jpg"
+                        alt="georges-perec"
+                      />
+                      <figcaption>17 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/logicomix.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/logicomix.jpg"
+                        alt="logicomix-cover"
+                      />
+                      <figcaption>18 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/match-stick.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/match-stick.jpg"
+                        alt="match-stick"
+                      />
+                      <figcaption>19 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/geometry-incircle.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/geometry-incircle.jpg"
+                        alt="geometry-incircle"
+                      />
+                      <figcaption>20 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/earth.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/earth.jpg"
+                        alt="earth-cover"
+                      />
+                      <figcaption>21 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/self-introduction.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/self-introduction.jpg"
+                        alt="2014-ulsan-building-No-6"
+                      />
+                      <figcaption>22 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/cheese.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/cheese.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>23 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/paju.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/paju.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>24 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/tennis.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/tennis.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>25 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/verythings-thumb.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/verythings-thumb.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>26 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/cv-jit-blobs-elongation.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/cv-jit-blobs-elongation.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>27 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/cv-jit-blobs-centroids.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/cv-jit-blobs-centroids.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>28 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/graphic-designer.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/graphic-designer.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>29 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/play.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/play.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>30 / 31</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        class="lazy"
+                        src="https://ik.imagekit.io/gyeon/outro.jpg?tr=h-1,w-1"
+                        data-src="https://ik.imagekit.io/gyeon/outro.jpg"
+                        alt="outro"
+                      />
+                      <figcaption>31 / 31</figcaption>
                     </figure>
                   </div>
                   <nav class="slide-nav">
                     <div class="slide-thumb"></div>
-                    <button class="slide-prev">Prev</button>
-                    <button class="slide-next">Next</button>
+                    <button name="prev" class="slide-prev c-hover">Prev</button>
+                    <button name="next" class="slide-next c-hover">Next</button>
                   </nav>
                 </div>
                 <a href="#" rel="modal:close"></a>
@@ -320,7 +565,7 @@
         >
           <span class="subtitle">Process</span>
 
-          <p>
+          <p lang="ko">
             나는 처음에는 타이포그라피를 배운 편집 디자이너였다. 폰트의 구조를
             탐구했고, 글자가 쓰이는 매체를 두루 공부했다. 웹은 책의 부족한 점을
             보완하여 과학자들이 서로 논문을 공유하기 위해 만들어졌다. 처음부터
@@ -328,7 +573,7 @@
             본다면 휴대성 ・ 내구성 ・ 비용 효율성 등의 다른 점보다는 비슷한 점,
             경쟁보다는 공존을 알게 되고 이런 점이 작업의 풍성함을 가져다준다.
             그래서 ‘이 웹을 책으로 표현한다면 무엇이 될까?’라는 생각을(혹은
-            반대로도) 하는 순간, 두 매체는 연결되어 있다는 생각을 한다.
+            반대로도) 하는 순간, <em>두 매체는 연결되어 있다는 생각을 한다.</em>
           </p>
         </div>
       </div>
@@ -357,7 +602,6 @@
               data-effect6
             >
               <span>Web Publishing</span>
-
               <span>Product Design</span>
             </h2>
           </div>
@@ -379,48 +623,82 @@
             class="h2"
           >
             <span class="subtitle">Work</span>
-
-            <p>
-              <a class="slash" href="https://verythings.org" target="_blank"
-                >스튜디오 베리띵즈</a
-              ><span>/</span> <sub>Design, Publishing</sub>
-            </p>
-            <p>
-              <a class="slash" href="https://studiorelease.kr" target="_blank"
-                >스튜디오 릴리즈</a
-              ><span>/</span> <sub>Design, Publishing</sub>
-            </p>
-            <p>
-              <a class="slash" href="https://seoyoosuk.com" target="_blank"
-                >스테이 서유숙</a
-              ><span>/</span> <sub>Design, Publishing</sub>
-            </p>
-            <p>
-              <a class="slash" href="https://ohoi.xyz" target="_blank"
-                >오호이 프로젝트</a
-              ><span>/</span> <sub>Design</sub>
-            </p>
             <p>
               <a
-                class="slash"
-                href="https://everylittlething.co.kr"
-                target="_blank"
-                >에브리리틀씽</a
-              ><span>/</span> <sub>Design, Publishing</sub>
-            </p>
-            <p>
-              <a
-                class="slash"
+                class="slash c-hover"
                 href="https://gyeon2357.github.io/boooooom/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                2020 마친보람맺음전</a
-              ><span>/</span> <sub>Design, Publishing</sub>
+                2020 더배곳</a
+              ><sup>Design, Publishing</sup>
             </p>
             <p>
-              <a class="slash" href="https://ag-shop.kr" target="_blank">
+              <a
+                class="slash c-hover"
+                href="https://seoyoosuk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >스테이 서유숙</a
+              ><sup>Design, Publishing</sup>
+            </p>
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://verythings.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                >스튜디오 베리띵즈</a
+              ><sup>Design, Publishing</sup>
+            </p>
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://studiorelease.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >스튜디오 릴리즈</a
+              ><sup>Design, Publishing</sup>
+            </p>
+
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://ohoi.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                >오호이 프로젝트</a
+              ><sup>Design</sup>
+            </p>
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://everylittlething.co.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >에브리리틀씽</a
+              ><sup>Design, Publishing</sup>
+            </p>
+
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://ag-shop.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 안샵</a
-              ><span>/</span> <sub>Design</sub>
+              ><sup>Design</sup>
+            </p>
+            <p>
+              <a
+                class="slash c-hover"
+                href="https://bmca.or.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                블루메미술관</a
+              ><sup>Publishing</sup>
             </p>
           </div>
         </div>
@@ -462,74 +740,90 @@
 
           <p>
             <a
-              class="slash"
+              class="slash c-hover"
               href="https://colonslashslash.neocities.org"
               target="_blank"
-              >://</a
-            ><sup>20. 09. 10.</sup>
+              rel="noopener noreferrer"
+              >http://</a
+            ><sup><time>20-09-27</time></sup>
           </p>
 
           <p>
             <a
-              class="slash"
-              href="https://gyeon2357.github.io/anchor"
-              target="_blank"
-              >anchor</a
-            ><sup>20. 10. 27.</sup>
-          </p>
-
-          <p>
-            <a
-              class="slash"
-              href="https://intimatepast.github.io/webgl_panorama_equirectangular/webgl_panorama_equirectangular.html"
-              target="_blank"
-              >Paju Typography Institute 2020: intimatepast 3D panorama</a
-            ><sup>20. 12. 15.</sup>
-          </p>
-          <p>
-            <a
-              class="slash"
-              href="https://nase-pocket.github.io"
-              target="_blank"
-              >Paju Typography Institute 2020: nase-pocket</a
-            ><sup>20. 12. 30.</sup>
-          </p>
-
-          <p>
-            <a
-              class="slash"
-              href="https://comping-example.github.io/"
-              target="_blank"
-              >AG Typography Institute: Happiness Sans comping page</a
-            ><sup>21. 2. 11.</sup>
-          </p>
-
-          <p>
-            <a
-              class="slash"
-              href="https://underline.neocities.org"
-              target="_blank"
-              >neworder.xyz: 밑줄 긋는 방법</a
-            ><sup>21. 03. 01.</sup>
-          </p>
-
-          <p>
-            <a
-              class="slash"
+              class="slash c-hover"
               href="https://gyeon2357.github.io/team2200/"
               target="_blank"
+              rel="noopener noreferrer"
               >TEAM2200 기획안</a
-            ><sup>21. 09. 02.</sup>
+            ><sup>21-09-02</sup>
+          </p>
+
+          <p>
+            <a
+              class="slash c-hover"
+              href="https://gyeon2357.github.io/anchor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >anchor</a
+            ><sup>21-10-27</sup>
+          </p>
+
+          <p>
+            <a
+              class="slash c-hover"
+              href="https://intimatepast.github.io/webgl_panorama_equirectangular/webgl_panorama_equirectangular.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >intimatepast</a
+            ><sup>21-12-11</sup>
           </p>
           <p>
-            <a class="slash" href="https://choiyechan.info" target="_blank"
-              >최예찬의 CV</a
-            ><sup>23. 01. 14.</sup>
+            <a
+              class="slash c-hover"
+              href="https://nase-pocket.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              >nase pocket</a
+            ><sup>21-12-30</sup>
+          </p>
+
+          <p>
+            <a
+              class="slash c-hover"
+              href="https://comping-example.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Happiness Sans comping test</a
+            ><sup>22-2-11</sup>
+          </p>
+
+          <p>
+            <a
+              class="slash c-hover"
+              href="https://underline.neocities.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >밑줄 긋는 방법</a
+            ><sup>22-03-01</sup>
+          </p>
+
+          <p>
+            <a
+              class="slash c-hover"
+              href="https://choiyechan.info"
+              target="_blank"
+              rel="noopener noreferrer"
+              >최예찬의 cv</a
+            ><sup>23-01-14</sup>
           </p>
           <p>
-            <a class="slash" href="https://lovepeacevibe.com/" target="_blank"
+            <a
+              class="slash c-hover"
+              href="https://lovepeacevibe.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               >lovepeacevibe</a
-            ><sup>23. 05. 02.</sup>
+            ><sup>23-05-02</sup>
           </p>
         </div>
       </div>
@@ -551,8 +845,10 @@
           class="h2"
         >
           <span class="subtitle">Contact</span>
-          <p>프로젝트 문의는 간단한 소개와 함께 아래 메일로 부탁드립니다.</p>
-          <p>
+          <p lang="ko">
+            프로젝트 문의는 간단한 소개와 함께 아래 메일로 부탁드립니다.
+          </p>
+          <p lang="en">
             Any inquiries about the project or collaboration, please send an
             e-mail with brief introduction about the project.
           </p>
@@ -581,6 +877,7 @@
               class="h3"
               href="https://www.instagram.com/2357.wtf"
               target="_blank"
+              rel="noopener noreferrer"
               >instagram</a
             >
           </p>
@@ -611,28 +908,41 @@
       type="text/javascript"
       crossorigin="anonymous"
     ></script>
-
+    <script src="./assets/js/lazyload.js"></script>
     <script type="module" src="./assets/js/index.e9a2d1b4.js"></script>
     <script src="./assets/js/index.b5e7c14d.js" nomodule defer></script>
-
-    <script
-      src="./assets/js/webflow.472574a57.js"
-      type="text/javascript"
-    ></script>
-
-    <!-- jQuery Modal -->
+    <script src="./assets/js/webflow.472574a57.js"></script>
     <script src="./assets/js/jquery.modal.js"></script>
     <script src="./assets/js/slide-stories.js"></script>
-
-    <style type="text/css">
-      .bigTitle {
-        pointer-events: none;
-      }
-    </style>
   </body>
 
   <script>
     $(function () {
+      // status bar
+      var counter = document.querySelector(".status");
+
+      function progress() {
+        var windowScrollTop = $(window).scrollTop();
+        var docHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+
+        var $bgColor = progress > 99 ? "#fcfcfc" : "#fcfcfc";
+        var $textColor = progress > 99 ? "#fcfcfc" : "#666";
+
+        $(".status-text")
+          .text(Math.round(progress) + "%")
+          .css({color: $textColor});
+
+        $(".status-fill")
+          .height(progress + "%")
+          .css({backgroundColor: $bgColor});
+      }
+      progress();
+      $(document).on("scroll", progress);
+
+      // modal function
+
       $("img[rel='modal:open']").click(function () {
         $("html").css("overflow", "hidden");
       });
@@ -643,6 +953,7 @@
     });
   </script>
 
+  <!-- to https -->
   <!-- <script>
     if (location.protocol != "https:") {
       window.location = "https://" + location.host + location.pathname;
