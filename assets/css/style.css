@@ -1919,8 +1919,7 @@ sup {
   pointer-events: none;
 
   z-index: 1001 !important;
-  filter: sepia(96%) saturate(3713%) hue-rotate(283deg) brightness(78%)
-    contrast(103%);
+  filter: grayscale(1);
 }
 
 .nav-info {
@@ -1929,7 +1928,6 @@ sup {
   top: 0;
   right: 0;
   bottom: auto;
-  z-index: 10;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2173,13 +2171,13 @@ figure img {
   top: 0.25rem;
   right: 0.875rem;
 
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 
   color: #333;
   margin: 1rem 1rem 0 0;
 
-  z-index: 1001 !important;
+  z-index: 10001 !important;
   cursor: pointer;
 
   -webkit-tap-highlight-color: var(--main-color-50);
@@ -2192,6 +2190,8 @@ figure img {
   height: 32px;
   width: 1.75px;
   background-color: #333;
+
+  margin-left: 0.75rem;
 }
 
 .modal a.close-modal:before {
@@ -2224,13 +2224,13 @@ figure img {
   }
 
   .modal a.close-modal {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
 
     top: 1.25rem;
     right: 0;
 
-    margin: 0 0.125rem 0 0;
+    margin: 0 0.25rem 0 0;
 
     bottom: auto;
     display: block;
@@ -2240,6 +2240,7 @@ figure img {
   .modal a.close-modal:after {
     height: 20px;
     width: 1px;
+    margin-left: 0.625rem;
   }
 }
 
