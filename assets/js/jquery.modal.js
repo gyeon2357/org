@@ -16,7 +16,8 @@
         t = !1;
       for (o = s.length - 1; o >= 0; o--)
         s[o].$blocker &&
-          (s[o].$blocker.toggleClass("current", !t).toggleClass("behind", t), (t = !0));
+          (s[o].$blocker.toggleClass("current", !t).toggleClass("behind", t),
+          (t = !0));
     };
   (o.modal = function (t, i) {
     var e, n;
@@ -57,7 +58,11 @@
               var i = l();
               i.hideSpinner(), s.pop(), t.trigger(o.modal.AJAX_COMPLETE);
             });
-    else (this.$elm = t), (this.anchor = t), this.$body.append(this.$elm), this.open();
+    else
+      (this.$elm = t),
+        (this.anchor = t),
+        this.$body.append(this.$elm),
+        this.open();
   }),
     (o.modal.prototype = {
       constructor: o.modal,
@@ -82,27 +87,40 @@
             });
       },
       close: function () {
-        s.pop(), this.unblock(), this.hide(), o.modal.isActive() || o(i).off("keydown.modal");
+        s.pop(),
+          this.unblock(),
+          this.hide(),
+          o.modal.isActive() || o(i).off("keydown.modal");
       },
       block: function () {
         this.$elm.trigger(o.modal.BEFORE_BLOCK, [this._ctx()]),
+          $(".content-page, .status").css("filter", "blur(6px)"),
           this.$body.css("overflow", "hidden"),
+
           (this.$blocker = o(
-            '<div class="' + this.options.blockerClass + ' blocker current"></div>'
+            '<div class="' +
+              this.options.blockerClass +
+              ' blocker current"></div>'
           ).appendTo(this.$body)),
           n(),
           this.options.doFade &&
-            this.$blocker.css("opacity", 0).animate({ opacity: 1 }, this.options.fadeDuration),
+            this.$blocker
+              .css("opacity", 0)
+              .animate({opacity: 1}, this.options.fadeDuration),
           this.$elm.trigger(o.modal.BLOCK, [this._ctx()]);
       },
       unblock: function (t) {
         !t && this.options.doFade
-          ? this.$blocker.fadeOut(this.options.fadeDuration, this.unblock.bind(this, !0))
+          ? this.$blocker.fadeOut(
+              this.options.fadeDuration,
+              this.unblock.bind(this, !0)
+            )
           : (this.$blocker.children().appendTo(this.$body),
             this.$blocker.remove(),
             (this.$blocker = null),
             n(),
-            o.modal.isActive() || this.$body.css("overflow", ""));
+            o.modal.isActive() || this.$body.css("overflow", ""),
+            $(".content-page, .status").css("filter", ""));
       },
       show: function () {
         this.$elm.trigger(o.modal.BEFORE_OPEN, [this._ctx()]),
@@ -118,8 +136,8 @@
           this.$elm.addClass(this.options.modalClass).appendTo(this.$blocker),
           this.options.doFade
             ? this.$elm
-                .css({ opacity: 0, display: "inline-block" })
-                .animate({ opacity: 1 }, this.options.fadeDuration)
+                .css({opacity: 0, display: "inline-block"})
+                .animate({opacity: 1}, this.options.fadeDuration)
             : this.$elm.css("display", "inline-block"),
           this.$elm.trigger(o.modal.OPEN, [this._ctx()]);
       },
@@ -140,9 +158,9 @@
         this.options.showSpinner &&
           ((this.spinner =
             this.spinner ||
-            o('<div class="' + this.options.modalClass + '-spinner"></div>').append(
-              this.options.spinnerHtml
-            )),
+            o(
+              '<div class="' + this.options.modalClass + '-spinner"></div>'
+            ).append(this.options.spinnerHtml)),
           this.$body.append(this.spinner),
           this.spinner.show());
       },
@@ -150,7 +168,12 @@
         this.spinner && this.spinner.remove();
       },
       _ctx: function () {
-        return { elm: this.$elm, $elm: this.$elm, $blocker: this.$blocker, options: this.options };
+        return {
+          elm: this.$elm,
+          $elm: this.$elm,
+          $blocker: this.$blocker,
+          options: this.options,
+        };
       },
     }),
     (o.modal.close = function (t) {

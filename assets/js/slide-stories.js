@@ -16,7 +16,7 @@ class SlideStories {
   prev() {
     if (this.active > 0) {
       this.activeSlide(this.active - 1);
-      $(this).find()("<div>Hello</div>");
+      // $(this).find()("<div>Hello</div>");
     } else {
       this.activeSlide(this.items.length - 1);
     }

@@ -6,7 +6,7 @@
 
 :root {
   --main-color: #9a13b8;
-  --main-color-50: #9a13b882;
+  --main-color-50: #9a13b8b0;
   --main-text-color: #333;
 
   --body-font: "national-2", "Pretendard Variable", -apple-system,
@@ -2014,6 +2014,20 @@ sup {
 }
 
 /* modal.slide */
+
+.slide-button-style {
+  width: fit-content;
+
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+}
+
+.thumb-tag {
+  font-size: 90%;
+  text-align: center;
+  margin: 0.125rem 0 0 0;
+}
 
 .slide {
   max-width: 100%;
