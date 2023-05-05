@@ -2055,8 +2055,15 @@ sup {
 
 .slide-nav button {
   appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--main-color-50);
   opacity: 0;
+}
+
+.slide-prev {
+  cursor: w-resize;
+}
+.slide-next {
+  cursor: e-resize;
 }
 
 .slide-items > * {
