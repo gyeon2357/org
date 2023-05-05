@@ -144,7 +144,7 @@
     >
       <div class="email-footer">
         <p class="nav-link">
-          <a href="/" class="menu-home link c-hover">2357</a>
+          <a href="#" class="menu-home link c-hover">2357</a>
         </p>
         <div class="link_underline"></div>
       </div>
@@ -280,7 +280,7 @@
                 data-w-id="8f9f6449-19d9-4caa-4b51-60066f3cada6"
                 class="thumb-tag"
               >
-                this is a thumbnail
+                This is a thumbnail of the webpage
               </p>
 
               <div id="thumb" class="modal">
@@ -537,8 +537,12 @@
                   </div>
                   <nav class="slide-nav">
                     <div class="slide-thumb"></div>
-                    <button name="prev" class="slide-prev c-hover">Prev</button>
-                    <button name="next" class="slide-next c-hover">Next</button>
+                    <button name="prev" class="slide-prev c-hover">
+                      <span>Prev</span>
+                    </button>
+                    <button name="next" class="slide-next c-hover">
+                      <span>Next</span>
+                    </button>
                   </nav>
                 </div>
                 <a href="#" rel="modal:close"></a>
@@ -627,13 +631,81 @@
             <p>
               <a
                 class="slash c-hover"
-                href="https://gyeon2357.github.io/boooooom/"
+                href="#boooooom"
+                rel="modal:open"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                2020 더배곳</a
+                2020 마친보람맺음전</a
               ><sup>Design, Publishing</sup>
             </p>
+
+            <div id="boooooom" class="modal">
+              <address>
+                <a
+                  href="https://gyeon2357.github.io/boooooom/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit Website ←</a
+                >
+              </address>
+              <div data-slide="slide-2" class="slide">
+                <div class="slide-items">
+                  <figure>
+                    <img
+                      class="lazy"
+                      src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                      data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                      alt="boooooom"
+                    />
+                    <!-- <figcaption>sdfsdffsd</figcaption> -->
+                  </figure>
+                  <figure>
+                    <img
+                      class="lazy"
+                      src="https://ik.imagekit.io/gyeon/boooooom-2.jpg?tr=h-1,w-1"
+                      data-src="https://ik.imagekit.io/gyeon/boooooom-2.jpg"
+                      alt="boooooom"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      class="lazy"
+                      src="https://ik.imagekit.io/gyeon/boooooom-3.jpg?tr=h-1,w-1"
+                      data-src="https://ik.imagekit.io/gyeon/boooooom-3.jpg"
+                      alt="boooooom"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      class="lazy"
+                      src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324tr=h-1,w-1"
+                      data-src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324"
+                      alt="boooooom"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      class="lazy"
+                      src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205tr=h-1,w-1"
+                      data-src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205"
+                      alt="boooooom"
+                    />
+                  </figure>
+                </div>
+                <nav class="slide-nav">
+                  <div class="slide-thumb"></div>
+                  <button name="prev" class="slide-prev c-hover">
+                    <span>Prev</span>
+                  </button>
+                  <button name="next" class="slide-next c-hover">
+                    <span>Next</span>
+                  </button>
+                </nav>
+              </div>
+              <a href="#" rel="modal:close"></a>
+            </div>
+
             <p>
               <a
                 class="slash c-hover"
@@ -920,12 +992,18 @@
   <script>
     $(function () {
       // add figcaption
-      let num = $("figure img").index();
+      let num = $("#thumb figure img").index();
       var length = $("figure").length;
-      $("figure img").each(function () {
+      $("#thumb figure img").each(function () {
         if (num == "index") num = 0;
         else num++;
         $(this).after($("<figcaption>").text(num + " / " + length));
+      });
+
+      //scroll-to-top
+      $(".menu-home").click(function () {
+        $("html, body").animate({scrollTop: 0}, "slow");
+        return false;
       });
 
       // status bar
