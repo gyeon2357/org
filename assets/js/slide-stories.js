@@ -7,11 +7,10 @@ class SlideStories {
 
   activeSlide(index) {
     this.active = index;
-    this.items.forEach((item) => item.classList.remove("active"));
+    this.items.forEach(item => item.classList.remove("active"));
     this.items[index].classList.add("active");
-    this.thumbItems.forEach((item) => item.classList.remove("active"));
+    this.thumbItems.forEach(item => item.classList.remove("active"));
     this.thumbItems[index].classList.add("active");
-    this.autoSlide();
   }
 
   prev() {
@@ -26,6 +25,7 @@ class SlideStories {
   next() {
     if (this.active < this.items.length - 1) {
       this.activeSlide(this.active + 1);
+      this.autoSlide();
     } else {
       this.activeSlide(0);
     }
@@ -45,7 +45,7 @@ class SlideStories {
 
   autoSlide() {
     clearTimeout(this.timeout);
-    this.timeout = setTimeout(this.next, 2500);
+    this.timeout = setTimeout(this.next, 5000);
   }
 
   init() {

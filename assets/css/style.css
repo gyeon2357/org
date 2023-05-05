@@ -2122,7 +2122,7 @@ sup {
   width: 100vw;
   height: 100vh;
 
-  max-width: 840px;
+  max-width: 600px;
 
   margin: 1rem 2rem;
   text-align: left;
@@ -2136,9 +2136,11 @@ figure figcaption {
   position: fixed;
 
   font-size: 0.75rem;
+  letter-spacing: 0.2px;
   width: fit-content;
 
   color: #333;
+  mix-blend-mode: difference;
 
   transform: translate(-50%, -50%);
   left: 50%;
@@ -2917,13 +2919,19 @@ figure img {
   grid-area: Area-5;
 }
 
-#wtf-title-box p {
-  line-height: 1.68;
+#wtf-title-box p,
+#wtf-title-box li {
+  line-height: 1.65;
   margin: 0 auto;
   max-width: 80%;
 
   word-break: keep-all;
-  margin-bottom: 1rem;
+}
+
+#wtf-title-box li {
+  font-size: 1.5rem;
+  list-style: decimal;
+  margin-bottom: 0;
 }
 
 /* #wtf-title-box p:first-of-type {
@@ -3847,8 +3855,7 @@ figure img {
 
   .contact > #wtf-footer-box {
     grid-row-start: 5;
-    grid-column-start: 5;
-    grid-column: span 3;
+    grid-column: 1 / span 5;
   }
 
   #w-node-f0b07aa6-28ea-9661-3e35-7832a3537427-2293e354 {
