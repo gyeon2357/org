@@ -60,3 +60,4 @@ class SlideStories {
 }
 
 new SlideStories("slide-1");
+new SlideStories("slide-2");
