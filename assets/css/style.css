@@ -3003,7 +3003,7 @@ figure img {
 
 .sticky-grid > #wtf-main-content-box {
   grid-row-start: 3;
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 11;
 }
 
 #wtf-main-content {
@@ -3823,8 +3823,8 @@ figure img {
 
   .contact > #wtf-mail-box {
     grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column: span 5;
+
+    grid-column: 2 / span 5;
   }
 
   .item-section > #wtf-mail-box {
@@ -3848,7 +3848,7 @@ figure img {
   .contact > #wtf-footer-box {
     grid-row-start: 5;
     grid-column-start: 5;
-    grid-column: span 1;
+    grid-column: span 3;
   }
 
   #w-node-f0b07aa6-28ea-9661-3e35-7832a3537427-2293e354 {
@@ -3874,8 +3874,8 @@ figure img {
 
   .contact > #wtf-contact-box {
     grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column: span 5;
+
+    grid-column: 1 / span 11;
   }
 
   .sticky-grid > #wtf-contact-box,
@@ -3962,15 +3962,13 @@ figure img {
 }
 
 .content100 {
-  height: 150vh;
+  height: 120vh;
 
   flex-direction: column;
   display: flex;
 
-  justify-content: center;
   position: relative;
-
-  margin: 30vh 0 0 0;
+  margin: 20vh 0 0 0;
 }
 
 .content100 p {
@@ -4163,7 +4161,7 @@ figure img {
 
   top: 50%;
   transform: translateY(-50%);
-  right: 4.5vw;
+  right: 1.5vw;
   flex-direction: column;
   justify-content: center;
   background: #33333320;
@@ -4173,7 +4171,7 @@ figure img {
 
 .status-text {
   font-size: 0.75rem;
-  margin: 0 0.75rem;
+  margin: 0 -2rem;
 }
 
 .status-fill {
@@ -4187,11 +4185,13 @@ figure img {
 
 @media screen and (max-width: 479px) {
   .status {
-    right: 2.75rem;
-    height: 5rem;
+    right: 4%;
+    height: 6rem;
   }
 
   .status-text {
-    margin: 0 0.5rem;
+    margin: 0 -1.75rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.25px;
   }
 }
