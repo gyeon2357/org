@@ -1943,6 +1943,7 @@ sup {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 1;
 }
 
 .item {
@@ -2064,18 +2065,35 @@ sup {
   position: relative;
   transform: translate(0);
 
-  padding: 1.5rem;
+  padding: 6rem 1.5rem;
 }
 
 .slide-nav button {
   appearance: none;
-  -webkit-tap-highlight-color: var(--main-color-50);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.slide-nav span {
+  align-self: end;
+  position: absolute;
 }
 
 .slide-prev {
   cursor: w-resize;
 }
+
+.slide-prev span {
+  left: 1.25rem;
+}
+
+.slide-next span {
+  right: 1.25rem;
+}
+
 .slide-next {
   cursor: e-resize;
 }
@@ -2143,7 +2161,7 @@ sup {
   width: 100vw;
   height: 100vh;
 
-  max-width: 600px;
+  max-width: 720px;
 
   margin: 1rem 2rem;
   text-align: left;
@@ -2225,6 +2243,25 @@ figure img {
   transform: rotate(-45deg);
 }
 
+.modal address {
+  position: fixed;
+  width: fit-content;
+
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 2.25rem;
+  cursor: pointer;
+  z-index: 10001 !important;
+}
+
+.modal address a {
+  color: #fff;
+  mix-blend-mode: difference;
+  font-size: 2rem;
+
+  margin: 1rem;
+}
+
 @media screen and (max-width: 479px) {
   .slide-nav {
     position: absolute;
@@ -2247,10 +2284,10 @@ figure img {
   }
 
   .modal a.close-modal {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
 
-    top: 1.25rem;
+    top: 1.125rem;
     right: 0;
 
     margin: 0 0.25rem 0 0;
@@ -2261,9 +2298,16 @@ figure img {
 
   .modal a.close-modal:before,
   .modal a.close-modal:after {
-    height: 20px;
-    width: 1px;
-    margin-left: 0.625rem;
+    height: 24px;
+    width: 1.25px;
+    margin-left: 0.8rem;
+  }
+
+  .modal address {
+    top: 2rem;
+  }
+  .modal address a {
+    font-size: 1.25rem;
   }
 }
 
