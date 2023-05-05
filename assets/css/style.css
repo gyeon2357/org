@@ -2209,14 +2209,14 @@ figure img {
 
 .modal a.close-modal {
   position: fixed;
-  top: 0.25rem;
+  top: 0;
   right: 0.875rem;
 
-  width: 40px;
-  height: 40px;
+  width: 140px;
+  height: 140px;
 
   color: #333;
-  margin: 1rem 1rem 0 0;
+  margin: 0.875rem 0 0 0;
 
   z-index: 10001 !important;
   cursor: pointer;
@@ -2228,11 +2228,11 @@ figure img {
 .modal a.close-modal:after {
   position: fixed;
   content: " ";
-  height: 32px;
-  width: 1.75px;
-  background-color: #333;
+  height: 120px;
+  width: 2px;
+  background-color: var(--main-color);
 
-  margin-left: 0.75rem;
+  margin-left: 70px;
 }
 
 .modal a.close-modal:before {
@@ -2257,9 +2257,17 @@ figure img {
 .modal address a {
   color: #fff;
   mix-blend-mode: difference;
-  font-size: 2rem;
 
   margin: 1rem;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  transition: color 0.125s;
+}
+
+address a:hover {
+  color: var(--main-color);
 }
 
 @media screen and (max-width: 479px) {
@@ -2284,13 +2292,13 @@ figure img {
   }
 
   .modal a.close-modal {
-    width: 36px;
-    height: 36px;
+    width: 80px;
+    height: 80px;
 
-    top: 1.125rem;
+    top: 0.875rem;
     right: 0;
 
-    margin: 0 0.25rem 0 0;
+    margin: 0 0.5rem 0 0;
 
     bottom: auto;
     display: block;
@@ -2298,16 +2306,16 @@ figure img {
 
   .modal a.close-modal:before,
   .modal a.close-modal:after {
-    height: 24px;
-    width: 1.25px;
-    margin-left: 0.8rem;
+    height: 80px;
+    width: 1.5px;
+    margin-left: 40px;
   }
 
   .modal address {
     top: 2rem;
   }
   .modal address a {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 

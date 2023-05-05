@@ -993,7 +993,7 @@
     $(function () {
       // add figcaption
       let num = $("#thumb figure img").index();
-      var length = $("figure").length;
+      var length = $("#thumb figure").length;
       $("#thumb figure img").each(function () {
         if (num == "index") num = 0;
         else num++;
