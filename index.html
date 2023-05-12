@@ -10,7 +10,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta
       name="viewport"
-      content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no"
+      content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
     />
 
     <title>2357</title>
@@ -91,6 +91,7 @@
     />
     <link rel="manifest" href="./assets/img/site.webmanifest" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="./assets/js/lazyload.js"></script>
 
     <script>
       !(function (o, c) {
@@ -102,6 +103,7 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -121,6 +123,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-6JDDJ7S12K"
     ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -155,17 +158,6 @@
       </div>
     </header>
 
-    <aside name="status">
-      <div
-        data-w-id="156f40e8-1d95-f87a-54aa-f448dbc90b0f"
-        style="opacity: 0"
-        class="status"
-      >
-        <div class="status-fill"></div>
-        <div class="counter"><p class="status-text"></p></div>
-      </div>
-    </aside>
-
     <section name="loader">
       <div
         data-w-id="78541404-72a3-73fb-19b5-89b297e8a3ea"
@@ -182,6 +174,17 @@
         data-ix2-initial-state="0"
       ></div>
     </section>
+
+    <aside name="status">
+      <div
+        data-w-id="156f40e8-1d95-f87a-54aa-f448dbc90b0f"
+        style="opacity: 0"
+        class="status"
+      >
+        <div class="status-fill"></div>
+        <div class="counter"><p class="status-text"></p></div>
+      </div>
+    </aside>
 
     <main>
       <div
@@ -284,7 +287,7 @@
                   </p>
 
                   <div id="thumb" class="modal">
-                    <div data-slide="slide-1" class="slide">
+                    <div data-slide="thisisthumb" class="slide">
                       <div class="slide-items">
                         <figure>
                           <img
@@ -880,151 +883,293 @@
                 class="h2"
               >
                 <span class="subtitle">Work</span>
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="#boooooom"
-                    rel="modal:open"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    2020 마친보람맺음전</a
-                  ><sup>Design, Publishing</sup>
-                </p>
+                <article name="boooooom">
+                  <p>
+                    <a class="slash c-hover" href="#boooooom" rel="modal:open">
+                      2020 마친보람맺음전</a
+                    ><sup>Design, Publishing</sup>
+                  </p>
 
-                <div id="boooooom" class="modal">
-                  <address>
-                    <a
-                      href="https://gyeon2357.github.io/boooooom/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Visit Website ←</a
-                    >
-                  </address>
-                  <div data-slide="slide-2" class="slide">
-                    <div class="slide-items">
-                      <figure>
-                        <img
-                          class="lazy"
-                          src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
-                          data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
-                          alt="boooooom"
-                        />
-                        <!-- <figcaption>sdfsdffsd</figcaption> -->
-                      </figure>
-                      <figure>
-                        <img
-                          class="lazy"
-                          src="https://ik.imagekit.io/gyeon/boooooom-2.jpg?tr=h-1,w-1"
-                          data-src="https://ik.imagekit.io/gyeon/boooooom-2.jpg"
-                          alt="boooooom"
-                        />
-                      </figure>
-                      <figure>
-                        <img
-                          class="lazy"
-                          src="https://ik.imagekit.io/gyeon/boooooom-3.jpg?tr=h-1,w-1"
-                          data-src="https://ik.imagekit.io/gyeon/boooooom-3.jpg"
-                          alt="boooooom"
-                        />
-                      </figure>
-                      <figure>
-                        <img
-                          class="lazy"
-                          src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324tr=h-1,w-1"
-                          data-src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324"
-                          alt="boooooom"
-                        />
-                      </figure>
-                      <figure>
-                        <img
-                          class="lazy"
-                          src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205tr=h-1,w-1"
-                          data-src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205"
-                          alt="boooooom"
-                        />
-                      </figure>
+                  <div id="boooooom" class="modal">
+                    <address>
+                      <a
+                        href="https://gyeon2357.github.io/boooooom/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <!-- <figure>
+                          <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          />
+
+                          <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-2.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-2.jpg"
+                            alt="boooooom"
+                          />
+
+                          <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-3.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-3.jpg"
+                            alt="boooooom"
+                          />
+
+                          <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-4.jpg?updatedAt=1683302057324"
+                            alt="boooooom"
+                          />
+
+                          <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-5.jpg?updatedAt=1683302057205"
+                            alt="boooooom"
+                          />
+                        </figure> -->
+                      </div>
                     </div>
-                    <nav class="slide-nav">
-                      <div class="slide-thumb"></div>
-                      <button name="prev" class="slide-prev c-hover">
-                        <span>Prev</span>
-                      </button>
-                      <button name="next" class="slide-next c-hover">
-                        <span>Next</span>
-                      </button>
-                    </nav>
+
+                    <a href="#" rel="modal:close"></a>
                   </div>
-                  <a href="#" rel="modal:close"></a>
-                </div>
+                </article>
 
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://seoyoosuk.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >스테이 서유숙</a
-                  ><sup>Design, Publishing</sup>
-                </p>
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://verythings.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >스튜디오 베리띵즈</a
-                  ><sup>Design, Publishing</sup>
-                </p>
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://studiorelease.kr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >스튜디오 릴리즈</a
-                  ><sup>Design, Publishing</sup>
-                </p>
+                <article
+                  name="seoyoosuk
+"
+                >
+                  <p>
+                    <a class="slash c-hover" href="#seoyoosuk" rel="modal:open"
+                      >스테이 서유숙</a
+                    ><sup>Design, Publishing</sup>
+                  </p>
 
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://ohoi.xyz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >오호이 프로젝트</a
-                  ><sup>Design</sup>
-                </p>
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://everylittlething.co.kr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >에브리리틀씽</a
-                  ><sup>Design, Publishing</sup>
-                </p>
+                  <div id="seoyoosuk" class="modal">
+                    <address>
+                      <a
+                        href="https://seoyoosuk.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
 
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://ag-shop.kr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    안샵</a
-                  ><sup>Design</sup>
-                </p>
-                <p>
-                  <a
-                    class="slash c-hover"
-                    href="https://bmca.or.kr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    블루메미술관</a
-                  ><sup>Publishing</sup>
-                </p>
+                <article name="verythings">
+                  <p>
+                    <a class="slash c-hover" href="#verythings" rel="modal:open"
+                      >스튜디오 베리띵즈</a
+                    ><sup>Design, Publishing</sup>
+                  </p>
+
+                  <div id="verythings" class="modal">
+                    <address>
+                      <a
+                        href="https://verythings.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
+
+                <article name="release">
+                  <p>
+                    <a class="slash c-hover" href="#release" rel="modal:open"
+                      >스튜디오 릴리즈</a
+                    ><sup>Design, Publishing</sup>
+                  </p>
+
+                  <div id="release" class="modal">
+                    <address>
+                      <a
+                        href="https://studiorelease.kr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <!-- <figure>
+                      <img src="./assets/img/thumb/graphic-designer.jpg" />
+                      <img src="./assets/img/thumb/graphic-designer.jpg" />
+                      <img src="./assets/img/thumb/graphic-designer.jpg" />
+                      <img src="./assets/img/thumb/graphic-designer.jpg" />
+                      <img src="./assets/img/thumb/graphic-designer.jpg" />
+                    </figure> -->
+
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
+
+                <article name="ohoi">
+                  <p>
+                    <a class="slash c-hover" href="#ohoi" rel="modal:open"
+                      >오호이 프로젝트</a
+                    ><sup>Design</sup>
+                  </p>
+                  <div id="ohoi" class="modal">
+                    <address>
+                      <a
+                        href="https://ohoi.xyz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
+
+                <article name="elt">
+                  <p>
+                    <a class="slash c-hover" href="#elt" rel="modal:open"
+                      >에브리리틀씽</a
+                    ><sup>Design, Publishing</sup>
+                  </p>
+
+                  <div id="elt" class="modal">
+                    <address>
+                      <a
+                        href="https://everylittlething.co.kr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
+
+                <article name="agshop">
+                  <p>
+                    <a class="slash c-hover" href="#agshop" rel="modal:open">
+                      안샵</a
+                    ><sup>Design</sup>
+                  </p>
+                  <div id="agshop" class="modal">
+                    <address>
+                      <a
+                        href="https://ag-shop.kr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
+
+                <article name="bmca">
+                  <p>
+                    <a class="slash c-hover" href="#bmca" rel="modal:open">
+                      블루메미술관</a
+                    ><sup>Publishing</sup>
+                  </p>
+                  <div id="bmca" class="modal">
+                    <address>
+                      <a
+                        href="https://bmca.or.kr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visit Website ←</a
+                      >
+                    </address>
+                    <div class="scroll">
+                      <div class="scroll-items">
+                        <figure>
+                          <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                          <!-- <figcaption>sdfsdffsd</figcaption> -->
+                        </figure>
+                      </div>
+                    </div>
+                    <a href="#" rel="modal:close"></a>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
@@ -1068,93 +1213,303 @@
             >
               <span class="subtitle">Project</span>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://colonslashslash.neocities.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >http://</a
-                ><sup><time>20-09-27</time></sup>
-              </p>
+              <article name="protocol">
+                <p>
+                  <a class="slash c-hover" href="#protocol" rel="modal:open"
+                    >http://</a
+                  ><sup><time>20-09-27</time></sup>
+                </p>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://gyeon2357.github.io/team2200/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >TEAM2200 기획안</a
-                ><sup>21-09-02</sup>
-              </p>
+                <div id="protocol" class="modal">
+                  <address>
+                    <a
+                      href="https://colonslashslash.neocities.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://gyeon2357.github.io/anchor"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >anchor</a
-                ><sup>21-10-27</sup>
-              </p>
+              <article name="team2200">
+                <p>
+                  <a class="slash c-hover" href="#team2200" rel="modal:open"
+                    >TEAM2200 기획안</a
+                  ><sup>21-09-02</sup>
+                </p>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://intimatepast.github.io/webgl_panorama_equirectangular/webgl_panorama_equirectangular.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >intimatepast</a
-                ><sup>21-12-11</sup>
-              </p>
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://nase-pocket.github.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >nase pocket</a
-                ><sup>21-12-30</sup>
-              </p>
+                <div id="team2200" class="modal">
+                  <address>
+                    <a
+                      href="https://gyeon2357.github.io/team2200/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://comping-example.github.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Happiness Sans comping test</a
-                ><sup>22-2-11</sup>
-              </p>
+              <article name="anchor">
+                <p>
+                  <a class="slash c-hover" href="#anchor" rel="modal:open"
+                    >anchor</a
+                  ><sup>21-10-27</sup>
+                </p>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://underline.neocities.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >밑줄 긋는 방법</a
-                ><sup>22-03-01</sup>
-              </p>
+                <div id="anchor" class="modal">
+                  <address>
+                    <a
+                      href="https://gyeon2357.github.io/anchor"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
 
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://choiyechan.info"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >최예찬의 cv</a
-                ><sup>23-01-14</sup>
-              </p>
-              <p>
-                <a
-                  class="slash c-hover"
-                  href="https://lovepeacevibe.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >lovepeacevibe</a
-                ><sup>23-05-02</sup>
-              </p>
+              <article name="intimatepast">
+                <p>
+                  <a class="slash c-hover" href="#intimatepast" rel="modal:open"
+                    >intimatepast</a
+                  ><sup>21-12-11</sup>
+                </p>
+
+                <div id="intimatepast" class="modal">
+                  <address>
+                    <a
+                      href="https://intimatepast.github.io/webgl_panorama_equirectangular/webgl_panorama_equirectangular.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
+              <article name="nasepocket">
+                <p>
+                  <a class="slash c-hover" href="#nasepocket" rel="modal:open"
+                    >nase pocket</a
+                  ><sup>21-12-30</sup>
+                </p>
+
+                <div id="nasepocket" class="modal">
+                  <address>
+                    <a
+                      href="https://nase-pocket.github.io"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
+
+              <article name="comping">
+                <p>
+                  <a class="slash c-hover" href="#comping" rel="modal:open"
+                    >Happiness Sans comping test</a
+                  ><sup>22-2-11</sup>
+                </p>
+
+                <div id="comping" class="modal">
+                  <address>
+                    <a
+                      href="https://comping-example.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
+
+              <article name="underline">
+                <p>
+                  <a class="slash c-hover" href="#underline" rel="modal:open"
+                    >밑줄 긋는 방법</a
+                  ><sup>22-03-01</sup>
+                </p>
+
+                <div id="underline" class="modal">
+                  <address>
+                    <a
+                      href="https://underline.neocities.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
+
+              <article name="choicv">
+                <p>
+                  <a class="slash c-hover" href="#choicv" rel="modal:open"
+                    >최예찬의 cv</a
+                  ><sup>23-01-14</sup>
+                </p>
+
+                <div id="choicv" class="modal">
+                  <address>
+                    <a
+                      href="https://choiyechan.info"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
+              <article name="lovepeacevibe">
+                <p>
+                  <a
+                    class="slash c-hover"
+                    href="#lovepeacevibe"
+                    rel="modal:open"
+                    >lovepeacevibe</a
+                  ><sup>23-05-02</sup>
+                </p>
+
+                <div id="lovepeacevibe" class="modal">
+                  <address>
+                    <a
+                      href="https://lovepeacevibe.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Website ←</a
+                    >
+                  </address>
+                  <div class="scroll">
+                    <div class="scroll-items">
+                      <figure>
+                        <!-- <img
+                            class="lazy"
+                            src="https://ik.imagekit.io/gyeon/boooooom-1.jpg?tr=h-1,w-1"
+                            data-src="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
+                            alt="boooooom"
+                          /> -->
+                        <!-- <figcaption>sdfsdffsd</figcaption> -->
+                      </figure>
+                    </div>
+                  </div>
+                  <a href="#" rel="modal:close"></a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -1242,75 +1597,74 @@
       type="text/javascript"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/lazyload.js"></script>
     <script src="./assets/js/jquery.modal.js"></script>
     <script src="./assets/js/slide-stories.js"></script>
 
     <script type="module" src="./assets/js/index.e9a2d1b4.js"></script>
     <script src="./assets/js/index.b5e7c14d.js" nomodule defer></script>
-    <script src="./assets/js/webflow.472574a57.js"></script>
-  </body>
+    <script src="./assets/js/template.js"></script>
 
-  <script>
-    $(function () {
-      // details
-      $("blockquote").click(function () {
-        $("blockquote", this).toggle();
-        $(".title-block", this).attr("data-after", function (i, attr) {
-          return attr == "+" ? "-" : "+";
+    <script>
+      $(function () {
+        // details
+        $("blockquote").click(function () {
+          $("blockquote", this).toggle();
+          $(".title-block", this).attr("data-after", function (i, attr) {
+            return attr == "+" ? "-" : "+";
+          });
         });
+
+        // add figcaption
+        let num = $("#thumb figure img").index();
+        var length = $("#thumb figure").length;
+        $("#thumb figure img").each(function () {
+          if (num == "index") num = 0;
+          else num++;
+          $(this).after($("<figcaption>").text(num + " / " + length));
+        });
+
+        //scroll-to-top
+        $(".menu-home").click(function () {
+          $("html, body").animate({scrollTop: 0}, "slow");
+          return false;
+        });
+
+        // status bar
+        var counter = document.querySelector(".status");
+
+        function progress() {
+          var windowScrollTop = $(window).scrollTop();
+          var docHeight = $(document).height();
+          var windowHeight = $(window).height();
+          var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+
+          var $bgColor = progress > 99 ? "#fcfcfc" : "#fcfcfc";
+          var $textColor = progress > 99 ? "#fcfcfc" : "#666";
+
+          $(".status-text")
+            .text(Math.round(progress) + "%")
+            .css({color: $textColor});
+
+          $(".status-fill")
+            .height(progress + "%")
+            .css({backgroundColor: $bgColor});
+        }
+        progress();
+        $(document).on("scroll", progress);
+
+        // modal function
+        if ($(".current").is(":visible")) {
+          $(".content-page").css("filter", "blur(8px)");
+        } else {
+          $(".content-page").css("filter", "");
+        }
       });
-
-      // add figcaption
-      let num = $("#thumb figure img").index();
-      var length = $("#thumb figure").length;
-      $("#thumb figure img").each(function () {
-        if (num == "index") num = 0;
-        else num++;
-        $(this).after($("<figcaption>").text(num + " / " + length));
-      });
-
-      //scroll-to-top
-      $(".menu-home").click(function () {
-        $("html, body").animate({scrollTop: 0}, "slow");
-        return false;
-      });
-
-      // status bar
-      var counter = document.querySelector(".status");
-
-      function progress() {
-        var windowScrollTop = $(window).scrollTop();
-        var docHeight = $(document).height();
-        var windowHeight = $(window).height();
-        var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
-
-        var $bgColor = progress > 99 ? "#fcfcfc" : "#fcfcfc";
-        var $textColor = progress > 99 ? "#fcfcfc" : "#666";
-
-        $(".status-text")
-          .text(Math.round(progress) + "%")
-          .css({color: $textColor});
-
-        $(".status-fill")
-          .height(progress + "%")
-          .css({backgroundColor: $bgColor});
-      }
-      progress();
-      $(document).on("scroll", progress);
-
-      // modal function
-      if ($(".current").is(":visible")) {
-        $(".content-page").css("filter", "blur(10px)");
-      } else {
-        $(".content-page").css("filter", "");
-      }
-    });
-  </script>
-  <!-- to https -->
-  <!-- <script>
+    </script>
+    <!-- to https -->
+    <!-- <script>
     if (location.protocol != "https:") {
       window.location = "https://" + location.host + location.pathname;
     }
   </script> -->
+  </body>
 </html>
