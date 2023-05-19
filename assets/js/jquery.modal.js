@@ -94,7 +94,7 @@
       },
       block: function () {
         this.$elm.trigger(o.modal.BEFORE_BLOCK, [this._ctx()]),
-          $(".content-page, .status").css("filter", "blur(6px)"),
+          $(".content-page, .status").css("filter", "blur(12px)"),
           this.$body.css("overflow", "hidden"),
 
           (this.$blocker = o(
@@ -200,7 +200,7 @@
       showSpinner: !0,
       showClose: !0,
       fadeDuration: null,
-      fadeDelay: 1,
+      fadeDelay: 300,
     }),
     (o.modal.BEFORE_BLOCK = "modal:before-block"),
     (o.modal.BLOCK = "modal:block"),

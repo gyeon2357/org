@@ -28,6 +28,7 @@ class SlideStories {
       this.autoSlide();
     } else {
       this.activeSlide(0);
+      // close blocker
     }
   }
 
@@ -61,21 +62,21 @@ class SlideStories {
 
 new SlideStories("thisisthumb");
 
-// new SlideStories("work-1");
-// new SlideStories("work-2");
-// new SlideStories("work-3");
-// new SlideStories("work-4");
-// new SlideStories("work-5");
-// new SlideStories("work-6");
-// new SlideStories("work-7");
-// new SlideStories("work-8");
+new SlideStories("work-1");
+new SlideStories("work-2");
+new SlideStories("work-3");
+new SlideStories("work-4");
+new SlideStories("work-5");
+new SlideStories("work-6");
+new SlideStories("work-7");
+new SlideStories("work-8");
 
-// new SlideStories("project-1");
-// new SlideStories("project-2");
-// new SlideStories("project-3");
-// new SlideStories("project-4");
-// new SlideStories("project-5");
-// new SlideStories("project-6");
-// new SlideStories("project-7");
-// new SlideStories("project-8");
-// new SlideStories("project-9");
+new SlideStories("side-project-1");
+new SlideStories("side-project-2");
+new SlideStories("side-project-3");
+new SlideStories("side-project-4");
+new SlideStories("side-project-5");
+new SlideStories("side-project-6");
+new SlideStories("side-project-7");
+new SlideStories("side-project-8");
+new SlideStories("side-project-9");
