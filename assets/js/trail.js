@@ -62,11 +62,11 @@ class ImageTrailEffect {
     // 3d
     perspective: false,
     // Total number of inner image elements
-    totalTrailElements: 1,
+    totalTrailElements: 5,
     // How much to translate and rotate the images (in both the x and y axis)
     valuesFromTo: {
-      x: [-150, 150],
-      y: [-150, 150],
+      x: [-75, 75],
+      y: [-75, 75],
       rx: [0, 0],
       ry: [0, 0],
       rz: [0, 0],
@@ -219,20 +219,22 @@ class ImageTrailEffect {
 
 // Initialize trail effect
 new ImageTrailEffect(document.querySelector(".trail-1"), {});
-new ImageTrailEffect(document.querySelector(".trail-2"), {});
-new ImageTrailEffect(document.querySelector(".trail-3"), {});
-new ImageTrailEffect(document.querySelector(".trail-4"), {});
-new ImageTrailEffect(document.querySelector(".trail-5"), {});
-new ImageTrailEffect(document.querySelector(".trail-6"), {});
-new ImageTrailEffect(document.querySelector(".trail-7"), {});
-new ImageTrailEffect(document.querySelector(".trail-8"), {});
-new ImageTrailEffect(document.querySelector(".trail-9"), {});
-new ImageTrailEffect(document.querySelector(".trail-10"), {});
-new ImageTrailEffect(document.querySelector(".trail-11"), {});
-new ImageTrailEffect(document.querySelector(".trail-12"), {});
-new ImageTrailEffect(document.querySelector(".trail-13"), {});
-new ImageTrailEffect(document.querySelector(".trail-14"), {});
-new ImageTrailEffect(document.querySelector(".trail-15"), {});
-new ImageTrailEffect(document.querySelector(".trail-16"), {});
-new ImageTrailEffect(document.querySelector(".trail-17"), {});
-new ImageTrailEffect(document.querySelector(".trail-18"), {});
+new ImageTrailEffect(document.querySelector(".trail-2"));
+new ImageTrailEffect(document.querySelector(".trail-3"));
+new ImageTrailEffect(document.querySelector(".trail-4"));
+new ImageTrailEffect(document.querySelector(".trail-5"));
+new ImageTrailEffect(document.querySelector(".trail-6"));
+new ImageTrailEffect(document.querySelector(".trail-7"));
+new ImageTrailEffect(document.querySelector(".trail-8"));
+new ImageTrailEffect(document.querySelector(".trail-9"));
+new ImageTrailEffect(document.querySelector(".trail-10"));
+new ImageTrailEffect(document.querySelector(".trail-11"));
+new ImageTrailEffect(document.querySelector(".trail-12"));
+new ImageTrailEffect(document.querySelector(".trail-13"));
+new ImageTrailEffect(document.querySelector(".trail-14"));
+new ImageTrailEffect(document.querySelector(".trail-15"));
+new ImageTrailEffect(document.querySelector(".trail-16"));
+new ImageTrailEffect(document.querySelector(".trail-17"));
+new ImageTrailEffect(document.querySelector(".trail-18"));
+
+// new ImageTrailEffect(document.querySelector(".trail").forEach, {});
