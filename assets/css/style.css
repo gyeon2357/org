@@ -1732,6 +1732,8 @@ address a:hover {
   position: relative;
   will-change: transform;
   grid-area: 1 / 1 / 2 / 2;
+
+  cursor: pointer;
 }
 
 .cursor-wrapper {
@@ -2316,8 +2318,8 @@ blockquote img {
 
 .status-text {
   font-size: 0.75rem;
-  margin: 0 -2rem;
-  color: var(--main-color);
+  margin: 0 -1.75rem;
+  color: #333;
 }
 
 .status-fill {
@@ -3339,14 +3341,13 @@ blockquote img {
     line-height: 1.125;
   }
 
-
   .status {
     right: 4%;
     height: 6rem;
   }
 
   .status-text {
-    margin: 0 -1.75rem;
+    margin: 0 -1.5rem;
     font-size: 0.5rem;
     letter-spacing: 0.25px;
   }
