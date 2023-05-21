@@ -181,7 +181,7 @@
         class="status"
       >
         <div class="status-fill"></div>
-        <!-- <div class="counter"><p class="status-text"></p></div> -->
+        <div class="counter"><p class="status-text"></p></div>
       </div>
     </aside>
 
@@ -1786,7 +1786,7 @@
           var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
 
           var $bgColor = progress > 99 ? "#fcfcfc" : "#fcfcfc";
-          var $textColor = progress > 99 ? "#fcfcfc" : "#666";
+          var $textColor = progress > 99 ? "#fcfcfc" : "#9a13b8";
 
           $(".status-text")
             .text(Math.round(progress) + "%")
