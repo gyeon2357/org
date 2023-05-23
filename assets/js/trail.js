@@ -17,14 +17,8 @@ const getCursorPos = ev => {
   };
 };
 
-/**
- * Map number x from range [a, b] to [c, d]
- */
 const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
 
-/**
- * Calculates the viewport size
- */
 const calcWinsize = () => {
   return {
     width: window.innerWidth,
@@ -32,12 +26,9 @@ const calcWinsize = () => {
   };
 };
 
-// Viewport size
 let winsize = calcWinsize();
-// Re-calculate on resize
-window.addEventListener("resize", () => (winsize = calcWinsize()));
 
-// Track the cursor position
+window.addEventListener("resize", () => (winsize = calcWinsize()));
 let cursor = {x: winsize.width / 2, y: winsize.height / 2};
 window.addEventListener("mousemove", ev => (cursor = getCursorPos(ev)));
 
@@ -48,25 +39,19 @@ window.addEventListener("mousemove", ev => (cursor = getCursorPos(ev)));
  */
 
 class ImageTrailEffect {
-  // DOM elements
   DOM = {
-    // Main element (.trail)
     el: null,
-    // Trail elements (.trail__img)
     trailElems: null,
   };
-  // the image path
+
   bgImage;
-  // option defaults
+
   defaults = {
-    // 3d
     perspective: false,
-    // Total number of inner image elements
     totalTrailElements: 5,
-    // How much to translate and rotate the images (in both the x and y axis)
     valuesFromTo: {
-      x: [-75, 75],
-      y: [-75, 75],
+      x: [-100, 100],
+      y: [-100, 100],
       rx: [0, 0],
       ry: [0, 0],
       rz: [0, 0],
@@ -122,10 +107,8 @@ class ImageTrailEffect {
         this.bgImage
       }" style="opacity: ${this.options.opacityChange ? opacityVal : 1}"/>`;
     }
-    // Append to the main element
-    this.DOM.el.innerHTML = innerHTML;
 
-    // Get inner .trail__img elements
+    this.DOM.el.innerHTML = innerHTML;
     this.DOM.trailElems = this.DOM.el.querySelectorAll(".trail__img");
 
     // 3d
@@ -145,7 +128,6 @@ class ImageTrailEffect {
           ? this.options.amtMain
           : this.options.amt(this.options.totalTrailElements - 1);
 
-      // Apply interpolated values (smooth effect)
       this.imgTransforms[i].x = lerp(
         this.imgTransforms[i].x,
         map(
@@ -211,13 +193,10 @@ class ImageTrailEffect {
         i
       ].style.transform = `translateX(${this.imgTransforms[i].x}px) translateY(${this.imgTransforms[i].y}px) rotateX(${this.imgTransforms[i].rx}deg) rotateY(${this.imgTransforms[i].ry}deg) rotateZ(${this.imgTransforms[i].rz}deg)`;
     }
-
-    // loop...
     requestAnimationFrame(() => this.render());
   }
 }
 
-// Initialize trail effect
 new ImageTrailEffect(document.querySelector(".trail-1"), {});
 new ImageTrailEffect(document.querySelector(".trail-2"));
 new ImageTrailEffect(document.querySelector(".trail-3"));

@@ -1,16 +1,36 @@
+@font-face {
+  font-family: "national-2";
+  src: url("../fonts/national-2-regular.woff2") format("woff2");
+}
+
 :root {
   --main-color: #9a13b8;
   --main-color-50: #9a13b8dd;
   --main-text-color: #333;
 
+  --purple-01: #E1C5FE;
+  --purple-02: #D3AAFD;
+  --purple-03: #C084FC;
+  --purple-04: #B773FB;
+  --purple-06: #A451F7;
+  --purple-08: #8256AE;
+  --purple-10: #533670;
+
+  --red-01: #FFC2AF;
+  --red-03: #FF784D;
+  --red-06: #F05C2E;
+  --red-07: #F5511D;
+  --red-09: #E7301D;
+
+  --yellow-02: #FFF7BF;
+  --yellow-05: #FFEB60;
+  --yellow-06: #FFE04B;
+  --yellow-08: #FFC71E;
+  --yellow-09: #FFC71E;
+
   --body-font: "national-2", "Pretendard Variable", -apple-system,
     BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
     Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-}
-
-@font-face {
-  font-family: "national-2";
-  src: url("../fonts/national-2-regular.woff2") format("woff2");
 }
 
 html {
@@ -160,6 +180,11 @@ a {
   line-height: 1;
 }
 
+mark {
+  color: var(--red-03);
+  background: transparent;
+}
+
 fieldset {
   padding: 0;
   margin: 0;
@@ -255,7 +280,7 @@ label {
 
 .w-input:focus,
 .w-select:focus {
-  border-color: var(--main-color);
+  border-color: var(--purple-06);
   outline: 0;
 }
 
@@ -1510,7 +1535,7 @@ sup::before {
   overflow: hidden;
   z-index: 1;
 
-  background-color: var(--main-color-50);
+  background-color: #ab5ef9e5;
   text-align: center;
 }
 
@@ -1608,6 +1633,25 @@ sup::before {
   -ms-user-select: none;
 }
 
+.thumb-caption {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  word-break: keep-all;
+
+  width: 100%;
+  color: #fcfcfc;
+}
+
+.thumb-caption p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .caption {
   display: flex;
   flex-direction: column;
@@ -1662,7 +1706,7 @@ sup::before {
   content: " ";
   height: 120px;
   width: 2px;
-  background-color: #fcfcfc50;
+  background-color: #fcfcfc70;
 
   margin-left: 70px;
 }
@@ -1699,7 +1743,7 @@ sup::before {
 }
 
 address a:hover {
-  color: var(--main-color);
+  color: var(--purple-06);
 }
 
 .trail-1,
@@ -1871,7 +1915,7 @@ address a:hover {
 }
 
 .lottie-animation {
-  max-width: 400px;
+  max-width: 800px;
 }
 
 #w-node-_796169e2-89c3-7da2-cb60-e140a86fa8e2-ae93e34f {
@@ -2296,7 +2340,7 @@ blockquote img {
 
 .sticky-grid>#wtf-lottie-box {
   grid-row-start: 1;
-  grid-column: 12 / span 5;
+  grid-column: 12 / span 6;
 }
 
 /* status bar */
@@ -2311,14 +2355,14 @@ blockquote img {
   transform: translateY(-50%);
   right: 1.5vw;
 
-  background: var(--main-color-50);
+  background: var(--purple-03);
   height: 5rem;
   width: 1px;
 }
 
 .status-text {
   font-size: 0.75rem;
-  margin: 0 -1.75rem;
+  margin: 0 -2rem;
   color: #333;
 }
 
@@ -2913,9 +2957,11 @@ blockquote img {
     padding: 1rem;
   }
 
+  .thumb-caption,
   .caption {
     padding: 0 4%;
   }
+
 
   .modal a.close-modal {
     width: 80px;
@@ -3443,7 +3489,7 @@ blockquote img {
   .sticky-grid>#wtf-contact-box {
     grid-row-start: 1;
     grid-column-start: 5;
-    grid-column: span 4;
+    grid-column: span 10;
   }
 }
 
