@@ -214,6 +214,5 @@ new ImageTrailEffect(document.querySelector(".trail-14"));
 new ImageTrailEffect(document.querySelector(".trail-15"));
 new ImageTrailEffect(document.querySelector(".trail-16"));
 new ImageTrailEffect(document.querySelector(".trail-17"));
-new ImageTrailEffect(document.querySelector(".trail-18"));
 
 // new ImageTrailEffect(document.querySelector(".trail").forEach, {});

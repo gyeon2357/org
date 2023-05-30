@@ -9,6 +9,7 @@
   --main-text-color: #333;
 
   --purple-01: #E1C5FE;
+  --purple-01-50: #e1c5fe7f;
   --purple-02: #D3AAFD;
   --purple-03: #C084FC;
   --purple-04: #B773FB;
@@ -177,7 +178,6 @@ a {
   text-decoration: none;
 
   color: #333;
-  line-height: 1;
 }
 
 mark {
@@ -1061,7 +1061,7 @@ textarea.w-select {
 .grid-work {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 7.5rem;
+  margin-bottom: 50vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -1225,8 +1225,16 @@ textarea.w-select {
 
 .subtitle {
   margin-right: 2%;
-  font-size: 0.875rem;
-  line-height: 1;
+  font-size: 0.75rem;
+  line-height: 3;
+
+  /* background-color: var(--purple-01-50);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.875rem; */
+}
+
+article:nth-child(1) {
+  margin-top: 3rem;
 }
 
 small {
@@ -1238,16 +1246,36 @@ cite {
   display: block;
 }
 
+.h2 p {
+  margin: 0 auto;
+  max-width: 75%;
+
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+
+  word-break: keep-all;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: row;
+}
+
 .slash {
   font-size: 100%;
   margin-right: 0.625rem;
-  box-shadow: inset 0 -1px 0 0 #333;
-  transition: all 0.25s cubic-bezier(0, 0, 0.23, 1);
+  box-shadow: none;
+  transition: all 0.125s cubic-bezier(0, 0, 0.23, 1);
+}
+
+.project-title span {
+  font-size: 50%;
+  margin-top: 0.25rem;
 }
 
 sub {
   font-size: 75%;
-  bottom: 0.125rem;
+  bottom: -0.75rem;
   text-transform: lowercase;
 }
 
@@ -1269,7 +1297,8 @@ sup::before {
 
 .slash:visited,
 .slash:hover {
-  box-shadow: none;
+
+  box-shadow: inset 0 -1px 0 0 #333;
   opacity: 0.7;
 }
 
@@ -1593,7 +1622,7 @@ sup::before {
   position: absolute;
 
   width: 100%;
-  height: auto;
+  height: 100%;
 
   opacity: 1;
   pointer-events: none;
@@ -1624,7 +1653,7 @@ sup::before {
   height: 100%;
 
   padding: 1.5rem;
-  object-fit: cover;
+  object-fit: contain;
 
   user-select: none;
   -moz-user-select: none;
@@ -1762,19 +1791,17 @@ address a:hover {
 .trail-14,
 .trail-15,
 .trail-16,
-.trail-17,
-.trail-18,
-.trail-19,
-.trail-20 {
+.trail-17 {
   position: relative;
   display: grid;
   place-items: center;
 }
 
 .trail__img {
-  max-height: 45vh;
+  max-height: 50vh;
   position: relative;
   will-change: transform;
+
   grid-area: 1 / 1 / 2 / 2;
 
   cursor: pointer;
@@ -2025,30 +2052,31 @@ address a:hover {
   margin-bottom: 0.625rem;
 } */
 
-.h2 p {
-  margin: 0 auto;
-  max-width: 80%;
 
-  line-height: 1.65;
-  margin-bottom: 0.625rem;
-
-  word-break: keep-all;
-}
 
 blockquote {
   font-size: 1.125rem;
   border-left: 1px solid #ddd;
 }
 
+blockquote.block-box {
+  margin: 2rem 0;
+}
+
+/* ** */
+blockquote.block-box:nth-of-type(1) {
+  margin: 0;
+}
+
 blockquote p {
   margin: 0.625rem 0.875rem !important;
 }
 
-.title-block {
+.block-header {
   cursor: pointer;
 }
 
-blockquote .title-block::after {
+blockquote .block-header::after {
   position: absolute;
   content: attr(data-after);
 
@@ -2064,7 +2092,7 @@ blockquote .title-block::after {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-blockquote blockquote {
+blockquote>blockquote {
   border-left: 1px dotted #ddd;
   display: none;
 }
@@ -2136,7 +2164,8 @@ blockquote img {
   grid-column: 3 / span 5;
 }
 
-#wtf-main-content p {
+#wtf-main-content p,
+#wtf-contact-box p {
   font-size: 1.5rem;
 }
 
@@ -2363,7 +2392,7 @@ blockquote img {
 .status-text {
   font-size: 0.75rem;
   margin: 0 -2rem;
-  color: #333;
+  color: #aaa;
 }
 
 .status-fill {
@@ -2394,7 +2423,10 @@ blockquote img {
     grid-template-areas: "Area-3 Area-2";
     grid-template-columns: minmax(15.625rem, 1fr) repeat(auto-fit,
         minmax(15.625rem, 1fr));
+
+    margin-bottom: 12.5vh;
   }
+
 
   .grid-work.content-move-up {
     grid-template-columns: minmax(15.625rem, 1fr) repeat(auto-fit,
@@ -3003,6 +3035,12 @@ blockquote img {
 
   .subtitle {
     margin-left: 2%;
+    line-height: 10;
+  }
+
+  .h2 p {
+    max-width: 85%;
+    margin-bottom: 0.625rem;
   }
 
   .nav-home {
@@ -3430,8 +3468,8 @@ blockquote img {
   }
 
   .subtitle {
-    font-size: 0.8vw;
-    line-height: 1.4;
+    font-size: 0.75vw;
+    line-height: 6;
   }
 
   .title-grid {

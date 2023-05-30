@@ -70,6 +70,7 @@ new SlideStories("work-5");
 new SlideStories("work-6");
 new SlideStories("work-7");
 new SlideStories("work-8");
+new SlideStories("work-9");
 
 new SlideStories("side-project-1");
 new SlideStories("side-project-2");
