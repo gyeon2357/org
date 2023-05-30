@@ -1631,11 +1631,11 @@ sup::before {
 .slide-items>figure figcaption {
   position: fixed;
 
-  font-size: 0.75rem;
-  letter-spacing: 0.2px;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
   width: fit-content;
 
-  color: #333;
+  color: #fff;
   mix-blend-mode: difference;
 
   transform: translate(-50%, -50%);
@@ -1791,7 +1791,8 @@ address a:hover {
 .trail-14,
 .trail-15,
 .trail-16,
-.trail-17 {
+.trail-17,
+.trail-18 {
   position: relative;
   display: grid;
   place-items: center;
