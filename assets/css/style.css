@@ -1631,9 +1631,12 @@ sup::before {
 .slide-items>figure figcaption {
   position: fixed;
 
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 0.1px;
+  text-align: center;
+
   width: fit-content;
+  white-space: nowrap;
 
   color: #fff;
   mix-blend-mode: difference;
@@ -1663,20 +1666,13 @@ sup::before {
 }
 
 .thumb-caption {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  word-break: keep-all;
-
-  width: 100%;
   color: #fcfcfc;
+  mix-blend-mode: difference;
 }
 
 .thumb-caption p {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2px;
   line-height: 1.5;
   margin: 0;
 }
@@ -1792,7 +1788,8 @@ address a:hover {
 .trail-15,
 .trail-16,
 .trail-17,
-.trail-18 {
+.trail-18,
+.trail-19 {
   position: relative;
   display: grid;
   place-items: center;
