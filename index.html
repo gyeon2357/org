@@ -148,7 +148,7 @@
 
         <div class="email-footer">
           <p class="nav-link">
-            <a href="#" class="menu-work link c-hover"></a>
+            <a href="#toproject" class="menu-work link c-hover">→ project</a>
           </p>
           <div class="link_underline"></div>
         </div>
@@ -216,13 +216,14 @@
               "
               class="h2"
             >
-              <!-- <span class="subtitle">About</span>
+              <span class="subtitle">About</span>
 
-<p lang="ko">
-2, 3, 5, 7은 10 이내의 소수이다. 소수는 물질을 이루는 가장 작은
-단위인 원자와 같다. 소수는 자기 위치에 단단히 고정되어
-있으면서도, 소수의 분포에서 규칙을 찾을 수 없다.
-</p> -->
+              <p lang="ko">
+                사람들은 보고 싶은 대로 보며 살아갑니다. 평소에 보고 느낀 대로
+                사는 게 편하기 때문입니다. 저는 ‘확증편향’이라는 말을 경계하며
+                정견(正見)이라는 이름 그대로 올바르게 보기 위해 노력하고
+                있습니다.
+              </p>
             </div>
           </div>
         </section>
@@ -433,7 +434,7 @@
                             alt="self-introduction"
                           />
                           <span class="thumb-caption">
-                            <p>2014년</p>
+                            <p></p>
                           </span>
                         </figure>
 
@@ -488,7 +489,7 @@
               "
               class="h2"
             >
-              <span class="subtitle">Main Project</span>
+              <span class="subtitle" id="toproject">Main Project</span>
               <article name="seoyoosuk">
                 <p class="project-title">
                   <a class="slash c-hover" href="#seoyoosuk" rel="modal:open"
@@ -955,7 +956,7 @@
                         <h1>2021년 일상의 역사 달력</h1>
                         <h2>2020. 06.</h2>
                         <p>
-                          디자인 스튜디오 일상의 실천과 함께 “일상의 역사”라는
+                          디자인 스튜디오 일상의 실천과 함께 “일상의 역사”
                           2021년 달력 중 4월의 메인 이미지를 만들었습니다.
                         </p>
                         <p>
@@ -1496,7 +1497,9 @@
               class="h3"
             >
               <p class="mail">
-                <a class="h3 slash" href="mailto:jeong.gyeony@gmail.com">Email</a>
+                <a class="h3 slash" href="mailto:jeong.gyeony@gmail.com"
+                  >Email</a
+                >
               </p>
               <p class="mail">
                 <a
@@ -1569,6 +1572,52 @@
         $(".menu-home").click(function () {
           $("html, body").animate({scrollTop: 0}, "slow");
           return false;
+        });
+
+        //scroll-to-project
+        $(function () {
+          $(".menu-work").click(function () {
+            $("html, body").animate(
+              {scrollTop: $("#toproject").offset().top},
+              "slow"
+            );
+            return false;
+          });
+
+          if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+              navigator.userAgent
+            )
+          ) {
+            $(".menu-work").css({display: "none"});
+          }
+
+          window.onscroll = function () {
+            scrollFunction();
+            switchFunction();
+          };
+
+          function scrollFunction() {
+            if (
+              document.body.scrollTop > 20 ||
+              document.documentElement.scrollTop > 20
+            ) {
+              $(".menu-work").css("display", "block");
+            } else {
+              $(".menu-work").css("display", "none");
+            }
+          }
+
+          function switchFunction() {
+            if (
+              document.body.scrollTop > 20 ||
+              document.documentElement.scrollTop > 20
+            ) {
+              $(".switch").css("display", "block");
+            } else {
+              $(".switch").css("display", "none");
+            }
+          }
         });
 
         // status-bar
