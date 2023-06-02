@@ -15,6 +15,7 @@
   --purple-04: #B773FB;
   --purple-06: #A451F7;
   --purple-08: #8256AE;
+  --purple-08-50: #8256ae4a;
   --purple-10: #533670;
 
   --red-01: #FFC2AF;
@@ -1298,7 +1299,7 @@ sup::before {
 .slash:visited,
 .slash:hover {
 
-  box-shadow: inset 0 -1px 0 0 #333;
+  box-shadow: inset 0 -1px 0 0 var(--purple-08);
   opacity: 0.7;
 }
 
@@ -1388,6 +1389,7 @@ sup::before {
   pointer-events: none;
 
   z-index: 1001 !important;
+  filter: grayscale(1);
 }
 
 .nav-info {
@@ -2074,7 +2076,7 @@ address a:hover {
 
 blockquote {
   font-size: 1.125rem;
-  border-left: 1px solid #ddd;
+  border-left: 0.75px solid var(--purple-08-50);
 }
 
 blockquote.block-box {
@@ -2111,13 +2113,14 @@ blockquote .block-header::after {
 }
 
 blockquote>blockquote {
-  border-left: 1px dotted #ddd;
+  border-left: 1px dotted var(--purple-08-50);
   display: none;
 }
 
 blockquote img {
   width: 10rem;
   height: auto;
+  margin-left: 0.875rem;
   object-fit: contain;
 }
 
@@ -2402,7 +2405,7 @@ blockquote img {
   transform: translateY(-50%);
   right: 1.5vw;
 
-  background: var(--purple-03);
+  background: var(--purple-10);
   height: 5rem;
   width: 1px;
 }
