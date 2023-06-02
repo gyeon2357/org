@@ -1652,10 +1652,10 @@ sup::before {
 
 .slide-items>figure img,
 .trail-items>figure img {
-  width: 100%;
-  height: 100%;
+  width: calc(100%);
+  height: calc(100%);
 
-  padding: 1.5rem;
+  padding: 6rem;
   object-fit: contain;
 
   user-select: none;
@@ -1666,13 +1666,20 @@ sup::before {
 }
 
 .thumb-caption {
+  position: fixed;
+
+  transform: translate(-50%, -50%);
+  bottom: 4.5rem;
+  left: 50%;
+
   color: #fcfcfc;
   mix-blend-mode: difference;
 }
 
 .thumb-caption p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.2px;
+  white-space: nowrap;
   line-height: 1.5;
   margin: 0;
 }
@@ -2987,10 +2994,16 @@ blockquote img {
     padding: 1rem;
   }
 
+  .thumb-caption {
+    bottom: 2.25rem;
+  }
+
   .thumb-caption,
   .caption {
     padding: 0 4%;
   }
+
+
 
 
   .modal a.close-modal {
