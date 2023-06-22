@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* reset.css
+----------------------------------------- */
+html,body,h1,h2,h3,h4,h5,h6,p,div,
+ul,ol,li,dl,dt,dd,
+table,caption,th,td,
+form,button,label,address,blockquote,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline:0;
+	font-size: 100%;
+	font-weight: normal;
+}
+body {
+	line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+nav ul {
+	list-style:none;
+}
+hr {
+	display: none;
+}
+img,abbr {
+	border: none;
+	vertical-align: bottom;
+}
+ul,ol,li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,td {
+	text-align: left;
+}
+/* clearfix */
+.cf {
+	zoom: 1;
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
