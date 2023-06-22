@@ -212,10 +212,10 @@ new ImageTrailEffect(document.querySelector(".trail-1"), {
   totalTrailElements: 9,
   valuesFromTo: {
     x: [-100, 100],
-    y: [-50, 50],
+    y: [-100, 100],
     rx: [0, 0],
     ry: [0, 0],
-    rz: [-10, 10],
+    rz: [0, 0],
   },
   opacityChange: true,
 });
