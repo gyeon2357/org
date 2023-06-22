@@ -105,18 +105,20 @@
   margin: 0;
   padding: 0;
 }
-
 .main-visual-slide .m-slide01 {
-  background: url(../img/mainvisual01_sp.jpg) center center no-repeat;
+  background: url(../img/motel-1.jpg) center center no-repeat;
   background-size: cover;
+  filter: grayscale(1);
 }
 .main-visual-slide .m-slide02 {
-  background: url(../img/mainvisual02_sp.jpg) center center no-repeat;
+  background: url(../img/motel-2.jpg) center center no-repeat;
   background-size: cover;
+  filter: grayscale(1);
 }
 .main-visual-slide .m-slide03 {
-  background: url(../img/mainvisual03_sp.jpg) center center no-repeat;
+  background: url(../img/motel-3.jpg) center center no-repeat;
   background-size: cover;
+  filter: grayscale(1);
 }
 .main-visual-slide .m-slide04 {
   background: url(../img/mainvisual04_sp.jpg) center center no-repeat;
