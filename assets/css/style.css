@@ -99,13 +99,24 @@ header {
 
 h1 {
   font-size: 8rem;
+  display: inline;
 
   color: #fff !important;
   mix-blend-mode: difference;
 }
 
+header svg {
+  width: 6rem;
+  margin: 0 1rem 2.5rem 0;
+
+  fill: #fff !important;
+  mix-blend-mode: difference;
+}
+
 article {
   z-index: 1 !important;
+
+  padding-bottom: var(--height-space);
 }
 
 a {
@@ -165,6 +176,11 @@ sup {
 }
 
 @media screen and (max-width: 479px) {
+  header svg {
+    width: 2.75rem;
+    margin: 0 0.5rem 1.25rem 0;
+  }
+
   h1 {
     font-size: 3.5rem;
   }
