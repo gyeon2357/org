@@ -140,23 +140,6 @@ sup {
 
 /* lazy-motion */
 
-.canvas-wrap {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-position: 50% 50%;
-	background-size: cover;
-	opacity: 0;
-}
-
-.no-js .canvas-wrap {
-	opacity: 1;
-}
-
-
-
 /* modal.slide */
 
 .slide-button-style {
@@ -183,7 +166,7 @@ sup {
 
   z-index: 998 !important;
 }
-
+.thumb-items,
 .slide-items {
   position: relative;
   grid-area: 1 / 1;
@@ -253,8 +236,7 @@ sup {
   overflow: hidden;
   z-index: 1;
 
-  background-color: #ab5ef9e5;
-  text-align: center;
+  background-color: #333333cb;
 }
 
 .blocker:before {
@@ -290,46 +272,40 @@ sup {
   cursor: initial;
 }
 
-.slide-items > .active {
-  position: relative;
+.thumb-items > figure {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
   opacity: 1;
-  pointer-events: initial;
+
+  pointer-events: none;
+  outline: none;
 }
 
 .slide-items > figure {
   position: absolute;
 
   width: 100%;
-  height: auto;
+  height: 100%;
+  opacity: 0;
 
   pointer-events: none;
+  outline: none;
 }
 
-.slide-items > figure figcaption {
-  position: fixed;
-
-  font-size: 0.875rem;
-  letter-spacing: 0.1px;
-  text-align: center;
-
-  width: fit-content;
-  white-space: nowrap;
-
-  color: #fff;
-  mix-blend-mode: difference;
-
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 2.25rem;
-
-  padding: 0.25rem 0.75rem;
+.slide-items > .active {
+  position: relative;
+  opacity: 1;
+  pointer-events: initial;
 }
 
+.thumb-items > figure img,
 .slide-items > figure img {
   width: 100%;
   height: 100%;
 
-  padding: 6rem;
+  /* padding: 6rem; */
   object-fit: contain;
 
   user-select: none;
@@ -339,48 +315,33 @@ sup {
   -ms-user-select: none;
 }
 
-.thumb-caption {
-  position: fixed;
-
-  transform: translate(-50%, -50%);
-  bottom: 4.5rem;
-  left: 50%;
-
-  color: #fcfcfc;
-  mix-blend-mode: difference;
-}
-
-.thumb-caption p {
-  font-size: 1rem;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-  line-height: 1.5;
-  margin: 0;
-}
-
 .caption {
   display: flex;
   flex-direction: column;
 
-  justify-content: flex-start;
-  align-items: flex-start;
-
+  font-family: var(--body-font);
   word-break: keep-all;
 
   width: 100%;
   position: absolute;
 
+  background: #333;
   color: #fcfcfc;
   bottom: 8%;
-  padding: 0 2%;
+  left: 50%;
+
+  padding: 0.875rem;
+  z-index: 3;
 }
 
 .caption h1,
 .caption h2 {
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.35;
   margin: 0;
+
+  mix-blend-mode: normal;
 }
 
 .caption p {
@@ -508,7 +469,6 @@ address a:hover {
     top: 50%;
 
     width: 100%;
-    height: 400px;
 
     padding: 1rem;
   }
@@ -518,16 +478,14 @@ address a:hover {
   }
 
   .slide-items > figure img {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 
-  .thumb-caption {
-    bottom: 2.25rem;
-  }
-
-  .thumb-caption,
   .caption {
-    padding: 0 4%;
+    width: 75%;
+    left: 0;
+
+    padding: 0.5rem;
   }
 
   .modal a.close-modal {

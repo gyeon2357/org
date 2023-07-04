@@ -94,7 +94,7 @@
       },
       block: function () {
         this.$elm.trigger(o.modal.BEFORE_BLOCK, [this._ctx()]),
-          $(".status, main a").css("filter", "blur(8px)"),
+          $(".status, main a, header").css("filter", "blur(8px)"),
           this.$body.css("overflow", "hidden"),
           (this.$blocker = o(
             '<div class="' +
@@ -122,7 +122,7 @@
             (this.$blocker = null),
             n(),
             o.modal.isActive() || this.$body.css("overflow", ""),
-            $(".status, main a").css("filter", ""));
+            $(".status, main a, header").css("filter", ""));
       },
       show: function () {
         this.$elm.trigger(o.modal.BEFORE_OPEN, [this._ctx()]),
