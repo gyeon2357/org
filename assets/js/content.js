@@ -59,7 +59,7 @@ export class Content {
       this.setCanvasSize();
       this.render();
       // Set up event listeners and triggers
-
+      this.initEvents();
     };
   }
 
