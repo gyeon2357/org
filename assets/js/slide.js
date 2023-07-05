@@ -61,23 +61,3 @@ class SlideStories {
 }
 
 new SlideStories("thisisthumb");
-
-new SlideStories("work-1");
-new SlideStories("work-2");
-new SlideStories("work-3");
-new SlideStories("work-4");
-new SlideStories("work-5");
-new SlideStories("work-6");
-new SlideStories("work-7");
-new SlideStories("work-8");
-new SlideStories("work-9");
-
-new SlideStories("side-project-1");
-new SlideStories("side-project-2");
-new SlideStories("side-project-3");
-new SlideStories("side-project-4");
-new SlideStories("side-project-5");
-new SlideStories("side-project-6");
-new SlideStories("side-project-7");
-new SlideStories("side-project-8");
-new SlideStories("side-project-9");
