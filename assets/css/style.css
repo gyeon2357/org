@@ -1636,6 +1636,8 @@ sup::before {
 
   opacity: 1;
   pointer-events: none;
+
+  margin-top: 3rem;
 }
 
 .slide-items > figure figcaption {
@@ -1718,7 +1720,7 @@ sup::before {
   position: absolute;
 
   color: #fcfcfc;
-  bottom: 8%;
+  bottom: 10%;
   padding: 0 2%;
 }
 
@@ -1726,7 +1728,7 @@ sup::before {
 .caption h2 {
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -1820,7 +1822,7 @@ address a:hover {
 .trail-19 {
   position: relative;
   display: grid;
-  place-items: center;
+  place-items: start;
 }
 
 .trail__img {
