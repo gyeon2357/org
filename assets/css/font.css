@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "national-2";
+  src: url("../fonts/national-2-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ortank-display-bold";
+  src: url("../fonts/OrtankHangeulDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/OrtankHangeulDisplay-Bold.woff") format("woff"),
+    url("../fonts/OrtankHangeulDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ortank-text-bold";
+  src: url("../fonts/OrtankHangeulText-Bold.woff2") format("woff2"),
+    url("../fonts/OrtankHangeulText-Bold.woff") format("woff"),
+    url("../fonts/OrtankHangeulText-Bold.ttf") format("truetype");
+}
