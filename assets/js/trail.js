@@ -208,11 +208,22 @@ class ImageTrailEffect {
   }
 }
 
-new ImageTrailEffect(document.querySelector(".trail-1"), {
-  totalTrailElements: 9,
+new ImageTrailEffect(document.querySelector(".trail-0"), {
+   totalTrailElements: 6,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-15, 15],
+    y: [-15, 15],
+    rx: [0, 0],
+    ry: [0, 0],
+    rz: [0, 0],
+  },
+  opacityChange: true,
+});
+new ImageTrailEffect(document.querySelector(".trail-1"), {
+   totalTrailElements: 4,
+  valuesFromTo: {
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
