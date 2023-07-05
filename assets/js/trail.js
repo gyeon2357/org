@@ -220,10 +220,10 @@ new ImageTrailEffect(document.querySelector(".trail-1"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-2"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -231,10 +231,10 @@ new ImageTrailEffect(document.querySelector(".trail-2"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-3"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -242,10 +242,10 @@ new ImageTrailEffect(document.querySelector(".trail-3"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-4"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -253,10 +253,10 @@ new ImageTrailEffect(document.querySelector(".trail-4"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-5"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -264,10 +264,10 @@ new ImageTrailEffect(document.querySelector(".trail-5"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-6"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -275,10 +275,10 @@ new ImageTrailEffect(document.querySelector(".trail-6"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-7"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -286,10 +286,10 @@ new ImageTrailEffect(document.querySelector(".trail-7"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-8"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -297,10 +297,10 @@ new ImageTrailEffect(document.querySelector(".trail-8"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-9"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -308,10 +308,10 @@ new ImageTrailEffect(document.querySelector(".trail-9"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-10"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -319,10 +319,10 @@ new ImageTrailEffect(document.querySelector(".trail-10"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-11"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -330,10 +330,10 @@ new ImageTrailEffect(document.querySelector(".trail-11"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-12"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -341,10 +341,10 @@ new ImageTrailEffect(document.querySelector(".trail-12"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-13"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -352,10 +352,10 @@ new ImageTrailEffect(document.querySelector(".trail-13"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-14"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -363,10 +363,10 @@ new ImageTrailEffect(document.querySelector(".trail-14"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-15"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -374,10 +374,10 @@ new ImageTrailEffect(document.querySelector(".trail-15"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-16"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -385,10 +385,10 @@ new ImageTrailEffect(document.querySelector(".trail-16"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-17"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -396,10 +396,10 @@ new ImageTrailEffect(document.querySelector(".trail-17"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-18"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],
@@ -407,10 +407,10 @@ new ImageTrailEffect(document.querySelector(".trail-18"), {
   opacityChange: true,
 });
 new ImageTrailEffect(document.querySelector(".trail-19"), {
-  totalTrailElements: 6,
+  totalTrailElements: 4,
   valuesFromTo: {
-    x: [-100, 100],
-    y: [-100, 100],
+    x: [-30, 30],
+    y: [-30, 30],
     rx: [0, 0],
     ry: [0, 0],
     rz: [0, 0],

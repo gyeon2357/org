@@ -94,8 +94,9 @@
       },
       block: function () {
         this.$elm.trigger(o.modal.BEFORE_BLOCK, [this._ctx()]),
-          $(".status, main a, header").css("filter", "blur(8px)"),
+          $(".content-page, .status").css("filter", "blur(8px)"),
           this.$body.css("overflow", "hidden"),
+
           (this.$blocker = o(
             '<div class="' +
               this.options.blockerClass +
@@ -107,9 +108,6 @@
               .css("opacity", 0)
               .animate({opacity: 1}, this.options.fadeDuration),
           this.$elm.trigger(o.modal.BLOCK, [this._ctx()]);
-        
-
-        
       },
       unblock: function (t) {
         !t && this.options.doFade
@@ -122,7 +120,7 @@
             (this.$blocker = null),
             n(),
             o.modal.isActive() || this.$body.css("overflow", ""),
-            $(".status, main a, header").css("filter", ""));
+            $(".content-page, .status").css("filter", ""));
       },
       show: function () {
         this.$elm.trigger(o.modal.BEFORE_OPEN, [this._ctx()]),
