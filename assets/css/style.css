@@ -171,7 +171,7 @@ ul {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #fcfcfc;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -268,7 +268,6 @@ label {
   line-height: 1.42857143;
   color: #333;
 
-  background-color: #fcfcfc;
   border: 1px solid #ccc;
 }
 
@@ -397,7 +396,6 @@ textarea.w-select {
   margin: 0;
   padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
-  background-color: #fcfcfc;
 }
 
 .w-file-upload-file {
@@ -407,7 +405,6 @@ textarea.w-select {
   margin: 0;
   padding: 0.5rem 9px 0.5rem 0.6875rem;
   border: 1px solid #ccc;
-  background-color: #fcfcfc;
 }
 
 .w-file-upload-file-name {
@@ -451,7 +448,6 @@ textarea.w-select {
   margin: 0;
   padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
-  background-color: #fcfcfc;
 }
 
 .w-icon-file-upload-icon,
@@ -623,7 +619,6 @@ textarea.w-select {
 }
 
 .w-slider-dot.w-active {
-  background-color: #fcfcfc;
 }
 
 .w-slider-dot:focus {
@@ -1007,7 +1002,6 @@ textarea.w-select {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #fcfcfc;
 }
 
 .nav {
@@ -1249,14 +1243,14 @@ textarea.w-select {
   font-size: 1.125rem;
   line-height: 1;
 
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .content-line {
   position: absolute;
-  margin: 4.75rem auto;
+  margin: 3.625rem auto;
 
-  width: 3px;
+  width: 2px;
   height: 100%;
 
   background: #333;
@@ -1276,7 +1270,7 @@ cite {
 }
 
 .h2 p {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 
   line-height: 1.65;
   margin-bottom: 0.5rem;
@@ -1327,7 +1321,7 @@ sup::before {
 .slash:visited,
 .slash:hover {
   /* box-shadow: inset 0 -1px 0 0 var(--main-text-color); */
-color: #999;
+  color: #999;
 }
 
 .image-5 {
@@ -1904,7 +1898,6 @@ address a:hover {
   width: 5.75rem;
   height: 5.75rem;
   border-radius: 6.25rem;
-  background-color: #fcfcfc;
 }
 
 .email-footer {
@@ -2427,8 +2420,8 @@ blockquote img {
   flex-direction: column;
   justify-content: center;
 
-  height: 3px;
-  width: 33.3%;
+  height: 2px;
+  width: 50%;
 
   position: fixed;
   top: 1.5rem;
@@ -3111,15 +3104,19 @@ blockquote img {
 
   .subtitle {
     margin-left: 2%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
   }
 
   .content-line {
-    margin: 3.875rem 0 0 0.4rem;
-    width: 2px;
+    margin: 2.75rem 0 0 0.4rem;
+    width: 1px;
   }
 
   .h2 p {
+    margin: 0 2rem;
+
     max-width: 85%;
     margin-bottom: 0.625rem;
   }
@@ -3160,7 +3157,7 @@ blockquote img {
 
   .contact {
     margin-top: 16vh;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     grid-column-gap: 2vw;
     grid-row-gap: 2rem;
     grid-template-areas: "Area-5 Area-5 Area-5" "Area-2 Area-2 Area-2" "Area-8 Area-9 Area";
@@ -3168,6 +3165,8 @@ blockquote img {
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto 2rem auto;
     grid-template-rows: auto auto;
+
+     box-shadow: inset 0 -1px 0 0 var(--main-text-color);
   }
 
   .bigtitle {
@@ -3516,7 +3515,7 @@ blockquote img {
   }
 
   .status {
-    height: 2px;
+    height: 1px;
     width: 60%;
 
     left: calc(50% + 1rem);

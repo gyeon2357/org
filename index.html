@@ -217,7 +217,7 @@
                 있습니다.
               </p> -->
 
-              <div
+              <!-- <div
                 class="grid"
                 data-duration="0.75"
                 data-ease="expo"
@@ -252,7 +252,7 @@
                     "
                   ></div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -1599,10 +1599,10 @@
           var windowScrollTop = $(window).scrollTop();
           var docHeight = $(document).height();
           var windowHeight = $(window).height();
-          var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+          var progress = (windowScrollTop / (docHeight - windowHeight)) * 97;
 
-          var $bgColor = progress > 99 ? "#fcfcfc" : "#fcfcfc";
-          var $textColor = progress > 99 ? "#fcfcfc" : "#aaa";
+          var $bgColor = progress > 99 ? "#fff" : "#fff";
+          var $textColor = progress > 99 ? "#fff" : "#aaa";
 
           $(".status-text")
             .text(Math.round(progress) + "")
