@@ -1284,7 +1284,8 @@ cite {
 }
 
 .slash {
-  font-family: var(--text-font);
+  font-family: var(--body-font);
+  font-weight: 600;
 
   margin-right: 0.625rem;
   box-shadow: none;
