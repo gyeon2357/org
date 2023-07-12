@@ -207,56 +207,20 @@
               "
               class="h2"
             >
-              <!-- <span class="subtitle">About</span>
+              <span class="subtitle">About</span>
 
               <p lang="ko">
-                사람들은 보고 싶은 대로 보며 살아갑니다. 평소에 보고 느낀 대로
-                사는 게 편하기 때문입니다. 저는 ‘확증편향’이라는 말을 경계하며
-                정견(正見)이라는 이름 그대로 올바르게 보기 위해 노력하고
-                있습니다.
-              </p> -->
-
-              <!-- <div
-                class="grid"
-                data-duration="0.75"
-                data-ease="expo"
-                data-scale="2"
-                data-max-rotation="10"
-                data-spread="50"
-                data-max-distance="1 000"
-              >
-                <div class="grid__item">
-                  <div
-                    class="grid__item-img"
-                    style="
-                      background-image: url(https://ik.imagekit.io/gyeon/cv-jit-blobs-centroids.jpg?updatedAt=1683179526019);
-                    "
-                  ></div>
-                </div>
-
-                <div class="grid__item">
-                  <div
-                    class="grid__item-img"
-                    style="
-                      background-image: url(https://ik.imagekit.io/gyeon/cv-jit-blobs-elongation.jpg?updatedAt=1683179525949);
-                    "
-                  ></div>
-                </div>
-
-                <div class="grid__item">
-                  <div
-                    class="grid__item-img"
-                    style="
-                      background-image: url(https://ik.imagekit.io/gyeon/scale-dual.jpg?updatedAt=1685509959668);
-                    "
-                  ></div>
-                </div>
-              </div> -->
+                타이포그라피 원리를 바탕으로 글꼴과 책을 만들었으며, 웹 폰트
+                임베이딩에 대한 관심을 시작으로 웹 퍼블리싱 기술을 익혔다.
+                기술자보다는 디자이너로서 비중을 두며, 웹과 앱 서비스를 다룰 때
+                관리자 입장에서의 지속가능성과 함께 사용자 편의를 위한 디자인을
+                하기 위해 노력한다.
+              </p>
             </div>
           </div>
         </section>
 
-        <section name="Main Project">
+        <section name="mainproject">
           <div
             data-w-id="4b9e4b80-34ba-5015-cdf9-0ba0407c2faa"
             class="sticky-grid"
@@ -1130,7 +1094,7 @@
           </div>
         </section>
 
-        <section name="memo">
+        <!-- <section name="memo">
           <div class="title-grid mobile--first-title">
             <div
               id="wtf-title-box"
@@ -1150,7 +1114,7 @@
               <span class="subtitle">Memo</span>
 
               <blockquote class="block-box">
-                <p class="block-header" data-after="+">짧은 소개</p>
+                <p class="block-header" data-after="+">약력</p>
                 <blockquote>
                   <p>
                     울산대학교 시각디자인학과에서 한글꼴 소모임 외솔가지 활동,
@@ -1179,7 +1143,7 @@
               </blockquote>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <section name="thumbnail">
           <div
@@ -1431,12 +1395,14 @@
               class="h3"
             >
               <blockquote>
-                <p class="mail">
+                <div class="email-footer" style="margin: 0.625rem 0.875rem">
                   <a class="h3" href="mailto:jkp.112357@gmail.com"
                     >jkp.112357@gmail.com</a
                   >
-                </p>
-                <p class="mail">
+                  <div class="link_underline"></div>
+                </div>
+
+                <div class="email-footer" style="margin: 0.625rem 0.875rem">
                   <a
                     class="h3"
                     href="https://www.instagram.com/gyeon.zip"
@@ -1444,7 +1410,8 @@
                     rel="noopener noreferrer"
                     >@gyeon.zip</a
                   >
-                </p>
+                  <div class="link_underline"></div>
+                </div>
               </blockquote>
             </div>
             <div
@@ -1531,8 +1498,8 @@
 
           function scrollFunction() {
             if (
-              document.body.scrollTop > 20 ||
-              document.documentElement.scrollTop > 20
+              document.body.scrollTop > 40 ||
+              document.documentElement.scrollTop > 40
             ) {
               $(".menu-work").css("opacity", "1");
             } else {
@@ -1542,8 +1509,8 @@
 
           function switchFunction() {
             if (
-              document.body.scrollTop > 20 ||
-              document.documentElement.scrollTop > 20
+              document.body.scrollTop > 40 ||
+              document.documentElement.scrollTop > 40
             ) {
               $(".switch").css("display", "block");
             } else {
@@ -1559,7 +1526,7 @@
           var windowScrollTop = $(window).scrollTop();
           var docHeight = $(document).height();
           var windowHeight = $(window).height();
-          var progress = (windowScrollTop / (docHeight - windowHeight)) * 97;
+          var progress = (windowScrollTop / (docHeight - windowHeight)) * 99;
 
           var $bgColor = progress > 99 ? "#fff" : "#fff";
           var $textColor = progress > 99 ? "#fff" : "#aaa";
