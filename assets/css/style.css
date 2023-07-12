@@ -7,6 +7,7 @@
   --purple-01-50: #e1c5fe7f;
   --purple-02: #d3aafd;
   --purple-03: #c084fc;
+  --purple-03-50: #c084fc7f;
   --purple-04: #b773fb;
   --purple-06: #a451f7;
   --purple-08: #8256ae;
@@ -1240,6 +1241,7 @@ textarea.w-select {
   align-items: start;
 
   width: fit-content;
+
   font-size: 1.125rem;
   line-height: 1;
 
@@ -1589,7 +1591,7 @@ sup::before {
   overflow: hidden;
   z-index: 1;
 
-  background-color: #000000ce;
+  background-color: #000000da;
   text-align: center;
 }
 
@@ -1774,7 +1776,7 @@ sup::before {
   position: fixed;
   content: " ";
   height: 120px;
-  width: 2px;
+  width: 2.5px;
   background-color: var(--purple-01-50);
 
   margin-left: 70px;
