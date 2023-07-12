@@ -22,38 +22,38 @@
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="" />
   </head>
-  <body id="body">
+  <body>
     <header>text header</header>
     <main><p id="demo"></p></main>
     <footer>text footer</footer>
 
-<script src="./assets/js/jquery.min.js"></script>
     <script>
       function getIP(json) {
         console.log(json.city);
         document.getElementById("demo").innerHTML = json.ip;
       }
-
-      $(document).ready(function () {
-        var check_ip = getIP(); // 접속한 기기의 IP를 가져온다
-        var AllowIP = ["10.39.199.116"]; // 허용할 IP 배열
-        var DenyIP = ["14.39.199.116"]; // 차단할 IP 배열
-        var i = 0;
-        for (var i in AllowIP) {
-          if (AllowIP[i] == check_ip) {
-            document.getElementById("body").style.display = "block";
-          }
-        }
-        for (var i in DenyIP) {
-          if (DenyIP[i] == check_ip) {
-            document.getElementById("body").style.display = "none";
-          }
-        }
-      });
     </script>
     <script
       type="application/javascript"
       src="https://ipinfo.io/?format=jsonp&callback=getIP"
     ></script>
+    <script>
+      $(document).ready(function () {
+        var check_ip = getIP  (); // 접속한 기기의 IP를 가져온다
+        var AllowIP = ["10.39.199.116"]; // 허용할 IP 배열
+        var DenyIP = ["14.39.199.116"]; // 차단할 IP 배열
+        var i = 0;
+        for (var i in AllowIP) {
+          if (AllowIP[i] == check_ip) {
+            document.querySelector("body").style.display = "block";
+          }
+        }
+        for (var i in DenyIP) {
+          if (DenyIP[i] == check_ip) {
+            document.querySelector("body").style.display = "none";
+          }
+        }
+      });
+    </script>
   </body>
 </html>
