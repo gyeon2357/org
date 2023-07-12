@@ -1310,15 +1310,13 @@ sup {
   top: -0.375rem;
   text-transform: lowercase;
 
+  margin-left: 0.375rem;
+
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-
-sup::before {
-  content: " - ";
 }
 
 .slash:hover {
@@ -2085,9 +2083,9 @@ address a:hover {
 }
 
 #wtf-title-box p {
-  line-height: 1.65;
+  line-height: 1.75;
 
-  max-width: 80%;
+  max-width: 90%;
 
   word-break: keep-all;
 }
@@ -2113,6 +2111,12 @@ blockquote.block-box:nth-of-type(1) {
 
 blockquote p {
   margin: 0.625rem 0.875rem !important;
+}
+
+blockquote sup {
+  font-family: var(--text-font);
+  font-size: 67.5%;
+  margin-right: .625rem;
 }
 
 .block-header {
