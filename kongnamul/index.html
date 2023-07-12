@@ -38,7 +38,7 @@
       src="https://ipinfo.io/?format=jsonp&callback=getIP"
     ></script>
     <script>
-      $(document).ready(function () {
+
         var check_ip = getIP  (); // 접속한 기기의 IP를 가져온다
         var AllowIP = ["10.39.199.116"]; // 허용할 IP 배열
         var DenyIP = ["14.39.199.116"]; // 차단할 IP 배열
@@ -53,7 +53,7 @@
             document.querySelector("body").style.display = "none";
           }
         }
-      });
+
     </script>
   </body>
 </html>
