@@ -1318,7 +1318,6 @@ sup::before {
   content: " - ";
 }
 
-.slash:visited,
 .slash:hover {
   /* box-shadow: inset 0 -1px 0 0 var(--main-text-color); */
   color: #999;
@@ -1356,9 +1355,6 @@ sup::before {
   grid-template-rows: auto auto auto;
 
   font-weight: 500;
-
-  box-shadow: inset 0 -2px 0 0 var(--main-text-color);
-  padding-bottom: 0.5rem;
 }
 
 .nav-home {
@@ -1592,7 +1588,7 @@ sup::before {
   overflow: hidden;
   z-index: 1;
 
-  background-color: #333333c5;
+  background-color: #000000ce;
   text-align: center;
 }
 
@@ -1778,7 +1774,7 @@ sup::before {
   content: " ";
   height: 120px;
   width: 2px;
-  background-color: #fcfcfc70;
+  background-color: var(--purple-01-50);
 
   margin-left: 70px;
 }
@@ -3165,8 +3161,6 @@ blockquote img {
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto 2rem auto;
     grid-template-rows: auto auto;
-
-     box-shadow: inset 0 -1px 0 0 var(--main-text-color);
   }
 
   .bigtitle {
