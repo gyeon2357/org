@@ -24,18 +24,15 @@
   </head>
   <body>
     <header>text header</header>
-    <main>text body</main>
+    <main><p id="demo"></p></main>
     <footer>text footer</footer>
 
-    <script type="text/javascript" src="http://jsgetip.appspot.com"></script>
-    <script>
-      alert(ip());
-
-      function ipv() {
-        return -1 != ip().indexOf(":") ? 6 : 4;
-      }
-
-      alert(ip() + " / " + ipv());
-    </script>
+<script>
+  function getIP(json) {
+    console.log(json.city);
+    document.getElementById("demo").innerHTML = json.ip;
+  }
+</script>
+<script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getIP"></script>
   </body>
 </html>
