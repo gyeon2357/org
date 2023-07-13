@@ -94,7 +94,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 474px) {
+@media only screen and (max-width: 474px) {
   main {
     margin: 2rem;
   }
@@ -664,7 +664,7 @@ body {
   }
 }
 
-@media (min-width: 475px) {
+@media only screen and (min-width: 475px) {
   .fordesktop {
     display: block;
     z-index: 100000;
