@@ -7,12 +7,15 @@ $(function () {
 
     setTimeout(function () {
       $(".zoom").remove();
-      $(".basket-icon").removeClass("basket-add-motion");
     }, 500);
 
     setTimeout(function () {
-      $(".basket-icon img").attr("src", "./assets/images/kongnamul-9.svg");
+      $(".basket-icon").removeClass("basket-add-motion");
     }, 750);
+
+    setTimeout(function () {
+      $(".basket-icon img").attr("src", "./assets/images/kongnamul-9.svg");
+    }, 1200);
   });
 });
 
