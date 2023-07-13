@@ -102,6 +102,7 @@ main {
 tbody,
 table {
   width: 100%;
+
 }
 
 .title {
@@ -659,7 +660,7 @@ table input {
   display: none;
 }
 
-@media only screen and (min-width: 480px) {
+@media (orientation: landscape) {
   .fordesktop {
     display: block;
     z-index: 100000;
@@ -677,7 +678,7 @@ table input {
   }
 
   .fordesktop-p {
-    display: block;
+     display: block;
     z-index: 100001;
     position: fixed;
     top: 50%;
