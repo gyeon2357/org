@@ -8,9 +8,30 @@ $(function () {
     setTimeout(function () {
       $(".zoom").remove();
       $(".basket-icon").removeClass("basket-add-motion");
+    }, 500);
+
+    setTimeout(function () {
       $(".basket-icon img").attr("src", "./assets/images/kongnamul-9.svg");
     }, 750);
   });
+});
+
+$(function () {
+  var images = [
+    "1.svg",
+    "2.svg",
+    "3.svg",
+    "4.svg",
+    "5.svg",
+    "6.svg",
+    "7.svg",
+    "8.svg",
+    "9.svg",
+  ];
+  $(".random").attr(
+    "src",
+    "./assets/images/order-" + images[Math.floor(Math.random() * images.length)]
+  );
 });
 
 $(function () {
