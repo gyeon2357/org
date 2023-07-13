@@ -108,8 +108,8 @@ footer figure {
 }
 
 .footer-bean img {
-  width: 2.75rem;
-  padding: 0 0.125rem;
+  width: 2.5rem;
+  padding: 0 0.25rem;
 }
 
 footer figure img {
@@ -592,6 +592,11 @@ button {
 
 #room.modal {
   background-color: #009fe8;
+  padding-bottom: 6rem;
+}
+
+#order.modal {
+  padding-bottom: 6rem;
 }
 
 .modal a.close-modal {
