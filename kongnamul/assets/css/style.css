@@ -113,7 +113,8 @@ footer figure {
 }
 
 footer figure img {
-  scale: 1.01;
+  width: 100%;
+  scale: 1.03;
 }
 
 /* #home */
@@ -585,7 +586,7 @@ button {
   overflow-y: auto;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   margin: 1rem 2rem;
   text-align: left;
@@ -598,10 +599,12 @@ button {
 #room.modal {
   background-color: #009fe8;
   padding-bottom: 6rem;
+  height: calc(100% + 3rem) !important;
 }
 
 #order.modal {
   padding-bottom: 6rem;
+  height: calc(100% + 3rem) !important;
 }
 
 .modal a.close-modal {
