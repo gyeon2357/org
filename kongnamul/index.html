@@ -69,7 +69,10 @@
                   <h2>9,000원</h2>
                 </button>
 
-                <img src="./assets/images/kongnamul-13.svg" style="width: 80px;"/>
+                <img
+                  src="./assets/images/kongnamul-13.svg"
+                  style="width: 80px"
+                />
               </li>
 
               <li>
@@ -82,15 +85,15 @@
                 <img src="./assets/images/kongnamul-7.svg" />
               </li>
               <li>
-                <button type="button">
+                <button type="button" onclick="chickenValue()">
                   <p>4</p>
-                  <h2>노가리</h2>
+                  <h2>치킨</h2>
                   <h2>12,000원</h2>
                 </button>
 
                 <img src="./assets/images/kongnamul-7.svg" />
               </li>
-              <li>
+              <!-- <li>
                 <button type="button">
                   <p>5</p>
                   <h2>노가리 4개</h2>
@@ -107,7 +110,7 @@
                 </button>
 
                 <img src="./assets/images/kongnamul-7.svg" />
-              </li>
+              </li> -->
             </ul>
           </article>
         </ol>
@@ -237,6 +240,29 @@
                 </td>
               </tr>
               <tr>
+                <td>치킨</td>
+                <td>
+                  <input
+                    id="chicken-num"
+                    class="total-num"
+                    type="text"
+                    name="치킨 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    id="chicken-price"
+                    class="total-price"
+                    type="text"
+                    name="치킨 총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
                 <td>결제 금액</td>
                 <td>
                   <input
@@ -269,8 +295,8 @@
 
         <div class="order-footer">
           <p>
-            콩나물주택에서 맛있는 경험 느끼시고 <br />돌아가시길
-            바라겠습니다.<br /><br />
+            콩나물주택에서 맛있는 경험 느끼시고<br />
+            돌아가시길 바라겠습니다.<br /><br />
           </p>
           <p>감사합니다.</p>
         </div>
@@ -367,6 +393,17 @@
 
         $("#beer-price").val(function (i, v) {
           return parseInt(v, 10) + 6000 || 0;
+        });
+      }
+
+      function chickenValue() {
+        var value = parseInt(document.getElementById("chicken-num").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("chicken-num").value = value;
+
+        $("#chicken-price").val(function (i, v) {
+          return parseInt(v, 10) + 12000 || 0;
         });
       }
 

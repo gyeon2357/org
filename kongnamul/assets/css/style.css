@@ -85,6 +85,8 @@ body {
   word-break: keep-all;
   cursor: default;
 
+  overflow-x: hidden;
+
   background-color: #f4ce59;
 
   background-image: url(../images/kongnamul-1.svg);
@@ -328,12 +330,12 @@ li img {
 
 .zoom {
   position: absolute;
-  top: calc(50% - 6rem);
-  left: calc(50% + 3rem);
-  width: 120px;
+  top: calc(50% - 4rem);
+  left: calc(50% + 4rem);
+  width: 140px;
   opacity: 0;
 
-  animation: zoom 0.75s ease forwards;
+  animation: zoom 0.5s ease forwards;
   z-index: 1001;
 }
 
@@ -345,10 +347,10 @@ li img {
     opacity: 1;
   }
   100% {
-    opacity: 0.25;
+    opacity: 0.1;
 
     top: calc(50% - 2rem);
-    left: calc(50% + 0rem);
+    left: calc(50% + 1rem);
   }
 }
 
@@ -367,7 +369,7 @@ li img {
   flex-direction: column;
 
   justify-content: space-between;
-  margin: 2rem 2rem 20vh 2rem;
+  margin: 2rem 2rem 15vh 2rem;
 }
 
 table {

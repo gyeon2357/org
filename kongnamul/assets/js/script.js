@@ -38,6 +38,13 @@ $(function () {
   $(".back-icon").on("click", function () {
     $("input:checkbox[id='menu__toggle']").prop("checked", false);
   });
+
+  // // checked
+  // if ($("input:checkbox[id='menu__toggle']").is(":checked")) {
+  //   $("body").css("overflow", "auto");
+  // } else {
+  //   $("body").css("overflow", "hidden");
+  // }
 });
 
 $(function () {
