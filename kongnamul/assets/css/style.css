@@ -224,7 +224,7 @@ li p {
 
   text-align: center;
   margin-right: 0.25rem;
-  padding: 0.375rem 0;
+  padding: 0.5vw 0;
 }
 
 li img {
@@ -345,7 +345,7 @@ li img {
   flex-direction: column;
 
   justify-content: space-between;
-  margin: 2rem 2rem 6rem 2rem;
+  margin: 2rem 2rem 10rem 2rem;
 }
 
 table {
@@ -402,6 +402,8 @@ table input {
   font-size: 1.25rem;
   z-index: 1001;
 
+  color: #000;
+
   border: 0.125rem solid #000;
   border-radius: 3rem;
 
@@ -433,7 +435,7 @@ table input {
 }
 
 .room-gallery:last-of-type {
-  margin: 2rem 2rem 8rem 2rem;
+  margin: 2rem 2rem 10rem 2rem;
 }
 
 .room-gallery span {
@@ -444,8 +446,8 @@ table input {
   background-color: #000;
   border-radius: 100%;
   text-align: center;
-  margin-right: 0.25rem
-  padding: 0.2rem 0;
+  margin-right: 0.25rem;
+  padding: 0.5vw 0;
   z-index: 1;
 }
 
