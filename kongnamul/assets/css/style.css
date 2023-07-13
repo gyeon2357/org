@@ -674,7 +674,7 @@ button {
   display: none;
 }
 
-@media all and (min-width: 475px), (orientation: landscape) {
+@media all and (orientation: landscape) {
   .fordesktop {
     display: block;
     z-index: 100000;
