@@ -675,7 +675,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #f4ce59;
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
@@ -695,7 +695,7 @@ body {
     font-size: 1.25rem;
 
     color: black;
-    background-color: white;
+    background-color: #f4ce59;
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
     text-decoration: none;
