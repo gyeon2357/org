@@ -1246,6 +1246,8 @@ textarea.w-select {
   font-size: 1.125rem;
   line-height: 1;
 
+  opacity: 0.75;
+
   margin-bottom: 2.5rem;
 }
 
@@ -2416,7 +2418,8 @@ blockquote img {
 .sticky-grid > #wtf-lottie-box {
   grid-row-start: 1;
   grid-column: 12 / span 6;
-  filter: grayscale(1) invert(1);
+  filter: grayscale(1);
+  opacity: 0.5;
 }
 
 /* status bar */
