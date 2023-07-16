@@ -1742,7 +1742,8 @@ sup {
   position: absolute;
 
   color: #fcfcfc;
-  top: calc(50% + 3rem);
+
+  bottom: 4.5rem;
   padding: 0 2%;
 }
 
@@ -3084,6 +3085,11 @@ blockquote img {
     padding: 0 4% env(safe-area-inset-bottom) 4%;
   }
 
+  .caption {
+    bottom: 0;
+    top: calc(50% + 6rem);
+  }
+
   .modal a.close-modal {
     width: 80px;
     height: 80px;
@@ -3354,6 +3360,11 @@ blockquote img {
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column: span 1;
+  }
+
+  blockquote > blockquote {
+    margin: 0.5rem 1.5rem;
+    border-left: 1px dotted #666;
   }
 
   #wtf-main-content-box {
