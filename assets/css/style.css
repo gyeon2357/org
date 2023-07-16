@@ -1255,7 +1255,7 @@ textarea.w-select {
 
   text-decoration: underline;
 
-  margin-bottom: 2.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .content-line {
@@ -3126,7 +3126,7 @@ blockquote img {
 
   .subtitle {
     margin-left: 2%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     font-size: 1rem;
   }
