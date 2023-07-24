@@ -1,8 +1,7 @@
 @font-face {
   font-family: "pretendard-regular";
   src: url("../fonts/Pretendard-Regular.woff2") format("woff2"),
-    url("../fonts/Pretendard-Regular.woff2") format("woff2"),
-    url("../fonts/Pretendard-Regular.ttf") format("truetype");
+    url("../fonts/Pretendard-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -389,6 +388,9 @@ body div.wpcf7-mail-sent-ok,
 .scope-text p,
 h3 {
   word-break: keep-all;
+}
+
+.scope-text p {
 }
 
 .c-paragraph--small,
@@ -1143,6 +1145,8 @@ a.value__td.state-active-dsc:before {
   display: block;
   position: relative;
   padding: 0.75em 1rem;
+
+  -webkit-tap-highlight-color: purple;
 }
 
 @media screen and (min-width: 432px) {
