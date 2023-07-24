@@ -1146,7 +1146,7 @@ a.value__td.state-active-dsc:before {
   position: relative;
   padding: 0.75em 1rem;
 
-  -webkit-tap-highlight-color: purple;
+  -webkit-tap-highlight-color: #E6E6FA;
 }
 
 @media screen and (min-width: 432px) {
