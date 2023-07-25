@@ -174,8 +174,8 @@ var Scroll = {
     Scroll.getLoadOffset();
   },
 };
-/* Accordion scripts */
 
+/* Accordion scripts */
 var Accordion = {
   count: 0,
   init: function init() {
@@ -232,6 +232,7 @@ var Accordion = {
           _trigger.setAttribute("aria-expanded", "true");
 
           _body.setAttribute("aria-hidden", "false");
+       
 
           anime({
             targets: _body,
@@ -423,7 +424,6 @@ var Sort = {
         Sort.films[_i].title = _trs[_i].getAttribute("data-title");
         Sort.films[_i].year = _trs[_i].getAttribute("data-year");
         Sort.films[_i].tag = _trs[_i].getAttribute("data-tag");
-        Sort.films[_i].genre = _trs[_i].getAttribute("data-genre");
       }
 
       Sort.wrapper = document.getElementById("index");
@@ -521,11 +521,11 @@ var Sort = {
             _swapEls[_j].classList.remove("state-active-dsc");
           }
 
-          _swapEls[0].classList.add("state-active-asc");
+          _swapEls[1].classList.add("state-active-asc");
 
-          document.getElementById("mobile-sort").selectedIndex = 0;
-          document.getElementById("select-text").innerHTML = "Sort by: Title";
-          Sort.sortASC("title");
+          document.getElementById("mobile-sort").selectedIndex = 1;
+          document.getElementById("select-text").innerHTML = "Sort by: Year";
+          Sort.sortASC("year");
           Sort.reorderFilms();
         }
       }

@@ -50,10 +50,7 @@ html,
 body {
   font-family: "national", "pretendard-regular", sans-serif;
   overflow-x: hidden;
-  margin: 0;
 }
-
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
   color: #222;
@@ -84,16 +81,6 @@ img,
 svg,
 video {
   vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
 }
 
 .browserupgrade {
@@ -248,10 +235,6 @@ blockquote {
   font-style: normal;
 }
 
-figure {
-  line-height: 0;
-  background-color: transparent;
-}
 
 img,
 video,
@@ -376,13 +359,14 @@ p:empty {
 .c-form span.wpcf7-not-valid-tip,
 body div.wpcf7-mail-sent-ok,
 .c-content__close {
+  display: block;
   font-family: "national", "pretendard-regular", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
-  line-height: 1.6;
-  color: #121212;
-  display: block;
+  line-height: 1.68;
+  color: #111;
+
 }
 
 .scope-text p,
@@ -631,14 +615,14 @@ body {
 @media screen and (min-width: 720px) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
   }
 }
 
@@ -932,6 +916,7 @@ aside {
 
 .nav__th {
   margin: 0 0 0.5rem 0;
+
 }
 
 .nav__th--desktop {
@@ -945,7 +930,7 @@ aside {
 }
 
 .nav__th--mobile {
-  padding: 0.75em 0.5rem;
+  padding: 0.75rem 0.5rem 1rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -967,7 +952,7 @@ aside {
 /* // */
 
 .project__tr {
-  border-bottom: 0.0625rem solid #eaeaea;
+  border-bottom: 0.2px solid #dddddd;
 }
 
 .project__tr:last-child {
@@ -1146,7 +1131,7 @@ a.value__td.state-active-dsc:before {
   position: relative;
   padding: 0.75em 1rem;
 
-  -webkit-tap-highlight-color: #E6E6FA;
+  -webkit-tap-highlight-color: #e6e6fade;
 }
 
 @media screen and (min-width: 432px) {
@@ -1181,6 +1166,7 @@ a.value__td.state-active-dsc:before {
 
 .project__details__inner {
   width: 100%;
+
 }
 
 @media screen and (min-width: 720px) {
@@ -1312,6 +1298,65 @@ a.value__td.state-active-dsc:before {
 
 .caption__text__button:after {
   display: none !important;
+}
+
+.scope-text p {
+  width: fit-content;
+}
+
+@media screen and (min-width: 720px) {
+  .scope-text p {
+    width: 48ch;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem;
+
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 432px) {
+  .footer-wrapper {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .footer-wrapper {
+    padding: 1rem;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 2rem;
+}
+
+.footer-inner a {
+  position: relative;
+  width: fit-content;
+}
+
+.footer-inner a:before {
+  content: "";
+  top: calc(100% + 0.25em);
+  height: 0.0625rem;
+  width: 100%;
+  background-color: #333;
+  top: calc(100% + 0em);
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  opacity: 1;
+  position: absolute;
+}
+
+.no-touch .footer-inner a:hover:before {
+  opacity: 0;
 }
 
 .c-form {
