@@ -59,8 +59,8 @@ var Device = {
 
     if (document.getElementsByClassName("nav__th--desktop").length !== 0) {
       if (
-        document.getElementsByClassName("nav__th--desktop")[0]
-          .offsetParent === null
+        document.getElementsByClassName("nav__th--desktop")[0].offsetParent ===
+        null
       ) {
         Device.mobile = true;
       } else {
@@ -1011,7 +1011,7 @@ var Boot = {
           setTimeout(function () {
             document.body.classList.add("state-page-loaded");
           }, 600);
-        }, 50);
+        }, 300);
       }
     } else {
       setTimeout(function () {
@@ -1020,7 +1020,7 @@ var Boot = {
         setTimeout(function () {
           document.body.classList.add("state-page-loaded");
         }, 600);
-      }, 50);
+      }, 300);
     }
   },
 };

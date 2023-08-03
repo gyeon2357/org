@@ -829,10 +829,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
+
   position: fixed;
   z-index: 9999;
-  background-color: white;
+  background-color: antiquewhite;
 
   font-size: 3rem;
 }
@@ -1126,7 +1126,20 @@ a.value__td.state-active-dsc:after {
   position: relative;
   padding: 0.75em 1rem;
 
-  -webkit-tap-highlight-color: #e6e6fade;
+  -webkit-tap-highlight-color: antiquewhite;
+}
+
+/* .project__details:hover {
+  text-shadow: sandybrown 2px 0 8px;
+}
+
+.state-accordion-open .project__details__inner {
+  text-shadow: sandybrown 2px 0 8px;
+} */
+
+.project__details:focus,
+.project__details:active {
+  background: #fafafa;
 }
 
 @media screen and (min-width: 432px) {
