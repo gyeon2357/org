@@ -232,7 +232,6 @@ var Accordion = {
           _trigger.setAttribute("aria-expanded", "true");
 
           _body.setAttribute("aria-hidden", "false");
-       
 
           anime({
             targets: _body,

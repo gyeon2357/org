@@ -24,25 +24,25 @@ html {
 
 @media (min-width: 700px) and (max-width: 999px) {
   html {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1000px) and (max-width: 1999px) {
   html {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 2000px) and (max-width: 2399px) {
   html {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
 @media (min-width: 2400px) {
   html {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
 
@@ -235,7 +235,6 @@ blockquote {
   font-style: normal;
 }
 
-
 img,
 video,
 iframe {
@@ -281,6 +280,8 @@ p:empty {
   position: absolute;
   object-fit: cover;
   opacity: 0;
+
+  border: 0.5px solid #ddd;
 }
 
 @media screen and (min-width: 432px) {
@@ -366,7 +367,6 @@ body div.wpcf7-mail-sent-ok,
   font-size: 0.875rem;
   line-height: 1.68;
   color: #111;
-
 }
 
 .scope-text p,
@@ -580,7 +580,6 @@ body {
 }
 
 .home-header__logo {
-  position: absolute;
   letter-spacing: -0.02em;
   font-weight: normal;
   font-size: 1rem;
@@ -615,28 +614,28 @@ body {
 @media screen and (min-width: 720px) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 2.5rem 1rem;
+    padding: 1rem 1rem 3rem 1rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 2.5rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .home-header {
     position: relative;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
   }
 }
 
@@ -916,7 +915,6 @@ aside {
 
 .nav__th {
   margin: 0 0 0.5rem 0;
-
 }
 
 .nav__th--desktop {
@@ -1092,11 +1090,10 @@ aside {
   }
 }
 
-a.value__td:before {
+a.value__td:after {
   content: "↑";
-  position: absolute;
-  left: 2rem;
-  top: 0.125rem;
+  margin-left: 0.5rem;
+
   opacity: 0.25;
   -webkit-transition: opacity 250ms;
   transition: opacity 250ms;
@@ -1104,24 +1101,22 @@ a.value__td:before {
   font-size: 90%;
 }
 
-.no-touch a.value__td:hover:before {
+.no-touch a.value__td:hover:after {
   opacity: 1;
 }
 
-a.value__td.state-active-asc:before {
+a.value__td.state-active-asc:after {
   content: "↑";
-  position: absolute;
-  left: 2rem;
-  top: 0.125rem;
+  margin-left: 0.5rem;
+
   color: #000;
   opacity: 1;
 }
 
-a.value__td.state-active-dsc:before {
+a.value__td.state-active-dsc:after {
   content: "↓";
-  position: absolute;
-  left: 2rem;
-  top: 0.125rem;
+  margin-left: 0.5rem;
+
   color: #000;
   opacity: 1;
 }
@@ -1136,7 +1131,7 @@ a.value__td.state-active-dsc:before {
 
 @media screen and (min-width: 432px) {
   .project__details {
-    padding: 0.25rem 1rem;
+    padding: 0.75em 1rem;
   }
 }
 
@@ -1166,7 +1161,6 @@ a.value__td.state-active-dsc:before {
 
 .project__details__inner {
   width: 100%;
-
 }
 
 @media screen and (min-width: 720px) {
@@ -1313,8 +1307,9 @@ a.value__td.state-active-dsc:before {
 .footer-wrapper {
   display: flex;
   flex-direction: row;
-  padding: 0.75rem;
+  font-size: 75%;
 
+  padding: 0.75rem;
   margin-top: 2rem;
 }
 
@@ -1341,7 +1336,7 @@ a.value__td.state-active-dsc:before {
   position: relative;
   width: fit-content;
 }
-
+/* 
 .footer-inner a:before {
   content: "";
   top: calc(100% + 0.25em);
@@ -1357,7 +1352,7 @@ a.value__td.state-active-dsc:before {
 
 .no-touch .footer-inner a:hover:before {
   opacity: 0;
-}
+} */
 
 .c-form {
   padding: 0 0.75rem 1rem;
