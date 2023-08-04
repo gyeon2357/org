@@ -963,7 +963,7 @@ aside {
   top: 1.25rem;
   height: 0.0625rem;
   width: 0.5625rem;
-  background-color: #000;
+  background-color: #333;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   position: absolute;
@@ -1013,7 +1013,7 @@ aside {
   top: 1.25rem;
   height: 0.0625rem;
   width: 0.5625rem;
-  background-color: #000;
+  background-color: #333;
   position: absolute;
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
@@ -1129,13 +1129,9 @@ a.value__td.state-active-dsc:after {
   -webkit-tap-highlight-color: antiquewhite;
 }
 
-/* .project__details:hover {
-  text-shadow: sandybrown 2px 0 8px;
+.state-accordion-opened {
+background: #fafafa;
 }
-
-.state-accordion-open .project__details__inner {
-  text-shadow: sandybrown 2px 0 8px;
-} */
 
 .project__details:focus,
 .project__details:active {
