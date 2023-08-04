@@ -914,7 +914,7 @@ aside {
 }
 
 .nav__th {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 2rem 0;
 }
 
 .nav__th--desktop {
@@ -922,6 +922,10 @@ aside {
 }
 
 @media screen and (min-width: 720px) {
+  .nav__th {
+    margin: 0;
+  }
+
   .nav__th--desktop {
     display: block;
   }
@@ -1064,6 +1068,10 @@ aside {
 .project__tr.state-accordion-open:after {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
+}
+
+.nav__th--desktop .project__details {
+  border-bottom: 0.5px solid #ccc;
 }
 
 .value__td {
