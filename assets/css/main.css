@@ -280,8 +280,6 @@ p:empty {
   position: absolute;
   object-fit: cover;
   opacity: 0;
-
-  border: 0.5px solid #ddd;
 }
 
 @media screen and (min-width: 432px) {
@@ -1110,7 +1108,7 @@ aside {
   background: dodgerblue;
 }
 
-.value__td span.document {
+.value__td span.editorial {
   background: silver;
 }
 
