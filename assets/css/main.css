@@ -949,7 +949,7 @@ aside {
   }
 }
 
-/* // */
+/* .project__tr */
 
 .project__tr {
   border-bottom: 0.2px solid #dddddd;
@@ -962,9 +962,9 @@ aside {
 
 .project__tr:before {
   content: "";
-  top: 1.25rem;
-  height: 0.0625rem;
-  width: 0.5625rem;
+  top: 1.5rem;
+  height: 0.075rem;
+  width: 0.875rem;
   background-color: #333;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -986,6 +986,9 @@ aside {
   .project__tr:before {
     right: 0.6875rem;
     top: 1.125rem;
+
+    width: 0.525rem;
+    height: 0.0625rem;
   }
 }
 
@@ -999,22 +1002,22 @@ aside {
 @media screen and (min-width: 80rem) {
   .project__tr:before {
     right: 1.0625rem;
-    top: 1.125rem;
+    top: 1.175rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .project__tr:before {
     right: 1.0625rem;
-    top: 1.125rem;
+    top: 1.175rem;
   }
 }
 
 .project__tr:after {
   content: "";
-  top: 1.25rem;
-  height: 0.0625rem;
-  width: 0.5625rem;
+  top: 1.5rem;
+  height: 0.075rem;
+  width: 0.875rem;
   background-color: #333;
   position: absolute;
   -webkit-transition: -webkit-transform 250ms;
@@ -1034,6 +1037,9 @@ aside {
   .project__tr:after {
     right: 0.6875rem;
     top: 1.125rem;
+
+    width: 0.525rem;
+    height: 0.0625rem;
   }
 }
 
@@ -1047,14 +1053,14 @@ aside {
 @media screen and (min-width: 80rem) {
   .project__tr:after {
     right: 1.0625rem;
-    top: 1.125rem;
+    top: 1.175rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .project__tr:after {
     right: 1.0625rem;
-    top: 1.125rem;
+    top: 1.175rem;
   }
 }
 
@@ -1200,16 +1206,16 @@ a.value__td.state-active-dsc:after {
   position: relative;
   padding: 0.75em 1rem;
 
-  -webkit-tap-highlight-color: antiquewhite;
+  -webkit-tap-highlight-color: #e7e7fb75;
 }
 
 .state-accordion-opened {
-  background: #fafafa;
+  background: #e7e7fb75;
 }
 
 .project__details:focus,
 .project__details:active {
-  background: #fafafa;
+  background: #e7e7fb75;
 }
 
 @media screen and (min-width: 432px) {

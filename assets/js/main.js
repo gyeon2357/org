@@ -1011,7 +1011,7 @@ var Boot = {
           setTimeout(function () {
             document.body.classList.add("state-page-loaded");
           }, 600);
-        }, 300);
+        }, 200);
       }
     } else {
       setTimeout(function () {
