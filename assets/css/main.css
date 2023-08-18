@@ -705,7 +705,7 @@ body {
   width: 100%;
   max-width: 24rem;
   padding-left: 9.5rem;
-  height: 6.125rem;
+  height: 5.125rem;
 }
 
 .home-header__box__instagram {
@@ -714,8 +714,8 @@ body {
   padding-left: 0.6875rem;
   white-space: nowrap;
   border-right: 0.0625rem solid #333;
-  line-height: 3rem;
-  height: 3.1rem;
+  line-height: 2.5rem;
+  height: 2.55rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -730,8 +730,8 @@ body {
   padding-left: 0.6875rem;
   white-space: nowrap;
   border-right: 0.0625rem solid #333;
-  line-height: 3rem;
-  height: 3rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
   position: absolute;
   top: 50%;
   left: 0;
@@ -881,8 +881,8 @@ body {
   border: none !important;
   font-size: 0.9375rem;
 
-  height: 3rem;
-  line-height: 3rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
 }
 
 @media screen and (min-width: 720px) {
@@ -893,8 +893,8 @@ body {
 
 .home-header__box__form form .button {
   border: none !important;
-  line-height: 3rem;
-  height: 3rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
   background-color: #333;
   color: white;
   text-align: left;
