@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "pretendard";
+  src: url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e808feba68aa9e09d6/1691656439024/Pretendard-Regular.woff")
+      format("woff"),
+    url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e8353c9c18971b3854/1691656448907/Pretendard-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e70b06010279354e53/1691656439023/Pretendard-Bold.woff")
+      format("woff"),
+    url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e715d322020c484e2d/1691656448616/Pretendard-Bold.ttf")
+      format("opentype");
+  font-weight: 600;
+}
+
+.header-nav-list > div:first-child {
+  display: none;
+}
+
+.sqs-gallery-design-carousel .sqs-gallery-design-carousel-slide {
+  background: #fcfcfc;
+  border-radius: 1.5rem;
+
+  padding: 1.5rem;
+}
+
+/* / menu-active */
+
+body:not(.header--menu-open) .header-nav-item--active>a {
+
+}
