@@ -12,8 +12,32 @@
   src: url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e70b06010279354e53/1691656439023/Pretendard-Bold.woff")
       format("woff"),
     url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64d4a0e715d322020c484e2d/1691656448616/Pretendard-Bold.ttf")
-      format("opentype");
+      format("truetype");
   font-weight: 600;
+}
+
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64e0b2e9cb27352742fd865e/1692447469077/GowunDodum-Regular.woff")
+      format("woff"),
+    url("https://static1.squarespace.com/static/64d489f4ff78564d8f43edec/t/64e0b2adddb7932eb7d9fdee/1692447433555/GowunDodum-Regular.ttf")
+      format("truetype");
+}
+
+* {
+  font-family: "pretendard", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+p {
+  word-break: keep-all;
 }
 
 .header-nav-list > div:first-child {
@@ -29,6 +53,10 @@
 
 /* / menu-active */
 
-body:not(.header--menu-open) .header-nav-item--active>a {
+body:not(.header--menu-open) .header-nav-item--active > a {
+  background-color: blue;
+}
 
+.header-nav-item a {
+  mix-blend-mode: difference;
 }

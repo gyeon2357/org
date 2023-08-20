@@ -1039,7 +1039,7 @@ aside {
 }
 
 .nav__th--mobile {
-  padding: 0.9375em 0.75rem;
+  padding: 0.75em 1rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -1523,10 +1523,8 @@ a.value__td.state-active-dsc:after {
 .footer-wrapper {
   display: flex;
   flex-direction: row;
-  font-size: 75%;
-
   padding: 0.75rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 @media screen and (min-width: 432px) {
@@ -1546,6 +1544,7 @@ a.value__td.state-active-dsc:after {
   flex-direction: column;
 
   margin-right: 2rem;
+  line-height: 1.6;
 }
 
 .footer-inner a {
