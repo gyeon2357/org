@@ -4,13 +4,28 @@
 }
 
 @font-face {
-  font-family: "OrtankHangeulText-Bold";
-  src: url("../fonts/OrtankHangeulText-Bold.woff2") format("woff2");
+  font-family: "national";
+  src: url("../fonts/national-2-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "national";
-  src: url("../fonts/national-2-regular.woff2") format("woff2");
+  font-family: "AGChoijeonghoMinburiStd";
+  font-weight: 400;
+  src: url("../fonts/AGChoijeonghoMinburiStd.woff2") format("woff2");
+  src: local(※), url("../fonts/AGChoijeonghoMinburiStd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AGChoijeonghoMinburiStdMedium";
+  font-weight: 400;
+  src: url("../fonts/AGChoijeonghoMinburiStdMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AGChoijeonghoMinburiStdBold";
+  font-weight: 600;
+  src: url("../fonts/AGChoijeonghoMinburiStdBold.woff2") format("woff2");
+  src: local(※), url("../fonts/AGChoijeonghoMinburiStdBold.woff") format("woff");
 }
 
 html {
@@ -363,10 +378,12 @@ body div.wpcf7-mail-sent-ok,
 .c-content__close {
   display: block;
   font-family: "national", "pretendard-regular", sans-serif;
+
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
-  line-height: 1.685;
+  line-height: 1.675;
+  letter-spacing: -0.2px;
   color: #111;
 }
 
@@ -810,17 +827,17 @@ body {
 }
 
 .no-touch .home-header__box__recommend:hover {
-  background-color: silver;
+  background-color: darkgray;
   color: white;
 }
 
 .no-touch .home-header__box__instagram:hover {
-  background-color: silver;
+  background-color: darkgray;
   color: white;
 }
 
 .no-touch .home-header__box__form__toggle:hover:before {
-  background-color: silver;
+  background-color: darkgray;
 }
 
 .home-header__box__form__toggle span:first-child {
@@ -1067,8 +1084,8 @@ aside {
 }
 
 .project__tr:last-child {
-  border-bottom: none;
-  margin-bottom: 10vh;
+  border-bottom: 0.5px solid #ccc;
+  margin-bottom: 8vh;
 }
 
 .project__tr:before {
@@ -1254,7 +1271,7 @@ aside {
 
 .project__icon span {
   font-size: 75%;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   margin-top: 3rem;
   padding: 0.25rem 0.675rem;
