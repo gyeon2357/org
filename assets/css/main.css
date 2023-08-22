@@ -458,11 +458,14 @@ h3 {
 }
 
 .scope-text p {
+  padding-bottom: 1em;
+}
+.scope-text p:last-child {
   padding-bottom: 2em;
 }
 
 @media screen and (min-width: 720px) {
-  .scope-text p {
+  .scope-text p:last-child {
     padding-bottom: 4em;
   }
 }
@@ -1363,7 +1366,8 @@ a.value__td.state-active-dsc:after {
 }
 
 a.state-accordion-open {
-  opacity: 0.5;
+  opacity: 0.6;
+  background-color: #eeeeee75;
 }
 
 .state-accordion-opened {
@@ -1429,7 +1433,7 @@ a.state-accordion-open {
 
 @media screen and (min-width: 720px) {
   .caption {
-    padding: 2rem 4rem 4rem;
+    padding: 2rem 3rem 4rem;
     display: -webkit-box;
     display: flex;
   }
@@ -1437,7 +1441,7 @@ a.state-accordion-open {
 
 @media screen and (min-width: 960px) {
   .caption {
-    padding: 2rem 4rem 4rem;
+    padding: 2rem 3.5rem 4rem;
   }
 }
 
@@ -1455,7 +1459,7 @@ a.state-accordion-open {
 
 .caption__image {
   margin-bottom: 0.9375em;
-  width: 100%;
+  width: 100% !important;
 }
 
 .caption__image__inner {
