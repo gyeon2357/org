@@ -836,17 +836,17 @@ body {
 }
 
 .no-touch .home-header__box__recommend:hover {
-  background-color: darkgray;
+  background-color: black;
   color: white;
 }
 
 .no-touch .home-header__box__instagram:hover {
-  background-color: darkgray;
+  background-color: black;
   color: white;
 }
 
 .no-touch .home-header__box__form__toggle:hover:before {
-  background-color: darkgray;
+  background-color: black;
 }
 
 .home-header__box__form__toggle span:first-child {
