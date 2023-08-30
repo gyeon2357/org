@@ -839,17 +839,17 @@ body {
 }
 
 .no-touch .home-header__box__recommend:hover {
-  background-color: black;
+  background-color: darkmagenta;
   color: white;
 }
 
 .no-touch .home-header__box__instagram:hover {
-  background-color: black;
+  background-color: darkmagenta;
   color: white;
 }
 
 .no-touch .home-header__box__form__toggle:hover:before {
-  background-color: black;
+  background-color: darkmagenta;
 }
 
 .home-header__box__form__toggle span:first-child {
@@ -972,9 +972,19 @@ body {
 
   position: fixed;
   z-index: 9999;
-  background-color: #eee;
+  background-color: darkmagenta;
+  color: #fff;
 
-  font-size: 3rem;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+
+  padding: 1rem;
+}
+
+@media screen and (max-width: 479px) {
+  .load {
+    padding: 1rem 0.75rem;
+  }
 }
 
 .state-site-loaded .load {
@@ -1091,21 +1101,32 @@ aside {
 
 /* .project__tr */
 
-.project__tr {
-  /* border-bottom: 0.2px solid #dddddd; */
+.project__tr:nth-child(even) {
+  background: #fbfbfb;
+}
+
+a.state-accordion-open {
+  opacity: 0.5;
+}
+
+a.state-accordion-open .value__td {
+  color: #555;
+}
+
+.state-accordion-opened {
+  background: #eeeeee50;
 }
 
 .project__tr:last-child {
-  border-bottom: 0.5px solid #ccc;
-  margin-bottom: 8vh;
+  margin-bottom: 4vh;
 }
 
 .project__tr:before {
   content: "";
   top: 1.5rem;
-  height: 0.075rem;
+  height: 0.1rem;
   width: 0.875rem;
-  background-color: #333;
+  background: #333 !important;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   position: absolute;
@@ -1159,9 +1180,9 @@ aside {
 .project__tr:after {
   content: "";
   top: 1.5rem;
-  height: 0.075rem;
+  height: 0.1rem;
   width: 0.875rem;
-  background-color: #333;
+  background-color: #333 !important;
   position: absolute;
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
@@ -1277,7 +1298,7 @@ aside {
 }
 
 .project__icon {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 @media screen and (min-width: 720px) {
@@ -1366,17 +1387,9 @@ a.value__td.state-active-dsc:after {
   -webkit-tap-highlight-color: #eeeeee75;
 }
 
-a.state-accordion-open {
-  background-color: #eeeeee75;
-}
-
-.state-accordion-opened {
-  background: #eeeeee50;
-}
-
 .project__details:focus,
 .project__details:active {
-  background: #eeeeee75;
+  background: #eeeeee20;
 }
 
 @media screen and (min-width: 432px) {
@@ -1585,7 +1598,7 @@ a.state-accordion-open {
   display: flex;
   flex-direction: row;
   padding: 0.75rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 @media screen and (min-width: 432px) {
@@ -1597,7 +1610,7 @@ a.state-accordion-open {
 @media screen and (min-width: 720px) {
   .footer-wrapper {
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 0 0 1rem;
   }
 }
 
@@ -1606,6 +1619,7 @@ a.state-accordion-open {
   flex-direction: column;
 
   margin-right: 2rem;
+  font-size: 90%;
   line-height: 1.75;
 }
 
