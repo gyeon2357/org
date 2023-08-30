@@ -383,7 +383,7 @@ body div.wpcf7-mail-sent-ok,
   font-style: normal;
   font-size: 1rem;
   line-height: 1.675;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.08px;
   color: #111;
 }
 
@@ -839,17 +839,17 @@ body {
 }
 
 .no-touch .home-header__box__recommend:hover {
-  background-color: darkmagenta;
+  background-color: darkolivegreen;
   color: white;
 }
 
 .no-touch .home-header__box__instagram:hover {
-  background-color: darkmagenta;
+  background-color: darkolivegreen;
   color: white;
 }
 
 .no-touch .home-header__box__form__toggle:hover:before {
-  background-color: darkmagenta;
+  background-color: darkolivegreen;
 }
 
 .home-header__box__form__toggle span:first-child {
@@ -912,6 +912,8 @@ body {
 
   height: 2.5rem;
   line-height: 2.5rem;
+
+  background: #54692f0b;
 }
 
 @media screen and (min-width: 720px) {
@@ -972,7 +974,7 @@ body {
 
   position: fixed;
   z-index: 9999;
-  background-color: darkmagenta;
+  background-color: darkolivegreen;
   color: #fff;
 
   font-size: 1rem;
@@ -1102,19 +1104,11 @@ aside {
 /* .project__tr */
 
 .project__tr:nth-child(even) {
-  background: #fbfbfb;
+  background: #54692f0b;
 }
 
 a.state-accordion-open {
   opacity: 0.5;
-}
-
-a.state-accordion-open .value__td {
-  color: #555;
-}
-
-.state-accordion-opened {
-  background: #eeeeee50;
 }
 
 .project__tr:last-child {
@@ -1389,7 +1383,7 @@ a.value__td.state-active-dsc:after {
 
 .project__details:focus,
 .project__details:active {
-  background: #eeeeee20;
+  background: #54692f0b;
 }
 
 @media screen and (min-width: 432px) {
