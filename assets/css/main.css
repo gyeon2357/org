@@ -1264,11 +1264,11 @@ a.state-accordion-open {
 }
 
 .value__td span.website {
-  background: silver;
+  background: gainsboro;
 }
 
 .value__td span.artwork {
-  background: silver;
+  background: saddlebrown;
 }
 
 .value__td span.appservice {
@@ -1276,7 +1276,11 @@ a.state-accordion-open {
 }
 
 .value__td span.editorial {
-  background: silver;
+  background: darkcyan;
+}
+
+.value__td span.document {
+  background: darkgray;
 }
 
 .value__td span.font {
