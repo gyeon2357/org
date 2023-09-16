@@ -1602,11 +1602,16 @@ a.value__td.state-active-dsc:after {
 }
 
 .scope-text h4 {
-  width: fit-content !important;
-  /* text-decoration: underline;
-  text-underline-position: under; */
+  width: 100%;
+  margin-bottom: 0.75rem;
 
-  box-shadow: inset 0 -1.5px 0 0 darkolivegreen;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-position: under;
+}
+
+.scope-text h4::after {
+  content: " ";
 }
 
 @media screen and (min-width: 720px) {
