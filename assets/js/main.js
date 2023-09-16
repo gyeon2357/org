@@ -638,7 +638,7 @@ var Layout = {
             .clientWidth
         );
 
-        var _addWidth = Math.floor((_availableWidth - _totalWidth) / 5);
+        var _addWidth = Math.floor((_availableWidth - _totalWidth) / 4);
 
         _tds = document.getElementsByClassName("value__td--title");
 
