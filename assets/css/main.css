@@ -461,7 +461,7 @@ h3 {
   padding-bottom: 1em;
 }
 .scope-text p:last-child {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 @media screen and (min-width: 720px) {
@@ -1484,7 +1484,7 @@ a.value__td.state-active-dsc:after {
 }
 
 .caption__image {
-  margin-bottom: 0.9375em;
+  margin-bottom: 0.75rem;
   width: 100% !important;
 }
 
@@ -1494,12 +1494,18 @@ a.value__td.state-active-dsc:after {
 }
 
 .caption__image__inner img {
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 @media screen and (min-width: 720px) {
   .caption__image__inner {
     padding-right: 1.5rem;
+  }
+  .caption__image__inner img {
+    padding-bottom: 1rem;
+  }
+  .caption__image {
+    margin-bottom: 1rem;
   }
 }
 
