@@ -1494,7 +1494,7 @@ a.value__td.state-active-dsc:after {
 }
 
 .caption__image__inner img {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 720px) {
