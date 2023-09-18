@@ -9,6 +9,12 @@
 }
 
 @font-face {
+  font-family: "normalbatang";
+  src: url("../fonts/NormalBatang-Regular.woff") format("woff"),
+    url("../fonts/NormalBatang-Regular.eot") format("embedded-opentype");
+}
+
+@font-face {
   font-family: "AGChoijeonghoMinburiStd";
   font-weight: 400;
   src: url("../fonts/AGChoijeonghoMinburiStd.woff2") format("woff2");
@@ -1276,12 +1282,12 @@ a.state-accordion-open {
     height: 0.425rem;
   }
 }
-
+/* 
 .value__td span.website {
   background: gainsboro;
 }
 
-.value__td span.artwork {
+.value__td span.graphic {
   background: saddlebrown;
 }
 
@@ -1307,7 +1313,7 @@ a.state-accordion-open {
 
 .value__td span.article {
   background: silver;
-}
+} */
 
 .project__icon {
   margin-top: 0.25rem;
@@ -1325,7 +1331,7 @@ a.state-accordion-open {
   text-transform: capitalize;
 
   margin-top: 3rem;
-  padding: 0.25rem 0.675rem;
+  padding: 0.25rem 0.5rem;
 
   color: orangered;
   border: 1px dashed orangered;
@@ -1334,7 +1340,7 @@ a.state-accordion-open {
 
 @media screen and (min-width: 720px) {
   .project__icon span {
-    padding: 0.2rem 0.75rem;
+    padding: 0.2rem 0.625rem;
   }
 }
 
@@ -1603,12 +1609,18 @@ a.value__td.state-active-dsc:after {
   display: none !important;
 }
 
+.caption__info {
+  font-family: "normalbatang", serif !important;
+  font-size: 95% !important;
+}
+
 .scope-text p {
   width: fit-content;
 }
 
 .scope-text h4 {
   width: 100%;
+  word-break: keep-all;
   margin-bottom: 0.75rem;
 
   text-decoration: underline;
