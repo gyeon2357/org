@@ -1,11 +1,13 @@
 @font-face {
   font-family: "pretendard-regular";
   src: url("../fonts/Pretendard-Regular.woff2") format("woff2");
+  src: local(※), url("../fonts/Pretendard-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "national";
+  font-family: "pretendard-regular";
   src: url("../fonts/national-2-regular.woff2") format("woff2");
+  unicode-range: U+0020-007E;
 }
 
 @font-face {
@@ -71,9 +73,12 @@ html {
   }
 }
 
+
+
 html,
 body {
-  font-family: "national", "pretendard-regular", sans-serif;
+  /* font-family: "national", "pretendard-regular", sans-serif; */
+  font-family: "pretendard-regular", sans-serif;
   overflow-x: hidden;
 }
 
@@ -383,7 +388,6 @@ p:empty {
 body div.wpcf7-mail-sent-ok,
 .c-content__close {
   display: block;
-  font-family: "national", "pretendard-regular", sans-serif;
 
   font-weight: 400;
   font-style: normal;
