@@ -1,41 +1,3 @@
-@font-face {
-  font-family: "pretendard-regular";
-  src: url("../fonts/Pretendard-Regular.subset.woff2") format("woff2");
-  src: local(※), url("../fonts/Pretendard-Regular.subset.woff") format("woff");
-}
-
-@font-face {
-  font-family: "pretendard-regular";
-  src: url("../fonts/national-2-regular.woff2") format("woff2");
-  unicode-range: U+0020-007E;
-}
-
-@font-face {
-  font-family: "normalbatang";
-  src: url("../fonts/NormalBatang-Regular.woff") format("woff"),
-    url("../fonts/NormalBatang-Regular.eot") format("embedded-opentype");
-}
-
-@font-face {
-  font-family: "AGChoijeonghoMinburiStd";
-  font-weight: 400;
-  src: url("../fonts/AGChoijeonghoMinburiStd.woff2") format("woff2");
-  src: local(※), url("../fonts/AGChoijeonghoMinburiStd.woff") format("woff");
-}
-
-@font-face {
-  font-family: "AGChoijeonghoMinburiStd";
-  font-weight: 500;
-  src: url("../fonts/AGChoijeonghoMinburiStdMedium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "AGChoijeonghoMinburiStd";
-  font-weight: 600;
-  src: url("../fonts/AGChoijeonghoMinburiStdBold.woff2") format("woff2");
-  src: local(※), url("../fonts/AGChoijeonghoMinburiStdBold.woff") format("woff");
-}
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,17 +35,14 @@ html {
   }
 }
 
-
-
 html,
 body {
-  /* font-family: "national", "pretendard-regular", sans-serif; */
   font-family: "pretendard-regular", sans-serif;
   overflow-x: hidden;
 }
 
 html {
-  color: #222;
+  color: #333;
 }
 
 ::-moz-selection {
@@ -1110,6 +1069,10 @@ aside {
   -webkit-box-pack: justify;
   justify-content: space-between;
 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
   border-bottom: 0.2px solid #dddddd;
 }
 
@@ -1514,6 +1477,7 @@ a.value__td.state-active-dsc:after {
   .caption__image__inner img {
     padding-bottom: 1rem;
   }
+
   .caption__image {
     margin-bottom: 1rem;
   }
@@ -1569,7 +1533,7 @@ a.value__td.state-active-dsc:after {
   text-transform: capitalize;
 
   padding: 0.25rem 0.675rem;
-  border: 1.2px dashed #222;
+  border: 1.2px dashed #333;
 }
 
 .caption__text__button {
@@ -1613,9 +1577,35 @@ a.value__td.state-active-dsc:after {
   display: none !important;
 }
 
+.caption__image__button {
+  display: flex;
+  justify-content: end;
+
+  -webkit-transition: color 250ms, color 250ms;
+  transition: color 250ms, color 250ms;
+  transform: translateY(-0.875rem);
+
+  font-size: 90%;
+  opacity: 0.6;
+}
+
+.caption__image__button:before {
+  content: "( ";
+}
+
+.caption__image__button:after {
+  content: " )";
+}
+
+.no-touch .caption__image__button:hover {
+  color: darkolivegreen;
+}
+
 .caption__info {
   font-family: "normalbatang", serif !important;
   font-size: 95% !important;
+  letter-spacing: 0.01rem !important;
+  line-height: 1.75 !important;
 }
 
 .scope-text p {

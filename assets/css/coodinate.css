@@ -49,13 +49,45 @@ p {
   mix-blend-mode: difference;
 }
 
-.header-nav-item.header-nav-item--collection a {
-  transition: opacity 0.125s ease-in;
-}
-
 .header-nav-item.header-nav-item--collection a:hover {
   text-decoration: underline;
-  opacity: 0.7;
+}
+
+body:not(.header--menu-open) .header-nav-item--active > a {
+  background: none;
+  text-decoration: none;
+  opacity: 0.5 !important;
+}
+
+body:not(.header--menu-open)
+  [data-header-style="gradient"].header
+  .header-nav-wrapper
+  .header-nav-item--active
+  a::after {
+  content: " ";
+  position: absolute;
+
+  top: 1.5rem;
+  margin-left: 0;
+
+  width: 0.5rem;
+  height: 0.5rem;
+
+  background-color: crimson;
+  border-radius: 9999px;
+}
+
+.header-menu-nav-item:hover a {
+  opacity: 0.5;
+}
+
+#footer-sections .sqs-block-html a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+#footer-sections .sqs-block-html a:hover {
+  opacity: 0.5;
 }
 
 .has-section-divider[data-section-id="64fa26ee52187037450226b5"]
@@ -90,6 +122,16 @@ p {
   width: fit-content;
   text-decoration: underline;
   text-underline-position: under;
+}
+
+.sqsrte-text-color--white {
+  word-break: keep-all;
+}
+
+.fe-block-c4ad11dbc7bfd4c4c4b4 .sqs-block h2,
+.fe-block-ea7f5bd83fd949ade80b .sqs-block h2 {
+  font-family: "GowunDodum-Regular", serif;
+
 }
 
 @media screen and (min-width: 768px),
