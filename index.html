@@ -42,7 +42,14 @@
       content="https://gyeon.zip/assets/images/og-image.jpg"
     />
 
-    <link href="./assets/css/font.css" rel="stylesheet" type="text/css" />
+    <link rel="preload" href="./assets/css/font.css" as="style" />
+    <link
+      href="./assets/css/font.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+      type="text/css"
+    />
 
     <link
       rel="apple-touch-icon"
