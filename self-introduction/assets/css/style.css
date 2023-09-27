@@ -40,6 +40,11 @@ body {
   cursor: default;
 }
 
+.lazy {
+  background-image: none;
+  background-color: silver;
+}
+
 body.fixed {
   height: 100%;
   overflow: hidden;
@@ -146,6 +151,7 @@ a mark {
   -webkit-animation: fadeIn 0.75s;
   animation: fadeIn 0.75s;
 
+  color: #000;
   box-shadow: 0 2px 1px -1px #333;
 }
 
