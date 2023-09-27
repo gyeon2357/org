@@ -593,7 +593,23 @@ header {
   z-index: 10;
 }
 
-.home-header__logo.center {
+.home-header__logo span {
+  position: absolute;
+  width: 1.375rem;
+  height: 1.375rem;
+
+  margin-top: 0.125rem;
+  margin-left: 0.25rem;
+
+  font-size: 0.625rem;
+  line-height: 1.375rem;
+  text-align: center;
+
+  letter-spacing: 0.2px;
+  color: white;
+
+  border-radius: 99rem;
+  background: darkolivegreen;
 }
 
 .home-header .scope-text {
