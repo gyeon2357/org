@@ -606,10 +606,10 @@ header {
   text-align: center;
 
   letter-spacing: 0.2px;
-  color: white;
+  color: orangered;
+  border: 1px dashed orangered;
 
   border-radius: 99rem;
-  background: darkolivegreen;
 }
 
 .home-header .scope-text {
