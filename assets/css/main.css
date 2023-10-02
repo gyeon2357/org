@@ -46,11 +46,11 @@ html {
 }
 
 ::-moz-selection {
-  text-shadow: none;
+
 }
 
 ::selection {
-  text-shadow: none;
+
 }
 
 hr {
@@ -1232,7 +1232,7 @@ a.state-accordion-open {
 }
 
 .value__td span {
-  margin: 0.675rem 0.5rem 0;
+  margin: 0.75rem 0.5rem 0;
 
   width: 0.375rem;
   height: 0.375rem;
@@ -1247,38 +1247,18 @@ a.state-accordion-open {
     height: 0.425rem;
   }
 }
-/* 
-.value__td span.website {
-  background: gainsboro;
+
+.value__td span.hundred {
+  background: black;
 }
 
-.value__td span.graphic {
-  background: saddlebrown;
-}
-
-.value__td span.appservice {
+.value__td span.collaboration {
   background: silver;
 }
 
-.value__td span.editorial {
-  background: darkcyan;
+.value__td span.support {
+  background: orange;
 }
-
-.value__td span.document {
-  background: darkgray;
-}
-
-.value__td span.font {
-  background: silver;
-}
-
-.value__td span.another {
-  background: silver;
-}
-
-.value__td span.article {
-  background: silver;
-} */
 
 .project__icon {
   margin-top: 0.25rem;
@@ -1370,9 +1350,9 @@ a.value__td.state-active-dsc:after {
   -webkit-tap-highlight-color: #eeeeee75;
 }
 
-.project__details:hover,
-.project__details:focus,
-.project__details:active {
+.project__tr .project__details:hover,
+.project__tr .project__details:focus,
+.project__tr .project__details:active {
   background: #54692f0b;
 }
 
@@ -1539,15 +1519,15 @@ a.value__td.state-active-dsc:after {
 .caption__text__button {
   display: inline-block;
 
-  border: 1.5px dashed darkolivegreen;
+  border: 1.5px dashed #333;
   border-radius: 3rem;
 
   -webkit-transition: background-color 250ms, color 250ms;
   transition: background-color 250ms, color 250ms;
   padding: 0 1rem;
 
-  height: 2.625rem;
-  line-height: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.375rem;
 
   font-size: 100%;
   text-decoration: none !important;
@@ -1555,8 +1535,8 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .caption__text__button {
-    height: 2.375rem;
-    line-height: 2.25rem;
+    height: 2.125rem;
+    line-height: 2rem;
 
     padding: 0 0.875rem;
 
@@ -1565,7 +1545,8 @@ a.value__td.state-active-dsc:after {
 }
 
 .no-touch .caption__text__button:hover {
-  background-color: darkolivegreen;
+  background-color: #333;
+
   color: white;
 }
 
@@ -1632,7 +1613,7 @@ a.value__td.state-active-dsc:after {
   }
 }
 
-span.length {
+.length {
   width: 1.375rem;
   height: 1.375rem;
 
@@ -1641,24 +1622,78 @@ span.length {
   text-align: center;
 
   letter-spacing: 0.2px;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+.length:after {
+  content: "";
+  top: 1.5rem;
+  height: 0.1rem;
+  width: 0.875rem;
+  background-color: #333 !important;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  right: 0.75rem;
+}
+
+@media screen and (min-width: 432px) {
+  .length:after {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .length:after {
+    left: 1.0625rem;
+    top: 1.125rem;
+
+    width: 10px;
+    height: 1.2px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .length:after {
+    left: 1.0625rem;
+    top: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .length:after {
+    left: 1.0625rem;
+    top: 1.175rem;
+
+    width: 0.5rem;
+    height: 0.0625rem;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  .length:after {
+    left: 1.0625rem;
+    top: 1.175rem;
+  }
 }
 
 .footer-wrapper {
   display: flex;
   flex-direction: row;
-  padding: 0.75rem;
+  padding: 1.75rem 0.75rem 0.75rem;
 }
 
 @media screen and (min-width: 432px) {
   .footer-wrapper {
-    padding: 1rem;
+    padding: 1.75rem 0.75rem 0.75rem;
   }
 }
 
 @media screen and (min-width: 720px) {
   .footer-wrapper {
-    padding: 1rem;
+    padding: 3rem 1rem 1rem;
   }
 }
 
