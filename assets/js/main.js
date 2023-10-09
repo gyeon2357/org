@@ -1011,7 +1011,7 @@ var Boot = {
           setTimeout(function () {
             document.body.classList.add("state-page-loaded");
           }, 600);
-        }, 200);
+        }, 1000);
       }
     } else {
       setTimeout(function () {
@@ -1020,7 +1020,7 @@ var Boot = {
         setTimeout(function () {
           document.body.classList.add("state-page-loaded");
         }, 600);
-      }, 300);
+      }, 1000);
     }
   },
 };
