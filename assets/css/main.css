@@ -1245,7 +1245,7 @@ a.state-accordion-open {
 }
 
 .value__td span {
-  margin: 0.675rem 0.5rem 0;
+  margin: 0.6rem 0.5rem 0;
 
   width: 0.425rem;
   height: 0.425rem;
@@ -1270,7 +1270,7 @@ a.state-accordion-open {
 
 @media screen and (min-width: 720px) {
   .value__td span {
-    margin: 0.675rem 0.625rem 0;
+    margin: 0.625rem 0.625rem 0;
 
     width: 0.375rem;
     height: 0.375rem;
