@@ -239,7 +239,7 @@ button:hover {
 
 a > figure {
   float: left;
-  width: calc(50% - 0.5rem);
+  width: calc(37.5% - 0.5rem);
   margin-top: 0.25rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
