@@ -434,17 +434,17 @@ var Sort = {
   },
   sortASC: function sortASC(_col) {
     if (Sort.films !== null) {
-      Sort.films.sort(function (a, b) {
+      Sort.films.sort(function (b, a) {
         if (a[_col] < b[_col]) return -1;
         if (a[_col] > b[_col]) return 1;
-        return 0;
+        return 1;
       });
       console.log(Sort.films);
     }
   },
   sortDSC: function sortDSC(_col) {
     if (Sort.films !== null) {
-      Sort.films.sort(function (a, b) {
+      Sort.films.sort(function (b, a) {
         if (a[_col] > b[_col]) return -1;
         if (a[_col] < b[_col]) return 1;
         return 0;
@@ -520,7 +520,7 @@ var Sort = {
             _swapEls[_j].classList.remove("state-active-dsc");
           }
 
-          _swapEls[1].classList.add("state-active-asc");
+          _swapEls[1].classList.add("state-active-dsc");
 
           document.getElementById("mobile-sort").selectedIndex = 1;
           document.getElementById("select-text").innerHTML = "Sort by: Year";
