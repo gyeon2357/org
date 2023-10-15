@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "pretendard-regular";
+  src: url("../fonts/Pretendard-Regular.subset.woff2") format("woff2");
+  src: local(※), url("../fonts/Pretendard-Regular.subset.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "pretendard-regular";
+  src: url("../fonts/national-2-regular.woff2") format("woff2");
+  unicode-range: U+0020-007E;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "normalbatang";
+  src: url("../fonts/NormalBatang-Regular.woff") format("woff"),
+    url("../fonts/NormalBatang-Regular.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AGChoijeonghoMinburiStd";
+  font-weight: 400;
+  src: url("../fonts/AGChoijeonghoMinburiStd.woff2") format("woff2");
+  src: local(※), url("../fonts/AGChoijeonghoMinburiStd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AGChoijeonghoMinburiStd";
+  font-weight: 500;
+  src: url("../fonts/AGChoijeonghoMinburiStdMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AGChoijeonghoMinburiStd";
+  font-weight: 600;
+  src: url("../fonts/AGChoijeonghoMinburiStdBold.woff2") format("woff2");
+  src: local(※), url("../fonts/AGChoijeonghoMinburiStdBold.woff") format("woff");
+}
