@@ -1069,15 +1069,13 @@ aside {
 }
 
 .nav__th--mobile {
-  padding: 0.75em 1rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
 
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  font-size: 0.875rem;
+  padding: 0.75em 1rem;
 
   border-bottom: 0.2px solid #dddddd;
 }
@@ -1234,7 +1232,7 @@ a.state-accordion-open {
 }
 
 .nav__th--desktop .project__details .value__td {
-  font-size: 95%;
+  font-size: 0.875rem;
 }
 
 .value__td {
@@ -1566,7 +1564,7 @@ figcaption::before {
 .caption__text__button {
   display: inline-block;
 
-  border: 1.5px dashed #333;
+  border: 1px dashed #333;
   border-radius: 3rem;
 
   -webkit-transition: background-color 250ms, color 250ms;
@@ -1584,6 +1582,7 @@ figcaption::before {
 
 @media screen and (min-width: 720px) {
   .caption__text__button {
+    border: 1.5px dashed #333;
     height: 2.125rem;
     line-height: 2rem;
 
@@ -1617,8 +1616,15 @@ figcaption::before {
   transition: color 250ms, color 250ms;
   transform: translateY(-0.875rem);
 
-  font-size: 90%;
-  opacity: 0.6;
+  font-size: 0.75rem;
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 720px) {
+  .caption__image__button {
+    font-size: 90%;
+    opacity: 0.6;
+  }
 }
 
 .caption__image__button:before {
@@ -1639,8 +1645,15 @@ figcaption::before {
   word-break: keep-all;
   margin-bottom: 1rem;
 
-  text-indent: 0.875rem;
   letter-spacing: -0.15px;
+}
+
+.scope-text h4::before {
+  content: " + ";
+  font-size: 90%;
+  vertical-align: 6%;
+
+  margin-right: 0.5rem;
 }
 
 .caption__info {
@@ -1666,8 +1679,10 @@ figcaption::before {
 }
 
 @media screen and (min-width: 720px) {
-  .scope-text h4 {
-    text-indent: 0.75rem;
+  .scope-text h4::before {
+
+    font-size: 82.5%;
+    vertical-align: 8%;
   }
 
   .caption__info {
