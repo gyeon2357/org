@@ -1788,18 +1788,19 @@ footer.safe-bottom {
 .footer-wrapper {
   display: flex;
   flex-direction: row;
-  padding: 1.75rem 0.75rem 1.75rem;
+  margin: 1.75rem 0.75rem 1.75rem;
+
 }
 
 @media screen and (min-width: 432px) {
   .footer-wrapper {
-    padding: 1.75rem 0.75rem 0.75rem;
+    margin: 1.75rem 0.75rem 0.75rem;
   }
 }
 
 @media screen and (min-width: 720px) {
   .footer-wrapper {
-    padding: 3rem 1rem 1rem;
+    margin: 3rem 1rem 1rem;
   }
 }
 
