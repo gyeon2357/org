@@ -53,7 +53,7 @@ body {
   font-family: "pretendard-regular", -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.65;
   word-spacing: 0.035rem;
@@ -250,6 +250,7 @@ a > figure {
 @media screen and (min-width: 900px) {
   body {
     word-break: keep-all;
+    font-size: 1.5rem;
   }
 
   a > figure {
