@@ -1466,21 +1466,50 @@ figcaption {
   width: 80%;
 
   font-size: 0.75rem;
-  line-height: 1.58;
+  line-height: 1.6;
   word-break: keep-all;
-  margin-top: -0.6rem;
+  margin-top: -0.45rem;
 }
 
 figcaption::before {
   content: " ↑ ";
 
   font-size: 75%;
-  vertical-align: 8%;
-  margin-right: 0.25rem;
+  width: fit-content;
+
+  margin: 0 auto;
+
+  text-align: center;
+  line-height: 0;
+
+  vertical-align: 0.05rem;
+  margin-right: 0.375rem;
+
+  border-radius: 999rem;
+  color: #666;
+  background: #556b2f12;
+
+  padding: 3px 3px 4px 5.25px;
+}
+.caption__before {
+  padding-top: 0.875em;
 }
 
+.caption__before__arrow {
+  content: " ↑ ";
+
+  font-size: 50%;
+  text-align: center;
+  vertical-align: 12%;
+
+  border-radius: 999rem;
+  background: #556b2f2a;
+
+  padding: 3px 5px 4px 5.25px;
+  margin-right: 0.25rem;
+}
 .caption__image {
-  margin-bottom: 0.75rem;
+  margin-bottom: 2em;
   width: 100% !important;
 }
 
@@ -1504,6 +1533,18 @@ figcaption::before {
 
     font-size: 0.675rem;
     line-height: 1.5;
+  }
+
+  .caption__before__arrow {
+    font-size: 67.5%;
+    vertical-align: 10%;
+    margin-right: 0.375rem;
+
+    padding: 3.5px 6.5px 4.5px 7px;
+  }
+
+  .caption__image {
+    margin-bottom: 0.75rem;
   }
 
   .caption__image__inner {
@@ -1651,7 +1692,7 @@ figcaption::before {
   font-size: 90%;
   vertical-align: 6%;
 
-  opacity: 0.6;
+  opacity: 0.8;
   margin-right: 0.5rem;
 }
 
@@ -1789,7 +1830,6 @@ footer.safe-bottom {
   display: flex;
   flex-direction: row;
   margin: 1.75rem 0.75rem 1.75rem;
-
 }
 
 @media screen and (min-width: 432px) {
