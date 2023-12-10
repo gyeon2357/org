@@ -236,7 +236,7 @@ var Accordion = {
           anime({
             targets: _body,
             height: _height,
-            duration: 250,
+            duration: 100,
             easing: "easeInCubic",
             complete: function complete() {
               Scroll.doResize();
@@ -267,13 +267,13 @@ var Accordion = {
           anime({
             targets: _inner,
             opacity: 0,
-            duration: 125,
+            duration: 60,
             easing: "linear",
             complete: function complete() {
               anime({
                 targets: _body,
                 height: 0,
-                duration: 250,
+                duration: 80,
                 easing: "easeInCubic",
                 complete: function complete() {
                   Scroll.doResize();
@@ -1011,7 +1011,7 @@ var Boot = {
           setTimeout(function () {
             document.body.classList.add("state-page-loaded");
           }, 600);
-        }, 1000);
+        }, 100);
       }
     } else {
       setTimeout(function () {
@@ -1020,7 +1020,7 @@ var Boot = {
         setTimeout(function () {
           document.body.classList.add("state-page-loaded");
         }, 600);
-      }, 1000);
+      }, 100);
     }
   },
 };

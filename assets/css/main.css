@@ -19,19 +19,19 @@ html {
 
 @media (min-width: 960px) and (max-width: 1279px) {
   html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1800px) {
+  html {
     font-size: 20px;
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1999px) {
+@media (min-width: 1801px) {
   html {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 2000px) {
-  html {
-    font-size: 2vw;
+    font-size: 1.25vw;
   }
 }
 
@@ -349,7 +349,7 @@ body div.wpcf7-mail-sent-ok,
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
-  line-height: 1.675;
+  line-height: 1.65;
   letter-spacing: -0.08px;
   color: #111;
 }
@@ -576,6 +576,50 @@ header {
   flex-direction: row;
 
   justify-content: space-between;
+}
+
+.loader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+
+  background-color: darkolivegreen;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.loader h1 {
+  position: fixed;
+  font-size: 4rem;
+}
+
+.loader .title {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: darkolivegreen;
+}
+
+.loader .title div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 5vw;
+
+  line-height: 1.25;
+  text-align: center;
+  color: white;
 }
 
 .home-header {
@@ -1099,9 +1143,13 @@ aside {
 }
 
 a.state-accordion-open {
-  opacity: 0.5;
-  border-bottom: 0.5px solid #556b2f50;
-  transition: all 0.125s ease-in;
+  border-bottom: none;
+}
+
+@media screen and (min-width: 720px) {
+  a.state-accordion-open {
+    border-bottom: 0.5px solid #556b2f50;
+  }
 }
 
 .project__tr:last-child {
@@ -1235,6 +1283,7 @@ a.state-accordion-open {
 
 .nav__th--desktop .project__details .value__td {
   font-size: 0.875rem;
+  color: #999;
 }
 
 .value__td {
@@ -1349,7 +1398,7 @@ a.value__td.state-active-asc:after {
   margin-left: 0.375rem;
   margin-top: 0.125rem;
 
-  color: #333;
+  color: #666;
   opacity: 1;
 }
 
@@ -1358,7 +1407,7 @@ a.value__td.state-active-dsc:after {
   margin-left: 0.375rem;
   margin-top: 0.125rem;
 
-  color: #333;
+  color: #666;
   opacity: 1;
 }
 
@@ -1487,9 +1536,6 @@ figcaption::before {
 
   border-radius: 999rem;
   color: #666;
-  background: #556b2f12;
-
-  padding: 3px 3px 4px 5.25px;
 }
 .caption__before {
   padding-top: 0.875em;
@@ -1498,14 +1544,12 @@ figcaption::before {
 .caption__before__arrow {
   content: " ↑ ";
 
-  font-size: 50%;
+  font-size: 62.5%;
   text-align: center;
   vertical-align: 12%;
 
   border-radius: 999rem;
-  background: #556b2f2a;
 
-  padding: 3px 5px 4px 5.25px;
   margin-right: 0.25rem;
 }
 .caption__image {
@@ -1538,9 +1582,6 @@ figcaption::before {
   .caption__before__arrow {
     font-size: 67.5%;
     vertical-align: 10%;
-    margin-right: 0.375rem;
-
-    padding: 3.5px 6.5px 4.5px 7px;
   }
 
   .caption__image {
@@ -1589,6 +1630,8 @@ figcaption::before {
   position: relative;
   display: block;
   width: 100%;
+
+  margin-top: 0.25rem;
 }
 
 .caption__text__clear {
@@ -1608,18 +1651,10 @@ figcaption::before {
 .caption__text__button {
   display: inline-block;
 
-  border: 1px dashed #333;
-
-  border-radius: 3rem;
-
-  -webkit-transition: background-color 250ms, color 250ms;
-  transition: background-color 250ms, color 250ms;
-  padding: 0 1rem;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 
   margin-top: 0.75rem;
-
-  height: 2.45rem;
-  line-height: 2.25rem;
 
   font-size: 100%;
   text-decoration: none !important;
@@ -1627,18 +1662,22 @@ figcaption::before {
 
 @media screen and (min-width: 720px) {
   .caption__text__button {
-    border: 1.2px solid #333;
-    height: 2.125rem;
-    line-height: 2rem;
-
-    padding: 0 0.875rem;
-
     font-size: 90%;
   }
 }
 
-.caption__text__button:before {
-  display: none !important;
+.badge {
+  display: inline-block;
+  position: relative;
+
+  width: 0.375rem;
+  height: 0.375rem;
+
+  margin-right: 0.375rem;
+  transform: translateY(-1px);
+
+  background: black;
+  border-radius: 50%;
 }
 
 .caption__text__button:after {
@@ -1687,26 +1726,17 @@ figcaption::before {
   letter-spacing: -0.15px;
 }
 
-.scope-text h4::before {
-  content: " + ";
-  font-size: 90%;
-  vertical-align: 6%;
-
-  opacity: 0.8;
-  margin-right: 0.5rem;
-}
-
 .caption__info {
   width: 100% !important;
 
   font-family: "normalbatang", serif !important;
 
-  font-size: 95% !important;
+  font-size: 97% !important;
   letter-spacing: -0.15px !important;
-  line-height: 1.75 !important;
+  line-height: 1.7125 !important;
 
-  padding: 0.625rem 1.5rem 0.625rem 0.875rem;
-  border-radius: 1.125rem;
+  /* padding: 0.625rem 1.5rem 0.625rem 0.875rem;
+  border-radius: 1.125rem; */
 
   margin-bottom: 1em;
   margin-right: 0;
@@ -1714,30 +1744,20 @@ figcaption::before {
 
 .project__tr:nth-child(even) .caption__info {
   /* background: #f1f3ef; */
-  background: #556b2f08;
+  /* background: #556b2f08; */
 }
-
-/* .project__tr:nth-child(even) .caption__text__button {
-  background: #556b2f12;
-} */
 
 .project__tr:nth-child(odd) .caption__info {
   /* background: #fafafa; */
-  background: #33333308;
+  /* background: #33333308; */
 }
-/* 
-.project__tr:nth-child(odd) .caption__text__button {
-  background: #33333312;
-} */
 
 .no-touch .project__tr:nth-child(odd) .caption__text__button:hover {
-  background-color: #333;
-  color: white;
+  opacity: 0.6;
 }
 
 .no-touch .project__tr:nth-child(even) .caption__text__button:hover {
-  background-color: darkolivegreen;
-  color: white;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 720px) {
@@ -1747,10 +1767,11 @@ figcaption::before {
   }
 
   .caption__info {
-    font-size: 90% !important;
+    width: 75% !important;
+    font-size: 95% !important;
 
-    padding: 0.75rem 1.25rem 0.75rem 1rem;
-    border-radius: 1rem;
+    /* padding: 0.75rem 1.25rem 0.75rem 1rem;
+    border-radius: 1rem; */
 
     margin-right: 3.5em;
   }
@@ -1868,7 +1889,7 @@ footer.safe-bottom {
 }
 
 .no-touch .footer-inner a:hover {
-  color: darkolivegreen;
+  opacity: 0.75;
 }
 
 /* .footer-inner a:nth-child(odd) {
