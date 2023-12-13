@@ -301,9 +301,9 @@ var Video = {
       }
     }
 
-    document.body.innerHTML +=
-      '<div class="c-video"><a href="#" class="c-video__close-overlay js-video-close"></a><a href="#" class="c-video__close js-video-close"><div class="c-video__close__line c-video__close__line--top"></div><div class="c-video__close__line c-video__close__line--bottom"></div></a><div class="c-video__inner"><a href="#" class="c-video__close-overlay js-video-close"></a><div class="c-video__wrapper js-object-size" data-width="1600" data-height="900"></div></div></div>';
-    _els = document.getElementsByClassName("js-launch-video");
+    // document.body.innerHTML +=
+    //   '<div class="c-video"><a href="#" class="c-video__close-overlay js-video-close"></a><a href="#" class="c-video__close js-video-close"><div class="c-video__close__line c-video__close__line--top"></div><div class="c-video__close__line c-video__close__line--bottom"></div></a><div class="c-video__inner"><a href="#" class="c-video__close-overlay js-video-close"></a><div class="c-video__wrapper js-object-size" data-width="1600" data-height="900"></div></div></div>';
+    // _els = document.getElementsByClassName("js-launch-video");
 
     if (_els.length > 0) {
       for (var _i2 = 0; _i2 < _els.length; _i2++) {
