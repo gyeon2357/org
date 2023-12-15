@@ -499,7 +499,7 @@ var Sort = {
           if (_event.target.id !== "mobile-sort") return;
           document.getElementById("select-text").innerHTML =
             _event.target.options[_event.target.selectedIndex].innerHTML;
-          Sort.sortASC(_event.target.value);
+          Sort.sortDSC(_event.target.value);
           Sort.reorderFilms();
         },
         false
@@ -524,7 +524,7 @@ var Sort = {
 
           document.getElementById("mobile-sort").selectedIndex = 1;
           document.getElementById("select-text").innerHTML = "Sort by: Year";
-          Sort.sortASC("year");
+          Sort.sortDSC("year");
           Sort.reorderFilms();
         }
       }
