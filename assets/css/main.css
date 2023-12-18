@@ -1498,12 +1498,16 @@ a.value__td.state-active-dsc:after {
   padding: 0.75rem 1rem 1.5rem;
 
   -webkit-tap-highlight-color: #f0f8ff23;
-  transition: background 0.125s ease;
+  transition: background 0.125s ease-in-out;
 }
 
 .project__tr .project__details:hover,
-.project__tr .project__details:focus,
+.project__tr .project__details:focus {
+  background: #000;
+}
+
 .project__tr .project__details:active {
+  background: inherit;
 }
 
 @media screen and (min-width: 432px) {
@@ -2917,4 +2921,13 @@ body.light .project__tr:nth-child(even) .caption__info {
 }
 body.light .project__tr:nth-child(odd) .caption__info {
   border-left: 1px solid var(--light-border-color-60);
+}
+
+body.light .project__tr .project__details:hover,
+body.light .project__tr .project__details:focus {
+  background: #fff;
+}
+
+body.light .project__tr .project__details:active {
+  background: inherit;
 }
