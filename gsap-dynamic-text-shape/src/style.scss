@@ -1,0 +1,102 @@
+// Design inspiration from https://www.zikd.space/en/
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --scaleWhite: 0;
+    --scaleBlack: 0;
+    // --outlineWidth: 12px;
+    --outlineWidth: 0.04em;
+}
+
+footer {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .8rem;
+
+    a { color: white; }
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+.center-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 6vw;
+
+    .title {
+        text-align: center;
+
+        .ellipse {
+
+            // breathing room
+            padding: .25em .5em;
+    
+            // follow font letter sizes
+            border-radius: 1em;
+            
+            position: relative;
+            visibility: hidden;
+
+            // border: 1px solid blue;
+    
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -100;
+                visibility: visible;
+    
+                content: "";
+                width: 100%;
+                height: 100%;
+                scale: var(--scaleWhite);
+    
+                // ❗️⛔️ outside border does not follow border-radius 
+				// in other browsers except Firefox
+                // outline: var(--outlineWidth) solid white;
+				box-shadow: 0 0 0 var(--outlineWidth) white;
+                
+                border-radius: 1em;
+                background-color: white;
+    
+                // debugging
+                // border: 1px solid blue;
+            }
+    
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -99;
+                visibility: visible;
+    
+                content: "";
+                width: 100%;
+                height: 100%;
+                scale: var(--scaleBlack);
+                
+                border-radius: 1em;
+                background-color: black;
+    
+                // border: 1px solid yellow;
+            }
+        }
+    }    
+}

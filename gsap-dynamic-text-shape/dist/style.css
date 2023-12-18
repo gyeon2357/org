@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --scaleWhite: 0;
+  --scaleBlack: 0;
+  --outlineWidth: 0.04em;
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+}
+footer a {
+  color: white;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.center-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "BIZ UDPMincho", serif;
+  font-size: 6vw;
+}
+.center-content .title {
+  text-align: center;
+}
+.center-content .title .ellipse {
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
+  position: relative;
+  visibility: hidden;
+}
+.center-content .title .ellipse::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  visibility: visible;
+  content: "";
+  width: 100%;
+  height: 100%;
+  scale: var(--scaleWhite);
+  box-shadow: 0 0 0 var(--outlineWidth) white;
+  border-radius: 1em;
+  background-color: white;
+}
+.center-content .title .ellipse::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  visibility: visible;
+  content: "";
+  width: 100%;
+  height: 100%;
+  scale: var(--scaleBlack);
+  border-radius: 1em;
+  background-color: black;
+}
