@@ -1,0 +1,34 @@
+body {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+h1 { text-align: center; }
+
+#rotator {
+	position: relative;
+  display:inline-block;
+	height:1.2em;
+	line-height:1.2;
+	overflow:hidden;
+	vertical-align: text-bottom;
+  overflow: hidden;
+  border: solid 1px #f00;
+  width: 100%;
+  margin: 0 auto;
+
+	& > span {
+    opacity: 0;
+    position: absolute;
+		top: 0;
+		left: 0;
+    width: 100%;
+    text-align: center;
+    background: -webkit-linear-gradient(#FF7800, #FF0066);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	}
+  
+  & > span:first-of-type { opacity: 1; }
+   
+}
