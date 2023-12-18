@@ -636,6 +636,8 @@ body {
 }
 
 .hover-reveal {
+  display: none;
+
   position: fixed;
   width: 200px;
   height: 150px;
@@ -664,6 +666,12 @@ body {
 .hover-reveal__img {
   background-size: cover;
   background-position: 50% 50%;
+}
+
+@media screen and (min-width: 720px) {
+  .hover-reveal {
+    display: block;
+  }
 }
 
 header {
@@ -1267,8 +1275,8 @@ aside {
 
 @media screen and (min-width: 720px) {
   .project__tr:before {
-    right: 1.0625rem;
-    top: 1.125rem;
+    right: 1.5rem;
+    top: 1rem;
 
     width: 10px;
     height: 1px;
@@ -1278,7 +1286,7 @@ aside {
 @media screen and (min-width: 960px) {
   .project__tr:before {
     right: 1.5rem;
-    top: 1.125rem;
+    top: 1rem;
 
     width: 14px;
     height: 1.125px;
@@ -1307,8 +1315,8 @@ aside {
 
 @media screen and (min-width: 720px) {
   .project__tr:after {
-    right: 1.0625rem;
-    top: 1.125rem;
+    right: 1.5rem;
+    top: 1rem;
 
     width: 10px;
     height: 1px;
@@ -1318,7 +1326,7 @@ aside {
 @media screen and (min-width: 960px) {
   .project__tr:after {
     right: 1.5rem;
-    top: 1.125rem;
+    top: 1rem;
 
     width: 14px;
     height: 1.125px;
@@ -1328,15 +1336,11 @@ aside {
 .project__tr.state-accordion-open:before {
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
-
-  scale: 1.5;
 }
 
 .project__tr.state-accordion-open:after {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
-
-  scale: 1.5;
 }
 
 .nav__th--desktop .project__details {
@@ -1491,7 +1495,7 @@ a.value__td.state-active-dsc:after {
 .project__tr .project__details {
   display: block;
   position: relative;
-  padding: .75rem 1rem 1.5rem;
+  padding: 0.75rem 1rem 1.5rem;
 
   -webkit-tap-highlight-color: #f0f8ff23;
   transition: background 0.125s ease;
@@ -1571,6 +1575,58 @@ a.value__td.state-active-dsc:after {
   .nav__th--desktop .project__details,
   .project__details__length {
     padding: 0.25rem 1.5rem;
+  }
+}
+
+.length {
+  width: 1.375rem;
+  height: 1.375rem;
+
+  color: var(--dark-text-color);
+  font-size: 90%;
+  line-height: 1.375rem;
+  text-align: center;
+
+  letter-spacing: 0.1px;
+}
+
+.length:after {
+  content: "";
+  top: 1.5rem;
+  height: 0.0875rem;
+  width: 0.625rem;
+  background: var(--dark-text-color);
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  right: 0.75rem;
+}
+
+@media screen and (min-width: 432px) {
+  .length:after {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .length:after {
+    right: 1.5rem;
+    top: 1rem;
+
+    width: 10px;
+    height: 1px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .length:after {
+    right: 1.5rem;
+    top: 1rem;
+
+    width: 14px;
+    height: 1.125px;
   }
 }
 
@@ -1658,7 +1714,7 @@ figcaption::before {
   vertical-align: 0.05rem;
   margin-right: 0.375rem;
 
-  border-radius: 999rem;
+  border-radius: 999px;
   color: var(--dark-text-color);
 }
 .caption__before {
@@ -1672,7 +1728,7 @@ figcaption::before {
   text-align: center;
   vertical-align: 12%;
 
-  border-radius: 999rem;
+  border-radius: 999px;
 
   margin-right: 0.25rem;
 }
@@ -1793,14 +1849,14 @@ figcaption::before {
   display: inline-block;
   position: relative;
 
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 6px;
+  height: 6px;
 
   margin-right: 0.375rem;
   transform: translateY(-1px);
 
   background: var(--dark-border-color-100);
-  border-radius: 50%;
+  border-radius: 999px;
 }
 
 .caption__text__button:after {
@@ -1813,8 +1869,8 @@ figcaption::before {
 
   margin-top: 4em;
 
-  -webkit-transition: color 250ms, color 250ms;
-  transition: color 250ms, color 250ms;
+  -webkit-transition: opacity 125ms ease-in-out;
+  transition: opacity 125ms ease-in-out;
   transform: translateY(-0.875rem);
 
   font-size: 0.75rem;
@@ -1833,7 +1889,7 @@ figcaption::before {
 }
 
 .no-touch .caption__image__button:hover {
-  color: var(--dark-background);
+  opacity: 0.7;
 }
 
 .scope-text p {
@@ -1913,57 +1969,6 @@ figcaption::before {
   }
 }
 
-.length {
-  width: 1.375rem;
-  height: 1.375rem;
-
-  font-size: 90%;
-  line-height: 1.375rem;
-  text-align: center;
-
-  letter-spacing: 0.1px;
-}
-
-.length:after {
-  content: "";
-  top: 1.5rem;
-  height: 0.0875rem;
-  width: 0.625rem;
-  background: var(--dark-text-color) !important;
-  position: absolute;
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms;
-  right: 0.75rem;
-}
-
-@media screen and (min-width: 432px) {
-  .length:after {
-    right: 1rem;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  .length:after {
-    right: 1.0625rem;
-    top: 1.125rem;
-
-    width: 10px;
-    height: 1px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .length:after {
-    right: 1.5rem;
-    top: 1.125rem;
-
-    width: 14px;
-    height: 1.125px;
-  }
-}
-
 footer.safe-bottom {
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -1971,7 +1976,7 @@ footer.safe-bottom {
 .footer-wrapper {
   display: flex;
   flex-direction: row;
-  margin: 1.75rem 0.75rem 1.75rem;
+  margin: 2.5rem 1rem 1.75rem;
 }
 
 @media screen and (min-width: 432px) {
@@ -2005,6 +2010,8 @@ footer.safe-bottom {
 .footer-inner a {
   position: relative;
   width: 100%;
+
+  line-height: 1.5;
 
   -webkit-transition: color 250ms, color 250ms;
   transition: color 250ms, color 250ms;
@@ -2672,7 +2679,7 @@ body .plyr__control.plyr__control--overlaid * {
   right: 0.5rem;
 
   font-size: 1.5rem;
-  content: " ☀ ";
+  content: url(../images/sun-fill.svg);
 
   width: 1rem;
   height: 1rem;
@@ -2680,13 +2687,19 @@ body .plyr__control.plyr__control--overlaid * {
   color: var(--light-background);
   border-radius: 999px;
 
+  transition: opacity 0.125s ease-in;
+
   cursor: pointer;
   z-index: 999;
 }
 
+.light-switch:hover {
+  opacity: 0.4;
+}
+
 @media screen and (min-width: 720px) {
   .light-switch {
-    right: 0px;
+    right: -4px;
     top: 0px;
 
     font-size: 1.625rem;
@@ -2703,6 +2716,7 @@ body.light {
 
 body.light .light-switch {
   color: var(--dark-background);
+  content: url(../images/sun.svg);
 }
 
 body.light .main-wrapper {
@@ -2761,10 +2775,6 @@ body.light .state-accordion-opened:nth-child(odd) {
     var(--light-background),
     var(--variable-light-cloud) 100%
   );
-}
-
-body.light .no-touch .caption__image__button:hover {
-  color: var(--light-background);
 }
 
 body.light .c-paragraph,
@@ -2872,6 +2882,10 @@ body.light .length:after {
 }
 
 body.light .footer-inner {
+  color: var(--light-text-color);
+}
+
+body.light .length {
   color: var(--light-text-color);
 }
 
