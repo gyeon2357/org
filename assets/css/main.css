@@ -68,8 +68,8 @@ html {
 
 html,
 body {
-  font-family: "pretendard-regular", sans-serif;
   font-family: "SUIT", sans-serif;
+  font-family: "pretendard-comb-type", sans-serif;
   overflow-x: hidden;
 }
 
@@ -611,7 +611,7 @@ body {
 }
 .onload .line_text {
   overflow: hidden;
-  font-family: "pretendard-regular", sans-serif;
+  font-family: "pretendard-comb-type", sans-serif;
   font-weight: 500;
 
   font-size: 5.5vw;
