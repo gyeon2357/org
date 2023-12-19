@@ -614,8 +614,8 @@ body {
   font-family: "pretendard-regular", sans-serif;
   font-weight: 500;
 
-  font-size: 7vw;
-  line-height: 1.2;
+  font-size: 6vw;
+  line-height: 1.3;
   scale: 0;
 }
 .onload .line_text .letter {
@@ -638,7 +638,17 @@ body {
 }
 .onload .line_text .lowercase {
   font-family: "normalbatang", serif;
-  font-size: 3vw;
+  font-size: 4vw;
+}
+
+@media screen and (min-width: 720px) {
+  .onload .line_text {
+    font-size: 7vw;
+    line-height: 1.2;
+  }
+  .onload .line_text .lowercase {
+    font-size: 3vw;
+  }
 }
 
 /* hover-reveal */
