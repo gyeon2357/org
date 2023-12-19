@@ -591,49 +591,57 @@ body {
   background: var(--dark-background);
 }
 
-.loader {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
+/* loader */
 
-  background: var(--dark-background);
-  background-size: cover;
-  background-position: center;
+.onload {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.25em;
+
+  background: #fff;
+  color: #000;
+}
+.onload .linerow {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.onload .line_text {
   overflow: hidden;
-}
+  font-family: "pretendard-regular", sans-serif;
+  font-weight: 500;
 
-.loader h1 {
-  position: fixed;
-  font-size: 4rem;
+  font-size: 7vw;
+  line-height: 1.2;
+  scale: 0;
 }
-
-.loader .title {
-  display: none;
-  position: fixed;
-  z-index: 999;
+.onload .line_text .letter {
+  position: relative;
+  display: inline-block;
+  transform: translateY(200%);
+}
+.onload .line_text .letter::before {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 120%;
-  background: var(--dark-background);
+  content: attr(data-char);
+  transform: translateY(-100%);
+}
+.onload .line_text .letter[data-char="."]::before {
+  opacity: 0;
+}
+.onload .line_text .letter[data-char="."] {
+  transform: translateY(100%);
+}
+.onload .line_text .lowercase {
+  font-family: "normalbatang", serif;
+  font-size: 3vw;
 }
 
-.loader .title div {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  font-size: 5vw;
-
-  line-height: 1.25;
-  text-align: center;
-  color: var(--dark-text-color);
-}
+/* hover-reveal */
 
 .hover-reveal {
   display: none;
@@ -1391,14 +1399,14 @@ aside {
   content: " 《 ";
 
   font-size: 90%;
-  margin-right: -2px;
+  margin-right: -2.5px;
 }
 
 .brackets::after {
   content: " 》 ";
 
   font-size: 90%;
-  margin-left: -2px;
+  margin-left: -2.5px;
 }
 
 @media screen and (min-width: 720px) {

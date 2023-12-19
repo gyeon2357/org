@@ -188,7 +188,7 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          this.DOM.reveal.style.opacity = 1;
+          this.DOM.reveal.style.opacity = .75;
           TweenMax.set(this.DOM.el, {zIndex: 1000});
         },
       })
