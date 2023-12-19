@@ -1,4 +1,3 @@
-// FONT PLUS "" SIZING
 const alpha15 = "ijl";
 const alpha20 = "frtz";
 const alpha30 = "acehknosuvxy";
@@ -14,7 +13,6 @@ const ALPHA55 = "W";
 
 const ALPHABETS_SIZES = [ALPHA35, ALPHA40];
 
-// TODO: FACTORISE THIS CODE
 let randomLetter = lett => {
   for (var letters of ALPHABETS_SIZES) {
     if (letters.indexOf(lett) != -1) {
@@ -91,7 +89,7 @@ var animation = tl
 
 tl.to(".onload", {
   y: "-100%",
-  delay: "0.5",
+  delay: "0.6",
 
   duration: 0.75,
   display: "none",
