@@ -62,11 +62,11 @@ const tl = gsap.timeline({defaults: {ease: "power2.out"}});
 var animation = tl
 
   .to(".line_text .letter", {
-    duration: 1.5,
+    duration: 1,
     yPercent: -100,
     stagger: {
       // amount: total time
-      // each: each pause
+      // each: 0.5,
       amount: 0.5,
       // from: 'start'
     },
@@ -79,7 +79,7 @@ var animation = tl
       duration: 1.5,
       yPercent: -200,
       stagger: {
-        amount: 0.75,
+        amount: 0.5,
         from: "edges",
       },
       ease: "expo.out",
@@ -89,10 +89,10 @@ var animation = tl
 
 tl.to(".onload", {
   y: "-100%",
-  delay: "0.6",
+  delay: "0.75",
 
-  duration: 0.75,
+  duration: 0.5,
   display: "none",
 });
 
-tl.fromTo("main, footer", {opacity: 0}, {opacity: 1, duration: 0.375});
+tl.fromTo("main, footer", {opacity: 0}, {opacity: 1, duration: 0.25});

@@ -18,7 +18,7 @@
     url("../fonts/NormalBatang-Regular.eot") format("embedded-opentype");
   font-display: swap;
 }
-
+/* 
 @font-face {
   font-family: "AGChoijeonghoMinburiStd";
   font-weight: 400;
@@ -37,4 +37,4 @@
   font-weight: 600;
   src: url("../fonts/AGChoijeonghoMinburiStdBold.woff2") format("woff2");
   src: local(※), url("../fonts/AGChoijeonghoMinburiStdBold.woff") format("woff");
-}
+}  */
