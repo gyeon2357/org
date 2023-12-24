@@ -346,6 +346,19 @@ p:empty {
   transition: opacity 400ms;
 }
 
+.reveal_reveal {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.image_reveal {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transform-origin: left;
+}
+
 .c-paragraph,
 .c-heading,
 .scope-text h1,
@@ -385,7 +398,7 @@ body div.wpcf7-mail-sent-ok,
   font-style: normal;
   font-size: 1rem;
   line-height: 1.725;
-  letter-spacing: -0.02px;
+  letter-spacing: -0.2px;
   color: var(--dark-text-color);
 }
 
@@ -602,6 +615,7 @@ body {
   justify-content: center;
   align-items: start;
   gap: 0.25em;
+  cursor: pointer;
 
   background: var(--dark-background);
   color: var(--dark-text-color);
@@ -649,7 +663,7 @@ body {
     line-height: 1.2;
   }
   .onload .line_text .lowercase {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -664,8 +678,9 @@ body {
   display: none;
 
   position: fixed;
-  width: 200px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
+
   top: 0;
   left: 0;
   pointer-events: none;
@@ -676,6 +691,7 @@ body {
 .hover-reveal__img {
   width: 100%;
   height: 100%;
+  border-radius: 100%;
   position: relative;
 }
 
@@ -1775,7 +1791,7 @@ figcaption::before {
 }
 
 .caption__image__inner img {
-  border: 0.5px solid #eeeeee;
+  border: 0.5px solid var(--dark-border-color-30);
 }
 
 @media screen and (min-width: 720px) {
@@ -2938,6 +2954,10 @@ body.light .nav__th--desktop .project__details {
 
 body.light .caption {
   border-bottom: 0.1px solid var(--light-border-color-100);
+}
+
+body.light .caption__image__inner img {
+  border: 0.5px solid var(--light-border-color-60);
 }
 
 body.light .badge {

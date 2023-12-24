@@ -124,6 +124,7 @@
         .add(
           new TweenMax(this.DOM.revealInner, 0.2, {
             ease: Sine.easeOut,
+
             x: "100%",
           }),
           "begin"
@@ -132,6 +133,7 @@
         .add(
           new TweenMax(this.DOM.revealImg, 0.2, {
             ease: Sine.easeOut,
+
             x: "-100%",
           }),
           "begin"
@@ -188,7 +190,7 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          this.DOM.reveal.style.opacity = .75;
+          this.DOM.reveal.style.opacity = 0.75;
           TweenMax.set(this.DOM.el, {zIndex: 1000});
         },
       })
@@ -246,11 +248,248 @@
     }
   }
 
+  // Effect 4
+  class HoverImgFx4 {
+    constructor(el) {
+      this.DOM = {el: el};
+      this.DOM.reveal = document.createElement("div");
+      this.DOM.reveal.className = "hover-reveal";
+      this.DOM.reveal.innerHTML = `<div class="hover-reveal__img" style="background-image:url(${this.DOM.el.dataset.img})"></div>`;
+      this.DOM.el.appendChild(this.DOM.reveal);
+      this.DOM.revealImg = this.DOM.reveal.querySelector(".hover-reveal__img");
+
+      this.initEvents();
+    }
+    initEvents() {
+      this.positionElement = ev => {
+        const mousePos = getMousePos(ev);
+        const docScrolls = {
+          left: document.body.scrollLeft + document.documentElement.scrollLeft,
+          top: document.body.scrollTop + document.documentElement.scrollTop,
+        };
+        this.DOM.reveal.style.top = `${mousePos.y + 20 - docScrolls.top}px`;
+        this.DOM.reveal.style.left = `${mousePos.x + 20 - docScrolls.left}px`;
+      };
+      this.mouseenterFn = ev => {
+        this.positionElement(ev);
+        this.showImage();
+        this.animateLetters();
+      };
+      this.mousemoveFn = ev =>
+        requestAnimationFrame(() => {
+          this.positionElement(ev);
+        });
+      this.mouseleaveFn = () => {
+        this.hideImage();
+      };
+
+      this.DOM.el.addEventListener("mouseenter", this.mouseenterFn);
+      this.DOM.el.addEventListener("mousemove", this.mousemoveFn);
+      this.DOM.el.addEventListener("mouseleave", this.mouseleaveFn);
+    }
+    showImage() {
+      TweenMax.killTweensOf(this.DOM.revealInner);
+      TweenMax.killTweensOf(this.DOM.revealImg);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          this.DOM.reveal.style.opacity = 1;
+          TweenMax.set(this.DOM.el, {zIndex: 1000});
+        },
+      })
+        .add("begin")
+        .add(
+          new TweenMax(this.DOM.revealInner, 0.8, {
+            ease: Expo.easeOut,
+            startAt: {opacity: 0, y: "50%", rotation: -15, scale: 0},
+            y: "0%",
+            rotation: 0,
+            opacity: 1,
+            scale: 1,
+          }),
+          "begin"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.8, {
+            ease: Expo.easeOut,
+            startAt: {rotation: 15, scale: 2},
+            rotation: 0,
+            scale: 1,
+          }),
+          "begin"
+        );
+    }
+    hideImage() {
+      TweenMax.killTweensOf(this.DOM.revealInner);
+      TweenMax.killTweensOf(this.DOM.revealImg);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          TweenMax.set(this.DOM.el, {zIndex: 999});
+        },
+        onComplete: () => {
+          TweenMax.set(this.DOM.el, {zIndex: ""});
+          TweenMax.set(this.DOM.reveal, {opacity: 0});
+        },
+      })
+        .add("begin")
+        .add(
+          new TweenMax(this.DOM.revealInner, 0.15, {
+            ease: Sine.easeOut,
+            y: "-40%",
+            rotation: 10,
+            scale: 0.9,
+            opacity: 0,
+          }),
+          "begin"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.15, {
+            ease: Sine.easeOut,
+            rotation: -10,
+            scale: 1.5,
+          }),
+          "begin"
+        );
+    }
+    animateLetters() {
+      TweenMax.killTweensOf(this.DOM.letters);
+      TweenMax.set(this.DOM.letters, {opacity: 0});
+      TweenMax.staggerTo(
+        this.DOM.letters,
+        0.8,
+        {
+          ease: Expo.easeOut,
+          startAt: {y: "50%"},
+          y: "0%",
+          opacity: 1,
+        },
+        0.03
+      );
+    }
+  }
+
+  // Effect 22
+  class HoverImgFx22 {
+    constructor(el) {
+      this.DOM = {el: el};
+      this.DOM.reveal = document.createElement("div");
+      this.DOM.reveal.className = "hover-reveal";
+      this.DOM.reveal.innerHTML = `<div class="hover-reveal__img" style="background-image:url(${this.DOM.el.dataset.img})"></div>`;
+      this.DOM.el.appendChild(this.DOM.reveal);
+      this.DOM.revealImg = this.DOM.reveal.querySelector(".hover-reveal__img");
+
+      this.initEvents();
+    }
+    initEvents() {
+      this.positionElement = ev => {
+        const mousePos = getMousePos(ev);
+        const docScrolls = {
+          left: document.body.scrollLeft + document.documentElement.scrollLeft,
+          top: document.body.scrollTop + document.documentElement.scrollTop,
+        };
+        this.DOM.reveal.style.top = `${mousePos.y + -5 - docScrolls.top}px`;
+        this.DOM.reveal.style.left = `${mousePos.x + -5 - docScrolls.left}px`;
+      };
+      this.mouseenterFn = ev => {
+        this.positionElement(ev);
+        this.showImage();
+      };
+      this.mousemoveFn = ev =>
+        requestAnimationFrame(() => {
+          this.positionElement(ev);
+        });
+      this.mouseleaveFn = () => {
+        this.hideImage();
+      };
+
+      this.DOM.el.addEventListener("mouseenter", this.mouseenterFn);
+      this.DOM.el.addEventListener("mousemove", this.mousemoveFn);
+      this.DOM.el.addEventListener("mouseleave", this.mouseleaveFn);
+    }
+    showImage() {
+      TweenMax.killTweensOf(this.DOM.revealImg);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          this.DOM.reveal.style.opacity = 1;
+          TweenMax.set(this.DOM.el, {zIndex: 1000});
+        },
+      })
+        .add("begin")
+        .set(this.DOM.revealImg, {transformOrigin: "50% 95%", y: "20%"})
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.2, {
+            ease: Sine.easeOut,
+            startAt: {scaleX: 0.5, scaleY: 1},
+            scaleX: 1,
+            scaleY: 0.9,
+          }),
+          "begin"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.8, {
+            ease: Expo.easeOut,
+            startAt: {rotation: 5, y: "5%", opacity: 0},
+            rotation: 0,
+            y: "0%",
+            opacity: 0.9,
+          }),
+          "begin"
+        )
+        .set(this.DOM.revealImg, {transformOrigin: "50% 0%"})
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.5, {
+            ease: Expo.easeOut,
+            scaleX: 1,
+            scaleY: 1,
+            opacity: 0.9,
+          }),
+          "begin+=0.1"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.6, {
+            ease: Expo.easeOut,
+            x: "0%",
+          }),
+          "begin+=0.1"
+        );
+    }
+    hideImage() {
+      TweenMax.killTweensOf(this.DOM.revealImg);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          TweenMax.set(this.DOM.el, {zIndex: 999});
+        },
+        onComplete: () => {
+          TweenMax.set(this.DOM.el, {zIndex: ""});
+          TweenMax.set(this.DOM.reveal, {opacity: 0});
+        },
+      })
+        .add("begin")
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.2, {
+            ease: Sine.easeOut,
+            opacity: 0,
+            x: "0%",
+          }),
+          "begin"
+        );
+    }
+  }
+
   [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(
     link => new HoverImgFx1(link)
   );
   [...document.querySelectorAll('[data-fx="2"] > a, a[data-fx="2"]')].forEach(
     link => new HoverImgFx2(link)
+  );
+  [...document.querySelectorAll('[data-fx="4"] > a, a[data-fx="4"]')].forEach(
+    link => new HoverImgFx4(link)
+  );
+  [...document.querySelectorAll('[data-fx="22"] > a, a[data-fx="22"]')].forEach(
+    link => new HoverImgFx22(link)
   );
 
   // Demo purspose only: Preload all the images in the page..
