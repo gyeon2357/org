@@ -520,10 +520,10 @@ var Sort = {
             _swapEls[_j].classList.remove("state-active-dsc");
           }
 
-          _swapEls[1].classList.add("state-active-dsc");
+          _swapEls[2].classList.add("state-active-dsc");
 
-          document.getElementById("mobile-sort").selectedIndex = 1;
-          document.getElementById("select-text").innerHTML = "Sort by: Year";
+          document.getElementById("mobile-sort").selectedIndex = 2;
+          document.getElementById("select-text").innerHTML = "Sort by: Date";
           Sort.sortDSC("year");
           Sort.reorderFilms();
         }

@@ -1264,7 +1264,7 @@ aside {
 .project__tr:nth-child(odd) {
 }
 
-.state-accordion-opened:nth-child(odd) {
+.state-accordion-opened {
   background: linear-gradient(
     to top,
     var(--dark-background),
@@ -1906,10 +1906,8 @@ figcaption::before {
 }
 
 .caption__image__button {
-  display: flex;
-  justify-content: start;
+  display: initial;
 
-  margin-left: 1em;
   margin-top: 3em;
 
   -webkit-transition: opacity 125ms ease-in-out;
@@ -1927,10 +1925,10 @@ figcaption::before {
   }
 }
 
-.caption__image__button:before {
+/* .caption__image__button:before {
   content: " → ";
-  margin-right: 0.5rem;
-}
+  margin-right: 0.375rem;
+} */
 
 .no-touch .caption__image__button:hover {
   opacity: 0.7;
@@ -1958,7 +1956,7 @@ figcaption::before {
   font-family: "normalbatang", serif !important;
 
   font-size: 97% !important;
-  letter-spacing: -0.1px !important;
+  letter-spacing: -0.25px !important;
   line-height: 1.75 !important;
 
   /* padding: 0.625rem 1.5rem 0.625rem 0.875rem;
@@ -2031,7 +2029,7 @@ footer.safe-bottom {
 
 @media screen and (min-width: 720px) {
   .footer-wrapper {
-    margin: 4rem 1.5rem 1rem;
+    margin: 7rem 1.5rem 2rem;
   }
 }
 
@@ -2813,7 +2811,7 @@ body.light .load {
   background: var(--light-background);
 }
 
-body.light .state-accordion-opened:nth-child(odd) {
+body.light .state-accordion-opened {
   background: linear-gradient(
     to top,
     var(--light-background),
