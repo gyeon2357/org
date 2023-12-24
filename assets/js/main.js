@@ -408,54 +408,54 @@ var ObjectSize = {
   },
 };
 var Sort = {
-  films: null,
+  projects: null,
   wrapper: null,
   mobile: null,
   init: function init() {
     var _trs = document.getElementsByClassName("project__tr");
 
     if (_trs) {
-      Sort.films = [];
+      Sort.projects = [];
 
       for (var _i = 0; _i < _trs.length; _i++) {
-        Sort.films[_i] = [];
-        Sort.films[_i].id = _trs[_i].getAttribute("id");
-        Sort.films[_i].title = _trs[_i].getAttribute("data-title");
-        Sort.films[_i].year = _trs[_i].getAttribute("data-year");
-        Sort.films[_i].tag = _trs[_i].getAttribute("data-tag");
+        Sort.projects[_i] = [];
+        Sort.projects[_i].id = _trs[_i].getAttribute("id");
+        Sort.projects[_i].title = _trs[_i].getAttribute("data-title");
+        Sort.projects[_i].year = _trs[_i].getAttribute("data-year");
+        Sort.projects[_i].tag = _trs[_i].getAttribute("data-tag");
       }
 
       Sort.wrapper = document.getElementById("index");
       Sort.bindClick();
       Sort.doResize();
     } else {
-      Sort.films = null;
+      Sort.projects = null;
     }
   },
   sortASC: function sortASC(_col) {
-    if (Sort.films !== null) {
-      Sort.films.sort(function (b, a) {
+    if (Sort.projects !== null) {
+      Sort.projects.sort(function (b, a) {
         if (a[_col] < b[_col]) return -1;
         if (a[_col] > b[_col]) return 1;
         return 1;
       });
-      console.log(Sort.films);
+      console.log(Sort.projects);
     }
   },
   sortDSC: function sortDSC(_col) {
-    if (Sort.films !== null) {
-      Sort.films.sort(function (b, a) {
+    if (Sort.projects !== null) {
+      Sort.projects.sort(function (b, a) {
         if (a[_col] > b[_col]) return -1;
         if (a[_col] < b[_col]) return 1;
         return 0;
       });
-      console.log(Sort.films);
+      console.log(Sort.projects);
     }
   },
-  reorderFilms: function reorderFilms() {
-    if (Sort.films !== null) {
-      for (var _i = 0; _i < Sort.films.length; _i++) {
-        Sort.wrapper.appendChild(document.getElementById(Sort.films[_i].id));
+  reorderProject: function reorderProject() {
+    if (Sort.projects !== null) {
+      for (var _i = 0; _i < Sort.projects.length; _i++) {
+        Sort.wrapper.appendChild(document.getElementById(Sort.projects[_i].id));
       }
     }
   },
@@ -471,12 +471,12 @@ var Sort = {
             this.classList.remove("state-active-asc");
             this.classList.add("state-active-dsc");
             Sort.sortDSC(this.getAttribute("data-order"));
-            Sort.reorderFilms();
+            Sort.reorderProject();
           } else if (this.classList.contains("state-active-dsc")) {
             this.classList.remove("state-active-dsc");
             this.classList.add("state-active-asc");
             Sort.sortASC(this.getAttribute("data-order"));
-            Sort.reorderFilms();
+            Sort.reorderProject();
           } else {
             var _swapEls = document.getElementsByClassName("js-swap-order");
 
@@ -488,7 +488,7 @@ var Sort = {
 
             this.classList.add("state-active-asc");
             Sort.sortASC(this.getAttribute("data-order"));
-            Sort.reorderFilms();
+            Sort.reorderProject();
           }
         });
       }
@@ -500,14 +500,14 @@ var Sort = {
           document.getElementById("select-text").innerHTML =
             _event.target.options[_event.target.selectedIndex].innerHTML;
           Sort.sortDSC(_event.target.value);
-          Sort.reorderFilms();
+          Sort.reorderProject();
         },
         false
       );
     }
   },
   doResize: function doResize() {
-    if (Sort.films !== null) {
+    if (Sort.projects !== null) {
       if (Sort.Mobile !== Device.mobile) {
         Sort.Mobile = Device.mobile;
 
@@ -523,9 +523,9 @@ var Sort = {
           _swapEls[2].classList.add("state-active-dsc");
 
           document.getElementById("mobile-sort").selectedIndex = 2;
-          document.getElementById("select-text").innerHTML = "Sort by: Date";
+          document.getElementById("select-text").innerHTML = "Sort by: Year";
           Sort.sortDSC("year");
-          Sort.reorderFilms();
+          Sort.reorderProject();
         }
       }
     }
