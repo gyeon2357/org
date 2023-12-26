@@ -56,15 +56,15 @@ html {
   }
 }
 
-@media (min-width: 1801px) and (max-width: 1919px) {
+@media (min-width: 1801px) and (max-width: 1918px) {
   html {
     font-size: 18px;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1919px) {
   html {
-    font-size: 1.25vw;
+    font-size: 22px;
   }
 }
 
@@ -457,40 +457,40 @@ h3 {
   }
 
   .c-paragraph,
-.c-heading,
-.scope-text h1,
-.scope-text h2,
-.scope-text h3,
-.scope-text h4,
-.scope-text h5,
-.scope-text h6,
-.scope-text p,
-.scope-text ul,
-.scope-text ol,
-.home-header__logo,
-.home-header__box__instagram,
-.home-header__box__recommend,
-.home-header__box__form__toggle,
-.home-header__box__form form .mc-field-group input,
-.home-header__box__form form .button,
-.nav__select__text,
-.nav__th,
-.project__tr,
-.value__td,
-.value__td *,
-.caption,
-.caption__image,
-.c-form__heading,
-.c-form__label,
-.c-form__input,
-.c-form__textarea,
-.c-form__note,
-.c-form .wpcf7-submit,
-.c-form span.wpcf7-not-valid-tip,
-body div.wpcf7-mail-sent-ok,
-.c-content__close {
-  font-size: 1rem;
-}
+  .c-heading,
+  .scope-text h1,
+  .scope-text h2,
+  .scope-text h3,
+  .scope-text h4,
+  .scope-text h5,
+  .scope-text h6,
+  .scope-text p,
+  .scope-text ul,
+  .scope-text ol,
+  .home-header__logo,
+  .home-header__box__instagram,
+  .home-header__box__recommend,
+  .home-header__box__form__toggle,
+  .home-header__box__form form .mc-field-group input,
+  .home-header__box__form form .button,
+  .nav__select__text,
+  .nav__th,
+  .project__tr,
+  .value__td,
+  .value__td *,
+  .caption,
+  .caption__image,
+  .c-form__heading,
+  .c-form__label,
+  .c-form__input,
+  .c-form__textarea,
+  .c-form__note,
+  .c-form .wpcf7-submit,
+  .c-form span.wpcf7-not-valid-tip,
+  body div.wpcf7-mail-sent-ok,
+  .c-content__close {
+    font-size: 1rem;
+  }
 }
 
 .c-heading {
@@ -661,7 +661,7 @@ body {
 .onload .linerow {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .onload .line_text {
   overflow: hidden;
@@ -694,6 +694,7 @@ body {
 }
 .onload .line_text .lowercase {
   font-family: "normalbatang", serif;
+
   font-size: 3.75vw;
 }
 
@@ -1358,9 +1359,9 @@ aside {
 @media screen and (min-width: 720px) {
   .project__tr:before {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.75rem;
 
-    width: 10px;
+    width: 8px;
     height: 1px;
   }
 }
@@ -1368,9 +1369,9 @@ aside {
 @media screen and (min-width: 960px) {
   .project__tr:before {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.875rem;
 
-    width: 14px;
+    width: 12px;
     height: 1.125px;
   }
 }
@@ -1399,9 +1400,9 @@ aside {
 @media screen and (min-width: 720px) {
   .project__tr:after {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.75rem;
 
-    width: 10px;
+    width: 8px;
     height: 1px;
   }
 }
@@ -1409,9 +1410,9 @@ aside {
 @media screen and (min-width: 960px) {
   .project__tr:after {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.875rem;
 
-    width: 14px;
+    width: 12px;
     height: 1.125px;
   }
 }
@@ -1431,7 +1432,7 @@ aside {
 }
 
 .nav__th--desktop .project__details .value__td {
-  font-size: 82.5%;
+  font-size: 90%;
 }
 
 .value__td {
@@ -1525,8 +1526,6 @@ aside {
 }
 
 .value__td--tag {
-  display: flex;
-  flex-direction: row;
   text-transform: capitalize;
 }
 
@@ -1544,7 +1543,8 @@ aside {
 }
 
 a.value__td:after {
-  content: "▲";
+  content: "↑";
+  font-family: "SUIT", "pretendard-comb-type";
   margin-left: 0.375rem;
 
   opacity: 0.3;
@@ -1557,14 +1557,16 @@ a.value__td:after {
 }
 
 a.value__td.state-active-asc:after {
-  content: "▲";
+  content: "↑";
+  font-family: "SUIT", "pretendard-comb-type";
   margin-left: 0.375rem;
 
   opacity: 1;
 }
 
 a.value__td.state-active-dsc:after {
-  content: "▼";
+  content: "↓";
+  font-family: "SUIT", "pretendard-comb-type";
   margin-left: 0.375rem;
 
   opacity: 1;
@@ -1585,7 +1587,7 @@ a.value__td.state-active-dsc:after {
 }
 
 .project__tr .project__details:active {
-  background: #000;
+  background: var(--dark-background);
 }
 
 @media screen and (min-width: 432px) {
@@ -1696,9 +1698,9 @@ a.value__td.state-active-dsc:after {
 @media screen and (min-width: 720px) {
   .length:after {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.75rem;
 
-    width: 10px;
+    width: 8px;
     height: 1px;
   }
 }
@@ -1706,9 +1708,9 @@ a.value__td.state-active-dsc:after {
 @media screen and (min-width: 960px) {
   .length:after {
     right: 1.5rem;
-    top: 1rem;
+    top: 0.875rem;
 
-    width: 14px;
+    width: 12px;
     height: 1.125px;
   }
 }
@@ -3025,5 +3027,5 @@ body.light .project__tr .project__details:focus {
 }
 
 body.light .project__tr .project__details:active {
-  background: #ffffff;
+  background: var(--light-background);
 }

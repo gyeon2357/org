@@ -38,11 +38,11 @@ for (var selection of textWrapper) {
       selection.innerHTML += ` `;
     }
     // don't replace special characters
-    else if (letter.match(/[\x21-\x40\x5B-\x60\x7B-\x7E]/g)) {
+    else if (letter.match(/[\x21-\x2d\x2f-\x40\x5B-\x60\x7B-\x7E]/g)) {
       selection.innerHTML += `<div data-char='.' class='letter'>${letter}</div>`;
     }
     // lowercase -> change font
-    else if (letter.match(/[a-z]/g)) {
+    else if (letter.match(/[\x2e\a-z]/g)) {
       selection.innerHTML += `<div data-char='.' class='letter lowercase'>${letter}</div>`;
     }
     // replace each letter with its appropriate size
