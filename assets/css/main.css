@@ -663,13 +663,13 @@ body {
   background: var(--dark-background);
   overflow: hidden;
 
-  font-size: 2rem;
-  line-height: 1.4;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 720px) {
   .hide {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
