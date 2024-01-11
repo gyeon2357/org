@@ -4,7 +4,7 @@ $(function () {
   $("body").toggleClass(localStorage.toggled);
 
   if (localStorage.toggled == "light") {
-    // $(".light-switch").addClass("light");
+    $(".light-switch").addClass("light");
   }
 
   function lightDark() {
