@@ -55,13 +55,13 @@ html {
 
 @media (min-width: 1801px) and (max-width: 1918px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1919px) {
   html {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -660,14 +660,14 @@ body {
   background: var(--light-background);
   overflow: hidden;
 
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 720px) {
   .hide {
     font-size: 2rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 }
 
@@ -737,8 +737,8 @@ body {
   display: none;
 
   position: fixed;
-  width: 160px;
-  height: 160px;
+  width: 96px;
+  height: 96px;
 
   top: 0;
   left: 0;
@@ -803,7 +803,7 @@ header {
 }
 
 .home-header {
-  padding: 1rem 0.75rem 1.5rem;
+  padding: 1rem 0.75rem 1rem;
 }
 
 .home-header__logo .info img {
@@ -859,28 +859,28 @@ header {
 
   .home-header {
     position: relative;
-    padding: 1rem 1.5rem 3rem;
+    padding: 1rem 1rem 3rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .home-header {
     position: relative;
-    padding: 1rem 1.5rem 7rem;
+    padding: 1rem 1rem 7rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .home-header {
     position: relative;
-    padding: 1rem 1.5rem 7rem;
+    padding: 1rem 1rem 7rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .home-header {
     position: relative;
-    padding: 1rem 1.5rem 7rem;
+    padding: 1rem 1rem 7rem;
   }
 }
 
@@ -1354,8 +1354,8 @@ aside {
 .project__tr:before {
   content: "";
   top: 1.5rem;
-  height: 0.0875rem;
-  width: 0.625rem;
+  width: 10px;
+  height: 1px;
   background: var(--light-text-color) !important;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -1376,7 +1376,7 @@ aside {
 
 @media screen and (min-width: 720px) {
   .project__tr:before {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.75rem;
 
     width: 8px;
@@ -1386,7 +1386,7 @@ aside {
 
 @media screen and (min-width: 960px) {
   .project__tr:before {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.875rem;
 
     width: 12px;
@@ -1397,8 +1397,8 @@ aside {
 .project__tr:after {
   content: "";
   top: 1.5rem;
-  height: 0.0875rem;
-  width: 0.625rem;
+  width: 10px;
+  height: 1px;
   background: var(--light-text-color) !important;
   position: absolute;
   -webkit-transition: -webkit-transform 250ms;
@@ -1417,7 +1417,7 @@ aside {
 
 @media screen and (min-width: 720px) {
   .project__tr:after {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.75rem;
 
     width: 8px;
@@ -1427,7 +1427,7 @@ aside {
 
 @media screen and (min-width: 960px) {
   .project__tr:after {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.875rem;
 
     width: 12px;
@@ -1593,7 +1593,7 @@ a.value__td.state-active-dsc:after {
 .project__tr .project__details {
   display: block;
   position: relative;
-  padding: 0.75rem 1rem 1.5rem;
+  padding: 0.75rem 1rem 1rem;
 
   -webkit-tap-highlight-color: #13131323;
   transition: background 0.125s ease-in-out;
@@ -1616,25 +1616,25 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .project__tr .project__details {
-    padding: 0.125rem 1.5rem 3rem;
+    padding: 0.125rem 1rem 2rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .project__tr .project__details {
-    padding: 0.125rem 1.5rem 4rem;
+    padding: 0.125rem 1rem 2.5rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1.5rem 4rem;
+    padding: 0.125rem 1rem 3rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1.5rem 4rem;
+    padding: 0.125rem 1rem 3rem;
   }
 }
 
@@ -1655,28 +1655,28 @@ a.value__td.state-active-dsc:after {
 @media screen and (min-width: 720px) {
   .nav__th--desktop .project__details,
   .project__details__length {
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .nav__th--desktop .project__details,
   .project__details__length {
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .nav__th--desktop .project__details,
   .project__details__length {
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .nav__th--desktop .project__details,
   .project__details__length {
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1rem;
   }
 }
 
@@ -1715,7 +1715,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .length:after {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.75rem;
 
     width: 8px;
@@ -1725,7 +1725,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 960px) {
   .length:after {
-    right: 1.5rem;
+    right: 1rem;
     top: 0.875rem;
 
     width: 12px;
@@ -1763,7 +1763,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .caption {
-    padding: 1rem 1.5rem 4rem;
+    padding: 1rem 1rem 4rem;
     display: -webkit-box;
     display: flex;
   }
@@ -1771,19 +1771,19 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 960px) {
   .caption {
-    padding: 1rem 1.5rem 4rem;
+    padding: 1rem 1rem 4rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .caption {
-    padding: 1rem 1.5rem 5rem;
+    padding: 1rem 1rem 5rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .caption {
-    padding: 1.5rem 1.5rem 5rem;
+    padding: 1.5rem 1rem 5rem;
   }
 }
 
@@ -1933,6 +1933,11 @@ figcaption::before {
   margin-bottom: 1rem;
 }
 
+.caption__text__content p {
+  font-size: 90%;
+  line-height: 1.5;
+}
+
 .caption__text__clear {
   position: relative;
   display: block;
@@ -2016,7 +2021,7 @@ figcaption::before {
   letter-spacing: -0.15px;
 }
 
-.caption__body {
+.caption__text__content p {
   width: 100% !important;
 }
 
@@ -2029,7 +2034,7 @@ figcaption::before {
   letter-spacing: -0.25px !important;
   line-height: 1.75 !important;
 
-  /* padding: 0.625rem 1.5rem 0.625rem 0.875rem;
+  /* padding: 0.625rem 1rem 0.625rem 0.875rem;
   border-radius: 1.125rem; */
 
   margin-bottom: 1em;
@@ -2066,8 +2071,8 @@ figcaption::before {
     vertical-align: 8%;
   }
 
-  .caption__body {
-    width: 75% !important;
+  .caption__text__content p {
+    width: 36ch !important;
   }
 
   .caption__info {
@@ -2099,7 +2104,7 @@ footer.safe-bottom {
 
 @media screen and (min-width: 720px) {
   .footer-wrapper {
-    margin: 7rem 1.5rem 2rem;
+    margin: 7rem 1rem 2rem;
   }
 }
 

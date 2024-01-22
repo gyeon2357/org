@@ -9,9 +9,9 @@ tl.to(".text", {
 /* SLIDER OPTIONAL */
 // tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 tl.to(".onload", {
-  y: "-100%",
-  delay: "0.5",
-  duration: 1,
+  opacity: "0",
+  delay: "0.125",
+  duration: 0.6,
 
   display: "none",
 }); /* ,  */
