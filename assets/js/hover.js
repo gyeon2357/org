@@ -60,8 +60,8 @@
           left: document.body.scrollLeft + document.documentElement.scrollLeft,
           top: document.body.scrollTop + document.documentElement.scrollTop,
         };
-        this.DOM.reveal.style.top = `${mousePos.y + 20 - docScrolls.top}px`;
-        this.DOM.reveal.style.left = `${mousePos.x + 20 - docScrolls.left}px`;
+        this.DOM.reveal.style.top = `${mousePos.y + 15 - docScrolls.top}px`;
+        this.DOM.reveal.style.left = `${mousePos.x + 15 - docScrolls.left}px`;
       };
       this.mouseenterFn = ev => {
         this.positionElement(ev);
@@ -86,23 +86,25 @@
       this.tl = new TimelineMax({
         onStart: () => {
           this.DOM.reveal.style.opacity = 1;
-          TweenMax.set(this.DOM.el, {zIndex: 1000});
+          TweenMax.set(this.DOM.el, {zIndex: 10002});
         },
       })
         .add("begin")
         .add(
-          new TweenMax(this.DOM.revealInner, 0.2, {
+          new TweenMax(this.DOM.revealInner, 0.1, {
             ease: Sine.easeOut,
-            startAt: {x: "-100%"},
+            startAt: {x: "-100%", scale: 0},
             x: "0%",
+            scale: 1,
           }),
           "begin"
         )
         .add(
-          new TweenMax(this.DOM.revealImg, 0.2, {
+          new TweenMax(this.DOM.revealImg, 0.1, {
             ease: Sine.easeOut,
-            startAt: {x: "100%"},
+            startAt: {x: "100%", scale: 1},
             x: "0%",
+            scale: 1,
           }),
           "begin"
         );
@@ -113,28 +115,31 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          TweenMax.set(this.DOM.el, {zIndex: 999});
+          TweenMax.set(this.DOM.el, {zIndex: 10001});
         },
         onComplete: () => {
           TweenMax.set(this.DOM.el, {zIndex: ""});
           TweenMax.set(this.DOM.reveal, {opacity: 0});
         },
       })
+
         .add("begin")
         .add(
-          new TweenMax(this.DOM.revealInner, 0.2, {
+          new TweenMax(this.DOM.revealInner, 0.1, {
             ease: Sine.easeOut,
-
+            delay: "1",
             x: "100%",
+            scale: 1,
           }),
           "begin"
         )
 
         .add(
-          new TweenMax(this.DOM.revealImg, 0.2, {
+          new TweenMax(this.DOM.revealImg, 0.1, {
             ease: Sine.easeOut,
-
+            delay: "1",
             x: "-100%",
+            scale: 0,
           }),
           "begin"
         );
@@ -190,13 +195,13 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          this.DOM.reveal.style.opacity = 0.75;
-          TweenMax.set(this.DOM.el, {zIndex: 1000});
+          this.DOM.reveal.style.opacity = 1;
+          TweenMax.set(this.DOM.el, {zIndex: 10002});
         },
       })
         .add("begin")
         .add(
-          new TweenMax(this.DOM.revealInner, 0.4, {
+          new TweenMax(this.DOM.revealInner, 0.5, {
             ease: Quint.easeOut,
             startAt: {x: "-100%", y: "-100%"},
             x: "0%",
@@ -205,7 +210,7 @@
           "begin"
         )
         .add(
-          new TweenMax(this.DOM.revealImg, 0.4, {
+          new TweenMax(this.DOM.revealImg, 0.5, {
             ease: Quint.easeOut,
             startAt: {x: "100%", y: "100%"},
             x: "0%",
@@ -220,7 +225,7 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          TweenMax.set(this.DOM.el, {zIndex: 999});
+          TweenMax.set(this.DOM.el, {zIndex: 10001});
         },
         onComplete: () => {
           TweenMax.set(this.DOM.el, {zIndex: ""});
@@ -229,8 +234,9 @@
       })
         .add("begin")
         .add(
-          new TweenMax(this.DOM.revealInner, 0.3, {
+          new TweenMax(this.DOM.revealInner, 0.125, {
             ease: Quint.easeOut,
+            delay: ".875",
             x: "100%",
             y: "100%",
           }),
@@ -238,8 +244,9 @@
         )
 
         .add(
-          new TweenMax(this.DOM.revealImg, 0.3, {
+          new TweenMax(this.DOM.revealImg, 0.125, {
             ease: Quint.easeOut,
+            delay: ".875",
             x: "-100%",
             y: "-100%",
           }),
@@ -294,16 +301,16 @@
       this.tl = new TimelineMax({
         onStart: () => {
           this.DOM.reveal.style.opacity = 1;
-          TweenMax.set(this.DOM.el, {zIndex: 1000});
+          TweenMax.set(this.DOM.el, {zIndex: 10002});
         },
       })
         .add("begin")
         .add(
           new TweenMax(this.DOM.revealInner, 0.8, {
             ease: Expo.easeOut,
-            startAt: {opacity: 0, y: "50%", rotation: -15, scale: 0},
+            startAt: {opacity: 0, y: "50%", scale: 0},
             y: "0%",
-            rotation: 0,
+
             opacity: 1,
             scale: 1,
           }),
@@ -312,8 +319,8 @@
         .add(
           new TweenMax(this.DOM.revealImg, 0.8, {
             ease: Expo.easeOut,
-            startAt: {rotation: 15, scale: 2},
-            rotation: 0,
+            startAt: {scale: 2},
+
             scale: 1,
           }),
           "begin"
@@ -325,7 +332,7 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          TweenMax.set(this.DOM.el, {zIndex: 999});
+          TweenMax.set(this.DOM.el, {zIndex: 10001});
         },
         onComplete: () => {
           TweenMax.set(this.DOM.el, {zIndex: ""});
@@ -336,8 +343,9 @@
         .add(
           new TweenMax(this.DOM.revealInner, 0.15, {
             ease: Sine.easeOut,
+            delay: ".875",
             y: "-40%",
-            rotation: 10,
+
             scale: 0.9,
             opacity: 0,
           }),
@@ -346,7 +354,8 @@
         .add(
           new TweenMax(this.DOM.revealImg, 0.15, {
             ease: Sine.easeOut,
-            rotation: -10,
+            delay: ".875",
+
             scale: 1.5,
           }),
           "begin"
@@ -365,6 +374,176 @@
           opacity: 1,
         },
         0.03
+      );
+    }
+  }
+
+  // Effect 11
+  class HoverImgFx11 {
+    constructor(el) {
+      this.DOM = {el: el};
+
+      this.DOM.reveal = document.createElement("div");
+      this.DOM.reveal.className = "hover-reveal";
+      this.DOM.reveal.style.overflow = "hidden";
+      this.DOM.reveal.innerHTML = `<div class="hover-reveal__deco"></div><div class="hover-reveal__inner"><div class="hover-reveal__img" style="background-image:url(${this.DOM.el.dataset.img})"></div></div>`;
+      this.DOM.el.appendChild(this.DOM.reveal);
+      this.DOM.revealInner = this.DOM.reveal.querySelector(
+        ".hover-reveal__inner"
+      );
+      this.DOM.revealInner.style.overflow = "hidden";
+      this.DOM.revealDeco = this.DOM.reveal.querySelector(
+        ".hover-reveal__deco"
+      );
+      TweenMax.set(this.DOM.revealDeco, {
+        width: "1%",
+        height: "100%",
+        background: "white",
+        left: "50%",
+      });
+      this.DOM.revealImg =
+        this.DOM.revealInner.querySelector(".hover-reveal__img");
+      charming(this.DOM.el);
+      this.DOM.letters = [...this.DOM.el.querySelectorAll("span")];
+      this.initEvents();
+    }
+    initEvents() {
+      this.positionElement = ev => {
+        const mousePos = getMousePos(ev);
+        const docScrolls = {
+          left: document.body.scrollLeft + document.documentElement.scrollLeft,
+          top: document.body.scrollTop + document.documentElement.scrollTop,
+        };
+        this.DOM.reveal.style.top = `${mousePos.y + 20 - docScrolls.top}px`;
+        this.DOM.reveal.style.left = `${mousePos.x + 20 - docScrolls.left}px`;
+      };
+      this.mouseenterFn = ev => {
+        this.positionElement(ev);
+        this.showImage();
+        this.animateLetters();
+      };
+      this.mousemoveFn = ev =>
+        requestAnimationFrame(() => {
+          this.positionElement(ev);
+        });
+      this.mouseleaveFn = () => {
+        this.hideImage();
+      };
+
+      this.DOM.el.addEventListener("mouseenter", this.mouseenterFn);
+      this.DOM.el.addEventListener("mousemove", this.mousemoveFn);
+      this.DOM.el.addEventListener("mouseleave", this.mouseleaveFn);
+    }
+    showImage() {
+      TweenMax.killTweensOf(this.DOM.reveal);
+      TweenMax.killTweensOf(this.DOM.revealInner);
+      TweenMax.killTweensOf(this.DOM.revealImg);
+      TweenMax.killTweensOf(this.DOM.revealDeco);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          this.DOM.reveal.style.opacity = 1;
+          TweenMax.set(this.DOM.el, {zIndex: 10002});
+        },
+      })
+        .add("begin")
+        .set(this.DOM.revealInner, {y: "100%"})
+        .set(this.DOM.revealDeco, {transformOrigin: "50% 100%"})
+        .add(
+          new TweenMax(this.DOM.revealDeco, 0.3, {
+            ease: Sine.easeInOut,
+            startAt: {scaleY: 0, scaleX: 10},
+            scaleY: 1,
+            scaleX: 1,
+          }),
+          "begin"
+        )
+        .set(this.DOM.revealDeco, {transformOrigin: "50% 0%"})
+        .add(
+          new TweenMax(this.DOM.revealDeco, 0.3, {
+            ease: Expo.easeOut,
+            scaleY: 0,
+          }),
+          "begin+=0.3"
+        )
+        .add(
+          new TweenMax(this.DOM.revealInner, 0.5, {
+            ease: Expo.easeOut,
+            startAt: {y: "100%"},
+            y: "0%",
+          }),
+          "begin+=0.4"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.5, {
+            ease: Expo.easeOut,
+            startAt: {y: "-100%"},
+            y: "0%",
+          }),
+          "begin+=0.4"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.5, {
+            ease: Expo.easeOut,
+            startAt: {y: "100%"},
+            y: "0%",
+          }),
+          "begin+=0.4"
+        )
+        .add(
+          new TweenMax(this.DOM.reveal, 1.1, {
+            ease: Expo.easeOut,
+            startAt: {y: "50%", rotation: 10},
+            y: "0%",
+            rotation: 0,
+          }),
+          "begin"
+        );
+    }
+    hideImage() {
+      TweenMax.killTweensOf(this.DOM.reveal);
+      TweenMax.killTweensOf(this.DOM.revealInner);
+      TweenMax.killTweensOf(this.DOM.revealImg);
+      TweenMax.killTweensOf(this.DOM.revealDeco);
+
+      this.tl = new TimelineMax({
+        onStart: () => {
+          TweenMax.set(this.DOM.el, {zIndex: 10001});
+        },
+        onComplete: () => {
+          TweenMax.set(this.DOM.el, {zIndex: ""});
+          TweenMax.set(this.DOM.reveal, {opacity: 0});
+        },
+      })
+        .add("begin")
+        .add(
+          new TweenMax(this.DOM.revealInner, 0.1, {
+            ease: Sine.easeOut,
+            y: "-100%",
+          }),
+          "begin"
+        )
+        .add(
+          new TweenMax(this.DOM.revealImg, 0.1, {
+            ease: Sine.easeOut,
+            y: "100%",
+          }),
+          "begin"
+        );
+    }
+    animateLetters() {
+      TweenMax.killTweensOf(this.DOM.letters);
+      TweenMax.set(this.DOM.letters, {opacity: 0});
+      TweenMax.staggerTo(
+        this.DOM.letters,
+        0.1,
+        {
+          ease: Expo.easeOut,
+          startAt: {y: "50%"},
+          y: "0%",
+          opacity: 1,
+        },
+        0.06
       );
     }
   }
@@ -413,7 +592,7 @@
       this.tl = new TimelineMax({
         onStart: () => {
           this.DOM.reveal.style.opacity = 1;
-          TweenMax.set(this.DOM.el, {zIndex: 1000});
+          TweenMax.set(this.DOM.el, {zIndex: 10002});
         },
       })
         .add("begin")
@@ -460,7 +639,7 @@
 
       this.tl = new TimelineMax({
         onStart: () => {
-          TweenMax.set(this.DOM.el, {zIndex: 999});
+          TweenMax.set(this.DOM.el, {zIndex: 10001});
         },
         onComplete: () => {
           TweenMax.set(this.DOM.el, {zIndex: ""});
@@ -486,6 +665,9 @@
     link => new HoverImgFx2(link)
   );
   [...document.querySelectorAll('[data-fx="4"] > a, a[data-fx="4"]')].forEach(
+    link => new HoverImgFx4(link)
+  );
+  [...document.querySelectorAll('[data-fx="11"] > a, a[data-fx="11"]')].forEach(
     link => new HoverImgFx4(link)
   );
   [...document.querySelectorAll('[data-fx="22"] > a, a[data-fx="22"]')].forEach(

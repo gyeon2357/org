@@ -236,7 +236,7 @@ var Accordion = {
           anime({
             targets: _body,
             height: _height,
-            duration: 100,
+            duration: 250,
             easing: "easeInCubic",
             complete: function complete() {
               Scroll.doResize();
@@ -267,13 +267,13 @@ var Accordion = {
           anime({
             targets: _inner,
             opacity: 0,
-            duration: 60,
+            duration: 100,
             easing: "linear",
             complete: function complete() {
               anime({
                 targets: _body,
                 height: 0,
-                duration: 80,
+                duration: 1,
                 easing: "easeInCubic",
                 complete: function complete() {
                   Scroll.doResize();
@@ -515,16 +515,16 @@ var Sort = {
 
         if (_swapEls.length > 0) {
           for (var _j = 0; _j < _swapEls.length; _j++) {
-            _swapEls[_j].classList.remove("state-active-asc");
-
             _swapEls[_j].classList.remove("state-active-dsc");
+
+            _swapEls[_j].classList.remove("state-active-asc");
           }
 
-          _swapEls[2].classList.add("state-active-dsc");
+          _swapEls[2].classList.add("state-active-asc");
 
           document.getElementById("mobile-sort").selectedIndex = 2;
           document.getElementById("select-text").innerHTML = "Sort by: Year";
-          Sort.sortDSC("year");
+          Sort.sortASC("year");
           Sort.reorderProject();
         }
       }
@@ -670,24 +670,19 @@ var Layout = {
           _tds[_i18].style.width = _tdGenreWidth + _addWidth + "px";
         }
 
+        // img width
+
         for (var _i19 = 0; _i19 < _imgs.length; _i19++) {
           _imgs[_i19].style.width = _tdTitleWidth + _addWidth + "px";
         }
 
+        // caption__text width
+
         for (var _i20 = 0; _i20 < _text.length; _i20++) {
-          _text[_i20].style.width =
-            _tdYearWidth +
-            _addWidth +
-            _tdtagWidth +
-            _addWidth +
-            _tdCountryWidth +
-            _addWidth +
-            _tdGenreWidth +
-            _addWidth +
-            "px";
+          _text[_i20].style.width = _tdTitleWidth + _addWidth + "px";
         }
 
-        if (Device.screenWidth > 1380) {
+        if (Device.screenWidth > 1280) {
           for (var _i21 = 0; _i21 < _headings.length; _i21++) {
             _headings[_i21].style.width = _tdYearWidth + _addWidth + "px";
           }

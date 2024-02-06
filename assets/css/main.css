@@ -67,7 +67,6 @@ html {
 
 html,
 body {
-  font-family: "SUIT", sans-serif;
   font-family: "pretendard-comb-type", sans-serif;
   /* font-family: "AGChoijeonghoMinburiStd", sans-serif; */
 
@@ -734,11 +733,9 @@ body {
 /* hover-reveal */
 
 .hover-reveal {
-  display: none;
-
   position: fixed;
-  width: 96px;
-  height: 96px;
+  width: 48px;
+  height: 48px;
 
   top: 0;
   left: 0;
@@ -770,7 +767,8 @@ body {
 
 @media screen and (min-width: 720px) {
   .hover-reveal {
-    display: block;
+    width: 96px;
+    height: 96px;
   }
 }
 
@@ -1301,9 +1299,9 @@ aside {
   justify-content: space-between;
 
   font-size: 0.875rem;
-  padding: 0.75em;
+  padding: 0.5rem 1rem;
 
-  border-bottom: 0.2px solid var(--light-border-color-100);
+  border-bottom: 0.5px solid var(--light-border-color-60);
 }
 
 h4.nav__th__heading {
@@ -1347,12 +1345,12 @@ h4.nav__th__heading {
 
 .project__tr {
   /* background: #54692f08; */
-  border-bottom: thin solid var(--light-border-color-60);
+  border-bottom: 0.1px solid var(--light-border-color-60);
 }
 
 .project__tr:last-child {
   /* margin-bottom: 4vh; */
-  border-bottom: thin solid var(--light-border-color-60);
+  border-bottom: 1px solid var(--light-border-color-60);
 }
 
 .project__tr:before {
@@ -1450,7 +1448,7 @@ h4.nav__th__heading {
 }
 
 .nav__th--desktop .project__details {
-  border-bottom: 0.1px solid var(--light-border-color-100);
+  border-bottom: 1px solid var(--light-border-color-60);
 }
 
 .nav__th--desktop .project__details .value__td {
@@ -1605,7 +1603,7 @@ a.value__td.state-active-dsc:after {
 
 .project__tr .project__details:hover,
 .project__tr .project__details:focus {
-  background: #ffffffb0;
+  background: #ffffff2b;
 }
 
 .project__tr .project__details:active {
@@ -1854,6 +1852,10 @@ figcaption::before {
   border: 0.5px solid var(--light-border-color-60);
 }
 
+.caption__image__inner .badge,
+.caption__image__inner a {
+}
+
 @media screen and (min-width: 720px) {
   figure {
     grid-template-columns: repeat(auto-fit, minmax(25%, auto));
@@ -1887,25 +1889,6 @@ figcaption::before {
   }
 
   .caption__image__inner {
-    padding-right: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .caption__image__inner {
-    padding-right: 1.75rem;
-  }
-}
-
-@media screen and (min-width: 80rem) {
-  .caption__image__inner {
-    padding-right: 2rem;
-  }
-}
-
-@media screen and (min-width: 100rem) {
-  .caption__image__inner {
-    padding-right: 2rem;
   }
 }
 
@@ -3018,14 +3001,14 @@ body.light .nav__th--mobile {
 }
 
 body.light .project__tr {
-  border-bottom: thin solid var(--dark-border-color-60);
+  border-bottom: 0.1px solid var(--dark-border-color-60);
 }
 body.light .project__tr:last-child {
-  border-bottom: thin solid var(--dark-border-color-60);
+  border-bottom: 1px solid var(--dark-border-color-60);
 }
 
 body.light .nav__th--desktop .project__details {
-  border-bottom: 0.1px solid var(--dark-border-color-100);
+  border-bottom: 1px solid var(--dark-border-color-60);
 }
 
 body.light .caption {
@@ -3049,7 +3032,7 @@ body.light .project__tr:nth-child(odd) .caption__info {
 
 body.light .project__tr .project__details:hover,
 body.light .project__tr .project__details:focus {
-  background: #000000b5;
+  background: #0000005b;
 }
 
 body.light .project__tr .project__details:active {
