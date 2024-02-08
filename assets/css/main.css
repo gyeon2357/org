@@ -814,6 +814,7 @@ header {
 
 .home-header__wrapper p,
 .home-header__wrapper a {
+  font-size: 0.75rem;
   line-height: 1.38;
   color: var(--light-text-color);
 }
@@ -857,6 +858,11 @@ header {
   .home-header .scope-text {
     padding: 2.5rem 0;
     max-width: 23rem;
+  }
+
+  .home-header__wrapper p,
+  .home-header__wrapper a {
+    font-size: 0.875rem;
   }
 }
 
@@ -2802,6 +2808,20 @@ body .plyr__control.plyr__control--overlaid * {
   }
 }
 
+.backtotop {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+}
+
+.backtotop span {
+  content: url("../images/bx_up-arrow.svg");
+
+  width: 1.125rem;
+  margin-right: 0.2rem;
+}
+
 .light-switch {
   position: absolute;
   top: 0;
@@ -2810,8 +2830,8 @@ body .plyr__control.plyr__control--overlaid * {
   font-size: 1.5rem;
   content: url("../images/sun.svg");
 
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 
   color: var(--light-background);
   border-radius: 999px;
@@ -2829,12 +2849,12 @@ body .plyr__control.plyr__control--overlaid * {
 @media screen and (min-width: 720px) {
   .light-switch {
     right: -2px;
-    top: 0px;
+    top: 2px;
 
     font-size: 1.625rem;
 
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 
@@ -2846,6 +2866,10 @@ body.light {
 body.light .light-switch {
   color: var(--dark-background);
   content: url("../images/sun-fill.svg");
+}
+
+body.light .backtotop span {
+  content: url("../images/bxs_up-arrow.svg");
 }
 
 body.light .main-wrapper {
