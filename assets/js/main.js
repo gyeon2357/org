@@ -267,13 +267,13 @@ var Accordion = {
           anime({
             targets: _inner,
             opacity: 0,
-            duration: 100,
+            duration: 250,
             easing: "linear",
             complete: function complete() {
               anime({
                 targets: _body,
                 height: 0,
-                duration: 1,
+                duration: 125,
                 easing: "easeInCubic",
                 complete: function complete() {
                   Scroll.doResize();
