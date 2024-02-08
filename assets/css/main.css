@@ -801,7 +801,6 @@ header {
   flex-direction: column;
 
   margin: 0 0 0.75rem 0;
-  font-size: 75%;
 
   border-left: 1px solid var(--light-border-color-100);
   padding-left: 6px;
@@ -815,7 +814,7 @@ header {
 
 .home-header__wrapper p,
 .home-header__wrapper a {
-  line-height: 1.4;
+  line-height: 1.38;
   color: var(--light-text-color);
 }
 
@@ -3042,10 +3041,6 @@ body.light .caption {
 
 body.light .caption__image__inner img {
   border: 0.5px solid var(--dark-border-color-60);
-}
-
-body.light .badge {
-  background: var(--orange);
 }
 
 body.light .project__tr:nth-child(even) .caption__info {
