@@ -1,6 +1,5 @@
 $(function () {
   localStorage.clear();
-
   $("body").toggleClass(localStorage.toggled);
 
   if (localStorage.toggled == "light") {
