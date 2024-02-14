@@ -1819,6 +1819,10 @@ figure img:nth-child(1) {
   grid-row-end: 1;
 }
 
+figure video {
+  grid-column: 1 / span 3;
+}
+
 figcaption {
   width: 80%;
 
