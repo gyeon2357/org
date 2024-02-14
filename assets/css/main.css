@@ -781,8 +781,8 @@ body {
 
 @media screen and (min-width: 720px) {
   .hover-reveal {
-    width: 96px;
-    height: 96px;
+    width: 72px;
+    height: 72px;
   }
 }
 
@@ -1640,25 +1640,25 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 2rem;
+    padding: 0.125rem 1rem 2.5rem;
   }
 }
 
 @media screen and (min-width: 960px) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 2.5rem;
+    padding: 0.125rem 1rem 3rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 3rem;
+    padding: 0.125rem 1rem 3.5rem;
   }
 }
 
 @media screen and (min-width: 100rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 3rem;
+    padding: 0.125rem 1rem 4rem;
   }
 }
 
