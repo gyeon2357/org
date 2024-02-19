@@ -3,20 +3,20 @@ $(function () {
   $("body").toggleClass(localStorage.toggled);
 
   if (localStorage.toggled == "light") {
-    $(".light-switch").addClass("light");
+    $(".c-theme-switch").addClass("light");
   }
 
   function lightDark() {
     if (localStorage.toggled != "light") {
-      $("body, .light-switch").toggleClass("light", true);
+      $("body, .c-theme-switch").toggleClass("light", true);
       localStorage.toggled = "light";
     } else {
-      $("body, .light-switch").toggleClass("light", false);
+      $("body, .c-theme-switch").toggleClass("light", false);
       localStorage.toggled = "";
     }
   }
 
-  $(".light-switch").click(function () {
+  $(".c-theme-switch").click(function () {
     lightDark();
   });
 });
