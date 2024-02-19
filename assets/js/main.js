@@ -421,9 +421,9 @@ var Sort = {
         Sort.projects[_i] = [];
         Sort.projects[_i].id = _trs[_i].getAttribute("id");
         Sort.projects[_i].title = _trs[_i].getAttribute("data-title");
-        Sort.projects[_i].title = _trs[_i].getAttribute("data-tag");
+        Sort.projects[_i].tag = _trs[_i].getAttribute("data-tag");
         Sort.projects[_i].year = _trs[_i].getAttribute("data-year");
-        Sort.projects[_i].tag = _trs[_i].getAttribute("data-role");
+        Sort.projects[_i].role = _trs[_i].getAttribute("data-role");
       }
 
       Sort.wrapper = document.getElementById("index");
@@ -600,12 +600,12 @@ var Layout = {
           }
         }
 
-        var _tdroleWidth = 0;
-        _tds = document.getElementsByClassName("value__td--role");
+        var _tdtagWidth = 0;
+        _tds = document.getElementsByClassName("value__td--tag");
 
         for (var _i11 = 0; _i11 < _tds.length; _i11++) {
-          if (_tdroleWidth < _tds[_i11].clientWidth) {
-            _tdroleWidth = Math.ceil(_tds[_i11].clientWidth);
+          if (_tdtagWidth < _tds[_i11].clientWidth) {
+            _tdtagWidth = Math.ceil(_tds[_i11].clientWidth);
           }
         }
 
@@ -618,21 +618,21 @@ var Layout = {
           }
         }
 
-        var _tdtagWidth = 0;
-        _tds = document.getElementsByClassName("value__td--tag");
+        var _tdroleWidth = 0;
+        _tds = document.getElementsByClassName("value__td--role");
 
         for (var _i13 = 0; _i13 < _tds.length; _i13++) {
-          if (_tdtagWidth < _tds[_i13].clientWidth) {
-            _tdtagWidth = Math.ceil(_tds[_i13].clientWidth);
+          if (_tdroleWidth < _tds[_i13].clientWidth) {
+            _tdroleWidth = Math.ceil(_tds[_i13].clientWidth);
           }
         }
 
         var _totalWidth =
           _tdTitleWidth +
-          _tdYearWidth +
+          _tdtagWidth +
           _tdroleWidth +
-          _tdCountryWidth +
-          _tdtagWidth;
+          _tdYearWidth +
+          _tdCountryWidth;
 
         var _availableWidth = Math.floor(
           document.getElementsByClassName("project__details__inner")[0]
@@ -653,10 +653,10 @@ var Layout = {
           _tds[_i15].style.width = _tdYearWidth + _addWidth + "px";
         }
 
-        _tds = document.getElementsByClassName("value__td--role");
+        _tds = document.getElementsByClassName("value__td--tag");
 
         for (var _i16 = 0; _i16 < _tds.length; _i16++) {
-          _tds[_i16].style.width = _tdroleWidth + _addWidth + "px";
+          _tds[_i16].style.width = _tdtagWidth + _addWidth + "px";
         }
 
         _tds = document.getElementsByClassName("value__td--country");
@@ -665,7 +665,7 @@ var Layout = {
           _tds[_i17].style.width = _tdCountryWidth + _addWidth + "px";
         }
 
-        _tds = document.getElementsByClassName("value__td--tag");
+        _tds = document.getElementsByClassName("value__td--role");
 
         for (var _i18 = 0; _i18 < _tds.length; _i18++) {
           _tds[_i18].style.width = _tdtagWidth + _addWidth + "px";
