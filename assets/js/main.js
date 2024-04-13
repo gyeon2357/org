@@ -521,7 +521,7 @@ var Sort = {
             _swapEls[_j].classList.remove("state-active-asc");
           }
 
-          _swapEls[2].classList.add("state-active-asc");
+          _swapEls[3].classList.add("state-active-asc");
 
           document.getElementById("mobile-sort").selectedIndex = 3;
           document.getElementById("select-text").innerHTML = "Sort by: Year";
