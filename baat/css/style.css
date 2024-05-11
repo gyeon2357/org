@@ -174,7 +174,7 @@ body {
   --color-text: #333;
   --color-bg: #eee;
   --color-link: #84733e;
-  --color-link-hover: #342d18;
+  --color-link-hover: #B39E5D;
   --color-info: #000;
   --grid-item-bg: #fafafa;
   --color-close: purple;
@@ -472,6 +472,7 @@ main {
   padding: 0 5vw;
   white-space: nowrap;
   grid-area: 1 / 1 / 1 / 1;
+  
 }
 
 .content__item-title > span {
@@ -507,7 +508,7 @@ main {
 .content__close {
   position: fixed;
   top: 0.75rem;
-  left: calc(50% - 12px);
+  left: 50%;
   z-index: 10000;
   transform: translateX(-50%);
 
@@ -608,5 +609,9 @@ main {
   }
   .content__indicator {
     display: block;
+  }
+
+  .content__close {
+    left: calc(50% - 12px);
   }
 }
