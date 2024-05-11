@@ -271,7 +271,9 @@
       this.DOM = { el: el };
       // The content elements: image, title, subtitle and text.
       this.DOM.img = this.DOM.el.querySelector(".content__item-img");
+
       this.DOM.title = this.DOM.el.querySelector(".content__item-title");
+
       this.DOM.subtitle = this.DOM.el.querySelector(".content__item-subtitle");
       this.DOM.text = this.DOM.el.querySelector(".content__item-text");
       // Split the title into spans using charming.js
