@@ -229,13 +229,13 @@
       this.toggle(withAnimation);
     }
     toggle(withAnimation, show = true) {
-      TweenMax.to(this.DOM.tilt.img, withAnimation ? 0.8 : 0, {
+      TweenMax.to(this.DOM.tilt.img, withAnimation ? 0.6 : 0, {
         ease: Expo.easeInOut,
         delay: !withAnimation ? 0 : show ? 0.15 : 0,
         scale: show ? 1 : 0,
         opacity: show ? 1 : 0,
       });
-      TweenMax.to(this.DOM.bg, withAnimation ? 0.8 : 0, {
+      TweenMax.to(this.DOM.bg, withAnimation ? 0.6 : 0, {
         ease: Expo.easeInOut,
         delay: !withAnimation ? 0 : show ? 0 : 0.15,
         scale: show ? 1 : 0,
@@ -423,7 +423,7 @@
       // Animate the item´s image.
       TweenMax.to(item.DOM.tilt.img, 1.2, {
         ease: Expo.easeInOut,
-        delay: 0.55,
+        delay: 0.5,
         scaleX: contentImgDim.width / imgDim.width,
         scaleY: contentImgDim.height / imgDim.height,
         x:
@@ -473,7 +473,7 @@
       item.DOM.tilt.img.style.opacity = 1;
       contentEl.DOM.img.style.visibility = "hidden";
       // Animate the grid´s image back to the grid position.
-      TweenMax.to(item.DOM.tilt.img, withAnimation ? 1.2 : 0, {
+      TweenMax.to(item.DOM.tilt.img, withAnimation ? 1 : 0, {
         ease: Expo.easeInOut,
         scaleX: 1,
         scaleY: 1,
@@ -482,7 +482,7 @@
         rotation: item.angle * 2,
       });
       // And also the bg element.
-      TweenMax.to(item.DOM.bg, withAnimation ? 1.2 : 0, {
+      TweenMax.to(item.DOM.bg, withAnimation ? 1 : 0, {
         ease: Expo.easeInOut,
         delay: 0.15,
         x: 0,
@@ -623,3 +623,63 @@
     });
   });
 }
+
+/* Find existing css selector
+selectorName: selector name eg: ".myCssStyle"
+*/
+function cssFindSelector(selectorName) {
+  console.log("document.styleSheets.length: " + document.styleSheets.length);
+  for (var i = 0; i < document.styleSheets.length; i += 1) {
+    var sheet = document.styleSheets[i];
+    for (var j = 0; j < sheet.cssRules.length; j += 1) {
+      var selTxt = sheet.cssRules[j].selectorText;
+      console.log("selTxt:" + selTxt);
+      if (selTxt == selectorName) {
+        return [i, j];
+      }
+    }
+  }
+  return null;
+}
+
+/* change existing css style
+selectorName = existing css style to change ".myCssStyle"
+newStyleStr = new style eg: "{color:red; border:1px;}"
+*/
+// function cssChangeStyle(selectorName, newStyleStr) {
+//   var idx = cssFindSelector(selectorName);
+//   if (idx == null) {
+//     return false;
+//   }
+//   var sheet = document.styleSheets[idx[0]];
+//   sheet.deleteRule(idx[1]);
+//   sheet.insertRule(selectorName + " " + newStyleStr, idx[1]);
+//   return true;
+// }
+
+function changeStyleFor_chrome() {
+  var txtUserAgent = navigator.userAgent;
+  //my mobile: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36
+  //PC Chrome: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+  //PC Opera : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+  //iPhone   : Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1
+  let chromeTxtIdx = txtUserAgent.search(/Chrome/i);
+  let operaTxtIdx = txtUserAgent.search(/OPR\//i);
+  //let platformTxtIdx = txtUserAgent.search(/iPhone/i);
+  let platformTxtIdx = txtUserAgent.search(/android/i);
+  if (chromeTxtIdx >= 0 && operaTxtIdx == -1) {
+    console.log("browser Chrome");
+    if (platformTxtIdx >= 0) {
+      console.log("browser Chrome platform Android");
+      // here you shall put your style that you want to change for chrome on Android
+      // note that style shall already exists!
+
+      $(".grid__item-title > span.kr").css("letter-spacing", "-3px");
+    } else {
+      console.log("browser Chrome platform not Android");
+      $(".grid__item-title > span.kr").css("letter-spacing", "-3px");
+    }
+  }
+}
+
+window.onload = changeStyleFor_chrome;

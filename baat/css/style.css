@@ -208,6 +208,8 @@ body {
   --color-info: #000;
   --grid-item-bg: #000;
   --grid-item-bg: #eee;
+
+  --focus-item-bg: #b39e5d;
   --color-close: purple;
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
@@ -350,18 +352,26 @@ main {
 }
 
 /* Top Navigation Style */
-.links {
+nav {
   position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
+  padding: 0.75rem;
+
+  width: fit-content;
+
+  z-index: 999;
 }
 
-.icon {
-  display: inline-block;
-  margin: 0.15em;
-  padding: 0.25em;
+nav > h1 {
+  margin: 0 0 0.5rem;
+
+  font-size: 0.75rem;
+}
+
+nav > a {
+  display: block;
+
+  font-size: 0.75rem;
+  line-height: 1.6;
 }
 
 .grid-wrap {
@@ -390,7 +400,15 @@ main {
   width: 280px;
   position: relative;
   padding: 2.75rem;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
+}
+
+.grid__item:focus {
+  color: var(--color-text);
+}
+
+.grid__item:focus > .grid__item-bg {
+  background: var(--focus-item-bg);
 }
 
 .grid__item-wrap {
@@ -425,15 +443,35 @@ main {
 
 .grid__item-title {
   position: absolute;
-  right: 0;
+  right: 0.125rem;
   top: 0.25rem;
   margin: 0 0 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
 
+  letter-spacing: 0px;
+
   transform-origin: 0 50%;
+}
+
+.grid__item-title > span {
+  text-orientation: sideways;
+  margin: 0.125rem 0;
+}
+
+.grid__item-title > span.kr {
+  text-orientation: inherit;
+  margin: 0 0 0.125rem;
+}
+
+.grid__item-title > em {
+  background: transparent;
+
+  writing-mode: horizontal-tb;
+  vertical-align: top;
+  margin: -0.25rem 0 0.375rem;
 }
 
 .grid__item-number {
@@ -443,6 +481,16 @@ main {
   font-size: 1rem;
   font-weight: 500;
   margin: 0 0 0.15rem;
+}
+
+.grid__item small {
+  position: absolute;
+
+  right: -1rem;
+  top: -0.25rem;
+
+  font-size: 0.625rem;
+  font-weight: 500;
 }
 
 .grid__item-number > span {
@@ -618,7 +666,7 @@ main {
 }
 
 .footer_container h1 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4;
   font-weight: 600;
 
@@ -626,7 +674,7 @@ main {
 }
 
 .footer_container p {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4;
   font-weight: 400;
 
@@ -660,9 +708,6 @@ main {
     margin: 0;
   }
 
-  .links {
-    margin: 0 0 0 1.5rem;
-  }
   .title {
     grid-area: title;
     display: flex;
@@ -685,6 +730,16 @@ main {
   .title__sub-works {
     display: block;
   }
+
+  nav {
+    position: sticky;
+    top: 0;
+  }
+
+  nav > a {
+    font-size: 0.625rem;
+  }
+
   .grid__item-number {
     right: -2.45rem;
   }
