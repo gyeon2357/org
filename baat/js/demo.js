@@ -300,8 +300,8 @@
               delay: !withAnimation
                 ? 0
                 : show
-                ? pos * 0.05
-                : (this.titleLettersTotal - pos - 1) * 0.04,
+                ? pos * 0.03
+                : (this.titleLettersTotal - pos - 1) * 0.01,
               startAt: show ? { y: "0%", opacity: 0 } : null,
               y: show ? "0%" : "0%",
               opacity: show ? 1 : 0,
@@ -436,13 +436,15 @@
           (imgDim.top + imgDim.height / 2),
         rotation: 0,
         onComplete: () => {
-          // Hide the item´s image and show the content´s image. Should both be overlapping.
-          item.DOM.tilt.img.style.opacity = 0;
-          contentEl.DOM.img.style.visibility = "visible";
           // Set the main content wrapper to absolute so it´s position at the top.
           contentEl.DOM.el.parentNode.style.position = "absolute";
           // Hiding the grid scroll.
           this.DOM.gridWrap.classList.add("grid-wrap--hidden");
+
+          // Hide the item´s image and show the content´s image. Should both be overlapping.
+          item.DOM.tilt.img.style.opacity = 0;
+          contentEl.DOM.img.style.visibility = "visible";
+
           // Scroll up the page.
           window.scrollTo(0, 0);
           // Enable page scrolling.
@@ -615,7 +617,7 @@
     var msnry = new Masonry(grid.DOM.el, {
       // options
       itemSelector: ".grid__item",
-      columnWidth: 260,
+      columnWidth: 280,
       gutter: 100,
       fitWidth: true,
     });
