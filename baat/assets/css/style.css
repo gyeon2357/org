@@ -197,7 +197,7 @@ html {
 }
 
 body {
-  --color-bg: #121212;
+  --color-bg: #151515;
   --grid-item-bg: #f8f6f0;
 
   --color-text: #000;
@@ -519,6 +519,7 @@ nav a:hover {
   font-weight: 600;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+  text-wrap: nowrap;
 
   letter-spacing: 0px;
 
@@ -533,6 +534,7 @@ nav a:hover {
 .grid__item-title > span.kr {
   text-orientation: inherit;
   margin: 0 0 0.125rem;
+  letter-spacing: -1px;
 }
 
 .grid__item-title > em {

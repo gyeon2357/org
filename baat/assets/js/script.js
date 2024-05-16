@@ -693,10 +693,10 @@ function changeStyleFor_chrome() {
       // here you shall put your style that you want to change for chrome on Android
       // note that style shall already exists!
 
-      $(".grid__item-title > span.kr").css("letter-spacing", "-3px");
+      $(".grid__item-title > span.kr").css("letter-spacing", "-2px");
     } else {
       console.log("browser Chrome platform not Android");
-      $(".grid__item-title > span.kr").css("letter-spacing", "-3px");
+      $(".grid__item-title > span.kr").css("letter-spacing", "-2px");
     }
   }
 }
