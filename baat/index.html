@@ -2,8 +2,73 @@
 <html lang="ko" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Night And Day</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>B.A.A.T</title>
+
+    <!-- Tags for social media links -->
+    <meta
+      name="description"
+      content="산수화에서 시작한 공간이지만 차에 집중하며, 또 차 안에만 머무르지 않고 재미난 이야기들을 찾아갑니다. 산수화의 여러 어둡고 밝은 공간들을 낮과 밤, 낮밤으로 부르며, 두 단어를 함께 담아 ‘밪’이라는 이름으로 만들고 ◐은 이를 은유적으로 드러내는 기호로 쓰고 있습니다."
+    />
+    <meta
+      name="keywords"
+      content="산수화, 산수화티, 산수화 티하우스, 밪, 낮밤, 산수화 전시, 한남동 전시, 용산 전시, 다구 전시, Sansuhwa, Sansuhwa tea, Sansuhwa Tea House, Baat, Night And Day, Sansuhwa Exhibition, Hannam-dong Exhibition, Yongsan Exhibition, Teaware Exhibition"
+    />
+
+    <meta itemprop="name" content="B.A.A.T" />
+    <meta
+      itemprop="description"
+      content="산수화에서 시작한 공간이지만 차에 집중하며, 또 차 안에만 머무르지 않고 재미난 이야기들을 찾아갑니다. 산수화의 여러 어둡고 밝은 공간들을 낮과 밤, 낮밤으로 부르며, 두 단어를 함께 담아 ‘밪’이라는 이름으로 만들고 ◐은 이를 은유적으로 드러내는 기호로 쓰고 있습니다."
+    />
+    <meta itemprop="image" content="https://../assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://.." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="B.A.A.T" />
+    <meta property="og:title" content="B.A.A.T" />
+    <meta
+      property="og:description"
+      content="산수화에서 시작한 공간이지만 차에 집중하며, 또 차 안에만 머무르지 않고 재미난 이야기들을 찾아갑니다. 산수화의 여러 어둡고 밝은 공간들을 낮과 밤, 낮밤으로 부르며, 두 단어를 함께 담아 ‘밪’이라는 이름으로 만들고 ◐은 이를 은유적으로 드러내는 기호로 쓰고 있습니다."
+    />
+    <meta property="og:image" content="https://../assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="B.A.A.T" />
+    <meta
+      name="twitter:description"
+      content="산수화에서 시작한 공간이지만 차에 집중하며, 또 차 안에만 머무르지 않고 재미난 이야기들을 찾아갑니다. 산수화의 여러 어둡고 밝은 공간들을 낮과 밤, 낮밤으로 부르며, 두 단어를 함께 담아 ‘밪’이라는 이름으로 만들고 ◐은 이를 은유적으로 드러내는 기호로 쓰고 있습니다."
+    />
+    <meta
+      name="twitter:image"
+      content="https://../assets/images/og-image.jpg"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
 
     <!-- font setting -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +85,7 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <script>
       document.documentElement.className = "js";
       var supportsCssVars = function () {
@@ -48,12 +113,11 @@
     <main>
       <div class="frame">
         <header class="header">
-          <h1 class="header__title">밪◐</h1>
-          <h1 class="header__title">Night And Day</h1>
-          <h1 class="header__title"></h1>
+          <h1 class="header__title">밪 ◐ Night And Day</h1>
+          <h1 class="header__title">Archive</h1>
         </header>
         <div class="title">
-          <h3 class="title__name">Menu</h3>
+          <h3 class="title__name"><button id="header__menu">Menu</button></h3>
         </div>
       </div>
 
@@ -384,7 +448,7 @@
             <div class="grid__item-wrap">
               <img
                 class="grid__item-img"
-                src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/d1348a7aaaa9f.jpg"
+                src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/2999c3233df35.jpg"
                 alt="자연을 옮겨오고 시간을 담아 온"
               />
             </div>
@@ -492,7 +556,7 @@
             <div class="grid__item-wrap">
               <img
                 class="grid__item-img"
-                src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/ec60aef59a3cc.jpg"
+                src="./assets/img/baat_1.jpg"
                 alt="밪 이야기"
               />
             </div>
@@ -591,6 +655,9 @@
               />
             </figure>
           </div>
+          <div class="content__close__container">
+            <button class="content__close__bottom">← Back</button>
+          </div>
         </article>
 
         <article class="content__item" order="25">
@@ -598,12 +665,13 @@
             <img
               class="content__item-img"
               src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/6e2257802b88d.jpg"
-              alt="Some image"
+              alt="田 光 個展 Nakada Hikaru Solo Exhibition"
             />
             <h2 class="content__item-title">
               田 光 個展 <br />Nakada Hikaru Solo Exhibition
             </h2>
           </div>
+
           <h3 class="content__item-subtitle">"this is subtitle"</h3>
           <div class="content__item-text">
             <p>
@@ -673,7 +741,9 @@
 
         <article class="content__item" order="23">
           <div class="content__item-intro">
-            <img class="content__item-img" src="img/4.jpg" alt="Some image" />
+            <img class="content__item-img"
+            src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/2db76c05118b6.jpg""
+            alt="盖碗展 - 백암요" />
             <h2 class="content__item-title">盖碗展 - 백암요</h2>
           </div>
           <h3 class="content__item-subtitle">"this is subtitle"</h3>
@@ -861,7 +931,11 @@
 
         <article class="content__item" order="18">
           <div class="content__item-intro">
-            <img class="content__item-img" src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/f0b74d259e185.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/f0b74d259e185.jpg"
+              alt="Some image"
+            />
             <h2 class="content__item-title">GDFDV0.1: GOMYEONG</h2>
           </div>
           <h3 class="content__item-subtitle">"this is subtitle"</h3>
@@ -895,7 +969,11 @@
 
         <article class="content__item" order="17">
           <div class="content__item-intro">
-            <img class="content__item-img" src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/417d2936603d6.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/417d2936603d6.jpg"
+              alt="Some image"
+            />
             <h2 class="content__item-title">和敬의 書 화경의 서</h2>
           </div>
           <h3 class="content__item-subtitle">"this is subtitle"</h3>
@@ -967,7 +1045,11 @@
 
         <article class="content__item" order="15">
           <div class="content__item-intro">
-            <img class="content__item-img" src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/68aff849a089c.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/68aff849a089c.jpg"
+              alt="Some image"
+            />
             <h2 class="content__item-title">Contemporary 진주요</h2>
           </div>
           <h3 class="content__item-subtitle">"this is subtitle"</h3>
@@ -1096,7 +1178,11 @@
         </article>
         <article class="content__item" order="6">
           <div class="content__item-intro">
-            <img class="content__item-img" src="img/12.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="https://cdn.imweb.me/upload/S20220110688c833e47c3d/2999c3233df35.jpg"
+              alt="자연을 옮겨오고 시간을 담아 온"
+            />
             <h2 class="content__item-title">자연을 옮겨오고 시간을 담아 온</h2>
           </div>
           <h3 class="content__item-subtitle"></h3>
@@ -1108,7 +1194,11 @@
         </article>
         <article class="content__item" order="5">
           <div class="content__item-intro">
-            <img class="content__item-img" src="img/12.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="img/12.jpg"
+              alt="Lonely Summer House"
+            />
             <h2 class="content__item-title">Lonely Summer House</h2>
           </div>
           <h3 class="content__item-subtitle"></h3>
@@ -1182,7 +1272,11 @@
         </article>
         <article class="content__item" order="">
           <div class="content__item-intro">
-            <img class="content__item-img" src="img/12.jpg" alt="Some image" />
+            <img
+              class="content__item-img"
+              src="./assets/img/baat_1.jpg"
+              alt="밪 이야기"
+            />
             <h2 class="content__item-title">밪 이야기</h2>
           </div>
           <h3 class="content__item-subtitle"></h3>
@@ -1193,7 +1287,7 @@
           </div>
         </article>
 
-        <button class="content__close">Close</button>
+        <button class="content__close">← Back</button>
         <svg class="content__indicator icon icon--caret">
           <use xlink:href="#icon-caret"></use>
         </svg>
@@ -1239,15 +1333,41 @@
       </div> -->
     </footer>
 
-    <script src="js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
     <script>
-      $.trim($(".content__item-title").val());
+      // image preload
+      const images = [
+        "./assets/img/.jpg",
+        "./assets/img/.jpg",
+        "./assets/img/.jpg",
+        "./assets/img/.jpg",
+      ];
+      const preload = (images) => () => {
+        images.forEach((image) => {
+          const img = new Image();
+          img.src = image;
+        });
+      };
+      const addLoadEvent = (func) => {
+        const onloadEvent = window.onload;
+        if (typeof window.onload != "function") {
+          window.onload = func;
+        } else {
+          window.onload = function () {
+            if (onloadEvent) {
+              onloadEvent();
+            }
+            func();
+          };
+        }
+      };
+      addLoadEvent(preload(images));
     </script>
 
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/charming.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/masonry.pkgd.min.js"></script>
+    <script src="./assets/js/charming.min.js"></script>
+    <script src="./assets/js/TweenMax.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
