@@ -630,7 +630,9 @@
 
   // Preload images.
   imagesLoaded(document.querySelectorAll(".grid__item-img"), () => {
-    body.classList.remove("loading");
+    // body.classList.remove("loading");
+    $("body").removeClass("loading");
+    
     var msnry = new Masonry(grid.DOM.el, {
       // options
       itemSelector: ".grid__item",
