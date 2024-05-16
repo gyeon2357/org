@@ -198,7 +198,7 @@ html {
 
 body {
   --color-bg: #121212;
-  --grid-item-bg: #F8F6F0;
+  --grid-item-bg: #f8f6f0;
 
   --color-text: #000;
   --color-link-olive: #d3c6a0;
@@ -394,7 +394,7 @@ nav > ul {
 
 nav h1 {
   display: block;
-  margin: 0 0 0.125rem;
+  margin: 0;
 
   font-size: 0.875rem;
   line-height: 1.6;
@@ -449,12 +449,17 @@ nav a:hover {
   color: var(--color-link-hover);
 }
 
+.grid__item.workshop:hover small,
+.grid__item.workshop:hover .grid__item-title,
+.grid__item.workshop:hover .grid__item-number {
+  color: var(--color-link-white);
+}
+
 .grid__item:focus {
-  color: var(--color-text);
 }
 
 .grid__item:focus > .grid__item-bg {
-  /* background: var(--focus-item-bg); */
+  box-shadow: 0 0 0 3px chocolate;
 }
 
 .grid__item-wrap {
@@ -468,6 +473,10 @@ nav a:hover {
   width: 100%;
   height: 100%;
   background: var(--grid-item-bg);
+}
+
+.grid__item-bg.workshop {
+  box-shadow: 0 0 80px 20px #8b634b inset;
 }
 
 .grid__item-img {
