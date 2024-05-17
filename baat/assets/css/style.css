@@ -1,3 +1,20 @@
+:root {
+  --color-bg: #171717;
+  --grid-item-bg: #f8f6f0;
+
+  --color-text: #342d18;
+  --color-link-olive: #d3c6a0;
+  --color-link-lightolive: #f8f6f0;
+  --color-link-white: snow;
+
+  --color-link-hover: #b39e5d;
+
+  --color-info: #000;
+
+  --focus-item-bg: #b39e5d;
+  --color-close: purple;
+}
+
 article,
 aside,
 details,
@@ -197,20 +214,6 @@ html {
 }
 
 body {
-  --color-bg: #151515;
-  --grid-item-bg: #f8f6f0;
-
-  --color-text: #000;
-  --color-link-olive: #d3c6a0;
-  --color-link-lightolive: #f8f6f0;
-  --color-link-white: snow;
-
-  --color-link-hover: #b39e5d;
-
-  --color-info: #000;
-
-  --focus-item-bg: #b39e5d;
-  --color-close: purple;
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -235,17 +238,17 @@ body {
 }
 
 .js .loading::after {
-  content: "◐";
+  content: url(../img/logo.svg);
   position: fixed;
   z-index: 100000;
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
-  margin: -30px 0 0 -30px;
+
+  margin: 0 auto;
   pointer-events: none;
   border-radius: 50%;
-  opacity: 0.4;
+  opacity: 0.2;
   background: var(--color-link);
   color: #fff;
 
@@ -490,7 +493,10 @@ nav a:hover {
 }
 
 .grid__item-bg.workshop {
-  box-shadow: 0 0 80px 20px #8b634b inset;
+  box-shadow: 0 0 80px 8px #84733e inset;
+}
+
+.grid__item.workshop .grid__item-title {
 }
 
 .grid__item-img {
@@ -515,13 +521,13 @@ nav a:hover {
   right: 0.125rem;
   top: 0.25rem;
   margin: 0 0 0 1rem;
-  font-size: 1.125rem;
+
+  font-size: 1.25rem;
   font-weight: 600;
+  letter-spacing: 0px;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   text-wrap: nowrap;
-
-  letter-spacing: 0px;
 
   transform-origin: 0 50%;
 }
@@ -534,7 +540,7 @@ nav a:hover {
 .grid__item-title > span.kr {
   text-orientation: inherit;
   margin: 0 0 0.125rem;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .grid__item-title > em {
