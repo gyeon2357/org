@@ -13,7 +13,7 @@
 
   --light-text-color: #16191fe5;
   --light-background: #16191f0a;
-  --light-odd-background: #16191f08;
+  --light-even-background: #16191f08;
   --light-border-color-100: #000311;
   --light-border-color-60: #00031155;
   --light-border-color-10: #3b4b5910;
@@ -27,7 +27,7 @@
 
   --dark-text-color: #e6e6e6;
   --dark-background: #030109;
-  --dark-odd-background: #151515;
+  --dark-even-background: #151515;
   --dark-border-color-100: #e1e4e1;
   --dark-border-color-60: #e1e4e160;
   --dark-border-color-30: #e1e4e130;
@@ -764,8 +764,8 @@ header {
 
 .home-header__wrapper p,
 .home-header__wrapper a {
-  font-size: 0.75rem;
-  line-height: 1.38;
+  font-size: 1rem;
+  line-height: 1.35;
   color: var(--light-text-color);
 }
 
@@ -812,7 +812,7 @@ header {
 
   .home-header__wrapper p,
   .home-header__wrapper a {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1257,8 +1257,8 @@ h4.nav__th__heading {
   );
 }
 
-.project__tr:nth-child(odd) {
-  background: var(--light-odd-background);
+.project__tr:nth-child(even) {
+  background: var(--light-even-background);
 }
 
 .project__tr:last-child {
@@ -1361,7 +1361,7 @@ h4.nav__th__heading {
 }
 
 .nav__th--desktop .project__details .value__td {
-  font-size: 90%;
+  font-size: 1.125rem;
   color: var(--semantic-pink);
 }
 
@@ -1514,7 +1514,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 720px) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 2.5rem;
+    padding: 0.125rem 1rem 1.5rem;
   }
   .project__tr .value__td--title {
     padding-left: 2rem;
@@ -1523,7 +1523,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 960px) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 3rem;
+    padding: 0.125rem 1rem 1.75rem;
   }
   .project__tr .value__td--title {
     padding-left: 2rem;
@@ -1532,7 +1532,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 80rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 3.5rem;
+    padding: 0.125rem 1rem 1.75rem;
   }
   .project__tr .value__td--title {
     padding-left: 2.5rem;
@@ -1541,7 +1541,7 @@ a.value__td.state-active-dsc:after {
 
 @media screen and (min-width: 100rem) {
   .project__tr .project__details {
-    padding: 0.125rem 1rem 4rem;
+    padding: 0.125rem 1rem 2rem;
   }
   .project__tr .value__td--title {
     padding-left: 2.5rem;
@@ -2022,7 +2022,6 @@ footer.safe-bottom {
 
 .footer-inner a {
   position: relative;
-  width: 100%;
 
   line-height: 1.5;
 
@@ -3006,8 +3005,8 @@ body.light .home-header__wrapper {
   border-left: 1px solid var(--dark-border-color-60);
 }
 
-body.light .project__tr:nth-child(odd) {
-  background: var(--dark-odd-background);
+body.light .project__tr:nth-child(even) {
+  background: var(--dark-even-background);
 }
 
 /* body.light .project__tr {
