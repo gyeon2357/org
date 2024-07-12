@@ -18,8 +18,8 @@ body {
   --cursor-text: #000;
   --padding-page: 2rem;
   --color-dot: #b93434;
-  --img-width: 110;
-  --img-height: 133;
+  --img-width: 96;
+  --img-height: 120;
   --img-ratio: calc(var(--img-height) / var(--img-width));
   --map-width: 30px;
   --map-height: calc(var(--img-ratio) * var(--map-width));
@@ -313,8 +313,8 @@ main {
 }
 @media screen and (min-width: 60em) {
   body {
-    --img-width: 220;
-    --img-height: 265;
+    --img-width: 160;
+    --img-height: 120;
   }
   main {
     overflow: hidden;
