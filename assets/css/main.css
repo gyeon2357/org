@@ -13,7 +13,7 @@
 
   --light-text-color: #16191fe5;
   --light-background: #16191f0a;
-  --light-even-background: #16191f08;
+  --light-even-background: #16191f06;
   --light-border-color-100: #000311;
   --light-border-color-60: #00031155;
   --light-border-color-10: #3b4b5910;
@@ -27,7 +27,7 @@
 
   --dark-text-color: #e6e6e6;
   --dark-background: #030109;
-  --dark-even-background: #151515;
+  --dark-even-background: #151515db;
   --dark-border-color-100: #e1e4e1;
   --dark-border-color-60: #e1e4e160;
   --dark-border-color-30: #e1e4e130;
