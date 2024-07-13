@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: 18px;
+  font-size: clamp(30px, 5vw, 1.25vw);
 }
 body {
   --color-text: #1f1b18;
@@ -301,7 +301,7 @@ main {
 
 .click_fcn {
   text-decoration: underline;
-  
+
   cursor: pointer;
 }
 
@@ -309,7 +309,7 @@ main {
   display: none;
 
   position: fixed;
-  width: 300px;
+  width: 17.5vw;
   height: auto;
 
   top: 50%;
@@ -369,6 +369,15 @@ main {
     width: calc(50vw - 300px);
   }
 }
+
+@media screen and (min-width: 2580px) {
+  .columns {
+    grid-template-areas: "column-1 ... column-2";
+    grid-template-columns: 25vw auto minmax(25vw, 50vw);
+    grid-template-rows: auto;
+  }
+}
+
 @media (any-pointer: fine) {
   .cursor {
     display: block;

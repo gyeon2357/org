@@ -88,7 +88,7 @@
               <h2 class="column__title line-effect">By now,</h2>
               <h2 class="column__title line-effect">By now,</h2>
               <h2 class="column__title line-effect">By now,</h2>
-              <h2 class="column__title line-effect">By now,</h2>
+              <h2 class="column__title line-effect click_fcn">By now,</h2>
               <h2 class="column__title line-effect">By now,</h2>
               <h2 class="column__title line-effect">By now,</h2>
               <h2 class="column__title line-effect">By now,</h2>
@@ -104,6 +104,7 @@
           </div>
 
           <img src="1.9798ee32.jpg" class="image_reveal" />
+          <img src="./2.2aed40a2.jpg" class="image_reveal" />
         </div>
         <div class="preview__item">
           <div class="preview__img">
@@ -145,6 +146,7 @@
             </div>
           </div>
 
+          <img src="./1.bca9ae5a.jpg" class="image_reveal" />
           <img src="./2.64277ee6.jpg" class="image_reveal" />
         </div>
         <div class="preview__item">
@@ -292,7 +294,7 @@
               <h2
                 class="column__title line-effect"
                 OnClick="location.href ='../push/'"
-                style="cursor: pointer; text-decoration: underline;"
+                style="cursor: pointer; text-decoration: underline"
               >
                 Link
               </h2>
@@ -401,12 +403,26 @@
       //   $(".image_reveal").toggleClass("toggle");
       // });
 
-      var each_item = $(".preview__item");
+      var preview_item = $(".preview__item");
 
-      each_item.find(".click_fcn").on("click", function () {
-        each_item.find(".image_reveal").toggleClass("toggle");
+      preview_item.find(".click_fcn").each(function () {
+        $(this).on("click", function () {
+          preview_item.find(".image_reveal").each(function () {
+            $(this).toggleClass("toggle");
+          });
+        });
       });
 
+      preview_item.find(".click_fcn").each(function (index) {
+        $(this).on("click", function () {
+          // For the boolean value
+          var boolKey = $(this).data("selected");
+          // For the mammal value
+          var mammalKey = $(this).attr("id");
+        });
+      });
+
+      // setting
       $(".thumb").on("click", function () {
         $(".thumb").css("z-index", "-1");
         $(".content").css("z-index", "-1");
