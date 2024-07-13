@@ -7,13 +7,13 @@
   font-size: 18px;
 }
 body {
-  --color-text: #fff;
+  --color-text: #1f1b18;
   --color-text-alt: #747474;
-  --color-bg: #1f1b18;
-  --color-bg-cover: #1f1b18;
-  --color-link: #fff;
-  --color-link-hover: #fff;
-  --color-map: #aaa;
+  --color-bg: #fff;
+  --color-bg-cover: #fff;
+  --color-link: #1f1b18;
+  --color-link-hover: #1f1b18;
+  --color-map: #666;
   --cursor-fill: #b74946;
   --cursor-text: #000;
   --padding-page: 2rem;
@@ -31,30 +31,7 @@ body {
   font-weight: 500;
   margin: 0;
 }
-.js .loading:after,
-.js .loading:before {
-  content: "";
-  position: fixed;
-  z-index: 2000;
-}
-.js .loading:before {
-  background: var(--color-bg);
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-.js .loading:after {
-  animation: loaderAnim 0.7s linear infinite alternate forwards;
-  background: var(--color-link);
-  border-radius: 50%;
-  height: 60px;
-  left: 50%;
-  margin: -30px 0 0 -30px;
-  opacity: 0.4;
-  top: 50%;
-  width: 60px;
-}
+
 @keyframes loaderAnim {
   to {
     opacity: 1;
@@ -182,14 +159,18 @@ main {
   display: flex;
   flex-direction: row;
   grid-area: content;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: relative;
   width: 100%;
+
+  z-index: 0;
 }
 .thumb {
   cursor: pointer;
   flex: none;
   margin: 3rem 0;
+
+  z-index: 0;
 }
 .thumb__img {
   height: calc(var(--img-height) * 1px);
@@ -217,7 +198,7 @@ main {
 }
 .preview {
   left: 0;
-  pointer-events: none;
+  /* pointer-events: none; */
   position: fixed;
   top: 0;
 }
@@ -226,6 +207,8 @@ main {
   display: grid;
   height: 100%;
   width: 100%;
+
+  z-index: 0;
 }
 .preview__item {
   grid-area: 1/1/2/2;
@@ -270,11 +253,13 @@ main {
   grid-area: column-2;
 }
 .column__title {
+  display: inline-block;
   font-size: 1.75rem;
   font-size: clamp(1rem, 3vw, 1.75rem);
   font-weight: 500;
-  margin-top: 0;
+  margin: 0;
 }
+
 .column__text {
   color: var(--color-text-alt);
   font-size: 0.95rem;
@@ -294,6 +279,8 @@ main {
   top: 50%;
   width: 100%;
   z-index: 1000;
+
+  display: none;
 }
 .preview__map-item {
   border: 1px solid var(--color-map);
@@ -311,6 +298,31 @@ main {
   position: absolute;
   width: 6px;
 }
+
+.click_fcn {
+  text-decoration: underline;
+  
+  cursor: pointer;
+}
+
+.image_reveal {
+  display: none;
+
+  position: fixed;
+  width: 300px;
+  height: auto;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 1001 !important;
+}
+
+.toggle {
+  display: block;
+}
+
 @media screen and (min-width: 60em) {
   body {
     --img-width: 160;
