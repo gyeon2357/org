@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: clamp(30px, 5vw, 1.25vw);
+  font-size: clamp(20px, 4vw, 1vw);
 }
 body {
-  --color-text: #1f1b18;
+  --color-text: #fff;
   --color-text-alt: #747474;
-  --color-bg: #fff;
-  --color-bg-cover: #fff;
-  --color-link: #1f1b18;
-  --color-link-hover: #1f1b18;
+  --color-bg: #1f1b18;
+  --color-bg-cover: #1f1b18;
+  --color-link: #fff;
+  --color-link-hover: #fff;
   --color-map: #666;
   --cursor-fill: #b74946;
   --cursor-text: #000;
@@ -27,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: forma-djr-deck, sans-serif;
+  font-family: Pretendard, sans-serif;
   font-weight: 500;
   margin: 0;
 }
@@ -159,7 +159,7 @@ main {
   display: flex;
   flex-direction: row;
   grid-area: content;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
   width: 100%;
 
@@ -240,22 +240,22 @@ main {
 .columns {
   display: grid;
   grid-area: columns;
-  grid-template-areas: "..." "column-1" "column-2";
+  grid-template-areas: 1fr 1fr 1fr;
   grid-template-columns: 100%;
   grid-template-rows: 4rem auto auto;
   position: relative;
 }
 .column {
-  grid-area: column-1;
+  /* grid-area: column-1; */
   padding: var(--padding-page) var(--padding-page) 0;
 }
 .column:nth-child(2) {
-  grid-area: column-2;
+  /* grid-area: column-2; */
 }
 .column__title {
   display: inline-block;
   font-size: 1.75rem;
-  font-size: clamp(1rem, 3vw, 1.75rem);
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 500;
   margin: 0;
 }
@@ -263,7 +263,7 @@ main {
 .column__text {
   color: var(--color-text-alt);
   font-size: 0.95rem;
-  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+  font-size: clamp(0.75rem, 1vw, 0.75rem);
   max-width: 90%;
 }
 .line-effect {
@@ -356,12 +356,12 @@ main {
     margin: 1rem 0;
   }
   .columns {
-    grid-template-areas: "column-1 ... column-2";
-    grid-template-columns: 300px auto minmax(300px, 50vw);
+    /* grid-template-areas: "column-1 ... column-2"; */
+    grid-template-columns: 15% 36% 49%;
     grid-template-rows: auto;
   }
   .column {
-    padding: calc(var(--padding-page) * 1.5) var(--padding-page);
+    padding: 40px 20px;
   }
   .preview__map {
     left: 300px;
@@ -371,9 +371,13 @@ main {
 }
 
 @media screen and (min-width: 2580px) {
+  body {
+    --img-width: 320;
+    --img-height: 240;
+  }
+
   .columns {
-    grid-template-areas: "column-1 ... column-2";
-    grid-template-columns: 25vw auto minmax(25vw, 50vw);
+    grid-template-columns: 15% 37.5% 47.5%;
     grid-template-rows: auto;
   }
 }
