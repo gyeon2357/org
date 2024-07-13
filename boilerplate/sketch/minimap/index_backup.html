@@ -413,6 +413,15 @@
         });
       });
 
+      preview_item.find(".click_fcn").each(function (index) {
+        $(this).on("click", function () {
+          // For the boolean value
+          var boolKey = $(this).data("selected");
+          // For the mammal value
+          var mammalKey = $(this).attr("id");
+        });
+      });
+
       // setting
       $(".thumb").on("click", function () {
         $(".thumb").css("z-index", "-1");
