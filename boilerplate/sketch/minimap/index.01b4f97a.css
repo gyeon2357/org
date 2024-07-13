@@ -214,7 +214,7 @@ main {
   grid-area: 1/1/2/2;
   grid-template-areas: "img" "columns";
   grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: calc(50% - 10px) calc(50% + 10px);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -267,6 +267,8 @@ main {
   font-size: clamp(0.75rem, 1vw, 0.75rem);
   line-height: 1.5;
   max-width: 90%;
+
+  margin: 1.5rem 0;
 }
 .line-effect {
   opacity: 0;
@@ -303,6 +305,7 @@ main {
 
 .click_fcn {
   text-decoration: underline;
+  text-underline-position: under;
 
   cursor: pointer;
 }
@@ -344,7 +347,27 @@ main {
   }
   .frame--header {
     grid-template-areas: "title links sponsor";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
   }
+
+  .frame__title {
+    justify-self: start;
+  }
+
+  .frame__links {
+    justify-self: center;
+  }
+  .frame__sponser {
+    justify-self: end;
+  }
+
+  .frame__title > img,
+  .frame__sponser > img {
+    width: 2vw;
+  }
+
   .frame--footer {
     grid-template-areas: "demos demos demos";
   }
