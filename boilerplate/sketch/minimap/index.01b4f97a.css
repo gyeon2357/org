@@ -257,6 +257,7 @@ main {
   font-size: 1.75rem;
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 500;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -264,6 +265,7 @@ main {
   color: var(--color-text-alt);
   font-size: 0.95rem;
   font-size: clamp(0.75rem, 1vw, 0.75rem);
+  line-height: 1.5;
   max-width: 90%;
 }
 .line-effect {
@@ -370,6 +372,7 @@ main {
   }
 }
 
+/* for 4k */
 @media screen and (min-width: 2580px) {
   body {
     --img-width: 320;
@@ -379,6 +382,10 @@ main {
   .columns {
     grid-template-columns: 15% 37.5% 47.5%;
     grid-template-rows: auto;
+  }
+
+  .column {
+    padding: 2vw 1.5vw;
   }
 }
 
