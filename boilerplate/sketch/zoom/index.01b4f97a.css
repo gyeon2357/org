@@ -156,7 +156,7 @@ a:focus-visible {
 
   width: 14vw;
   height: 8vw;
-  margin-bottom: 15vh;
+  margin-bottom: 16vh;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -170,7 +170,7 @@ a:focus-visible {
   opacity: 0.7;
 }
 .grid__cell--current .grid__cell-img {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .grid__cell--padded {
   padding: calc(var(--grid-padding) * 2);
@@ -216,19 +216,21 @@ a:focus-visible {
 }
 .content__item-number {
   display: block;
-  font-size: 0.9vw;
-  font-weight: 600;
+  font-size: 0.925vw;
+  font-weight: 700;
 }
 .content__item-heading {
   font-size: 2.25vw;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   margin: 1rem 0 3rem;
 }
 .content__item-text {
   font-size: 1vw;
+  font-weight: 500;
+  margin-top: 0;
   margin-bottom: 2rem;
-  max-width: 38ch;
+  max-width: 40ch;
 }
 .content__item-link {
   cursor: pointer;
@@ -245,8 +247,8 @@ a:focus-visible {
 }
 .slide-nav__img {
   cursor: not-allowed;
-  height: 9vh;
-  opacity: 0.5;
+  height: 10vh;
+  opacity: 0.4;
   overflow: hidden;
   position: relative;
   width: 100%;
