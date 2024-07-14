@@ -8,7 +8,7 @@
 }
 body {
   --color-text: #000;
-  --color-bg: #f7f5ee;
+  --color-bg: #fff;
   --color-link: #000;
   --color-link-hover: #000;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,7 @@ body {
   line-height: 1;
   margin: 0;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .js .loading:after,
 .js .loading:before {
@@ -72,7 +72,6 @@ a:focus:not(:focus-visible) {
 }
 a:focus-visible {
   background: transparent;
-  outline: 2px solid red;
 }
 .unbutton {
   background: none;
@@ -85,7 +84,7 @@ a:focus-visible {
   outline: none;
 }
 .line {
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
   transform-origin: 0 50%;
   white-space: nowrap;
   will-change: transform;
@@ -143,20 +142,21 @@ a:focus-visible {
 }
 .grid--large {
   --grid-padding: 0.5vw;
-  grid-auto-rows: calc(33vmin - 0.9375vw);
+  grid-auto-rows: calc(33.3vh - 1.375rem);
 
   /* grid-template-rows: repeat(3, 33vmin); */
-  padding: 1.875vw;
+  padding: 2rem;
+  overflow-y: hidden;
 }
 .grid--mini {
   --grid-padding: 2.5px;
 
-  min-width: 240px;
-  min-height: 120px;
+  min-width: 280px;
+  min-height: 160px;
 
-  width: 11vw;
-  height: 5.5vw;
-  margin-bottom: 12vh;
+  width: 14vw;
+  height: 8vw;
+  margin-bottom: 15vh;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -228,7 +228,7 @@ a:focus-visible {
 .content__item-text {
   font-size: 1vw;
   margin-bottom: 2rem;
-  max-width: 30ch;
+  max-width: 38ch;
 }
 .content__item-link {
   cursor: pointer;
@@ -286,7 +286,6 @@ a:focus-visible {
 }
 .back:focus,
 .back:hover {
-  stroke: #823725;
   outline: none;
 }
 .content--open .back {
@@ -313,8 +312,7 @@ a:focus-visible {
 
 .frame__demo--current,
 .frame__demo--current:hover {
-  color: var(--color-text);
-  opacity: 0.5;
+  color: #8f8d8c;
 }
 
 @media screen and (min-width: 53em) {
@@ -375,6 +373,70 @@ a:focus-visible {
     grid-column: 3;
     grid-row: 5;
   }
+
+  .grid__cell-c3-r6 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .grid__cell-c3-r6 .frame {
+    justify-content: end;
+    align-items: start;
+  }
+
+  .grid__cell-c3-r6 .frame__title {
+    margin: 0;
+  }
+
+  .grid__cell-c3-r6 .frame__demo {
+    padding-right: 1rem;
+    font-weight: 500;
+    color: #000;
+
+    text-decoration: underline;
+  }
+
+  .grid__cell-c3-r6 .frame__demo--current,
+  .grid__cell-c3-r6 .frame__demo--current:hover {
+    color: #8f8d8c;
+    text-decoration: none;
+  }
+  /* 
+  .oh {
+    overflow: hidden;
+  }
+  .oh__inner {
+    line-height: 1;
+  }
+  .line {
+    transform-origin: 0 50%;
+    will-change: transform;
+  }
+
+  .hover-line,
+  .line {
+    white-space: nowrap;
+  }
+
+  .hover-line {
+    overflow: hidden;
+    position: relative;
+  }
+  .hover-line:before {
+    background: #000;
+    content: "";
+    height: 1px;
+    opacity: 0.7;
+    position: absolute;
+    top: 92%;
+    transform-origin: 0 50%;
+    transition: transform 0.3s;
+    width: 100%;
+  }
+  .hover-line:hover:before {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+  } */
 
   .grid--mini {
     position: relative;

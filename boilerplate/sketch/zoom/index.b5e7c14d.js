@@ -4467,7 +4467,8 @@
                     defaults: { duration: 1.2, ease: "expo" },
                   })
                     .set(this.DOM.inner, { y: "120%", rotate: 15 })
-                    .to(this.DOM.inner, { y: "0%", rotate: 0, stagger: 0.03 })),
+                    .to(this.DOM.inner, { y: "0%", rotate: 0, stagger: 0.03,  })),
+                  
                   this.inTimeline
                 );
               },

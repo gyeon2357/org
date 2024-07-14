@@ -14,7 +14,7 @@ body {
   --color-link: #fff;
   --color-link-hover: #fff;
   --color-map: #666;
-  --cursor-fill: #b74946;
+  --cursor-fill: #fff;
   --cursor-text: #000;
   --padding-page: 2rem;
   --color-dot: #b93434;
@@ -58,7 +58,6 @@ a:focus:not(:focus-visible) {
 }
 a:focus-visible {
   background: transparent;
-  outline: 2px solid red;
 }
 .oh {
   overflow: hidden;
@@ -141,6 +140,9 @@ main {
 .frame__demos a:not(:last-child),
 .frame__links a:not(:last-child) {
   margin-right: 1rem;
+
+  text-decoration: underline;
+  text-underline-position: from-font;
 }
 .frame__demos {
   grid-area: demos;
@@ -150,6 +152,8 @@ main {
 .frame__demo--current:hover {
   color: var(--color-text);
   opacity: 0.5;
+
+  text-decoration: none;
 }
 .cursor {
   display: none;
@@ -186,11 +190,13 @@ main {
   background-size: cover;
   height: 100%;
   width: 100%;
+
+  border-radius: 0.125rem;
 }
 .thumb__caption {
   font-family: Pretendard, sans-serif;
 
-  font-weight: 400;
+  font-weight: 600;
   padding-top: 0.25rem;
 }
 .thumb__caption-inner {
