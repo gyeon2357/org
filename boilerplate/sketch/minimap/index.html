@@ -118,7 +118,7 @@
             </div>
 
             <div class="column">
-              <div style="width: 90%">
+              <div style="width: 90%; margin-top: 0.125rem">
                 <h2 class="column__body line-effect">
                   호텔의 입지와 상권의 인구통계, 소비 수준 등
                 </h2>
@@ -680,7 +680,15 @@
               </div>
 
               <p class="column__caption line-effect">
-              In the sales channel setup and marketing phase, we identify and establish effective channels and media to attract target customers efficiently. We set up online travel agency (OTA) channels and other sales channels, building a reservation system. We implement diverse marketing strategies to increase brand awareness and drive customer acquisition, promoting initial customer inflow and ensuring sustainable revenue growth.
+                In the pre-opening and operational setup phase, we complete all
+                preparations for the hotel opening. We purchase and place
+                furniture and content that align with the brand plan, performing
+                VMD tasks. We install necessary equipment and supplies and
+                establish operational systems and processes. We coordinate with
+                models and professional photographers to create as-built photos
+                and images for post-opening marketing. Finally, we conduct staff
+                training based on the operational manual to ensure service
+                quality and facilitate smooth hotel operations from the start.
               </p>
             </div>
           </div>
@@ -936,8 +944,8 @@
       </section>
       <div class="frame frame--footer">
         <div class="frame__demos">
-          <a class="frame__demo " href="index.html">Work Process</a>
-          <a class="frame__demo frame__demo--current " href="../zoom/"
+          <a class="frame__demo" href="index.html">Work Process</a>
+          <a class="frame__demo frame__demo--current" href="../zoom/"
             >Product</a
           >
         </div>
@@ -952,7 +960,7 @@
     <script src="../../../assets/js/jquery.min.js"></script>
 
     <script>
-    // image preload
+      // image preload
       const images = [
         "back-1.jpg",
         "back-2.jpg",
@@ -1011,14 +1019,14 @@
         "click-6-3.jpg",
       ];
 
-      const preload = images => () => {
-        images.forEach(image => {
+      const preload = (images) => () => {
+        images.forEach((image) => {
           const img = new Image();
           img.src = image;
         });
       };
 
-      const addLoadEvent = func => {
+      const addLoadEvent = (func) => {
         const onloadEvent = window.onload;
         if (typeof window.onload != "function") {
           window.onload = func;
