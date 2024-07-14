@@ -41,8 +41,8 @@
       <h1 class="header--title">
         <div class="header--div">안녕하세요.</div>
         <div class="header--div">스페이스플래닝입니다.</div>
-        <div class="header--div">스페이스플래닝입니다.</div>
-        <div class="header--div">스페이스플래닝입니다.</div>
+        <!-- <div class="header--div">스페이스플래닝입니다.</div>
+        <div class="header--div">스페이스플래닝입니다.</div> -->
       </h1>
     </header>
 
@@ -57,7 +57,7 @@
         var $header = $(".header");
         var $title = $(".header--title");
         var $main = $(".main");
-        var delay = 750;
+        var delay = 500;
         setTimeout(function () {
           $title.fadeIn(delay);
           setTimeout(function () {
@@ -66,24 +66,24 @@
               $title
                 .find(".header--div")
                 .eq(0)
-                .fadeOut(delay, function () {
-                  $title.find(".header--div").eq(1).show(0);
-                  setTimeout(function () {
-                    $title
-                      .find(".header--div")
-                      .eq(1)
-                      .fadeOut(delay, function () {
-                        $title.find(".header--div").eq(2).show(0);
-                        setTimeout(function () {
-                          $title
-                            .find(".header--div")
-                            .eq(2)
+                // .fadeOut(delay, function () {
+                //   $title.find(".header--div").eq(1).show(0);
+                //   setTimeout(function () {
+                //     $title
+                //       .find(".header--div")
+                //       .eq(1)
+                //       .fadeOut(delay, function () {
+                //         $title.find(".header--div").eq(2).show(0);
+                //         setTimeout(function () {
+                //           $title
+                //             .find(".header--div")
+                //             .eq(2)
                             .fadeOut(delay, function () {
-                              $title.find(".header--div").eq(3).show(0);
+                              $title.find(".header--div").eq(1).show(0);
                               setTimeout(function () {
                                 $title
                                   .find(".header--div")
-                                  .eq(3)
+                                  .eq(1)
                                   .fadeOut(delay, function () {
                                     $header.fadeOut(delay);
                                     $main.animate(
@@ -96,10 +96,10 @@
                                   });
                               }, delay * 0.7);
                             });
-                        }, delay);
-                      });
-                  }, delay);
-                });
+                //         }, delay);
+                //       });
+                //   }, delay);
+                // });
             }, delay);
           }, delay);
         }, delay * 0.7);
