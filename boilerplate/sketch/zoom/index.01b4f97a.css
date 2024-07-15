@@ -276,11 +276,11 @@ a:focus-visible {
   background: none;
   border: 0;
   cursor: pointer;
-  margin: auto 0 1.5vw;
+  margin: auto 0 1.5vw .25rem;
   opacity: 0;
   padding: 0;
   pointer-events: none;
-  width: 4vw;
+  width: 3.375vw;
   z-index: 1000;
 }
 .back svg {

@@ -191,7 +191,7 @@ main {
   height: 100%;
   width: 100%;
 
-  border-radius: 0.125rem;
+  
 }
 .thumb__caption {
   font-family: Pretendard, sans-serif;
@@ -265,7 +265,6 @@ main {
   height: auto;
   margin-bottom: 0.75rem;
 
-  border-radius: 4px;
 }
 
 .column__title {
@@ -299,9 +298,9 @@ main {
   padding-right: 6px;
 }
 
-.column__name:first-of-type {
+/* .column__name:first-of-type {
 margin-left: 0.125rem;
-}
+} */
 
 .column__profile {
   color: var(--color-text);
@@ -311,14 +310,14 @@ margin-left: 0.125rem;
   line-height: 1.5;
   text-wrap: nowrap;
 
-  margin: 0.5rem 0.125rem;
+  margin: 0.5rem 0;
 }
 
 .column__number {
   color: var(--color-text);
   font-size: clamp(0.5rem, 1vw, 0.625rem);
   font-weight: 700;
-  margin: 0.125rem 0 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .column__body {
