@@ -280,7 +280,7 @@ a:focus-visible {
   opacity: 0;
   padding: 0;
   pointer-events: none;
-  width: 3.375vw;
+  width: 3.25vw;
   z-index: 1000;
 }
 .back svg {
