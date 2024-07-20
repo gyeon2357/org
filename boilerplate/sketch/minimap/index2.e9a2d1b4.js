@@ -5058,10 +5058,10 @@ const Dr = new (class {
 
 // click fcn
 for (const t of Or)
-  t.DOM.img.addEventListener("click", () => {
+  t.DOM.img.addEventListener("mouseenter", () => {
     kr(), t.showPreview(), Cr(t);
   }),
-    t.DOM.img.addEventListener("", () => {
+    t.DOM.img.addEventListener("mouseleave", () => {
       t.hidePreview(), Sr(), Ar();
     });
 
