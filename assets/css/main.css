@@ -786,7 +786,7 @@ header {
 
 @media screen and (min-width: 720px) {
   header {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .home-header {
@@ -794,7 +794,7 @@ header {
   }
 
   .home-header__wrapper {
-    margin: 0 4rem 0 0;
+    margin: 2rem 0 0 0;
   }
 
   .home-header__wrapper:first-child {
@@ -812,7 +812,7 @@ header {
 
   .home-header__wrapper p,
   .home-header__wrapper a {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -829,10 +829,6 @@ header {
 }
 
 @media screen and (min-width: 720px) {
-  header {
-    flex-direction: row;
-  }
-
   .home-header {
     position: relative;
     padding: 1rem 1rem 3rem;
