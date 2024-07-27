@@ -679,7 +679,7 @@ body {
 }
 
 .intro-img img {
-  width: 80px;
+  width: 120px;
 }
 
 @media screen and (min-width: 720px) {
@@ -690,7 +690,8 @@ body {
 }
 
 .hide span {
-  transform: translateY(100%);
+  transform: translateY(0);
+  opacity: 0;
   display: inline-block;
 }
 
