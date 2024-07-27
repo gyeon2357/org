@@ -771,7 +771,7 @@ header {
 }
 
 .home-header__wrapper:nth-child(n + 2) a {
-  width: 30ch;
+  width: 87.5%;
 
   cursor: pointer;
 }
@@ -796,6 +796,10 @@ header {
 
   justify-content: space-between;
   padding: 1rem;
+}
+
+.construction {
+  margin: 1rem 0;
 }
 
 .home-header__logo .info img {
@@ -824,6 +828,10 @@ header {
 
   .home-header__wrapper:first-child {
     margin: 0;
+  }
+
+  .home-header__wrapper:nth-child(n + 2) a {
+    width: 30ch;
   }
 
   .home-header__logo .info img {
@@ -984,6 +992,18 @@ header {
   -webkit-transition: color 250ms, background 250ms;
   transition: color 250ms, background 250ms;
   font-size: 0.9375rem;
+}
+
+.construction {
+  display: inline-block;
+
+  margin: 0.5rem 0 0.25rem;
+}
+
+.construction img {
+  max-width: 300px;
+  min-height: 28px;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 720px) {
