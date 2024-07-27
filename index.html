@@ -115,7 +115,8 @@
       <div class="intro">
         <h1 class="hide">
           <div class="rect"></div>
-          <span class="text">PARK, JEONG GYEON</span>
+          <!-- <span class="text">PARK, JEONG GYEON</span> -->
+          <span class="text intro-img"></span>
           <span class="text"></span>
         </h1>
 
@@ -2271,7 +2272,7 @@
         </div>
         <div class="footer-inner">
           <a href="#" class="gototop"
-            >© 2024. Park jeong-gyeon all rights reserved.</a
+            >© 2024. PARK JEONG GYEON all rights reserved.</a
           >
         </div>
       </div>
@@ -2289,6 +2290,37 @@
     <script src="./assets/js/lightdark.js"></script>
     <script>
       $(document).ready(function () {
+        // intro-random img
+
+        const imgs = [
+          "./assets/images/cloud/c1.jpg",
+          "./assets/images/cloud/c2.jpg",
+          "./assets/images/cloud/c3.jpg",
+          "./assets/images/cloud/c4.jpg",
+          "./assets/images/cloud/c5.jpg",
+          "./assets/images/cloud/c6.jpg",
+          "./assets/images/cloud/c7.jpg",
+          "./assets/images/cloud/c8.jpg",
+          "./assets/images/cloud/c9.jpg",
+          "./assets/images/cloud/c10.jpg",
+          "./assets/images/cloud/c11.jpg",
+          "./assets/images/cloud/c12.jpg",
+          "./assets/images/cloud/c13.jpg",
+          "./assets/images/cloud/c14.jpg",
+          "./assets/images/cloud/c15.jpg",
+          "./assets/images/cloud/c16.jpg",
+          "./assets/images/cloud/c17.jpg"
+        ];
+
+        const introimg = imgs[Math.floor(Math.random() * imgs.length)];
+
+        const etImg = document.createElement("img");
+        etImg.src = `${introimg}`;
+
+        const homePage = document.querySelector(".intro-img");
+        homePage.appendChild(etImg);
+        
+
         $("html").css("overflow-y", "hidden");
         // $(".onload .line_text").css("scale", "1");
 
