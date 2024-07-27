@@ -387,7 +387,7 @@ p:empty {
 .scope-text p,
 .scope-text ul,
 .scope-text ol,
-.home-header__logo,
+.home-header__info,
 .home-header__box__instagram,
 .home-header__box__recommend,
 .home-header__box__form__toggle,
@@ -787,6 +787,10 @@ header {
 }
 
 .home-header {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
   padding: 1rem;
 }
 
@@ -939,6 +943,11 @@ header {
   max-width: 24rem;
   padding-left: 9.5rem;
   height: 5.125rem;
+}
+
+.home-header__info a {
+  text-decoration: line-through;
+  text-decoration-color: var(--semantic-pink);
 }
 
 .home-header__box__instagram {
@@ -2757,7 +2766,7 @@ body .plyr__control.plyr__control--overlaid * {
 
 @media only screen and (min-device-width: 320px) and (max-width: 767px) {
   .aside-switch {
-    top: 0.5rem;
+    margin-left: 1.5rem;
   }
 
   .c-theme-switch .is-switch {
@@ -2913,7 +2922,7 @@ body.light .scope-text h6,
 body.light .scope-text p,
 body.light .scope-text ul,
 body.light .scope-text ol,
-body.light .home-header__logo,
+body.light .home-header__info,
 body.light .home-header__box__instagram,
 body.light .home-header__box__recommend,
 body.light .home-header__box__form__toggle,
