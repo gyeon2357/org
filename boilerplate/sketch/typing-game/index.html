@@ -15,11 +15,13 @@
       body {
         font-family: "Pretendard", Arial, Helvetica, sans-serif;
         overflow: hidden;
+
+        margin: 32px;
       }
 
       #info {
         float: left;
-        margin: 16px;
+        margin: 0;
         font-size: 24px;
         line-height: 1.2;
       }
@@ -31,8 +33,10 @@
       }
       #tajaContents {
         width: 100%;
-        height: 95%;
+        height: 90%;
         position: relative;
+
+        background: #f8f8f8;
       }
 
       #inputContents {
@@ -43,8 +47,8 @@
         justify-content: center;
 
         text-align: center;
-        border-top: 2px solid #000;
-        padding-top: 30px;
+        border-top: 3px solid #000;
+        padding-top: 20px;
       }
 
       #inputText {
@@ -72,6 +76,10 @@
         border-radius: none;
       }
 
+      button:focus {
+        outline: 4px solid orangered;
+      }
+
       #typing-text {
         margin: 10px 0;
         border: 1px solid #000;
@@ -93,12 +101,15 @@
       }
 
       .tajaWord {
-        font-size: 24px;
+        font-size: 30px;
         text-wrap: nowrap;
-        text-decoration: underline;
+
+        /* text-decoration: underline;
         text-underline-position: under;
-        text-decoration-color: #000;
+        text-decoration-color: #000; */
         background: #fff;
+        border: 1px solid #121212;
+        padding: 2px 4px;
       }
 
       p.word {
@@ -114,8 +125,10 @@
         top: 0;
         left: 0;
 
-        width: 101%;
-        height: 101%;
+        width: 100%;
+        height: 100%;
+        scale: 1.01;
+
         padding: 0;
         margin: 0;
         outline: none;
@@ -125,6 +138,50 @@
 
       #tajaBtn:active {
         background: #121212;
+      }
+
+      .formobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .formobile {
+          display: block;
+          z-index: 10000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: white;
+          box-sizing: border-box;
+          overflow: hidden;
+          text-align: center;
+        }
+
+        .formobile-p {
+          display: block;
+          z-index: 10001;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif;
+          font-size: 15px;
+          font-weight: normal;
+          line-height: 1.4;
+          color: black;
+          background-color: white;
+          -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+          text-decoration: none;
+          overflow: hidden;
+          text-align: center;
+        }
       }
 
       /* Print Styles */
@@ -189,50 +246,6 @@
           margin: 0;
         }
       }
-
-      .formobile {
-        display: none;
-      }
-
-      @media screen and (max-width: 768px) {
-        .formobile {
-          display: block;
-          z-index: 10000;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          background-color: white;
-          box-sizing: border-box;
-          overflow: hidden;
-          text-align: center;
-        }
-
-        .formobile-p {
-          display: block;
-          z-index: 10001;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          margin: 0;
-          padding: 0;
-          font-family: sans-serif;
-          font-size: 15px;
-          font-weight: normal;
-          line-height: 1.4;
-          color: black;
-          background-color: white;
-          -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-          text-decoration: none;
-          overflow: hidden;
-          text-align: center;
-        }
-      }
     </style>
   </head>
   <body>
@@ -241,9 +254,11 @@
     <div id="info" class="print">
       <div id="score"></div>
       <div id="life"></div>
-      <div id="typing-text"></div>
+      <div id="typing-text">
+        <!-- <h1>box</h1> -->
+      </div>
 
-      <button id="download" class="no-print">print</button>
+      <button id="download" class="no-print">인쇄하기</button>
     </div>
 
     <div id="contents">
