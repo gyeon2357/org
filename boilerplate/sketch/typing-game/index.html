@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>duroo-typing-game-prototype</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+
     <style>
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Pretendard", Arial, Helvetica, sans-serif;
         overflow: hidden;
       }
 
@@ -242,7 +250,7 @@
       <div id="tajaContents"></div>
       <div id="inputContents">
         <div id="inputText">
-          <input type="text" id="tajaText" placeholder="타자를 입력해주세요."/>
+          <input type="text" id="tajaText" placeholder="타자를 입력해주세요." />
         </div>
         <div id="inputBtn">
           <button id="tajaBtn">시작하기</button>
@@ -270,6 +278,7 @@
     <script>
       $("#tajaBtn").on("click", function () {
         $(this).fadeOut();
+        $("#tajaText").focus();
       });
 
       const button = document.querySelector("#download");
