@@ -6,6 +6,7 @@
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
       }
 
       #info {
@@ -98,6 +99,24 @@
 
       p.body {
         display: none;
+      }
+
+      #tajaBtn {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 101%;
+        height: 101%;
+        padding: 0;
+        margin: 0;
+        outline: none;
+
+        cursor: pointer;
+      }
+
+      #tajaBtn:active {
+        background: #121212;
       }
 
       /* Print Styles */
@@ -249,6 +268,10 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
+      $("#tajaBtn").on("click", function () {
+        $(this).fadeOut();
+      });
+
       const button = document.querySelector("#download");
       button.addEventListener("click", () => {
         $('p.word:contains("방임")').append(
