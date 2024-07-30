@@ -125,7 +125,7 @@ function easyDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            // alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
@@ -161,7 +161,7 @@ function speedDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            // alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
@@ -215,7 +215,7 @@ function zigzagDown(tajaArg) {
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
           alert("5개의 생명을 모두 사용하셨습니다.");
-          alert("총 " + score + "점을 획득하였습니다.");
+          // alert("총 " + score + "점을 획득하였습니다.");
           location.reload();
         }
 
@@ -224,7 +224,7 @@ function zigzagDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             location.reload();
           }
@@ -264,7 +264,7 @@ function rightDown(tajaArg) {
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
           alert("5개의 생명을 모두 사용하셨습니다.");
-          alert("총 " + score + "점을 획득하였습니다.");
+          // alert("총 " + score + "점을 획득하였습니다.");
           location.reload();
         }
 
@@ -273,7 +273,7 @@ function rightDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             location.reload();
           }
@@ -321,7 +321,7 @@ function leftDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            // alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
@@ -356,7 +356,7 @@ tajaText.addEventListener("keydown", function (e) {
         // life를 다 소진하지않고 clear 했을 경우
         if (setConstructor.length === taja.length) {
           if (!tajaContents.hasChildNodes()) {
-            // alert("다음 단계로 이동합니다.(준비중)");
+            
             alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
