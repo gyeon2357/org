@@ -1510,7 +1510,7 @@ a.value__td:after {
   font-family: "SUIT", "pretendard-comb-type";
   margin-left: 0.375rem;
 
-  background: lightgray;
+  /* background: lightgray; */
   border-radius: 100%;
 
   position: absolute;
@@ -1523,7 +1523,7 @@ a.value__td:after {
   transform: translateY(0.3rem);
 
   font-size: 75%;
-  color: #fff;
+  color: #000;
 
   -webkit-transition: opacity 250ms;
   transition: opacity 250ms;
@@ -1540,7 +1540,7 @@ a.value__td.state-active-asc:after {
     line-height: 1.3rem;
   margin-left: 0.375rem;
 
-  background: var(--semantic-pink);
+  background: var(--dark-border-color-100);
   opacity: 1;
 }
 
@@ -1548,10 +1548,10 @@ a.value__td.state-active-dsc:after {
   content: "↓";
   font-family: "SUIT", "pretendard-comb-type";
   font-weight: 600;
-  line-height: 1.2rem;
+
   margin-left: 0.375rem;
 
-  background: var(--semantic-pink);
+  background: var(--dark-border-color-100);
   opacity: 1;
 }
 
