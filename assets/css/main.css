@@ -690,7 +690,7 @@ body {
 }
 
 .hide span {
-  transform: translateY(0);
+  transform: translateY(100%);
   opacity: 0;
   display: inline-block;
 }
@@ -781,6 +781,8 @@ header {
   text-decoration: line-through;
   cursor: no-drop;
   text-decoration-color: var(--semantic-pink);
+
+  opacity: 0.4;
 }
 
 .home-header__wrapper p,
@@ -1537,7 +1539,7 @@ a.value__td.state-active-asc:after {
   content: "↑";
   font-family: "SUIT", "pretendard-comb-type";
   font-weight: 600;
-    line-height: 1.3rem;
+  line-height: 1.3rem;
   margin-left: 0.375rem;
 
   background: var(--dark-border-color-100);
