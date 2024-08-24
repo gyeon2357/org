@@ -121,7 +121,10 @@
       <div class="home state-active">
         <div class="home-header">
           <header>
-            <div class="home-header__wrapper" style="border: none; padding: 0">
+            <div
+              class="home-header__wrapper open"
+              style="border: none; padding: 0"
+            >
               <a>PARK, JEONG GYEON</a>
 
               <aside class="aside-switch">
@@ -133,19 +136,20 @@
               </aside>
             </div>
 
-            <div class="home-header__wrapper" style="border: none; padding: 0">
-              <a href="."
-                ><span class="badge"></span> Commercial Design and Print;
-                Research and Development, Prototyping and Implementation of Web
-                Interactive</a
-              >
-            </div>
+            <div class="home-header__container">
+              <div class="home-header__wrapper open" lang="en">
+                <a href="."
+                  >Commercial Design and Print; Research and Development,
+                  Prototyping and Implementation of Web Interactive</a
+                >
+              </div>
 
-            <div class="home-header__wrapper" style="border: none; padding: 0">
-              <a
-                ><span class="badge disabled"></span> Web experimentation; to
-                write in a structured way, to practice the handmade web</a
-              >
+              <div class="home-header__wrapper" lang="en">
+                <a href="./practice/"
+                  >Web experimentation; to write in a structured way, to
+                  practice the handmade web</a
+                >
+              </div>
             </div>
 
             <!-- <div class="home-header__wrapper" style="border: none; padding: 0">
@@ -153,9 +157,9 @@
             </div> -->
           </header>
 
-          <h1 class="home-header__info">
+          <!-- <h1 class="home-header__info">
             <a class="info" href="#">Info</a>
-          </h1>
+          </h1> -->
         </div>
 
         <section class="project">
@@ -223,9 +227,7 @@
               >
                 <div class="project__details__inner">
                   <header class="value__td value__td--title">
-                    <h3>
-                      <span class="brackets">BOOOOOOM!</span>
-                    </h3>
+                    <h3>BOOOOOOM!</h3>
                   </header>
 
                   <p class="value__td value__td--tag">Task</p>
@@ -1516,9 +1518,7 @@
               >
                 <div class="project__details__inner">
                   <header class="value__td value__td--title">
-                    <h3>
-                      <span class="brackets">곧은순</span>
-                    </h3>
+                    <h3>곧은순</h3>
                   </header>
 
                   <p class="value__td value__td--tag">Task</p>
@@ -1580,7 +1580,7 @@
               >
                 <div class="project__details__inner">
                   <header class="value__td value__td--title">
-                    <h3>부동산 서비스 오호이</h3>
+                    <h3>오호이</h3>
                   </header>
 
                   <p class="value__td value__td--tag">advertisement</p>
@@ -1593,9 +1593,6 @@
                 <div class="js-accordion__inner">
                   <div class="caption">
                     <div class="caption__text scope-text">
-                      <h4 class="caption__text__heading">
-                        부동산 중개 서비스 웹사이트&nbsp;
-                      </h4>
                       <div class="caption__text__content">
                         <p style="text-decoration: underline">Client</p>
                         <p>OHOI Project</p>
@@ -1665,9 +1662,7 @@
               >
                 <div class="project__details__inner">
                   <header class="value__td value__td--title">
-                    <h3>
-                      <span class="brackets">숫자일력</span>
-                    </h3>
+                    <h3>숫자일력</h3>
                   </header>
 
                   <p class="value__td value__td--tag">Task</p>
@@ -2410,33 +2405,33 @@
       $(document).ready(function () {
         // intro-random img
 
-        const imgs = [
-          "./assets/images/cloud/c1.jpg",
-          "./assets/images/cloud/c2.jpg",
-          "./assets/images/cloud/c3.jpg",
-          "./assets/images/cloud/c4.jpg",
-          "./assets/images/cloud/c5.jpg",
-          "./assets/images/cloud/c6.jpg",
-          "./assets/images/cloud/c7.jpg",
-          "./assets/images/cloud/c8.jpg",
-          "./assets/images/cloud/c9.jpg",
-          "./assets/images/cloud/c10.jpg",
-          "./assets/images/cloud/c11.jpg",
-          "./assets/images/cloud/c12.jpg",
-          "./assets/images/cloud/c13.jpg",
-          "./assets/images/cloud/c14.jpg",
-          "./assets/images/cloud/c15.jpg",
-          "./assets/images/cloud/c16.jpg",
-          "./assets/images/cloud/c17.jpg",
-        ];
+        // const imgs = [
+        //   "./assets/images/cloud/c1.jpg",
+        //   "./assets/images/cloud/c2.jpg",
+        //   "./assets/images/cloud/c3.jpg",
+        //   "./assets/images/cloud/c4.jpg",
+        //   "./assets/images/cloud/c5.jpg",
+        //   "./assets/images/cloud/c6.jpg",
+        //   "./assets/images/cloud/c7.jpg",
+        //   "./assets/images/cloud/c8.jpg",
+        //   "./assets/images/cloud/c9.jpg",
+        //   "./assets/images/cloud/c10.jpg",
+        //   "./assets/images/cloud/c11.jpg",
+        //   "./assets/images/cloud/c12.jpg",
+        //   "./assets/images/cloud/c13.jpg",
+        //   "./assets/images/cloud/c14.jpg",
+        //   "./assets/images/cloud/c15.jpg",
+        //   "./assets/images/cloud/c16.jpg",
+        //   "./assets/images/cloud/c17.jpg",
+        // ];
 
-        const introimg = imgs[Math.floor(Math.random() * imgs.length)];
+        // const introimg = imgs[Math.floor(Math.random() * imgs.length)];
 
-        const etImg = document.createElement("img");
-        etImg.src = `${introimg}`;
+        // const etImg = document.createElement("img");
+        // etImg.src = `${introimg}`;
 
-        const homePage = document.querySelector(".intro-img");
-        homePage.appendChild(etImg);
+        // const homePage = document.querySelector(".intro-img");
+        // homePage.appendChild(etImg);
 
         $("html").css("overflow-y", "hidden");
         // $(".onload .line_text").css("scale", "1");

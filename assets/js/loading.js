@@ -5,7 +5,7 @@ tl.to(".text", {
   y: "0",
   opacity: 1,
   duration: 1.2,
-  stagger: 0.3,
+  stagger: 0.25,
 });
 
 // tl.to(".text", {
@@ -21,10 +21,10 @@ tl.to(".onload", {
   y: "0",
   opacity: "0",
   delay: "0.125",
-  duration: 0.4,
+  duration: 0.3,
 
   display: "none",
 }); /* ,  */
 
 /* HOME PAGE CONTENT ANIMATION */
-tl.fromTo("main, footer", { opacity: 0 }, { opacity: 1, duration: 0.5 });
+tl.fromTo("main, footer", { opacity: 0 }, { opacity: 1, duration: 0.3 });
