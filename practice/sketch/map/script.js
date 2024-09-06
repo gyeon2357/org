@@ -14,7 +14,7 @@ function initialize() {
     saveMarker(event);
   });
 
-  //map.data.setControls(['Point']);
+  map.data.setControls(['Point']);
   bindDataLayerListeners(map.data);
 
   //load saved data
