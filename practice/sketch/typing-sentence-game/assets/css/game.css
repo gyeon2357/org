@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header-box {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+}
+.header {
+  width: 100%;
+
+  color: transparent;
+  background-image: linear-gradient(
+    to left,
+    beige,
+    purple,
+    rgb(18, 63, 122),
+    white,
+    #3b5999,
+    powderblue,
+    silver
+  );
+  -webkit-background-clip: text;
+  background-size: 500%;
+  animation: animate 11s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.word-display {
+  font-size: 64px;
+  line-height: 1.5;
+  text-align: left;
+
+  width: 400px;
+  border-bottom: 1px solid black;
+
+  margin-left: 0px;
+}
+
+.word-input-box {
+  width: 400px;
+}
+
+.word-input {
+  font-size: 64px;
+  line-height: 1.5;
+  text-align: left;
+
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.game-info {
+  margin-top: 2rem;
+  font-size: 1rem;
+  display: flex;
+  width: 250px;
+  justify-content: space-evenly;
+  color: gray;
+}
+
+.time,
+.score {
+  font-weight: 500;
+}
+
+.button {
+  margin-top: 50px;
+  width: 200px;
+  height: 35px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  outline: none;
+  transition: background 0.1s ease-out;
+}
+.button:hover {
+  background: black;
+}
+
+.loading:hover {
+  background: black;
+}
+.loading:active {
+  transform: none;
+}
+
+.loading {
+  background: gray;
+
+  /* pointer-events: none; */
+}
+
+.word-input.disabled {
+  pointer-events: none;
+}
+
+.message {
+  font-size: 48px;
+  margin-top: 32px;
+  color: rgb(248, 139, 139);
+  font-weight: 600;
+}

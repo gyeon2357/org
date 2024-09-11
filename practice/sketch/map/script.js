@@ -43,7 +43,7 @@ function placeMarker(location) {
 function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener("addfeature", saveMarker);
   dataLayer.addListener("removefeature", saveMarker);
-  //dataLayer.addListener('setgeometry', saveMarker);
+  dataLayer.addListener('setgeometry', saveMarker);
 }
 
 function saveMarker() {
@@ -65,3 +65,4 @@ function loadMarkers(map) {
 
 //google.maps.event.addDomListener(window, 'load', initialize);
 initialize();
+
