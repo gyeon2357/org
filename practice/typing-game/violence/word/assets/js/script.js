@@ -1,10 +1,4 @@
-var taja = [
-  "방임",
-  "명의도용",
-  "부당계약",
-  "보이스피싱",
-  "가정폭력",
-];
+var taja = ["방임", "명의도용", "부당계약", "보이스피싱", "가정폭력"];
 
 var tajaContents = document.getElementById("tajaContents");
 
@@ -12,12 +6,12 @@ var tajaContents = document.getElementById("tajaContents");
 var setConstructor = [];
 
 // setInterval 의 시간으로 사용할 상수입니다.
-const DOWNTIME = 500;
+const DOWNTIME = 2000;
 
 // 생명 변수
 var life = 5;
 var lifeDiv = document.getElementById("life");
-lifeDiv.innerHTML = "생명: " + life;
+// lifeDiv.innerHTML = "생명: " + life;
 
 // 점수 변수
 var score = 0;
@@ -26,6 +20,12 @@ scoreDiv.innerHTML = "점수: " + score;
 
 // taja배열의 index 값에 대한 변수
 var idx = 0;
+
+// 버튼
+const printButton = document.querySelector("#download");
+printButton.addEventListener("click", () => {
+  window.print();
+});
 
 // 화면에 일정 간격으로 그려주는 메서드입니다.
 function drawTaja() {
@@ -125,8 +125,10 @@ function easyDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            
-            alert("총 " + score + "점을 획득하였습니다.");
+
+            window.print();
+            printButton.style.display = "block";
+
             // location.reload();
           }
         }
@@ -147,7 +149,7 @@ function speedDown(tajaArg) {
       if (tajaContents.contains(tajaArg)) {
         tajaContents.removeChild(tajaArg);
         life--;
-        lifeDiv.innerHTML = "생명: " + life;
+        // lifeDiv.innerHTML = "생명: " + life;
 
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
@@ -161,8 +163,10 @@ function speedDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            
-            alert("총 " + score + "점을 획득하였습니다.");
+
+            window.print();
+            printButton.style.display = "block";
+            // alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
         }
@@ -210,7 +214,7 @@ function zigzagDown(tajaArg) {
       if (tajaContents.contains(tajaArg)) {
         tajaContents.removeChild(tajaArg);
         life--;
-        lifeDiv.innerHTML = "생명: " + life;
+        // lifeDiv.innerHTML = "생명: " + life;
 
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
@@ -224,8 +228,10 @@ function zigzagDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            
-            alert("총 " + score + "점을 획득하였습니다.");
+
+            window.print();
+            printButton.style.display = "block";
+            // alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
         }
@@ -259,7 +265,7 @@ function rightDown(tajaArg) {
       if (tajaContents.contains(tajaArg)) {
         tajaContents.removeChild(tajaArg);
         life--;
-        lifeDiv.innerHTML = "생명: " + life;
+        // lifeDiv.innerHTML = "생명: " + life;
 
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
@@ -273,8 +279,10 @@ function rightDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            
-            alert("총 " + score + "점을 획득하였습니다.");
+
+            window.print();
+            printButton.style.display = "block";
+            // alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
         }
@@ -307,7 +315,7 @@ function leftDown(tajaArg) {
       if (tajaContents.contains(tajaArg)) {
         tajaContents.removeChild(tajaArg);
         life--;
-        lifeDiv.innerHTML = "생명: " + life;
+        // lifeDiv.innerHTML = "생명: " + life;
 
         // 목숨을 모두 잃었을 때 - 실패
         if (life === 0) {
@@ -321,7 +329,9 @@ function leftDown(tajaArg) {
           // 화면에 단어가 다 뿌려진 이후
           if (!tajaContents.hasChildNodes()) {
             // 뿌려진 단어가 화면에 존재하지 않을 경우
-            
+
+            window.print();
+            printButton.style.display = "block";
             // alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
           }
@@ -356,9 +366,10 @@ tajaText.addEventListener("keydown", function (e) {
         // life를 다 소진하지않고 clear 했을 경우
         if (setConstructor.length === taja.length) {
           if (!tajaContents.hasChildNodes()) {
-            
-            alert("총 " + score + "점을 획득하였습니다.");
+            // alert("총 " + score + "점을 획득하였습니다.");
             // location.reload();
+            window.print();
+            printButton.style.display = "block";
           }
         }
       }

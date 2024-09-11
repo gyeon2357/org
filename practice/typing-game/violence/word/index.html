@@ -2,7 +2,8 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>duroo-typing-game-prototype</title>
+    <title>typing-game-word-prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
@@ -90,6 +91,7 @@
       }
 
       button#download {
+        display: none;
         margin-top: 20px;
       }
 
@@ -98,6 +100,13 @@
 
         font-size: 8mm;
         margin-bottom: 12px;
+      }
+
+      .print-body {
+        display: none;
+
+        font-size: 4mm;
+        margin-bottom: 6px;
       }
 
       .tajaWord {
@@ -201,7 +210,8 @@
           padding: 12px;
         }
 
-        .print-title {
+        .print-title,
+        .print-body {
           display: block;
         }
 
@@ -250,8 +260,17 @@
   </head>
   <body>
     <div class="print-title print">(prototype)Title: subtitle</div>
+    <div class="print-body print">
+      방임(放任)은 사람이 상대방에게 기본으로 제공되어야 하는 숙식,
+      의료(어린이의 경우에는 교육까지 포함됨.)을 제공하지 않고 방치하는 학대의
+      유형이다. 신체적 학대, 심리적 학대, 성적 학대가 능동적인 유형의 학대인
+      것과는 달리, 방임은 수동적인 유형의 학대이다. 실질적인 학대 유형에는 잘
+      언급되지 않지만, 방임의 파생 학대 유형으로 유기가 있는데, 유기는 사람이
+      상대방을 아예 버리는 것이다. —위키백과, https://ko.wikipedia.org / 2024.
+      7. 30.
+    </div>
 
-    <div id="info" class="print">
+    <div id="info" class="no-print">
       <div id="score"></div>
       <div id="life"></div>
       <div id="typing-text">
@@ -301,17 +320,10 @@
         $("#tajaText").focus();
       });
 
-      const button = document.querySelector("#download");
-      button.addEventListener("click", () => {
-        $('p.word:contains("방임")').append(
-          "<p class='body'>방임(放任)은 사람이 상대방에게 기본으로 제공되어야 하는 숙식, 의료(어린이의 경우에는 교육까지 포함됨.)을 제공하지 않고 방치하는 학대의 유형이다. 신체적 학대, 심리적 학대, 성적 학대가 능동적인 유형의 학대인 것과는 달리, 방임은 수동적인 유형의 학대이다. 실질적인 학대 유형에는 잘 언급되지 않지만, 방임의 파생 학대 유형으로 유기가 있는데, 유기는 사람이 상대방을 아예 버리는 것이다. —위키백과, https://ko.wikipedia.org / 2024. 7. 30.</p>"
-        );
-        $('p.word:contains("가정폭력")').append(
-          "<p class='body'>가정폭력(家庭暴力, 영어: domestic violence (DV), domestic abuse, spousal abuse, intimate partner violence, battering, family violence)은 부모, 배우자, 자식, 형제자매, 친척, 사실혼 관계에 있는 사람 등을 대상으로 행해지는 폭력과 가족 구성원이나 근친자에게 행하는 폭력적인 행위 또는 폭력에 의해 지배하는 행위 전반을 일컫는다. —위키백과, https://ko.wikipedia.org / 2024. 7. 30.</p>"
-        );
-
-        window.print();
-      });
+      // const printButton = document.querySelector("#download");
+      // printButton.addEventListener("click", () => {
+      //   window.print();
+      // });
     </script>
   </body>
 </html>

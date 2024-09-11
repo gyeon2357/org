@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typing-game-sentence-prototype</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="word-display no-print">설명1</div>
+    <div class="word-input-box no-print">
+      <input type="text" class="word-input" />
+    </div>
+    <div class="message no-print"></div>
+    <button id="download" class="no-print">인쇄하기</button>
+    <div class="game-info">
+      <!-- <div>Time Left: <span class="time">0</span></div> -->
+      <div>점수: <span class="score">0</span></div>
+    </div>
+    <button class="button loading">loading...</button>
+    <!-- <button class="button loading" onclick="run()">loading...</button> -->
+
+    <footer>
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

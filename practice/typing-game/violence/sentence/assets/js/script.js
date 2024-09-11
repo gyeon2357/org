@@ -13,6 +13,7 @@ const scoreDisplay = document.querySelector(".score");
 const timeDisplay = document.querySelector(".time");
 const button = document.querySelector(".button");
 const message = document.querySelector(".message");
+const printButton = document.querySelector("#download");
 
 init();
 
@@ -36,11 +37,11 @@ function run() {
     return;
   }
   isPlaying = true;
-  time = Game_Time;
+  // time = Game_Time;
   wordInput.focus();
   scoreDisplay.innerText = 0;
 
-  timeInterval = setInterval(countDown, 1000);
+  // timeInterval = setInterval(countDown, 1000);
   checkInterval = setInterval(checkStatus, 50);
   buttonChange("진행중...");
   wordInput.classList.remove("disabled");
@@ -56,6 +57,8 @@ function checkStatus() {
     wordInput.blur();
     wordInput.classList.add("disabled");
     message.innerHTML = "게임 종료!";
+
+    printButton.style.display = "block";
   }
 }
 
@@ -90,7 +93,7 @@ function checkMatch() {
       return;
     }
     score++;
-    time = Game_Time;
+    // time = Game_Time;
     scoreDisplay.innerText = score;
     // const randomIndex = Math.floor(Math.random() * words.length);
 
@@ -113,3 +116,11 @@ function buttonChange(text) {
     ? button.classList.remove("loading")
     : button.classList.add("loading");
 }
+
+printButton.addEventListener("click", () => {
+  $("body").prepend(
+    "<p class='body'>방임(放任)은 사람이 상대방에게 기본으로 제공되어야 하는 숙식, 의료(어린이의 경우에는 교육까지 포함됨.)을 제공하지 않고 방치하는 학대의 유형이다. 신체적 학대, 심리적 학대, 성적 학대가 능동적인 유형의 학대인 것과는 달리, 방임은 수동적인 유형의 학대이다. 실질적인 학대 유형에는 잘 언급되지 않지만, 방임의 파생 학대 유형으로 유기가 있는데, 유기는 사람이 상대방을 아예 버리는 것이다. —위키백과, https://ko.wikipedia.org / 2024. 7. 30.</p>"
+  );
+
+  window.print();
+});
