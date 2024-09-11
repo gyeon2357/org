@@ -1,4 +1,140 @@
-  .formobile {
+   body {
+        font-family: "Pretendard", Arial, Helvetica, sans-serif;
+        overflow: hidden;
+
+        margin: 32px;
+      }
+
+      #info {
+        float: left;
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      #contents {
+        background-color: #fff;
+        width: 80%;
+        height: 90vh;
+        margin: 0 auto;
+      }
+      #tajaContents {
+        width: 100%;
+        height: 90%;
+        position: relative;
+
+        background: #f8f8f8;
+      }
+
+      #inputContents {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        border-top: 3px solid #000;
+        padding-top: 20px;
+      }
+
+      #inputText {
+        display: inline-block;
+
+        padding-right: 10px;
+      }
+      #inputText input {
+        font-size: 30px;
+        padding: 12px;
+        border: 1px solid #000;
+      }
+      #inputBtn {
+        display: inline-block;
+      }
+
+      button {
+        font-size: 30px;
+
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        padding: 12px 16px;
+        border-radius: none;
+      }
+
+      button:focus {
+        outline: 4px solid orangered;
+      }
+
+      #typing-text {
+        margin: 10px 0;
+        border: 1px solid #000;
+      }
+
+      #typing-text p {
+        padding: 4px;
+      }
+
+      button#download {
+        display: none;
+        margin-top: 20px;
+      }
+
+      .print-title {
+        display: none;
+
+        font-size: 8mm;
+        margin-bottom: 12px;
+      }
+
+      .print-body {
+        display: none;
+
+        font-size: 4mm;
+        margin-bottom: 6px;
+      }
+
+      .tajaWord {
+        font-size: 30px;
+        text-wrap: nowrap;
+
+        /* text-decoration: underline;
+        text-underline-position: under;
+        text-decoration-color: #000; */
+        background: #fff;
+        border: 1px solid #121212;
+        padding: 2px 4px;
+      }
+
+      p.word {
+        margin: 0 auto;
+      }
+
+      p.body {
+        display: none;
+      }
+
+      #tajaBtn {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        scale: 1.01;
+
+        padding: 0;
+        margin: 0;
+        outline: none;
+
+        cursor: pointer;
+      }
+
+      #tajaBtn:active {
+        background: #121212;
+      }
+
+      .formobile {
         display: none;
       }
 
@@ -39,5 +175,69 @@
           text-decoration: none;
           overflow: hidden;
           text-align: center;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        /* 	Hide everything that doesn't have the '.print' class */
+        body > *:not(.print) {
+          display: none;
+        }
+        .print {
+          /* 		Force the browser to print with the given colors instead of overwriting to black&white */
+          color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+
+          background-color: ddd;
+          color: #000;
+
+          padding: 12px;
+        }
+
+        .print-title,
+        .print-body {
+          display: block;
+        }
+
+        p.word {
+          font-size: 8mm;
+
+          border: 1px solid #999;
+          padding: 4mm 6mm;
+          margin: 6mm 0;
+        }
+
+        #typing-text {
+          border: none;
+        }
+
+        p.body {
+          display: block;
+          font-size: 5mm;
+        }
+
+        #score,
+        #life {
+          font-size: 3mm;
+        }
+
+        #life {
+          margin-bottom: 24px;
+        }
+
+        .no-print {
+          display: none;
+        }
+
+        /* 	Give the cards fixed dimensions  */
+        /* .container {
+          width: 85.5mm;
+          height: 55mm;
+        } */
+
+        /* 	Remove the header and footer text and urls the browser places  */
+        @page {
+          margin: 0;
         }
       }
