@@ -50,7 +50,7 @@ function run() {
 
 function checkStatus() {
   // if (!isPlaying && time === 0) {
-  if (score == 6) {
+  if (score == 3) {
     buttonChange("게임 시작");
     clearInterval(checkInterval);
     wordInput.value = "";
@@ -59,6 +59,7 @@ function checkStatus() {
     message.innerHTML = "게임 종료!";
 
     printButton.style.display = "block";
+    window.print();
   }
 }
 
@@ -118,9 +119,5 @@ function buttonChange(text) {
 }
 
 printButton.addEventListener("click", () => {
-  $("body").prepend(
-    "<p class='body'>방임(放任)은 사람이 상대방에게 기본으로 제공되어야 하는 숙식, 의료(어린이의 경우에는 교육까지 포함됨.)을 제공하지 않고 방치하는 학대의 유형이다. 신체적 학대, 심리적 학대, 성적 학대가 능동적인 유형의 학대인 것과는 달리, 방임은 수동적인 유형의 학대이다. 실질적인 학대 유형에는 잘 언급되지 않지만, 방임의 파생 학대 유형으로 유기가 있는데, 유기는 사람이 상대방을 아예 버리는 것이다. —위키백과, https://ko.wikipedia.org / 2024. 7. 30.</p>"
-  );
-
   window.print();
 });
