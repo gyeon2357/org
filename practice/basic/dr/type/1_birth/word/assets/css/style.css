@@ -14,16 +14,25 @@ body {
   font-size: 1.75vw;
   line-height: 1.2;
 }
+
+.info-backg {
+  position: absolute;
+
+  width: 14vw;
+  height: 100vh;
+
+  transform: translate(-2vw, -2vw);
+
+  background-image: url(../../../../assets/images/type/backg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 #contents {
   background-color: #fff;
   width: calc(100% - 12vw);
   height: calc(100vh - 4vw);
   margin: 0 4vw 0 12vw;
-
-  background-image: url(../../../../assets/images/type/word-backg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left 0 top 100%;
 }
 
 #contents .content_header {
@@ -152,7 +161,7 @@ button#download {
   letter-spacing: -0.5px;
   text-wrap: nowrap;
 
-  background: #fff;
+  background: #f8f8f8;
 
   padding: 0.125vw;
 }

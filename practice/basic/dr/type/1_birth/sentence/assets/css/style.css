@@ -1,7 +1,7 @@
 @font-face {
   font-family: "space";
-  src: url("../../../../assets/fonts/space1.woff2") format("woff2");
-  src: local(※), url("../../../../assets/fonts/space1.woff") format("woff");
+  src: url("../../../../assets/fonts/ssp.woff2") format("woff2");
+  src: local(※), url("../../../../assets/fonts/ssp.woff") format("woff");
   unicode-range: U+0020;
   font-display: swap;
 }
@@ -171,6 +171,19 @@ textarea::-ms-input-placeholder {
   margin: 0;
   font-size: 1.75vw;
   line-height: 1.2;
+}
+
+.info-backg {
+  position: absolute;
+
+  width: 14vw;
+  height: 100vh;
+
+  transform: translate(-2vw, -2vw);
+
+  background-image: url(../../../../assets/images/type/backg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .score-section {

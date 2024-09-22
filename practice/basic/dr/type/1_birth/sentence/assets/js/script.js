@@ -125,26 +125,25 @@ printButton.addEventListener("click", () => {
   window.print();
 });
 
-// // 감시자 인스턴스 만들기
+// message
 let observer = new MutationObserver((mutations) => {
-  // 노드가 변경 됐을 때의 작업
-
   setTimeout(function () {
-    $(".message").find("img").fadeOut(400);
-  }, 500);
+    $(".message").find("img").fadeOut(500);
+  }, 600);
 });
 
-// // 감시자의 설정
 let option = {
   attributes: true,
   childList: true,
   characterData: true,
 };
 
-// // 대상 노드에 감시자 전달
 observer.observe(message, option);
+
+// focus
 document.body.focus();
 
+// button
 $(".button").one("click", function () {
   $(".word-display").css("opacity", "1");
   $("textarea").css("opacity", "1");
