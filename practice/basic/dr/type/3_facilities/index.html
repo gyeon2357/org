@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. 탈시설</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <style>
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      main > section:nth-last-child(3) {
+        border-right: none;
+      }
+
+      main > section:nth-child(2) {
+        border-right: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><img src="../assets/images/type/select-title.svg" /></h1>
+    </header>
+
+    <main>
+      <section><a href="./word/">단어</a></section>
+      <section><a href="./sentence/">문장</a></section>
+    </main>
+
+    <footer>
+      <div class="main-footer">
+        <img src="../assets/images/type/symbol-horizontal.svg" />
+        <img src="../assets/images/type/symbol-type.svg" />
+      </div>
+
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+
+      <section class="backspace">
+        <a href="../">처음으로 되돌아가기</a>
+      </section>
+    </footer>
+  </body>
+</html>

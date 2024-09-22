@@ -6,6 +6,37 @@ body {
   background: #d6d6d6;
 }
 
+.load {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+
+  width: 106vw;
+  height: calc(100vh + 4vw);
+
+  left: -2vw;
+  bottom: -2vw;
+
+  text-align: center;
+
+  overflow: hidden;
+  background: black;
+  color: white;
+
+  z-index: 1001;
+}
+
+.load h1 {
+  color: white;
+
+  font-size: 3.5vw;
+  font-weight: 700;
+}
+
 #info {
   width: 11vw;
 
@@ -68,7 +99,7 @@ body {
 
 #tajaContents {
   width: 100%;
-  height: 100%;
+  height: 95%;
   position: relative;
 }
 
@@ -122,9 +153,9 @@ button:hover {
   color: black;
 }
 
+a:focus,
 button:focus {
   outline: 4px solid orangered;
-  content: url(../../../../assets/print/dr-1.pdf);
 }
 
 #typing-text {

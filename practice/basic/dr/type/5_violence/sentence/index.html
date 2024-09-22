@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. 아동에 대한 폭력: 설명</title>
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="info">
+      <div class="score-section">
+        <div class="score-num">
+          <img src="../../assets/images/type/score.svg" />
+        </div>
+        <p><span class="score">0</span> / 3</p>
+      </div>
+      <button id="download-btn1" class="no-print">인쇄하기</button>
+    </div>
+
+    <div class="info-backg"></div>
+
+    <section id="contents">
+      <div class="content_header">
+        <img src="../../assets/images/type/symbol-horizontal-white.svg" /><img
+          src="../../assets/images/type/symbol-type-white.svg"
+        /><a href="../"
+          ><img src="../../assets/images/type/word-close-btn.svg"
+        /></a>
+      </div>
+
+      <div class="main-word">
+        <div class="word-display no-print">
+          2020년 아동 및 청소년 성보호에 관한 법률 개정안이 통과되어 성매수
+          범죄의 대상이 된 아동 및 청소년이 이제 '피해 아동 및 청소년'으로
+          지원을 받을 수 있게 되었다.
+        </div>
+        <div class="word-input-box no-print">
+          <textarea
+            type="text"
+            placeholder="문장을 입력해주세요."
+            autocomplete="off"
+            autofocus
+            class="word-input"
+          ></textarea>
+        </div>
+        <div class="message no-print"></div>
+
+        <button id="download-btn2" class="no-print">인쇄하기</button>
+        <button class="button loading">loading...</button>
+      </div>
+    </section>
+
+    <!-- <button class="button loading" onclick="run()">loading...</button> -->
+
+    <footer>
+      <div class="word-footer">
+        <a href="../../"
+          ><img src="../../../type/assets/images/type/symbol-two-lines.svg"
+        /></a>
+      </div>
+
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src=" https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      setTimeout(function () {
+        $("#download-btn1").show();
+      }, 7000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. 탈시설: 키워드</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://printjs-4de6.kxcdn.com/print.min.css"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+  </head>
+  <body>
+    <div class="load"><h1>게임 시작!</h1></div>
+
+    <div id="info" class="no-print">
+      <div class="score-section">
+        <div class="score-num">
+          <img src="../../assets/images/type/score.svg" />
+        </div>
+        <div id="score"></div>
+      </div>
+      <div id="life"></div>
+      <div id="typing-text">
+        <!-- <h1>box</h1> -->
+      </div>
+
+      <button id="download" class="no-print">인쇄하기</button>
+    </div>
+
+    <div class="info-backg"></div>
+
+    <div id="contents">
+      <div class="content_header">
+        <img src="../../assets/images/type/symbol-horizontal-white.svg" /><img
+          src="../../assets/images/type/symbol-type-white.svg"
+        /><a href="../"
+          ><img src="../../assets/images/type/word-close-btn.svg"
+        /></a>
+      </div>
+
+      <div id="tajaContents"></div>
+      <div id="inputContents">
+        <div id="inputText">
+          <input
+            type="text"
+            id="tajaText"
+            placeholder="단어를 입력해주세요."
+            autocomplete="off"
+          />
+        </div>
+        <div id="inputBtn">
+          <!-- <button id="tajaBtn">시작하기</button> -->
+          <button onClick="top.location='javascript:location.reload()'">
+            다시하기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="word-footer">
+        <a href="../../"
+          ><img src="../../../type/assets/images/type/symbol-two-lines.svg"
+        /></a>
+      </div>
+
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src=" https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+          $("#tajaBtn").on("click", function () {
+        $(this).fadeOut();
+        $("#tajaText").focus();
+      });
+
+      setTimeout(function () {
+        $(".load").fadeOut();
+      }, 2000);
+
+      setTimeout(function () {
+        printButton.style.display = "block";
+      }, 7000);
+    </script>
+  </body>
+</html>

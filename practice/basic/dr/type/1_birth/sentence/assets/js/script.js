@@ -51,7 +51,7 @@ function run() {
 
 function checkStatus() {
   // if (!isPlaying && time === 0) {
-  if (score == 7) {
+  if (score == 6) {
     buttonChange("게임 시작!");
     clearInterval(checkInterval);
     wordInput.value = "";
@@ -141,7 +141,7 @@ printButton2.addEventListener("click", () => {
 // message
 let observer = new MutationObserver((mutations) => {
   setTimeout(function () {
-    $(".message").find("img").fadeOut(600);
+    $(".message").find("img").fadeOut(500);
   }, 700);
 });
 

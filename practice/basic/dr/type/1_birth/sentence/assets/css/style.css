@@ -107,6 +107,8 @@ body {
 }
 
 .word-display {
+  word-spacing: 0.75vw;
+
   font-family: "space", "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 3vw;
   word-break: break-all;
@@ -144,6 +146,7 @@ textarea::-ms-input-placeholder {
 }
 
 .word-input {
+word-spacing: 0.75vw;
   font-size: 3vw;
   line-height: 1.55;
   text-align: center;
@@ -225,7 +228,7 @@ textarea::-ms-input-placeholder {
   margin: 2vw auto 0;
 
   font-size: 1.75vw;
-  font-weight: 900;
+  font-weight: 700;
   text-wrap: nowrap;
   height: 3.75vw;
   text-transform: uppercase;
@@ -265,6 +268,11 @@ button#download-btn2 {
 .button:hover {
   background: #fff;
   color: #000;
+}
+
+a:focus,
+button:focus {
+  outline: 4px solid orangered;
 }
 
 #download-btn1:hover,
@@ -315,7 +323,7 @@ p.body {
 
 .backspace {
   position: absolute;
-  bottom: 40px;
+  bottom: 2.5vw;
   left: 50%;
   transform: translateX(-50%);
 }

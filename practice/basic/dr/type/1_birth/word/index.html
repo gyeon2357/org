@@ -18,6 +18,8 @@
     />
   </head>
   <body>
+    <div class="load"><h1>게임 시작!</h1></div>
+
     <div id="info" class="no-print">
       <div class="score-section">
         <div class="score-num">
@@ -87,6 +89,10 @@
         $(this).fadeOut();
         $("#tajaText").focus();
       });
+
+      setTimeout(function () {
+        $(".load").fadeOut();
+      }, 2000);
 
       setTimeout(function () {
         printButton.style.display = "block";

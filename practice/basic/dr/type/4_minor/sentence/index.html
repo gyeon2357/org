@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. 소수자 아동: 설명</title>
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="info">
+      <div class="score-section">
+        <div class="score-num">
+          <img src="../../assets/images/type/score.svg" />
+        </div>
+        <p><span class="score">0</span> / 4</p>
+      </div>
+      <button id="download-btn1" class="no-print">인쇄하기</button>
+    </div>
+
+    <div class="info-backg"></div>
+
+    <section id="contents">
+      <div class="content_header">
+        <img src="../../assets/images/type/symbol-horizontal-white.svg" /><img
+          src="../../assets/images/type/symbol-type-white.svg"
+        /><a href="../"
+          ><img src="../../assets/images/type/word-close-btn.svg"
+        /></a>
+      </div>
+
+      <div class="main-word">
+        <div class="word-display no-print">
+          모든 아동은 자신이나 그 부모, 법정대리인의 인종, 피부색, 성, 언어, 종교, 정치적 견해 또는 기타 의견, 민족적 및 인종적 및 사회적 출신, 재산, 장애, 태생, 신분 등의 차별없이 권리를 보장받아야 한다.
+        </div>
+        <div class="word-input-box no-print">
+          <textarea
+            type="text"
+            placeholder="문장을 입력해주세요."
+            autocomplete="off"
+            autofocus
+            class="word-input"
+          ></textarea>
+        </div>
+        <div class="message no-print"></div>
+
+        <button id="download-btn2" class="no-print">인쇄하기</button>
+        <button class="button loading">loading...</button>
+      </div>
+    </section>
+
+    <!-- <button class="button loading" onclick="run()">loading...</button> -->
+
+    <footer>
+      <div class="word-footer">
+        <a href="../../"
+          ><img src="../../../type/assets/images/type/symbol-two-lines.svg"
+        /></a>
+      </div>
+
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src=" https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      setTimeout(function () {
+        $("#download-btn1").show();
+      }, 7000);
+    </script>
+  </body>
+</html>

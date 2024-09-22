@@ -1,0 +1,462 @@
+@font-face {
+  font-family: "space";
+  src: url("../../../../assets/fonts/ssp.woff2") format("woff2");
+  src: local(※), url("../../../../assets/fonts/ssp.woff") format("woff");
+  unicode-range: U+0020;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+
+  margin: 2vw;
+
+  background: #d6d6d6;
+}
+
+#contents {
+  background-color: #fff;
+  width: calc(100% - 12vw);
+  height: calc(100vh - 4vw);
+  margin: 0 4vw 0 12vw;
+}
+
+#contents .content_header {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 3vw;
+
+  padding: 1.25vw 0.75vw;
+
+  background: black;
+}
+
+#contents .content_header a:hover {
+  filter: invert(1);
+}
+
+#contents .content_header > img,
+#contents .content_header a > img {
+  height: 2vw;
+}
+
+#contents .content_header > img:nth-child(2) {
+  height: 1.375vw;
+  margin-right: 7vw;
+}
+
+.main-word {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  top: 50%;
+
+  left: calc(50% + 6vw);
+}
+
+.header-box {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+}
+.header {
+  width: 100%;
+
+  color: transparent;
+  background-image: linear-gradient(
+    to left,
+    beige,
+    purple,
+    rgb(18, 63, 122),
+    white,
+    #3b5999,
+    powderblue,
+    silver
+  );
+  -webkit-background-clip: text;
+  background-size: 500%;
+  animation: animate 11s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.word-display {
+word-spacing: 0.75vw;
+  font-family: "space", "Pretendard", Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  word-break: break-all;
+  line-height: 1.55;
+
+  text-align: center;
+
+  font-weight: 500;
+
+  width: 60vw;
+  border-bottom: 2px solid #666;
+}
+
+textarea {
+  font-family: "space", "Pretendard", Arial, Helvetica, sans-serif;
+}
+
+.word-display,
+textarea {
+  opacity: 0.15;
+}
+
+textarea::placeholder {
+  color: #ddd;
+  opacity: 0.6;
+}
+
+textarea::-ms-input-placeholder {
+  color: #ddd;
+}
+
+.word-input-box {
+  width: 100%;
+  text-align: center;
+}
+
+.word-input {
+word-spacing: 0.75vw;
+  font-size: 3vw;
+  line-height: 1.55;
+  text-align: center;
+
+  word-break: break-all;
+  font-weight: 700;
+  outline: none;
+  border: none;
+
+  border-bottom: 3px solid black;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.375vw;
+}
+
+#info {
+  width: 11vw;
+
+  float: left;
+  margin: 0;
+  font-size: 1.75vw;
+  line-height: 1.2;
+}
+
+.info-backg {
+  position: absolute;
+
+  width: 14vw;
+  height: 100vh;
+
+  transform: translate(-2vw, -2vw);
+
+  background-image: url(../../../../assets/images/type/backg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  z-index: -1;
+}
+
+.score-section {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  width: 100%;
+
+  margin-top: 0.375vw;
+}
+
+.score-num {
+  width: 4vw;
+}
+
+#score {
+  font-size: 2vw;
+  font-weight: 900;
+
+  color: #2b2b2b;
+}
+
+.time,
+.score,
+.score-section p {
+  font-size: 2vw;
+  font-weight: 900;
+  color: #2b2b2b;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  margin: 2vw auto 0;
+
+  font-size: 1.75vw;
+  font-weight: 700;
+  text-wrap: nowrap;
+  height: 3.75vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  border: 2px solid black;
+  padding: 0.75vw 1vw;
+  border-radius: none;
+
+  transition: filter 0.125s ease-out;
+}
+
+button#download-btn1,
+button#download-btn2 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  margin: 2vw auto 0;
+
+  font-size: 1.75vw;
+  font-weight: 700;
+  height: 3.75vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  border: 2px solid black;
+  padding: 0.75vw 1vw;
+  border-radius: none;
+}
+
+#download-btn1 {
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+a:focus,
+button:focus {
+  outline: 4px solid orangered;
+}
+
+#download-btn1:hover,
+#download-btn2:hover {
+  background: #fff;
+  color: black;
+}
+
+.loading:hover {
+  background: #fff;
+  color: #000;
+}
+.loading:active {
+  transform: none;
+}
+
+.word-input.disabled {
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  font-weight: 600;
+}
+
+.message img {
+  width: 20vw;
+}
+
+.message.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/type/sentence-answer.svg);
+}
+
+#download-btn1,
+#download-btn2 {
+  display: none;
+}
+
+p.body {
+  display: none;
+}
+
+.backspace {
+  position: absolute;
+  bottom: 2.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.backspace a {
+  color: #a0a0a0;
+  transition: opacity 0.2s;
+}
+
+.backspace a:hover {
+  opacity: 0.6;
+}
+
+.word-footer {
+  position: absolute;
+  bottom: 2.25vw;
+  left: 7vw;
+  transform: translateX(-50%);
+}
+
+.word-footer img {
+  width: 11vw;
+}
+
+/* Print Styles */
+@media print {
+  /* 	Hide everything that doesn't have the '.print' class */
+  body > *:not(.print) {
+    display: none;
+  }
+  .print {
+    /* 		Force the browser to print with the given colors instead of overwriting to black&white */
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+
+    background-color: ddd;
+    color: #000;
+
+    padding: 12px;
+  }
+
+  .print-title {
+    display: block;
+  }
+
+  p.word {
+    font-size: 8mm;
+
+    border: 1px solid #999;
+    padding: 4mm 6mm;
+    margin: 6mm 0;
+  }
+
+  #typing-text {
+    border: none;
+  }
+
+  p.body {
+    display: block;
+    font-size: 5mm;
+  }
+
+  #score,
+  #life {
+    font-size: 3mm;
+  }
+
+  #life {
+    margin-bottom: 24px;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  /* 	Give the cards fixed dimensions  */
+  /* .container {
+          width: 85.5mm;
+          height: 55mm;
+        } */
+
+  /* 	Remove the header and footer text and urls the browser places  */
+  @page {
+    margin: 0;
+  }
+}
+
+.formobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .formobile {
+    display: block;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .formobile-p {
+    display: block;
+    z-index: 10001;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: black;
+    background-color: white;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+/* @media print {
+  @page {
+    size: 21cm 29.7cm;
+    margin: 15px;
+  }
+} */

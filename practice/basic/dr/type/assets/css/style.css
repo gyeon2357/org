@@ -93,7 +93,7 @@ main > section:nth-last-child(-n + 2) {
 
 .backspace {
   position: absolute;
-  bottom: 40px;
+  bottom: 2.5vw;
   left: 50%;
   transform: translateX(-50%);
 }
