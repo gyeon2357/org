@@ -109,12 +109,12 @@ body {
 .word-display {
   font-family: "space", "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 3vw;
-  word-break: keep-all;
-  line-height: 1.5;
+  word-break: break-all;
+  line-height: 1.55;
 
   text-align: center;
 
-  font-weight: 700;
+  font-weight: 500;
 
   width: 60vw;
   border-bottom: 2px solid #666;
@@ -145,10 +145,10 @@ textarea::-ms-input-placeholder {
 
 .word-input {
   font-size: 3vw;
-  line-height: 1.5;
+  line-height: 1.55;
   text-align: center;
 
-  word-break: keep-all;
+  word-break: break-all;
   font-weight: 700;
   outline: none;
   border: none;
@@ -184,6 +184,8 @@ textarea::-ms-input-placeholder {
   background-image: url(../../../../assets/images/type/backg.png);
   background-repeat: no-repeat;
   background-size: contain;
+
+  z-index: -1;
 }
 
 .score-section {
@@ -224,7 +226,8 @@ textarea::-ms-input-placeholder {
 
   font-size: 1.75vw;
   font-weight: 900;
-  height: 3.5vw;
+  text-wrap: nowrap;
+  height: 3.75vw;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
@@ -236,18 +239,38 @@ textarea::-ms-input-placeholder {
   transition: filter 0.125s ease-out;
 }
 
-button#download {
-  font-size: 30px;
+button#download-btn1,
+button#download-btn2 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  margin: 2vw auto 0;
+
+  font-size: 1.75vw;
+  font-weight: 700;
+  height: 3.75vw;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+  background-color: black;
+  border: 2px solid black;
+  padding: 0.75vw 1vw;
+  border-radius: none;
+}
 
-  padding: 12px 16px;
+#download-btn1 {
 }
 
 .button:hover {
   background: #fff;
   color: #000;
+}
+
+#download-btn1:hover,
+#download-btn2:hover {
+  background: #fff;
+  color: black;
 }
 
 .loading:hover {
@@ -281,7 +304,8 @@ button#download {
   background-image: url(../../assets/images/type/sentence-answer.svg);
 }
 
-#download {
+#download-btn1,
+#download-btn2 {
   display: none;
 }
 
@@ -422,3 +446,10 @@ p.body {
     text-align: center;
   }
 }
+
+/* @media print {
+  @page {
+    size: 21cm 29.7cm;
+    margin: 15px;
+  }
+} */

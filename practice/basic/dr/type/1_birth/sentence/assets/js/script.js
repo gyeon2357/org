@@ -13,7 +13,8 @@ const scoreDisplay = document.querySelector(".score");
 const timeDisplay = document.querySelector(".time");
 const button = document.querySelector(".button");
 const message = document.querySelector(".message");
-const printButton = document.querySelector("#download");
+const printButton = document.querySelector("#download-btn2");
+const printButton2 = document.querySelector("#download-btn1");
 
 init();
 
@@ -122,14 +123,26 @@ function buttonChange(text) {
 }
 
 printButton.addEventListener("click", () => {
-  window.print();
+  printJS({
+    printable: "../../../type/assets/print/dr-1.pdf",
+    type: "pdf",
+    showModal: false,
+  });
+});
+
+printButton2.addEventListener("click", () => {
+  printJS({
+    printable: "../../../type/assets/print/dr-1.pdf",
+    type: "pdf",
+    showModal: false,
+  });
 });
 
 // message
 let observer = new MutationObserver((mutations) => {
   setTimeout(function () {
-    $(".message").find("img").fadeOut(500);
-  }, 600);
+    $(".message").find("img").fadeOut(600);
+  }, 700);
 });
 
 let option = {

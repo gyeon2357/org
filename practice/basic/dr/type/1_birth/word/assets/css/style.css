@@ -26,6 +26,8 @@ body {
   background-image: url(../../../../assets/images/type/backg.png);
   background-repeat: no-repeat;
   background-size: contain;
+
+  z-index: -1;
 }
 
 #contents {
@@ -103,6 +105,7 @@ body {
 
 button {
   font-size: 1.75vw;
+  font-weight: 700;
   height: 3.75vw;
 
   text-transform: uppercase;
@@ -133,12 +136,13 @@ button:focus {
   font-weight: 900;
   padding: 0.125vw;
 
-  color: #2b2b2b;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 button#download {
   display: none;
-  margin-top: 20px;
+  margin-top: 2vw;
 }
 
 .print-title {
@@ -349,7 +353,9 @@ p.body {
         } */
 
   /* 	Remove the header and footer text and urls the browser places  */
-  @page {
-    margin: 0;
-  }
+
+  /* @page {
+  size: 21cm 29.7cm;
+  margin: 15px;
+} */
 }

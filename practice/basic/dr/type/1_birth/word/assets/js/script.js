@@ -45,6 +45,7 @@ printButton.addEventListener("click", () => {
     printable: "../../../type/assets/print/dr-1.pdf",
     type: "pdf",
     showModal: false,
+    // style: `@page { margin: 0mm; size: 80m 80m; } @media print { body { margin: 0mm; width: 80mm; height: 80mm } }`,
   });
 });
 
