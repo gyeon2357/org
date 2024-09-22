@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+li > img {
+  width: 40px;
+}
+
 .wrapper {
   position: absolute;
   padding: 20px;

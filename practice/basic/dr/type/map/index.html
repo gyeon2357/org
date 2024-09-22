@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>서울시 지도</title>
+  </head>
+  <style>
+    main {
+      display: flex;
+    }
+
+    section {
+      border: 1px solid;
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <div class="jongro" onclick="location.href='./jongro/o.html'">
+          test
+        </div>
+      </section>
+
+      <!-- <section>
+        <iframe src="./yongsan/o.html"></iframe>
+        <a href="./jongro/o.html">용산구</a>
+      </section> -->
+    </main>
+  </body>
+</html>
+
+<script src="./assets/js/jquery.min.js"></script>
+
+<script>
+  $(".jongro").load("./jongro/o.html", function () {
+   
+  });
+</script>

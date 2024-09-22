@@ -2,59 +2,63 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>종로구 X</title>
+    <title>종로구</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../assets/style.css" />
     <style>
-      body {
-        background: transparent;
-        z-index: -1;
-
-        width: 100%;
-        height: 100%;
-        overflow-y: hidden;
-      }
-
-      .wrapper {
-        position: absolute;
-        right: 0;
-      }
-
       input[type="submit"] {
         position: fixed;
         transform: translateY(-50%);
-        left: calc(50%);
+        right: 50%;
         bottom: 0;
 
         width: 50%;
         height: 300px;
+
+        z-index: 1001 !important;
       }
 
-      .add-items-x input[type="text"] {
+      .wrapper {
+        right: 50%;
+      }
+
+      .add-items-o input[type="text"] {
         display: none;
       }
     </style>
   </head>
 
+  <!-- partial:index.partial.html -->
+
   <body>
     <div class="wrapper">
       <p></p>
-      <ul class="plates-x">
+      <ul class="plates-o">
         <li>Loading Tapas...</li>
       </ul>
-      <form class="add-items-x">
+      <form class="add-items-o">
         <input type="text" name="item" disabled="disabled" />
-        <input type="submit" value="X" onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;"/>
+        <input
+          type="submit"
+          value="O"
+          onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;"
+        />
       </form>
     </div>
 
+    <iframe src="./jongro/x.html"></iframe>
+
+    <section class="backspace">
+      <a href="../">처음으로 되돌아가기</a>
+    </section>
+
     <script>
-      const addItems = document.querySelector(".add-items-x");
-      const itemsList = document.querySelector(".plates-x");
-      const items = JSON.parse(localStorage.getItem("jongrogu-x")) || [];
+      const addItems = document.querySelector(".add-items-o");
+      const itemsList = document.querySelector(".plates-o");
+      const items = JSON.parse(localStorage.getItem("jongrogu-o")) || [];
       function addItem(e) {
         e.preventDefault();
         const text = this.querySelector("[name=item]").value;
@@ -64,20 +68,15 @@
         };
         items.push(item);
         populateList(items, itemsList);
-        localStorage.setItem("jongrogu-x", JSON.stringify(items));
+        localStorage.setItem("jongrogu-o", JSON.stringify(items));
         this.reset();
       }
       function populateList(plates = [], platesList) {
         platesList.innerHTML = plates
           .map((plate, i) => {
             return `
-        <li><img src="../gray.svg"/></li>
+            <li><img src="../assets/images/true-img.svg"/></li>
       `;
-
-            //  <input type="checkbox" data-index=${i} id="item${i}" ${
-            //           plate.done ? "checked" : ""
-            //         } />
-            // <label for="item${i}">${plate.text}</label>
           })
           .join("");
       }
@@ -86,7 +85,7 @@
         const el = e.target;
         const index = el.dataset.index;
         items[index].done = !items[index].done;
-        localStorage.setItem("jongrogu-x", JSON.stringify(items));
+        localStorage.setItem("jongrogu-o", JSON.stringify(items));
         populateList(items, itemsList);
       }
       addItems.addEventListener("submit", addItem);
@@ -95,7 +94,6 @@
     </script>
   </body>
 
-  <!-- partial -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 </html>
