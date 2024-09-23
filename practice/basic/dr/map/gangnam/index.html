@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>강남구</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/style/normalize.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
+  </head>
+
+  <!-- partial:index.partial.html -->
+
+  <body onload="Init()">
+    <div class="wrapper">
+      <!-- <p></p> -->
+      <div class="map">
+        <ul class="plates-o">
+          <li>Not allowed...</li>
+        </ul>
+        <ul class="plates-x">
+          <li>Not allowed...</li>
+        </ul>
+      </div>
+
+      <form class="add-items-o">
+        <input type="text" name="item" disabled="disabled" />
+
+        <input
+          type="submit"
+          value=""
+          onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;"
+        />
+      </form>
+
+      <form class="add-items-x">
+        <input type="text" name="item" disabled="disabled" />
+        <input
+          type="submit"
+          value=""
+          onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;"
+        />
+      </form>
+    </div>
+
+    <aside>
+      <div class="place"><img src="../assets/images/gangnam-txt.svg" /></div>
+      <div class="border"></div>
+    </aside>
+
+    <section class="done-modal">
+      <div class="done">
+        <div><p>완료되었습니다!</p></div>
+      </div>
+      <div class="done-backg"></div>
+    </section>
+
+    <!-- <iframe src="./x.html"></iframe> -->
+
+    <script>
+      const addItems1 = document.querySelector(".add-items-o");
+      const addItems2 = document.querySelector(".add-items-x");
+      const itemsList1 = document.querySelector(".plates-o");
+      const itemsList2 = document.querySelector(".plates-x");
+      const items1 = JSON.parse(localStorage.getItem("gangnam-o")) || [];
+      const items2 = JSON.parse(localStorage.getItem("gangnam-x")) || [];
+
+      function addItem1(e) {
+        e.preventDefault();
+        const text1 = this.querySelector("[name=item]").value;
+        const item1 = {
+          text1,
+          done: false,
+        };
+
+        items1.push(item1);
+
+        populateList1(items1, itemsList1);
+
+        localStorage.setItem("gangnam-o", JSON.stringify(items1));
+
+        this.reset();
+      }
+
+      function addItem2(e) {
+        e.preventDefault();
+        const text2 = this.querySelector("[name=item]").value;
+
+        const item2 = {
+          text2,
+          done: false,
+        };
+
+        items2.push(item2);
+
+        populateList2(items2, itemsList2);
+
+        localStorage.setItem("gangnam-x", JSON.stringify(items2));
+        this.reset();
+      }
+
+      function populateList1(plates = [], platesList1) {
+        platesList1.innerHTML = plates
+          .map((plate, i) => {
+            return `
+            <li><img src="../assets/images/true-img.svg"/></li>
+      `;
+          })
+          .join("");
+      }
+
+      function populateList2(plates = [], platesList2) {
+        platesList2.innerHTML = plates
+          .map((plate, i) => {
+            return `
+            <li><img class="false-img" src="../assets/images/false-img.svg"/></li>
+      `;
+          })
+          .join("");
+      }
+
+      function toggleDone(e) {
+        if (!e.target.matches("input")) return; // skip this unless it's an input
+        const el = e.target;
+        const index = el.dataset.index;
+        items1[index].done = !items1[index].done;
+        items2[index].done = !items2[index].done;
+        localStorage.setItem("gangnam-o", JSON.stringify(items1));
+        localStorage.setItem("gangnam-x", JSON.stringify(items2));
+        populateList1(items1, itemsList1);
+        populateList2(items2, itemsList2);
+      }
+
+      addItems1.addEventListener("submit", addItem1);
+      addItems2.addEventListener("submit", addItem2);
+
+      itemsList1.addEventListener("click", toggleDone);
+      itemsList2.addEventListener("click", toggleDone);
+      // itemsList2.addEventListener("click", toggleDone);
+      populateList1(items1, itemsList1);
+      populateList2(items2, itemsList2);
+    </script>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+    $("input[type='submit']").one("click", function () {
+      $(".done-modal").delay(300).fadeIn(300);
+
+      setTimeout(function () {
+        window.location.href = "../";
+      }, 2000);
+    });
+  </script>
+</html>

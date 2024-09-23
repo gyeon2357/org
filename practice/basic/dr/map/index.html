@@ -3,31 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <title>서울시 지도</title>
-  </head>
-  <style>
-    main {
-      display: flex;
-    }
 
-    section {
-      border: 1px solid;
-      padding: 20px;
-    }
-  </style>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/normalize.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <style>
+      aside .place {
+        padding: 1vw 1.75vw;
+      }
+    </style>
+  </head>
+
   <body>
-    <header></header>
+    <aside>
+      <div class="header">
+        <div><img src="./assets/images/logotype.svg" /></div>
+        <div><img src="./assets/images/symbol.svg" /></div>
+      </div>
+
+      <div class="place"><img src="./assets/images/seoul-txt.svg" /></div>
+      <div class="border"></div>
+    </aside>
 
     <main>
-      <section>
-        <div class="jongro" onclick="location.href='./jongro/o.html'">
-          test
-        </div>
-      </section>
+      <article>
+        <figure>
+          <img src="./assets/images/seoul-map.svg" />
 
-      <!-- <section>
-        <iframe src="./yongsan/o.html"></iframe>
-        <a href="./jongro/o.html">용산구</a>
-      </section> -->
+          <div class="mapo-pin" onclick="location.href='./mapo'"></div>
+          <div class="jongro-pin" onclick="location.href='./jongro'"></div>
+          <div class="yongsan-pin" onclick="location.href='./yongsan'"></div>
+          <div class="gwanak-pin" onclick="location.href='./gwanak'"></div>
+          <div class="gangnam-pin" onclick="location.href='./gangnam'"></div>
+        </figure>
+
+        <div class="gangbuk-section">
+          <div class="jongro" onclick="location.href='./jongro'">
+            <h1><img src="./assets/images/jongro-txt.svg" /></h1>
+            <table>
+              <td id="jongroO">
+                <div><img src="./assets/images/true-btn.svg" /></div>
+              </td>
+              <td id="jongroX">
+                <div><img src="./assets/images/false-btn.svg" /></div>
+              </td>
+            </table>
+          </div>
+          <div class="mapo" onclick="location.href='./mapo'">
+            <h1><img src="./assets/images/mapo-txt.svg" /></h1>
+            <table>
+              <td id="mapoO">
+                <div><img src="./assets/images/true-btn.svg" /></div>
+              </td>
+              <td id="mapoX">
+                <div><img src="./assets/images/false-btn.svg" /></div>
+              </td>
+            </table>
+          </div>
+          <div class="yongsan" onclick="location.href='./yongsan'">
+            <h1><img src="./assets/images/yongsan-txt.svg" /></h1>
+            <table>
+              <td id="yongsanO">
+                <div><img src="./assets/images/true-btn.svg" /></div>
+              </td>
+              <td id="yongsanX">
+                <div><img src="./assets/images/false-btn.svg" /></div>
+              </td>
+            </table>
+          </div>
+        </div>
+        <div class="gangnam-section">
+          <div class="gwanak" onclick="location.href='./gwanak'">
+            <h1><img src="./assets/images/gwanak-txt.svg" /></h1>
+            <table>
+              <td id="gwanakO">
+                <div><img src="./assets/images/true-btn.svg" /></div>
+              </td>
+              <td id="gwanakX">
+                <div><img src="./assets/images/false-btn.svg" /></div>
+              </td>
+            </table>
+          </div>
+          <div class="gangnam" onclick="location.href='./gangnam'">
+            <h1><img src="./assets/images/gangnam-txt.svg" /></h1>
+            <table>
+              <td id="gangnamO">
+                <div><img src="./assets/images/true-btn.svg" /></div>
+              </td>
+              <td id="gangnamX">
+                <div><img src="./assets/images/false-btn.svg" /></div>
+              </td>
+            </table>
+          </div>
+        </div>
+      </article>
     </main>
   </body>
 </html>
@@ -35,7 +109,75 @@
 <script src="./assets/js/jquery.min.js"></script>
 
 <script>
-  $(".jongro").load("./jongro/o.html", function () {
-   
+  $(document).ready(function ($) {
+    var mapoO = document.getElementById("mapoO");
+    var mapoX = document.getElementById("mapoX");
+
+    var jongroO = document.getElementById("jongroO");
+    var jongroX = document.getElementById("jongroX");
+
+    var yongsanO = document.getElementById("yongsanO");
+    var yongsanX = document.getElementById("yongsanX");
+
+    var gwanakO = document.getElementById("gwanakO");
+    var gwanakX = document.getElementById("gwanakX");
+
+    var gangnamO = document.getElementById("gangnamO");
+    var gangnamX = document.getElementById("gangnamX");
+
+    var mapo_itemsO = JSON.parse(localStorage.getItem("mapo-o"));
+    var mapo_itemsX = JSON.parse(localStorage.getItem("mapo-x"));
+
+    for (var i = 0; i < mapo_itemsO.length; i++) {
+      mapoO.innerHTML += "<tr><img src='./assets/images/true-img.svg'/></tr>";
+    }
+    for (var i = 0; i < mapo_itemsX.length; i++) {
+      mapoX.innerHTML += "<tr><img src='./assets/images/false-img.svg'/></tr>";
+    }
+
+    var jongro_itemsO = JSON.parse(localStorage.getItem("jongro-o"));
+    var jongro_itemsX = JSON.parse(localStorage.getItem("jongro-x"));
+
+    for (var i = 0; i < jongro_itemsO.length; i++) {
+      jongroO.innerHTML += "<tr><img src='./assets/images/true-img.svg'/></tr>";
+    }
+    for (var i = 0; i < jongro_itemsX.length; i++) {
+      jongroX.innerHTML +=
+        "<tr><img src='./assets/images/false-img.svg'/></tr>";
+    }
+
+    var yongsan_itemsO = JSON.parse(localStorage.getItem("yongsan-o"));
+    var yongsan_itemsX = JSON.parse(localStorage.getItem("yongsan-x"));
+
+    for (var i = 0; i < yongsan_itemsO.length; i++) {
+      yongsanO.innerHTML +=
+        "<tr><img src='./assets/images/true-img.svg'/></tr>";
+    }
+    for (var i = 0; i < yongsan_itemsX.length; i++) {
+      yongsanX.innerHTML +=
+        "<tr><img src='./assets/images/false-img.svg'/></tr>";
+    }
+
+    var gangnam_itemsO = JSON.parse(localStorage.getItem("gangnam-o"));
+    var gangnam_itemsX = JSON.parse(localStorage.getItem("gangnam-x"));
+
+    var gwanak_itemsO = JSON.parse(localStorage.getItem("gwanak-o"));
+    var gwanak_itemsX = JSON.parse(localStorage.getItem("gwanak-x"));
+
+    for (var i = 0; i < gwanak_itemsO.length; i++) {
+      gwanakO.innerHTML += "<tr><img src='./assets/images/true-img.svg'/></tr>";
+    }
+    for (var i = 0; i < gwanak_itemsX.length; i++) {
+      gwanakX.innerHTML +=
+        "<tr><img src='./assets/images/false-img.svg'/></tr>";
+    }
+    for (var i = 0; i < gangnam_itemsO.length; i++) {
+      gangnamO.innerHTML +=
+        "<tr><img src='./assets/images/true-img.svg'/></tr>";
+    }
+    for (var i = 0; i < gangnam_itemsX.length; i++) {
+      gangnamX.innerHTML +=
+        "<tr><img src='./assets/images/false-img.svg'/></tr>";
+    }
   });
 </script>
