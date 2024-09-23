@@ -152,7 +152,8 @@ function easyDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -195,7 +196,8 @@ function speedDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -265,7 +267,8 @@ function zigzagDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -321,7 +324,8 @@ function rightDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -376,7 +380,8 @@ function leftDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -420,7 +425,8 @@ tajaText.addEventListener("keydown", function (e) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable:
+                "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });

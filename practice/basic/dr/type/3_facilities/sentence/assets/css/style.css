@@ -107,7 +107,7 @@ body {
 }
 
 .word-display {
-word-spacing: 0.75vw;
+  word-spacing: 0.75vw;
   font-family: "space", "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 3vw;
   word-break: break-all;
@@ -145,7 +145,7 @@ textarea::-ms-input-placeholder {
 }
 
 .word-input {
-word-spacing: 0.75vw;
+  word-spacing: 0.75vw;
   font-size: 3vw;
   line-height: 1.55;
   text-align: center;
@@ -261,7 +261,17 @@ button#download-btn2 {
   border-radius: none;
 }
 
-#download-btn1 {
+button#download-btn1 {
+  display: none;
+  margin-top: 2vw;
+
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+button#download-btn1 img {
+  width: 100%;
 }
 
 .button:hover {

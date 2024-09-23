@@ -261,7 +261,17 @@ button#download-btn2 {
   border-radius: none;
 }
 
-#download-btn1 {
+button#download-btn1 {
+  display: none;
+  margin-top: 2vw;
+
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+button#download-btn1 img {
+  width: 100%;
 }
 
 .button:hover {

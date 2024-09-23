@@ -173,6 +173,14 @@ a:focus, button:focus {
 button#download {
   display: none;
   margin-top: 2vw;
+
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+button#download img {
+  width: 100%;
 }
 
 .print-title {
@@ -195,9 +203,9 @@ button#download {
   letter-spacing: -0.5px;
   text-wrap: nowrap;
 
-  background: #f8f8f8;
+  background: #f0f0f0;
 
-  padding: 0.125vw;
+  padding: 0.375vw;
 }
 
 input::placeholder {
