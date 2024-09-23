@@ -8,7 +8,6 @@ var taja = [
   "미혼부 자",
   "미혼모 자녀",
   "보호대상아동",
-  "통합교육",
   "통합놀이",
   "다문화가정",
   "체류자",
@@ -29,14 +28,14 @@ var setConstructor = [];
 const DOWNTIME = 2500;
 
 // 생명 변수
-var life = 19;
+var life = 18;
 var lifeDiv = document.getElementById("life");
 // lifeDiv.innerHTML = "생명: " + life;
 
 // 점수 변수
 var score = 0;
 var scoreDiv = document.getElementById("score");
-scoreDiv.innerHTML = score + " / 19";
+scoreDiv.innerHTML = score + " / 18";
 
 // taja배열의 index 값에 대한 변수
 var idx = 0;
@@ -45,7 +44,7 @@ var idx = 0;
 const printButton = document.querySelector("#download");
 printButton.addEventListener("click", () => {
   printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+    printable: "../../../type/assets/print/dr-4.pdf",
     type: "pdf",
     showModal: false,
     // style: `@page { margin: 0mm; size: 80m 80m; } @media print { body { margin: 0mm; width: 80mm; height: 80mm } }`,
@@ -153,7 +152,7 @@ function easyDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -196,7 +195,7 @@ function speedDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -266,7 +265,7 @@ function zigzagDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -322,7 +321,7 @@ function rightDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -377,7 +376,7 @@ function leftDown(tajaArg) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });
@@ -410,7 +409,7 @@ tajaText.addEventListener("keydown", function (e) {
         setConstructor[i].destroyTaja();
 
         score += 1;
-        scoreDiv.innerHTML = score + " / 19";
+        scoreDiv.innerHTML = score + " / 18";
 
         // 더이상 화면에 뿌려질 단어가 없고
         // life를 다 소진하지않고 clear 했을 경우
@@ -421,7 +420,7 @@ tajaText.addEventListener("keydown", function (e) {
 
             // alert("👏👏 성공했습니다!");
             printJS({
-              printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-4.pdf",
+              printable: "../../../type/assets/print/dr-4.pdf",
               type: "pdf",
               showModal: false,
             });

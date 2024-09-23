@@ -124,7 +124,7 @@ function buttonChange(text) {
 
 printButton.addEventListener("click", () => {
   printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-3.pdf",
+    printable: "../../../type/assets/print/dr-3.pdf",
     type: "pdf",
     showModal: false,
   });
@@ -132,7 +132,7 @@ printButton.addEventListener("click", () => {
 
 printButton2.addEventListener("click", () => {
   printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-3.pdf",
+    printable: "../../../type/assets/print/dr-3.pdf",
     type: "pdf",
     showModal: false,
   });
