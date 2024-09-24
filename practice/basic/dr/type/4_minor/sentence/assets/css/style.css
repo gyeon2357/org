@@ -339,6 +339,8 @@ p.body {
 
 .backspace a {
   color: #a0a0a0;
+
+  font-size: 1.25vw;
   transition: opacity 0.2s;
 }
 

@@ -100,6 +100,8 @@ main > section:nth-last-child(-n + 2) {
 
 .backspace a {
   color: #a0a0a0;
+
+  font-size: 1.25vw;
 }
 
 .formobile {
