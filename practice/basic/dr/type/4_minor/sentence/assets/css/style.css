@@ -362,8 +362,9 @@ p.body {
 /* Print Styles */
 @media print {
   /* 	Hide everything that doesn't have the '.print' class */
-  body > *:not(.print) {
-    display: none;
+    body {
+    padding: 0;
+    margin: 0;
   }
   .print {
     /* 		Force the browser to print with the given colors instead of overwriting to black&white */
