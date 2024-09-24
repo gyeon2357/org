@@ -60,7 +60,11 @@ function checkStatus() {
     message.innerHTML = "게임 종료!";
 
     printButton.style.display = "block";
-    window.print();
+    printJS({
+    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-1.pdf",
+    type: "pdf",
+    showModal: false,
+  });
   }
 }
 
