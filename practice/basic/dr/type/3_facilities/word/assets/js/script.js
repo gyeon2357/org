@@ -1,34 +1,8 @@
 var taja = [
-  "집",
-  "시설화",
-  "수용",
-  "강제퇴거",
-  "가정환경",
   "주거권",
-  "양육",
-  "집단생활",
-  "홈리스",
-  "배제",
-  "불안",
-  "두려움",
-  "안전한 공간",
-  "탈출",
-  "학대",
   "인간다운 생활",
-  "면접교섭권",
-  "시설보호",
-  "보호대상아동",
-  "가정밖청소년",
-  "위기청소년",
-  "탈시설",
-  "가정위탁",
-  "그룹홈",
+  "지역사회",
   "아동양육시설",
-  "독립주거",
-  "주거차별",
-  "공공주택",
-  "자립준비청년",
-  "보호종료아동",
   "거소결정권",
 ];
 
@@ -41,14 +15,14 @@ var setConstructor = [];
 const DOWNTIME = 2500;
 
 // 생명 변수
-var life = 31;
+var life = 5;
 var lifeDiv = document.getElementById("life");
 // lifeDiv.innerHTML = "생명: " + life;
 
 // 점수 변수
 var score = 0;
 var scoreDiv = document.getElementById("score");
-scoreDiv.innerHTML = score + " / 31";
+scoreDiv.innerHTML = score + " / 5";
 
 // taja배열의 index 값에 대한 변수
 var idx = 0;
@@ -427,7 +401,7 @@ tajaText.addEventListener("keydown", function (e) {
         setConstructor[i].destroyTaja();
 
         score += 1;
-        scoreDiv.innerHTML = score + " / 31";
+        scoreDiv.innerHTML = score + " / 5";
 
         // 더이상 화면에 뿌려질 단어가 없고
         // life를 다 소진하지않고 clear 했을 경우

@@ -2,21 +2,8 @@ var taja = [
   "성소수자 아동",
   "장애아동",
   "이주배경아동",
-  "수용자자녀",
-  "학교 밖 청소년",
-  "가정 밖 청소년",
-  "미혼부 자녀",
-  "미혼모 자녀",
-  "보호대상아동",
-  "통합놀이",
-  "다문화가정",
-  "체류자",
-  "F-2",
-  "성별정체성",
+  "통합놀이터",
   "성적지향",
-  "트랜지션",
-  "성별표현",
-  "통합교육",
 ];
 
 var tajaContents = document.getElementById("tajaContents");
@@ -28,14 +15,14 @@ var setConstructor = [];
 const DOWNTIME = 2500;
 
 // 생명 변수
-var life = 18;
+var life = 5;
 var lifeDiv = document.getElementById("life");
 // lifeDiv.innerHTML = "생명: " + life;
 
 // 점수 변수
 var score = 0;
 var scoreDiv = document.getElementById("score");
-scoreDiv.innerHTML = score + " / 18";
+scoreDiv.innerHTML = score + " / 5";
 
 // taja배열의 index 값에 대한 변수
 var idx = 0;
@@ -414,7 +401,7 @@ tajaText.addEventListener("keydown", function (e) {
         setConstructor[i].destroyTaja();
 
         score += 1;
-        scoreDiv.innerHTML = score + " / 18";
+        scoreDiv.innerHTML = score + " / 5";
 
         // 더이상 화면에 뿌려질 단어가 없고
         // life를 다 소진하지않고 clear 했을 경우

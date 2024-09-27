@@ -1,20 +1,11 @@
 var taja = [
   "출생신고",
-  "통계",
-  "아동권리의 시작점",
-  "모든 아동",
-  "난민아동",
-  "이주아동",
   "보편적출생신고제도",
-  "기본권",
-  "출생 후 즉시 등록",
-  "성명권",
   "정체성",
-  "누락없는 권리",
-  "사랑이법",
   "출생통보",
-  "출생증명서",
   "생일",
+
+
 ];
 
 var tajaContents = document.getElementById("tajaContents");
@@ -26,14 +17,14 @@ var setConstructor = [];
 const DOWNTIME = 2500;
 
 // 생명 변수
-var life = 16;
+var life = 5;
 var lifeDiv = document.getElementById("life");
 // lifeDiv.innerHTML = "생명: " + life;
 
 // 점수 변수
 var score = 0;
 var scoreDiv = document.getElementById("score");
-scoreDiv.innerHTML = score + " / 16";
+scoreDiv.innerHTML = score + " / 5";
 
 // taja배열의 index 값에 대한 변수
 var idx = 0;
@@ -407,7 +398,7 @@ tajaText.addEventListener("keydown", function (e) {
         setConstructor[i].destroyTaja();
 
         score += 1;
-        scoreDiv.innerHTML = score + " / 16";
+        scoreDiv.innerHTML = score + " / 5";
 
         // 더이상 화면에 뿌려질 단어가 없고
         // life를 다 소진하지않고 clear 했을 경우
