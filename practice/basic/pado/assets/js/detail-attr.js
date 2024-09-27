@@ -17,38 +17,38 @@ $(function () {
     img.attr(
       "data-srcset",
       "https://ik.imagekit.io/11195/" +
-        res100 +
         partsrc +
+        res100 +
         " " +
         "100w, " +
         "https://ik.imagekit.io/11195/" +
-        res150 +
         partsrc +
+        res150 +
         " " +
         "150w, " +
         "https://ik.imagekit.io/11195/" +
-        res300 +
         partsrc +
+        res300 +
         " " +
         "300w, " +
         "https://ik.imagekit.io/11195/" +
-        res800 +
         partsrc +
+        res800 +
         " " +
         "800w, " +
         "https://ik.imagekit.io/11195/" +
-        res1024 +
         partsrc +
+        res1024 +
         " " +
         "1024w, " +
         "https://ik.imagekit.io/11195/" +
-        res1400 +
         partsrc +
+        res1400 +
         " " +
         "1400w, " +
         "https://ik.imagekit.io/11195/" +
-        res2000 +
         partsrc +
+        res2000 +
         " " +
         "2000w"
     );
@@ -72,38 +72,38 @@ $(function () {
     img.attr(
       "data-srcset",
       "https://ik.imagekit.io/11195/" +
-        res100 +
         partsrc +
+        res100 +
         " " +
         "100w, " +
         "https://ik.imagekit.io/11195/" +
-        res150 +
         partsrc +
+        res150 +
         " " +
         "150w, " +
         "https://ik.imagekit.io/11195/" +
-        res300 +
         partsrc +
+        res300 +
         " " +
         "300w, " +
         "https://ik.imagekit.io/11195/" +
-        res800 +
         partsrc +
+        res800 +
         " " +
         "800w, " +
         "https://ik.imagekit.io/11195/" +
-        res1024 +
         partsrc +
+        res1024 +
         " " +
         "1024w, " +
         "https://ik.imagekit.io/11195/" +
-        res1400 +
         partsrc +
+        res1400 +
         " " +
         "1400w, " +
         "https://ik.imagekit.io/11195/" +
-        res2000 +
         partsrc +
+        res2000 +
         " " +
         "2000w"
     );
