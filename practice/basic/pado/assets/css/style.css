@@ -1319,6 +1319,7 @@ body.hasHover .tooltip {
 }
 #project__header .projecttitle__wrapper .projecttitle__name p {
   width: 90%;
+  opacity: 0.7;
 }
 #project__header .projecttoggle {
   position: relative;
@@ -1736,7 +1737,7 @@ body.hasHover .tooltip {
   flex-direction: column-reverse;
   padding-bottom: 0.2rem;
   padding-left: 3.5px;
-  background: #fff;
+  background: #f0f0f0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -1745,7 +1746,8 @@ body.hasHover .tooltip {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 
-  height: 48px;
+  padding-top: 0.2rem;
+  font-size: 0.75rem;
 }
 
 #project
