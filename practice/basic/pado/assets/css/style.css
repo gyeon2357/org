@@ -1737,7 +1737,7 @@ body.hasHover .tooltip {
   flex-direction: column-reverse;
   padding-bottom: 0.2rem;
   padding-left: 3.5px;
-  background: #f0f0f0;
+  background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
