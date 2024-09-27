@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=1"
+    />
+
+    <title>PADO</title>
+    <meta name="description" content="시대기물연구소 〈파도〉의 설명글" />
+
+    <meta itemprop="name" content="PADO" />
+    <meta name="keywords" content="PADO, 시대기물연구소, 파도" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#000000"
+    />
+
+    <!-- og-image -->
+    <meta itemprop="image" content="./assets/favicon/og-image.jpg" />
+    <meta property="og:url" content="https://pado.sansuhwa.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="GYEON" />
+    <meta property="og:title" content="GYEON" />
+    <meta property="og:description" content="PARK, JEONG GYEON" />
+    <meta property="og:image" content="./assets/favicon/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GYEON" />
+    <meta name="twitter:description" content="PARK, JEONG GYEON" />
+    <meta name="twitter:image" content="./assets/favicon/og-image.jpg" />
+
+    <!-- web-app-image -->
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+      href="./assets/favicon/apple-touch-startup-image-320x460.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+      href="./assets/favicon/apple-touch-startup-image-640x920.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      href="./assets/favicon/apple-touch-startup-image-640x1096.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      href="./assets/favicon/apple-touch-startup-image-750x1294.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
+      href="./assets/favicon/apple-touch-startup-image-1182x2208.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
+      href="./assets/favicon/apple-touch-startup-image-1242x2148.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+      href="./assets/favicon/apple-touch-startup-image-1024x748.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+      href="./assets/favicon/apple-touch-startup-image-2048x1496.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+      href="./assets/favicon/apple-touch-startup-image-1004x768.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+      href="./assets/favicon/apple-touch-startup-image-2008x1536.png"
+    />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" />
+    <meta name="application-name" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-config"
+      content="./assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#fff" />
+
+    <!-- <meta name="msapplication-TileColor" content="#000000" /> -->
+    <link href="./assets/css/slick.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="home">
+    <div class="overflow__wrapper">
+      <header id="header">
+        <div class="header__sitetitle">
+          <div class="header__sitetitle__item item--1" data-sort="random">
+            <a href="#"> PADO </a>
+          </div>
+        </div>
+
+        <div class="header__menutoggle">
+          <div class="header__menutoggle__item">
+            <span class="mobile">Menu</span>
+            <span class="desktop">Menu</span>
+          </div>
+        </div>
+      </header>
+
+      <div id="menu__header" class="hidden mobile"></div>
+
+      <div id="menu" class="hidden preload">
+        <div id="swup" class="menu__wrapper">
+          <div class="menu__item contact">
+            <p>
+              시대기물연구소 〈파도〉
+              <br />
+              <br />
+             In SANSUHWA*TEAHOUSE
+              <br />
+
+              21-14, Hannam-daero 20gil,
+              <br />
+
+              Yongsan-gu, Seoul
+              <br />
+              <a href="mailto:mail@sansuhwa.com">mail@sansuhwa.com</a>
+              <br />
+
+              +82 2 749 3138
+            </p>
+          </div>
+
+          <div class="menu__item projectlist">
+            <!-- <a href="./category/4/" class="projectlist__item">
+              <span class="item--projectnumber">04</span>
+              <span class="item--projectname">
+                <p>PA-1-2-000</p>
+              </span>
+            </a> -->
+
+            <a href="./category/3/" class="projectlist__item">
+              <span class="item--projectnumber">03</span>
+              <span class="item--projectname">
+                <p>1-1-03-CJH</p>
+              </span>
+            </a>
+            <a href="./category/2/" class="projectlist__item">
+              <span class="item--projectnumber">02</span>
+              <span class="item--projectname">
+                <p>1-1-02-HYG</p>
+              </span>
+            </a>
+
+            <a href="./category/1/" class="projectlist__item">
+              <span class="item--projectnumber">01</span>
+              <span class="item--projectname">
+                <p>1-1-01-KJH</p>
+              </span>
+            </a>
+          </div>
+
+          <div class="header__menutoggle__lang language__item visible de">
+            <span class="language--active">
+              <a href="#" hreflang="ko"> KO </a>
+            </span>
+
+            <span>
+              <a href="./en" hreflang="en"> EN </a>
+            </span>
+          </div>
+
+          <div class="menu__item pages">
+            <div class="pages__item">
+              <a href="./">Home </a>
+            </div>
+
+            <div class="pages__item">
+              <a href="./information/" class="page--information">
+                Information
+              </a>
+            </div>
+
+            <div class="legal">
+              <div class="pages__item">
+                <a href="./legal-notice/"> Legal Notice </a>
+              </div>
+
+              <div class="pages__item">
+                <a href="./privacy/"> Privacy Policy </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main id="swup" class="transition-fade">
+        <div id="atlas__header" class="page__header">
+          <a href="" class="projectlink__url url--inactive">
+            <div class="projecttitle__number"></div>
+
+            <div class="projecttitle__name__wrapper">
+              <span class="projecttitle__name"></span>
+            </div>
+          </a>
+
+          <div class="atlas__sort">
+            <div
+              class="atlas__sort__button atlas__sort--random sort--active"
+              data-sort="random"
+            >
+              Random:
+            </div>
+            <div
+              class="atlas__sort__button atlas__sort--chronological sort--inactive"
+              data-sort="default"
+            >
+              Number:
+            </div>
+          </div>
+        </div>
+
+        <!-- contents -->
+        <div id="atlas">
+          <div
+            class="mix atlas__item"
+            data-project="3"
+            data-link="./cafegory/3/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/3/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-03-CJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">1</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Cho Jang-Hyun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mix atlas__item"
+            data-project="3"
+            data-link="./cafegory/3/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/3/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-03-CJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">2</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Cho Jang-Hyun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="3"
+            data-link="./cafegory/3/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/3/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-03-CJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">3</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Cho Jang-Hyun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="3"
+            data-link="./cafegory/3/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/3/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-03-CJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">4</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Cho Jang-Hyun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="3"
+            data-link="./cafegory/3/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/3/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/3-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-03-CJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">5</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Cho Jang-Hyun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="2"
+            data-link="./cafegory/2/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-02-HYG</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">1</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Hong Woo-Kyung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="2"
+            data-link="./cafegory/2/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-02-HYG</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">2</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Hong Woo-Kyung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="2"
+            data-link="./cafegory/2/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-02-HYG</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">3</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Hong Woo-Kyung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="2"
+            data-link="./cafegory/2/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-02-HYG</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">4</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Hong Woo-Kyung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="2"
+            data-link="./cafegory/2/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/2-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-02-HYG</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">5</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Hong Woo-Kyung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="1"
+            data-link="./cafegory/1/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/1/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-01-KJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">1</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Kim Joong-Hoon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="1"
+            data-link="./cafegory/1/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-01-KJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">2</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Kim Joong-Hoon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="1"
+            data-link="./cafegory/1/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-01-KJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">3</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Kim Joong-Hoon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="1"
+            data-link="./cafegory/1/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-01-KJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">4</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Kim Joong-Hoon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mix atlas__item"
+            data-project="1"
+            data-link="./cafegory/1/"
+            data-dominantcolor-hex="#ffffff"
+          >
+            <div class="item__wrapper">
+              <div class="item__img__wrapper">
+                <div class="item__link__wrapper">
+                  <a href="./category/2/" class="atlas__item__link disabled">
+                    <img
+                      src="https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-200,bl-10,q-70"
+                      srcset="
+                        https://ik.imagekit.io/11195/sansuhwa/public/4-1.jpg?tr=w-600,bl-10,q-70
+                      "
+                      data-srcset=""
+                      data-sizes="auto"
+                      class="lazyload item__img"
+                      width="2000"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="item__text hidden">
+                  <span class="item__count">
+                    <span class="item__projectnumber">1-1-01-KJH</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="item__imgnumber">5</span>
+                  </span>
+
+                  <span class="item__projectname hidden">Kim Joong-Hoon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./assets/js/tinycolor-min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/mixitup.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/jquery.zoom.min.js"></script>
+    <script src="./assets/js/functions.min.js"></script>
+    <!-- <script src="./assets/js/functions.js"></script> -->
+    <script src="./assets/js/bundle.js"></script>
+
+    <script src="./assets/js/main-attr.js"></script>
+  </body>
+</html>
