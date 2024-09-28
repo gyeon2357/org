@@ -1530,6 +1530,8 @@ body.hasHover .tooltip {
   transition: opacity 0.3s ease-in-out;
   -webkit-transition-delay: 100ms;
   transition-delay: 100ms;
+
+  z-index: 1;
 }
 #project .project__images .images__slideshow .zoomImg:hover {
   -webkit-transition-duration: 170ms;
