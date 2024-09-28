@@ -481,7 +481,7 @@ function atlasImgHover() {
 function atlasImgClick() {
   if ($(window).width() < 700) {
     // if ($("body").hasClass("hasHover")) {
-    $(".atlas__item__link").addClass("enabled").removeClass("disabled");
+    // $(".atlas__item__link").addClass("enabled").removeClass("disabled");
   }
 
   $(document).on("click", ".item__link__wrapper", function (event) {
@@ -1267,4 +1267,3 @@ function generalMinHeight() {
     $(".general__wrapper").css("height", "80vh");
   }
 }
-
