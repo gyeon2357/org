@@ -252,6 +252,7 @@ body.hasHover .tooltip {
   top: 0;
   width: 100%;
   padding-top: 72px;
+  padding-bottom: 6px;
   z-index: 80;
   background: #ffffff;
 }
@@ -956,25 +957,6 @@ body.hasHover .tooltip {
   pointer-events: all;
 }
 
-@media (min-width: 700px) {
-  #atlas
-    .atlas__item
-    .item__wrapper
-    .item__img__wrapper
-    .item__link__wrapper
-    .atlas__item__link.disabled {
-    pointer-events: none;
-  }
-
-  #atlas
-    .atlas__item
-    .item__wrapper
-    .item__img__wrapper
-    .item__link__wrapper
-    .atlas__item__link.enabled {
-    pointer-events: all;
-  }
-}
 
 #atlas .atlas__item .item__wrapper .item__img {
   width: 100%;
