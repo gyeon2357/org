@@ -450,6 +450,7 @@ body.hasHover .tooltip {
   text-align: right;
 
   z-index: 56;
+  cursor: pointer;
 }
 #header .header__menutoggle.hidden {
   opacity: 0;
