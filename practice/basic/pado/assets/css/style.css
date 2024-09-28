@@ -19,6 +19,7 @@
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
+
 html,
 body,
 div,
@@ -108,6 +109,7 @@ video {
   text-decoration: none;
   list-style: none;
 }
+
 @font-face {
   font-family: "Pretendard";
   src: url("../fonts/Pretendard-Regular.subset.woff"),
@@ -120,7 +122,8 @@ body {
   color: #000;
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1;
+  letter-spacing: -0.25px;
+  line-height: 1.15;
 }
 body.page--project {
   overflow: hidden;
@@ -1321,7 +1324,6 @@ body.hasHover .tooltip {
 }
 #project__header .projecttitle__wrapper .projecttitle__name p {
   width: 90%;
-  opacity: 0.7;
 }
 #project__header .projecttoggle {
   position: relative;
@@ -1358,6 +1360,8 @@ body.hasHover .tooltip {
   align-items: flex-start;
   padding-right: 1rem;
   padding-left: 0.2rem;
+
+  /* background-color: #fffcfa; */
 }
 #project__header .projecttoggle .projecttoggle__wrapper .projecttoggle__item {
   padding-left: 0.2rem;
@@ -1889,6 +1893,10 @@ body.hasHover .tooltip {
 }
 #project .project__information .project__layer__body .information__description {
   font-size: 1.19rem;
+  line-height: 1.4;
+  text-indent: 2rem;
+  word-break: keep-all;
+
   padding-right: 0.5rem;
   padding-bottom: 1rem;
   position: relative;
@@ -1973,7 +1981,7 @@ body.hasHover .tooltip {
 }
 #project .project__overview {
   z-index: 60;
-  background: #d2d2d2;
+  background: #f8f8f8;
   padding-top: calc(2.525rem + 15.3vw);
 }
 @media (min-width: 1200px) {
@@ -1982,7 +1990,7 @@ body.hasHover .tooltip {
   }
 }
 #project .project__overview .project__layer__header {
-  background: #d2d2d2;
+  background: #f8f8f8;
 }
 #project
   .project__overview
