@@ -784,9 +784,9 @@ header {
   -ms-hyphens: auto;
   hyphens: auto;
   border: 1px solid var(--light-border-color-10);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 5px;
   box-shadow: rgb(234, 234, 234) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset;
+    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset; */
   padding: 0.5rem 0.75rem;
 
   text-decoration-line: line-through;
@@ -815,8 +815,8 @@ header {
   text-decoration-style: dashed;
   text-decoration-color: var(--semantic-pink);
 
-  box-shadow: #b43765 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset;
+  /* box-shadow: #b43765 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset; */
 }
 
 .home-header__container .home-header__wrapper a:hover sub {
@@ -3058,15 +3058,15 @@ body.light .home-header__container .home-header__wrapper a {
 
   border: 1px solid var(--dark-border-color-30);
 
-  box-shadow: rgb(28, 30, 31) 3px 3px 6px 0px inset,
-    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+  /* box-shadow: rgb(28, 30, 31) 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset; */
 }
 
 body.light .home-header__container .home-header__wrapper a:hover {
   text-decoration-color: var(--semantic-pink);
 
-  box-shadow: #6c233e 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset;
+  /* box-shadow: #6c233e 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset; */
 }
 
 body.light .home-header__container .home-header__wrapper a:hover sub {
