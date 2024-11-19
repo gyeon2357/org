@@ -805,7 +805,7 @@ header {
 
   letter-spacing: 4px;
 
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .home-header__container .home-header__wrapper a:hover {
