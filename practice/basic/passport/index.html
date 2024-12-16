@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>패스포트 익스프레스 티켓머신</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/print.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+  </head>
+  <body>
+    <header class="no-print">
+      <figure>
+        <img src="./assets/images/header.svg" />
+      </figure>
+    </header>
+
+    <main>
+      <div class="row">
+        <div class="left">
+          <figure>
+            <img class="no-print" src="./assets/images/main-select.svg" />
+          </figure>
+          <div class="input-section">
+            <figure class="input-container">
+              <img class="no-print" src="./assets/images/input-header.svg" />
+              <section name="input">
+                <input
+                  id="name"
+                  class="no-print"
+                  onkeyup="printName()"
+                  placeholder="Please enter your name"
+                  autocomplete="off"
+                  autofocus
+                />
+              </section>
+            </figure>
+            <button
+              id="print-btn"
+              class="print-btn"
+              onclick="window.print()"
+              onkeyup="enterkey()"
+            >
+              <img class="no-print" src="./assets/images/print-btn.svg" />
+            </button>
+          </div>
+        </div>
+
+        <div class="right no-print">
+          <figure><img src="./assets/images/main-infor.svg" /></figure>
+        </div>
+      </div>
+
+      <div class="bottom no-print">
+        <figure><img src="./assets/images/main-footer.svg" /></figure>
+      </div>
+    </main>
+
+    <div id="result"></div>
+
+    <section name="background-video" class="no-print">
+      <video playsinline autoplay muted loop id="backg">
+        <source src="./assets/images/backg.webm" type="video/webm" />
+
+        <source src="./assets/images/backg.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <footer>
+      <div class="formobile">
+        <div class="formobile-p">
+          데스크탑을 이용해 접속해주세요.<br />
+          Please use this on a desktop.
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</html>
