@@ -1,7 +1,13 @@
 $(document).ready(function () {
-  $("input[name = 'printName']").focus();
+  // $("#name").focus();
+  // $("#name").tabIndex = 0;
+  setTimeout(function () {
+    $("#name").focus();
+  }, 10);
   $("#backg").attr("loop", "true");
 });
+
+console.log(document.activeElement);
 
 // var backg = document.getElementById("backg");
 // if (typeof backg.loop == "boolean") {
