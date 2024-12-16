@@ -3,7 +3,7 @@ $(document).ready(function () {
   // $("#name").tabIndex = 0;
   setTimeout(function () {
     $("#name").focus();
-  }, 10);
+  }, 100);
   $("#backg").attr("loop", "true");
 });
 
