@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>패스포트 익스프레스 티켓머신</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
+
+    <link rel="preload" href="./assets/css/font.css" as="style" />
+    <link
+      href="./assets/css/font.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+      type="text/css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/print.css" />
+    <link rel="stylesheet" media="print" href="./assets/css/print.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -36,7 +45,7 @@
                   id="name"
                   class="no-print"
                   onkeyup="printName()"
-                  placeholder="Please enter your name"
+                  placeholder="Please enter your name in English"
                   autocomplete="off"
                   autofocus
                 />
@@ -63,7 +72,14 @@
       </div>
     </main>
 
-    <div id="result"></div>
+    <section name="ticket">
+      <div class="ticket_container">
+        <div class="ticket">
+          <img src="./assets/images/ticket.svg" />
+        </div>
+      </div>
+      <div id="result"></div>
+    </section>
 
     <section name="background-video" class="no-print">
       <video playsinline autoplay muted loop id="backg">
