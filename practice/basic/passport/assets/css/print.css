@@ -45,10 +45,10 @@
     display: block;
 
     position: absolute;
-    top: calc(50% - 13.5mm);
+    top: calc(50% - 14.5mm);
     left: calc(50% - 10.5mm);
 
-    font-size: 30pt;
+    font-size: 28pt;
     text-wrap: nowrap;
 
     transform-origin: 50% 50%;
