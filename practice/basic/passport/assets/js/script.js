@@ -40,3 +40,7 @@ input.addEventListener("keypress", function (event) {
     document.getElementById("print-btn").click();
   }
 });
+
+window.onafterprint = function () {
+  window.location.reload(true);
+};

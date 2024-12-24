@@ -1,0 +1,459 @@
+::-moz-selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+::selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #000;
+}
+
+@media screen and (min-width: 512px) {
+  html {
+    font-size: 1.75vw;
+  }
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.725;
+  word-break: keep-all;
+  color: white;
+  cursor: default;
+}
+
+
+
+span {
+  cursor: pointer;
+  color: white;
+  transition: color 0.25s;
+  transition-delay: 0.125s;
+}
+
+span:hover {
+  color: silver;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.imgClass2,
+.imgClass3,
+.imgClass4,
+.imgClass5,
+.imgClass6 {
+  display: none;
+}
+
+.imgClass2 {
+  display: block;
+  margin: 0rem 0 0.75rem 3.5rem;
+  width: 30%;
+}
+
+.imgClass3 {
+  display: block;
+  margin: 0rem 0 0rem 3.5rem;
+  width: 30%;
+}
+
+.imgClass4 {
+  display: block;
+  margin: 0rem 0 0.75rem 3.5rem;
+  width: 45%;
+}
+
+.imgClass5 {
+  display: block;
+  margin: 0rem 0 1rem 3.5rem;
+  width: 45%;
+}
+
+.imgClass6 {
+  display: block;
+  margin: -5rem 0 -5rem -2.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 512px) {
+  .imgClass2 {
+    position: absolute;
+    display: block;
+    margin: 2rem 0rem 0rem 1rem;
+    width: 25%;
+  }
+
+  .imgClass3 {
+    position: absolute;
+    display: block;
+    margin: 13rem 0rem 0rem 1rem;
+    width: 25%;
+  }
+
+  .imgClass4 {
+    position: absolute;
+    display: inline-block;
+    margin: 2rem 0 15rem 1rem;
+    width: 25%;
+  }
+
+  .imgClass5 {
+    position: absolute;
+    display: inline-block;
+    margin: 30rem 0 15rem 1rem;
+    width: 25%;
+  }
+
+  .imgClass6 {
+    position: absolute;
+    display: inline-block;
+    margin: 0rem 0 15rem -6.5rem;
+    width: 50%;
+  }
+
+  img:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    position: absolute;
+    z-index: 10000;
+  }
+}
+
+@media screen and (min-width: 512px) {
+  body {
+    font-weight: 700;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+}
+
+body.fixed {
+  height: 100%;
+  overflow: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.25s;
+  transition-delay: 0.125s;
+  cursor: pointer;
+}
+
+a:hover {
+  color: silver;
+}
+
+ul {
+  margin: 0.75rem 0.75rem 6rem 0.75rem;
+  font-size: 2rem;
+  line-height: 2;
+}
+
+summary {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  padding: 0;
+  margin: 0.75rem 0 1.5rem 0.5rem;
+  border-bottom: solid 2px;
+  list-style: decimal;
+}
+
+summary:last-child {
+  border-bottom: solid 4px;
+  margin-bottom: 2rem;
+}
+
+header{
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url("../images/exitLogo.png");
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+}
+
+.header::after {
+  content: "TEAM 2200";
+  position: absolute;
+  z-index: 888;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.125rem 0.25rem;
+  font-size: 2rem;
+  color: white;
+  overflow: hidden;
+}
+
+.header .title {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: #000;
+
+}
+
+.header .title div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 5vw;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+  color: white;
+  
+}
+
+.footerText {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.main {
+  margin-top: 100vh;
+  margin-left: 3vh;
+  width: 90%;
+}
+
+.section {
+  padding: 0.5rem;
+  opacity: 0.25;
+  transition: opacity 0.25s;
+  transition-delay: 0.125s;
+
+}
+
+.section:hover {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+}
+
+.content .summary {
+  position: relative;
+  width: 80%;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.6;
+
+  padding-left: 0.75rem;
+}
+
+.content:nth-child(1) {
+  padding-left: 3rem;
+}
+
+.content:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0.375rem;
+  left: 0;
+
+  height: 2.25rem;
+  /* background-image: url("../images/qmask.png"); */
+  background-size: cover;
+  overflow-y: hidden;
+}
+
+.content:nth-child(2) {
+  margin-left: 3rem;
+}
+
+@media screen and (min-width: 512px) {
+  .content:nth-child(1) {
+    margin-right: calc(100% / 3);
+  }
+
+  .content:nth-child(2) {
+    margin-left: calc(100% / 3);
+  }
+}
+
+.content code {
+  padding: 0 0.125em;
+  font-family: Courier;
+  line-height: 1;
+  color: #000;
+  background-color: dimgray;
+  border-radius: 0.125em;
+}
+
+.content:not(:last-child),
+.content > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.4s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: 1rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,809 @@
+@font-face {
+  font-family: "font";
+  src: url("../fonts/Brice-Bold-Expanded.otf") format("opentype");
+}
+
+:root {
+  --ion-safe-area-top: env(safe-area-inset-top);
+  --ion-safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "font";
+  font-size: 1rem;
+  overflow: hidden;
+  margin: 1rem 1.5rem;
+}
+
+header {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% - 1rem);
+  left: 50%;
+
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+header:hover {
+  opacity: 0.8;
+  filter: contrast(0.5);
+}
+
+header p {
+  display: inline;
+  font-size: 3.125rem;
+  line-height: 1;
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+}
+
+article figure img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s ease;
+  transform-origin: 50% 50%;
+}
+
+article.fordesktop figure img:nth-child(1) {
+  width: 15rem;
+  top: 10rem;
+  left: 4%;
+}
+
+article.fordesktop figure img:nth-child(2) {
+  width: 13rem;
+  top: 3rem;
+  left: 15%;
+
+  -webkit-animation: rotate2 3s infinite;
+  -moz-animation: rotate2 3s infinite;
+  -ms-animation: rotate2 3s infinite;
+  animation: rotate2 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(3) {
+  width: 2.5rem;
+  top: 11.5rem;
+  left: 25%;
+}
+
+article.fordesktop figure img:nth-child(4) {
+  width: 3.5rem;
+  top: 8rem;
+  left: 35%;
+}
+
+article.fordesktop figure img:nth-child(5) {
+  width: 12rem;
+  transform: scaleX(-1);
+  top: 5.5rem;
+  left: 40%;
+
+  -webkit-animation: scale2 3s infinite;
+  -moz-animation: scale2 3s infinite;
+  -ms-animation: scale2 3s infinite;
+  animation: scale2 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(6) {
+  width: 3.5rem;
+  top: 5.75rem;
+  left: 52%;
+}
+
+article.fordesktop figure img:nth-child(7) {
+  width: 3.5rem;
+  top: 7.5rem;
+  left: 60%;
+}
+
+article.fordesktop figure img:nth-child(8) {
+  width: 15rem;
+  top: 5rem;
+  left: 64%;
+
+  -webkit-animation: rotate4 5s infinite;
+  -moz-animation: rotate4 5s infinite;
+  -ms-animation: rotate4 5s infinite;
+  animation: rotate4 5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(9) {
+  width: 14rem;
+  top: 8rem;
+  left: 85%;
+
+  -webkit-animation: rotate4 4s infinite;
+  -moz-animation: rotate4 4s infinite;
+  -ms-animation: rotate4 4s infinite;
+  animation: rotate4 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(10) {
+  width: 15rem;
+  top: 28rem;
+  left: -1rem;
+
+  -webkit-animation: rotate4 2s infinite;
+  -moz-animation: rotate4 2s infinite;
+  -ms-animation: rotate4 2s infinite;
+  animation: rotate4 2s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(11) {
+  width: 6rem;
+  top: 29.5rem;
+  left: 23%;
+}
+
+article.fordesktop figure img:nth-child(12) {
+  width: 15rem;
+  top: 32rem;
+  left: 76%;
+}
+
+article.fordesktop figure img:nth-child(13) {
+  width: 5.7rem;
+  top: 23.5rem;
+  left: 90%;
+
+  -webkit-animation: scale1 4s infinite;
+  -moz-animation: scale1 4s infinite;
+  -ms-animation: scale1 4s infinite;
+  animation: scale1 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(14) {
+  width: 27rem;
+  top: 74%;
+  left: -14%;
+
+  -webkit-animation: rotate4 5s infinite;
+  -moz-animation: rotate4 5s infinite;
+  -ms-animation: rotate4 5s infinite;
+  animation: rotate4 5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(15) {
+  width: 16.5rem;
+  top: 66%;
+  left: 16.3%;
+
+  -webkit-animation: rotate4 5s infinite;
+  -moz-animation: rotate4 5s infinite;
+  -ms-animation: rotate4 5s infinite;
+  animation: rotate4 5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(16) {
+  width: 12rem;
+  top: 68%;
+  left: 34.3%;
+
+  -webkit-animation: rotate2 3s infinite;
+  -moz-animation: rotate2 3s infinite;
+  -ms-animation: rotate2 3s infinite;
+  animation: rotate2 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(17) {
+  width: 11rem;
+  top: 60%;
+  left: 44.5%;
+
+  -webkit-animation: rotate4 2s infinite;
+  -moz-animation: rotate4 2s infinite;
+  -ms-animation: rotate4 2s infinite;
+  animation: rotate4 2s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(18) {
+  width: 29rem;
+  top: 72%;
+  left: 53%;
+
+  -webkit-animation: rotate4 4s infinite;
+  -moz-animation: rotate4 4s infinite;
+  -ms-animation: rotate4 4s infinite;
+  animation: rotate4 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(19) {
+  width: 14.5rem;
+  top: 72%;
+  left: 88%;
+
+  -webkit-animation: rotate4 4s infinite;
+  -moz-animation: rotate4 4s infinite;
+  -ms-animation: rotate4 4s infinite;
+  animation: rotate4 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(20) {
+  width: 3rem;
+  top: 20rem;
+  left: 1%;
+}
+article.fordesktop figure img:nth-child(21) {
+  width: 3rem;
+  top: 20rem;
+  left: 7.5%;
+}
+article.fordesktop figure img:nth-child(22) {
+  width: 3rem;
+  top: 19rem;
+  left: 18%;
+}
+article.fordesktop figure img:nth-child(23) {
+  width: 3rem;
+  top: 20rem;
+  left: 23%;
+}
+article.fordesktop figure img:nth-child(24) {
+  width: 13.5rem;
+  top: 13rem;
+  left: 25.5%;
+
+  -webkit-animation: scale1 4s infinite;
+  -moz-animation: scale1 4s infinite;
+  -ms-animation: scale1 4s infinite;
+  animation: scale1 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+article.fordesktop figure img:nth-child(25) {
+  width: 3rem;
+  top: 25rem;
+  left: 38%;
+}
+article.fordesktop figure img:nth-child(26) {
+  width: 3rem;
+  top: 24rem;
+  left: 67%;
+}
+article.fordesktop figure img:nth-child(27) {
+  width: 3.5rem;
+  top: 20rem;
+  left: 80%;
+}
+article.fordesktop figure img:nth-child(28) {
+  width: 11rem;
+  top: 16rem;
+  left: 53%;
+
+  -webkit-animation: scale1 6s infinite;
+  -moz-animation: scale1 6s infinite;
+  -ms-animation: scale1 6s infinite;
+  animation: scale1 6s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.fordesktop figure img:nth-child(2):hover,
+article.fordesktop figure img:nth-child(5):hover,
+article.fordesktop figure img:nth-child(9):hover,
+article.fordesktop figure img:nth-child(10):hover,
+article.fordesktop figure img:nth-child(13):hover,
+article.fordesktop figure img:nth-child(14):hover,
+article.fordesktop figure img:nth-child(15):hover,
+article.fordesktop figure img:nth-child(16):hover,
+article.fordesktop figure img:nth-child(17):hover,
+article.fordesktop figure img:nth-child(18):hover,
+article.fordesktop figure img:nth-child(19):hover,
+article.fordesktop figure img:nth-child(24):hover,
+article.fordesktop figure img:nth-child(28):hover {
+  scale: 1.08;
+}
+
+article.fordesktop figure img:nth-child(29) {
+  width: 3.5rem;
+  top: 38rem;
+  left: 95%;
+}
+article.fordesktop figure img:nth-child(30) {
+  width: 3.5rem;
+  top: 22rem;
+  left: 85%;
+}
+article.fordesktop figure img:nth-child(31) {
+  width: 3.5rem;
+  top: 20rem;
+  left: 98%;
+}
+article.fordesktop figure img:nth-child(32) {
+  width: 3.5rem;
+  top: 32rem;
+  left: 16%;
+}
+article.fordesktop figure img:nth-child(33) {
+  width: 3.5rem;
+  top: 38rem;
+  left: 22%;
+}
+article.fordesktop figure img:nth-child(34) {
+  width: 3.5rem;
+  top: 36rem;
+  left: 32%;
+}
+article.fordesktop figure img:nth-child(35) {
+  width: 3.5rem;
+  top: 38rem;
+  left: 58%;
+}
+article.fordesktop figure img:nth-child(36) {
+  width: 3.5rem;
+  top: 39rem;
+  left: 67%;
+}
+article.fordesktop figure img:nth-child(37) {
+  width: 3.5rem;
+  top: 40rem;
+  left: 87%;
+}
+article.fordesktop figure img:nth-child(38) {
+  width: 3.5rem;
+  top: 90%;
+  left: 10%;
+}
+article.fordesktop figure img:nth-child(39) {
+  width: 3.5rem;
+  top: 91%;
+  left: 19%;
+}
+article.fordesktop figure img:nth-child(40) {
+  width: 3.5rem;
+  top: 88%;
+  left: 32%;
+}
+article.fordesktop figure img:nth-child(41) {
+  width: 3.5rem;
+  top: 89%;
+  left: 48%;
+}
+article.fordesktop figure img:nth-child(42) {
+  width: 3.5rem;
+  top: 90%;
+  left: 80%;
+}
+article.fordesktop figure img:nth-child(43) {
+  width: 3.5rem;
+  top: 88%;
+  left: 86%;
+}
+
+article.formobile figure img:nth-child(1) {
+  width: 4rem;
+  top: 2rem;
+  right: 2rem;
+}
+
+article.formobile figure img:nth-child(2) {
+  width: 4rem;
+  top: 12rem;
+  right: 1.25rem;
+}
+
+article.formobile figure img:nth-child(3) {
+  width: 12rem;
+  top: 11rem;
+  left: 1.5rem;
+}
+
+article.formobile figure img:nth-child(1) {
+  -webkit-animation: scale2 4s infinite;
+  -moz-animation: scale2 4s infinite;
+  -ms-animation: scale2 4s infinite;
+  animation: scale2 4s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(3) {
+  -webkit-animation: rotate3 3s infinite;
+  -moz-animation: rotate3 3s infinite;
+  -ms-animation: rotate3 3s infinite;
+  animation: rotate3 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(5) {
+  -webkit-animation: rotate4 3s infinite;
+  -moz-animation: rotate4 3s infinite;
+  -ms-animation: rotate4 3s infinite;
+  animation: rotate4 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(8) {
+  -webkit-animation: rotate2 5s infinite;
+  -moz-animation: rotate2 5s infinite;
+  -ms-animation: rotate2 5s infinite;
+  animation: rotate2 5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(9) {
+  -webkit-animation: scale1 3s infinite;
+  -moz-animation: scale1 3s infinite;
+  -ms-animation: scale1 3s infinite;
+  animation: scale1 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(3):hover,
+article.formobile figure img:nth-child(5):hover,
+article.formobile figure img:nth-child(8):hover {
+  scale: 1.08;
+}
+
+article.formobile figure img:nth-child(4) {
+  width: 4rem;
+  top: 17rem;
+  right: 1rem;
+
+  -webkit-animation: rotate4 2s infinite;
+  -moz-animation: rotate4 2s infinite;
+  -ms-animation: rotate4 2s infinite;
+  animation: rotate4 2s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(5) {
+  width: 9rem;
+  top: 19.5rem;
+  right: 3.25rem;
+}
+
+article.formobile figure img:nth-child(6) {
+  width: 3.5rem;
+  top: 23rem;
+  left: 1.5rem;
+
+  -webkit-animation: scale1 2.5s infinite;
+  -moz-animation: scale1 2.5s infinite;
+  -ms-animation: scale1 2.5s infinite;
+  animation: scale1 2.5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(7) {
+  width: 3.5rem;
+  top: 25.5rem;
+  left: 8rem;
+
+  -webkit-animation: scale2 3.5s infinite;
+  -moz-animation: scale2 3.5s infinite;
+  -ms-animation: scale2 3.5s infinite;
+  animation: scale2 3.5s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+article.formobile figure img:nth-child(8) {
+  width: 9rem;
+  top: 30rem;
+  left: 1rem;
+}
+
+article.formobile figure img:nth-child(9) {
+  width: 4rem;
+  top: 38rem;
+  right: 8.5rem;
+}
+
+article.formobile figure img:nth-child(10) {
+  width: 4rem;
+  top: 36.75rem;
+  right: 0.5rem;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 1.5rem;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+address {
+  font-style: normal;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+address span:nth-child(1),
+header p:nth-child(1) {
+  color: #eb6a3c;
+}
+address span:nth-child(1) {
+margin-right: 0.125rem;
+}
+
+address span:nth-child(2),
+header p:nth-child(2) {
+  color: #29aae0;
+}
+address span:nth-child(3),
+header p:nth-child(3) {
+  color: #86d41f;
+}
+
+@keyframes scale1 {
+  0% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+  50% {
+    -moz-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+  100% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes scale2 {
+  0% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+  50% {
+    -moz-transform: translate(5%, 5%);
+    -ms-transform: translate(5%, 5%);
+    transform: translate(5%, 5%);
+  }
+  100% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate4 {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.formobile {
+  display: none;
+}
+
+.fordesktop {
+  display: block;
+}
+
+/*<!-- Modal -->*/
+
+/* The Modal (background) */
+.ebcf_modal1 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 10%;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ebcf_modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  width: 40%;
+}
+
+.ebcf_modal-content1 p {
+  font-family: "pretendard-regular", sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.4;
+
+  word-break: keep-all;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+/* The Close Button */
+
+.ebcf_close1:hover,
+.ebcf_close1:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (orientation: portrait), (max-width: 480px) {
+  body {
+    overflow: auto;
+  }
+
+  .formobile {
+    display: block;
+  }
+
+  header {
+    position: relative;
+    transform: translate(0);
+
+    top: 0;
+    left: 0;
+  }
+
+  header p {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 0.3;
+  }
+
+  .ebcf_modal1 {
+    padding-top: 20%;
+  }
+
+  .ebcf_modal-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0.75rem 1.25rem;
+    width: calc(80% - 1rem);
+  }
+
+  .ebcf_modal-content1 p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .fordesktop {
+    display: none;
+  }
+
+  footer {
+    display: block;
+  }
+}
