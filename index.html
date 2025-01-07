@@ -1,13 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta
       name="viewport"
-      content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no viewport-fit=cover"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no  viewport-fit=cover"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="email=no" />
     <title>GYEON</title>
 
     <meta name="description" content="PARK, JEONG GYEON" />
@@ -42,11 +47,6 @@
       content="https://gyeon.org/assets/images/og-image.jpg"
     />
 
-    <link
-      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css"
-      rel="stylesheet"
-    />
-
     <link rel="preload" href="./assets/css/font.css" as="style" />
     <link
       href="./assets/css/font.css"
@@ -55,6 +55,7 @@
       onload="this.media='all'"
       type="text/css"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <link
       rel="apple-touch-icon"
@@ -75,2545 +76,2162 @@
     />
     <link rel="manifest" href="./assets/images/site.webmanifest" />
 
-    <link href="./assets/css/normalize.css" rel="stylesheet" type="text/css" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="./assets/script/current-device-browser.min.js"></script>
+    <script src="./assets/script/script.js"></script>
     <link
       rel="stylesheet"
-      href="./assets/css/style.css"
       type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/css/main.css"
-      type="text/css"
-      media="all"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <script type="text/javascript" src="./assets/js/plugins.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   </head>
 
   <body>
-    <div id="js-height-forcer" class="forcer"></div>
-
-    <div class="onload">
-      <!-- INTRO ANIMATION -->
-
-      <div class="intro">
-        <h1 class="hide">
-          <div class="rect"></div>
-          <span class="text">PARK,</span>
-          <span class="text">JEONG </span>
-          <span class="text">GYEON</span>
-
-          <!-- <span class="text intro-img"></span> -->
-          <span class="text"></span>
-        </h1>
-
-        <h1 class="hide">
-          <div class="rect"></div>
-          <span class="text" style="margin: 0; font-size: 62.5%"></span>
-        </h1>
-      </div>
-    </div>
-
-    <main class="main-wrapper">
-      <div class="home state-active">
-        <div class="home-header">
-          <header>
-            <div class="home-header__wrapper open">
-              <a>PARK, JEONG GYEON</a>
-
-              <aside class="aside-switch">
-                <a class="c-theme-switch" href="javascript:void(0);">
-                  <span class="is-light">Light</span>
-                  <div class="is-switch"><div class="is-toggle"></div></div>
-                  <span class="is-dark">Dark</span>
-                </a>
-              </aside>
-            </div>
-
-            <div class="home-header__container">
-              <div class="home-header__wrapper open" lang="en">
-                <a href=".">
-                  <span class="badge"></span>Commercial Design and Print;
-                  <sub
-                    >Research and Development, Prototyping and Implementation of
-                    Web Interactive</sub
-                  ></a
-                >
-              </div>
-
-              <div class="home-header__wrapper" lang="en">
-                <a href="./practice/"
-                  >Web experimentation;
-                  <sub
-                    >to write in a structured way, to practice the handmade
-                    web</sub
-                  ></a
-                >
-              </div>
-            </div>
-          </header>
-
-          <!-- <h1 class="home-header__info">
-            <a class="info" href="#">Info</a>
-          </h1> -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <div class="content">
+      <div id="index-global" class="">
+        <div id="links">
+          <div
+            class="number cap"
+            onclick="ordenarPor('number')"
+            style="font-size: var(--main) !important"
+          >
+            Num
+          </div>
+          <div class="title cap" onclick="ordenarPor('title')">Title</div>
+          <div class="category cap" onclick="ordenarPor('category')">
+            Category
+          </div>
+          <div class="year cap" onclick="ordenarPor('year')">Year</div>
         </div>
 
-        <section class="project">
-          <nav class="nav__th nav__th--desktop">
-            <div class="project__details">
-              <div class="project__details__inner">
-                <a
-                  href="#"
-                  class="value__td value__td--title js-swap-order"
-                  data-order="title"
-                  >Title</a
-                >
-
-                <a
-                  href="#"
-                  class="value__td value__td--tag js-swap-order"
-                  data-order="tag"
-                  >Tag</a
-                >
-
-                <a
-                  href="#"
-                  class="value__td value__td--role js-swap-order"
-                  data-order="role"
-                  >Role</a
-                >
-
-                <a
-                  href="#"
-                  class="value__td value__td--year state-active-asc js-swap-order"
-                  data-order="year"
-                  >Year</a
-                >
+        <section class="accordion">
+          <article id="project" class="project collabs accordion-label">
+            <a>
+              <div class="number">01</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">collabs</div>
+              <div class="year">2019</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </div>
-          </nav>
-
-          <nav class="nav__th nav__th--mobile">
-            <h4 class="nav__th__heading">Catalogue</h4>
-            <div class="nav__select">
-              <select id="mobile-sort" class="nav__select__input">
-                <option value="title">Sort by: Title</option>
-                <option value="tag">Sort by: Tag</option>
-                <option value="role">Sort by: Role</option>
-                <option value="year" selected>Sort by: Year</option>
-              </select>
-              <p id="select-text" class="nav__select__text">Sort by: Year</p>
-            </div>
-          </nav>
-
-          <div id="index">
-            <article
-              data-fx="1"
-              id="project-1"
-              class="project__tr js-accordion"
-              data-title="BOOOOOOMa2021a"
-              data-tag="task"
-              data-role="webuidesignwebpaBOOM"
-              data-year="20211aBOOM"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/boooooom-1.jpg"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>BOOOOOOM!</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2021</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>
-                          Design, Graphic Design, Publishing, Wireframes,
-                          Content Strategy
-                        </p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="./practice/basic/boooooom/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Website</a
-                        >
-                      </div>
-                    </div>
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/boooooom.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/boooooom-m-6.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/boooooom-m-1.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="./practice/basic/boooooom/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project collabs accordion-label">
+            <a>
+              <div class="number">02</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">collabs</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <!-- <article
-              data-fx="1"
-              id="project-2"
-              class="project__tr js-accordion"
-              data-title="스테이서유숙a2020awebsite"
-              data-tag="amenity"
-              data-role="webuidesignphotoa스테이서유숙"
-              data-year="2020a스테이서유숙"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-seoyoosuk.jpg?updatedAt=1703346958280"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>스테이 서유숙</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Amenity</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2020</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                     
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Seoyoosuk, Studio Verythings</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Amenity, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>
-                          Design, Publishing, Wireframes, Content
-                          Strategy, Product photography
-                        </p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://seoyoosuk.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/seoyoosuk.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/seoyoosuk-m-1.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/seoyoosuk-m-2.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/seoyoosuk-1(1).jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/seoyoosuk-2(1).jpg"
-                            />
-                          </figure>
-
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://seoyoosuk.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project collabs accordion-label">
+            <a>
+              <div class="number">03</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">collabs</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <article
-              data-fx="1"
-              id="project-3"
-              class="project__tr js-accordion"
-              data-title="베리띵즈a2022aabout"
-              data-tag="advertisement"
-              data-role="webuidesignwebpa베리띵즈"
-              data-year="2022a베리띵즈"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-verythings.jpg?updatedAt=1703347879421"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>베리띵즈</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Advertisement</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2022</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Studio Verythings</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Advertisement, Design Agency, Fashion</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>
-                          Design, Graphic Design, Publishing, Wireframes,
-                          Content Strategy
-                        </p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://verythings.org/working/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Draft Work</a
-                        >
-
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://verythings.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <video muted loop autoplay playsinline>
-                              <source
-                                src="https://ik.imagekit.io/gyeon/verythings.webm?updatedAt=1707899814273"
-                                type="video/webm"
-                              />
-                              <source
-                                src="https://ik.imagekit.io/gyeon/verythings.mp4?updatedAt=1707899814345"
-                                type="video/mp4"
-                              />
-                            </video>
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/verythings-m-2.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/verythings-m-1.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://verythings.org"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">04</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2019</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-4"
-              class="project__tr js-accordion"
-              data-title="스튜디오릴리즈a2021awebsite"
-              data-tag="advertisement"
-              data-role="webuidesigna스튜디오릴리즈"
-              data-year="2021a스튜디오릴리즈"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-release.jpg?updatedAt=1703346957783"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>스튜디오 릴리즈</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Advertisement</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2021</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          상업 사진 스튜디오 웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Studio Release</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Advertisement, Fashion</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://studiorelease.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <video muted loop autoplay playsinline>
-                              <source
-                                src="https://ik.imagekit.io/gyeon/release.webm?updatedAt=1707900716145"
-                                type="video/webm"
-                              />
-                              <source
-                                src="https://ik.imagekit.io/gyeon/release.mp4?updatedAt=1707900715276"
-                                type="video/mp4"
-                              />
-                            </video>
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/release-m-3.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/studiorelease-4.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://studiorelease.kr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">05</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2019</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-5"
-              class="project__tr js-accordion"
-              data-title="에브리리틀씽a2023awebsite"
-              data-tag="advertisement"
-              data-role="webuidesignwebpa에브리리틀씽"
-              data-year="20234a에브리리틀씽"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-elt.jpg?updatedAt=1707725570059"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>에브리리틀씽</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Advertisement</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          디자인 스튜디오 웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Everylittlething</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Advertisement, Design Agency</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://www.figma.com/file/E7zRb0WdxG2xcNcR8yjSvz/ELT-renewal?type=design&node-id=404%3A3295&mode=design&t=60xI7O56WEFSx4Tb-1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Figma File</a
-                        >
-
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://everylittlething.co.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <video muted loop autoplay playsinline>
-                              <source
-                                src="https://ik.imagekit.io/gyeon/elt.webm?updatedAt=1707900862256"
-                                type="video/webm"
-                              />
-                              <source
-                                src="https://ik.imagekit.io/gyeon/elt.mp4?updatedAt=1707900896331"
-                                type="video/mp4"
-                              />
-                            </video>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/everylittlething-m-1.jpg?updatedAt=1697366610496"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/everylittlething-m-2.jpg?updatedAt=1697366610188"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/everylittlething-m-3.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/everylittlething-4.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/everylittlething-3(1).jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://everylittlething.co.kr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">06</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2019</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-6"
-              class="project__tr js-accordion"
-              data-title="블루메미술관a2023awebsite"
-              data-tag="art"
-              data-role="webdeva블루메미술관"
-              data-year="20236a블루메미술관"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-bmca.jpg?updatedAt=1703347967867"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>블루메미술관</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Art</p>
-                  <p class="value__td value__td--role">Web Publishing</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          미술관 웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>블루메미술관</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Art, Gallery, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://bmca.or.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/bmca-1.jpg"
-                            />
-                            <img src="https://ik.imagekit.io/gyeon/bmca.jpg" />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/bmca-m-2.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://bmca.or.kr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">07</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <!-- <article
-              data-fx="1"
-              id="project-7"
-              class="project__tr js-accordion"
-              data-title="성형뷰티a2023aappservice"
-              data-tag="medical"
-              data-role="appservicea성형뷰티"
-              data-year="20235a성형뷰티"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/natoo.jpg"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>
-                      성형 뷰티 B2B‧B2C 서비스
-                      <span class="brackets">나투</span>
-                    </h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">medical</p>
-                  <p class="value__td value__td--role">app service Design</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <h4 class="caption__text__heading">
-                          성형&뷰티 앱 서비스&nbsp;
-                        </h4>
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Natoo</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Medical, Advertisement, SaaS</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>
-                          App Service Design, Design, Publishing,
-                          Wireframes
-                        </p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://drive.google.com/drive/folders/1FpuNZIDmDr9ngf2qt_hrNLtyAYjSpxSQ?usp=share_link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >Prototype(Google Drive)</a
-                        >
-
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://www.figma.com/file/O1RBZJ15sSGAqFfmHFaWrt/natoo-service-view?type=design&mode=design"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Figma File</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img src="https://ik.imagekit.io/gyeon/natoo.jpg" />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/thumbnail-natoo-4.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/thumbnail-natoo-5.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/thumbnail-natoo-7.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/thumbnail-natoo-8.jpg"
-                            />
-                          </figure>
-
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://drive.google.com/drive/folders/1FpuNZIDmDr9ngf2qt_hrNLtyAYjSpxSQ?usp=share_link"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">08</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <article
-              data-fx="1"
-              id="project-8"
-              class="project__tr js-accordion"
-              data-title="노들장애인야학a20237awebsite"
-              data-tag="education"
-              data-role="webuidesignwebpa노들장애인야학"
-              data-year="20237a노들장애인야학"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-nodl.jpg"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>노들오래대다노들좋다노들쭉가자</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">education</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          야학 30주년 특별 웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>노들장애인야학</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Education, Celebration</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://30th.nodl.or.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/nodl-1.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/30th-nodl-m-2.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/30th-nodl-m-1.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/nodl-4.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://30th.nodl.or.kr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">09</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-9"
-              class="project__tr js-accordion"
-              data-title="일상의a역사a2020agraphic"
-              data-tag="advertisement"
-              data-role="graphica일상의a역사"
-              data-year="2020a일상의a역사"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/a-history-of-practice-3.jpg"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>일상의 역사</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Advertisement</p>
-                  <p class="value__td value__td--role">graphic design</p>
-                  <p class="value__td value__td--year">2020</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          2021년 달력 그래픽 이미지&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <div>
-                          <p style="text-decoration: underline">Client</p>
-                          <p>PaTI, Everyday-Practice</p>
-                          <p
-                            style="text-decoration: underline; margin-top: 1em"
-                          >
-                            Tag
-                          </p>
-                          <p>Advertisement</p>
-                          <p
-                            style="text-decoration: underline; margin-top: 1em"
-                          >
-                            Role
-                          </p>
-                          <p>Graphic Design</p>
-                        </div>
-                      </div>
-
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://everyday-practice.com/a-history-of-practice/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Article</a
-                        >
-                      </div>
-                    </div>
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/a-history-of-practice.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/a-history-of-practice-3.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/a-history-of-practice-4.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://everyday-practice.com/a-history-of-practice/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Article</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">010</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-10"
-              class="project__tr js-accordion"
-              data-title="제이와이디디엠a2021awebsite"
-              data-tag="commerce"
-              data-role="webpublishinga제이와이디디엠"
-              data-year="202405a제이와이디디엠"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img=""
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>제이와이디디엠</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Commerce</p>
-                  <p class="value__td value__td--role">Web Publishing</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>JYDdM</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Commerce</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Publishing, Design</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="http://jyddm.co.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/jyddm.jpg?updatedAt=1724469078672"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">011</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-10"
-              class="project__tr js-accordion"
-              data-title="아늑료칸a2021awebsite"
-              data-tag="amenity"
-              data-role="webpublishinga아늑료칸"
-              data-year="202401a아늑료칸"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img=""
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>아늑 료칸</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Amenity</p>
-                  <p class="value__td value__td--role">Web Publishing</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Space Planning</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Amenity, Commerce</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Publishing, Design</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="./practice/basic/annk"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/annk.jpg?updatedAt=1724469442636"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">012</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <!-- <article
-              data-fx="1"
-              id="project-11"
-              class="project__tr js-accordion"
-              data-title="파주속건축a2020agraphic"
-              data-tag="task"
-              data-role="graphica파주속건축"
-              data-year="2020a파주속건축"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-paju.jpg?updatedAt=1703347746838"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>파주 속 건축</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">graphic design</p>
-                  <p class="value__td value__td--year">2020</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                    
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>Graphic Design, Screen Printing</p>
-                      </div>
-                      <div class="caption__text__clear"></div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <video muted loop autoplay playsinline>
-                              <source
-                                src="https://ik.imagekit.io/gyeon/paju.webm?updatedAt=1707969611303"
-                                type="video/webm"
-                              />
-                              <source
-                                src="https://ik.imagekit.io/gyeon/paju.mp4?updatedAt=1707969611294"
-                                type="video/mp4"
-                              />
-                            </video>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/architectural-paju-1.png"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/architectural-paju-2.png"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">013</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <!-- <article
-              data-fx="1"
-              id="project-12"
-              class="project__tr js-accordion"
-              data-title="민원서식a2018aeditorial"
-              data-tag="task"
-              data-role="editoriala민원서식"
-              data-year="2018a민원서식"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/document.jpg"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>민원 서식 개선안</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">editorial design</p>
-                  <p class="value__td value__td--year">2018</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                    
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>Editorial Design, Copywriting</p>
-                      </div>
-
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="./assets/images/pdf/document.pdf"
-                          download="document.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View PDF File</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document-2.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document-4.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="./assets/images/pdf/document.pdf"
-                            download="document.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View PDF File</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">014</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <!-- <article
-              data-fx="1"
-              id="project-13"
-              class="project__tr js-accordion"
-              data-title="TEAM2200a2021awebpage"
-              data-tag="education"
-              data-role="webuidesignaaTEAM2200"
-              data-year="2021aTEAM2200"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-team.jpg?updatedAt=1703347279788"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>
-                      <span class="brackets">TEAM2200</span>
-                    </h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">education</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2021</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                    
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>움직이는청소년센터 EXIT</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Education</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="./practice/basic/team2200"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/team2200.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/team2200-2.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="./practice/basic/team2200""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">015</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <!-- <article
-              data-fx="1"
-              id="project-14"
-              class="project__tr js-accordion"
-              data-title="나투사이드a2023awebsite"
-              data-tag="medical"
-              data-role="webuidesignwebpa나투사이드"
-              data-year="20236a나투사이드"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-color.jpg?updatedAt=1703347185944"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>
-                      나투 사이드 프로젝트
-                      <span class="brackets">너의 얼굴은/너의 컬러는</span>
-                    </h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">medical</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <h4 class="caption__text__heading">
-                          나투 사이드 프로젝트&nbsp;
-                        </h4>
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Natoo</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Medical, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <div>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__text__button"
-                            href="https://www.figma.com/file/SJSplxWHaSrUX5yXjcgqcx/natoo_shared?type=design&node-id=310%3A4631&t=mA4vmAivDIrzcRgs-1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Figma File</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/your-face.jpg?updatedAt=1708369217502"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">016</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-
-            <article
-              data-fx="1"
-              id="project-16"
-              class="project__tr js-accordion"
-              data-title="곧은순a2020atype"
-              data-tag="task"
-              data-role="typea곧은순"
-              data-year="2020a곧은순"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-soon.png?updatedAt=1703346513006"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>곧은순</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">type design</p>
-                  <p class="value__td value__td--year">2020</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          한글 반부리 장체&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>Type Design, Editorial Design</p>
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/soon-2.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/soon-3.png?updatedAt=1694838306451"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/soon-4.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/soon-5.jpg"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">017</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <article
-              data-fx="1"
-              id="project-17"
-              class="project__tr js-accordion"
-              data-title="부동산서비스a2022awebsite"
-              data-tag="advertisement"
-              data-role="webuidesigna부동산서비스"
-              data-year="2022a부동산서비스"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-ohoi.jpg?updatedAt=1703347744606"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>오호이</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">advertisement</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2022</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>OHOI Project</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing, Wireframes</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://ohoi.xyz"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/ohoi-3.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/ohoi-m-1.jpg"
-                            />
-
-                            <img src="https://ik.imagekit.io/gyeon/ohoi.jpg" />
-                          </figure>
-                        </div>
-                        <span class="badge"></span>
-                        <a
-                          class="caption__image__button"
-                          href="https://ohoi.xyz"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">018</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <article
-              data-fx="1"
-              id="project-18"
-              class="project__tr js-accordion"
-              data-title="숫자일력a2019agraphic"
-              data-tag="task"
-              data-role="graphica숫자일력"
-              data-year="2019a숫자일력"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-num-jpg.jpg?updatedAt=1703347746721"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>숫자일력</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">graphic design</p>
-                  <p class="value__td value__td--year">2019</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>Graphic Design, Content Strategy, Book Binding</p>
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/number.jpg"
-                            />
-                            <img src="https://ik.imagekit.io/gyeon/num-1.jpg" />
-                            <img src="https://ik.imagekit.io/gyeon/num-3.jpg" />
-                            <img src="https://ik.imagekit.io/gyeon/num-2.jpg" />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">019</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <!-- <article
-              data-fx="1"
-              id="project-20"
-              class="project__tr js-accordion"
-              data-title="의도된a2019aeditorial"
-              data-tag="task"
-              data-role="editoriala의도된"
-              data-year="2019a의도된"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-document-2.jpg?updatedAt=1703346957182"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>
-                      <span class="brackets">의도된 노출</span>
-                    </h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">editorial design</p>
-                  <p class="value__td value__td--year">2019</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                  
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>
-                          Editorial Design, Copywriting, Content Strategy, Book
-                          Binding
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document19-3.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document19.jpg"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/document19-2.jpg?updatedAt=1694847082972"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project ui accordion-label">
+            <a>
+              <div class="number">020</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">Web UX/UI</div>
+              <div class="year">2022</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-            <article
-              data-fx="1"
-              id="project-21"
-              class="project__tr js-accordion"
-              data-title="인티머시a2023awebsite"
-              data-tag="advertisement"
-              data-role="webuidesigna인티머시"
-              data-year="2023a인티머시"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-ick.jpg?updatedAt=1707725570099"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>인티머시 코디네이터 코리아</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">advertisement</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2023</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <!-- <h4 class="caption__text__heading">
-                          인티머시 코디네이터 홍보 웹사이트&nbsp;
-                        </h4> -->
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Intimacy Coordinator Japan</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Advertisement, News</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design, Publishing</p>
-                        <!-- <p style="text-decoration: underline; margin-top: 1em">
-                          기여도
-                        </p>
-                        <p>기획 80, 디자인 100, 웹 개발 50</p> -->
-                      </div>
-
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://www.intimacycoordinatorkorea.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/intimacycoordinator-1.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/intimacycoordinator-m-1.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/intimacycoordinator-4.jpg"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://www.intimacycoordinatorkorea.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">021</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-            <!-- <article
-              data-fx="1"
-              id="project-22"
-              class="project__tr js-accordion"
-              data-title="글꼴분석집a2014aeditorial"
-              data-tag="task"
-              data-role="editoriala글꼴분석집"
-              data-year="2014a글꼴분석집"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/light-gray-solid-color-background.jpg?updatedAt=1690227435975"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>글꼴 비교/분석집</h3>
-                  </header>
-                  
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">editorial design</p>
-                  <p class="value__td value__td--year">2014</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p class="caption__info">
-                          분석 작업을 할 때 디도와 발바움 모두 라이노타이프
-                          회사의 글꼴을 사용했다. 디도와 발바움은 만들어진지
-                          200년이 지나 많은 회사들이 다양한 서체를 만들고
-                          있는데, 라이노타이포의 글꼴이 그나마 가장 원형에
-                          가까운 글꼴이라고 생각했기 때문이다. 서체의
-                          비교・분석을 위해 가장 무난한 보통(Regular, Roman)
-                          크기를 사용했다.
-                        </p>
-                        <p>
-                          영문 알파벳을 소재로 글자의 기본 형태・구조・공간에
-                          대해 배우고, 디자인을 할 때 글자를 활용하는 능력을
-                          기를 수 있었습니다.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/didot-walbaum-1.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/didot-walbaum-4.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/didot-walbaum-2.jpg"
-                            />
-                            <figcaption>최종 분석집 쪽배열표.</figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">022</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-
-            <!-- <article
-              data-fx="1"
-              id="project-23"
-              class="project__tr js-accordion"
-              data-title="밑줄긋는방법a2021awebuidesign"
-              data-tag="task"
-              data-role="webuidesigna밑줄긋는방법"
-              data-year="2021a밑줄긋는방법"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-underline.jpg?updatedAt=1703577914797"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3>밑줄 긋는 방법</h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Task</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2021</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Role</p>
-                        <p>Design, Publishing, Copywriting</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          class="caption__text__button"
-                          href="https://underline.neocities.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/underline.jpg"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">023</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article> -->
-
-            <article
-              data-fx="1"
-              id="project-24"
-              class="project__tr js-accordion"
-              data-title="카달로그a2024awebuidesign"
-              data-tag="commerce"
-              data-role="webuidesigna카달로그"
-              data-year="202401a카달로그"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/hover-cadalogue.jpg?updatedAt=1707725922468"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3><em>카달로그</em></h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Commerce</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline">Client</p>
-                        <p>Overthesunshine</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Fashion, Commerce, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://cadalogue.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/cadalogue-1.jpg?updatedAt=1707901467906"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/cadalogue-2.jpg?updatedAt=1707901465366"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/cadalogue-3.jpg?updatedAt=1707901466498"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/cadalogue-4.jpg?updatedAt=1707901466495"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://cadalogue.kr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">024</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <article
-              data-fx="1"
-              id="project-25"
-              class="project__tr js-accordion"
-              data-title="산수화a2024awebuidesign"
-              data-tag="commerce"
-              data-role="webuidesigna산수화"
-              data-year="202404a산수화"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/sansuhwa-1.jpg?updatedAt=1712994358147"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3><em>산수화 티하우스</em></h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Commerce</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Commerce, Art, Gallery, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://sansuhwa.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <!-- <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/sansuhwa-2.jpg?updatedAt=1712994358357"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/sansuhwa-3.jpg?updatedAt=1712994359587"
-                            />
-                            <img
-                              src="https://ik.imagekit.io/gyeon/sansuhwa-1.jpg?updatedAt=1712994358147"
-                            />
-                          </figure> -->
-                          <!-- <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://sansuhwa.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          > -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">025</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <article
-              data-fx="1"
-              id="project-26"
-              class="project__tr js-accordion"
-              data-title="산수화a2024awebuidesign"
-              data-tag="archive"
-              data-role="webuidesigna산수화"
-              data-year="202404a산수화"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img="https://ik.imagekit.io/gyeon/archive.jpg?updatedAt=1716456539138"
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3><em>산수화 아카이브</em></h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Archive</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Archive, Art, Gallery</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Design</p>
-                      </div>
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://archive.sansuhwa.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              src="https://ik.imagekit.io/gyeon/sansuhwa-archive-3.jpg?updatedAt=1716456481181"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/gyeon/sansuhwa-archive-2.jpg?updatedAt=1716456480879"
-                            />
-                          </figure>
-                          <span class="badge"></span
-                          ><a
-                            class="caption__image__button"
-                            href="https://archive.sansuhwa.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >View Live Website</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">026</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <article
-              data-fx="1"
-              id="project-28"
-              class="project__tr js-accordion"
-              data-title="choa2024agraphicdesign"
-              data-tag="advertisement"
-              data-role="graphicdesignacho"
-              data-year="202407acho"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img=""
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3><em>2024 조장현</em></h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Exhibition</p>
-                  <p class="value__td value__td--role">Graphic design</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Exhibition, Advertisement</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Graphic Design</p>
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure>
-                            <img
-                              style="width: 33.3%"
-                              src="https://ik.imagekit.io/gyeon/cho.jpg?updatedAt=1724470536611"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">027</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
-
-            <article
-              data-fx="1"
-              id="project-29"
-              class="project__tr js-accordion"
-              data-title="padoa2024agraphicdesign"
-              data-tag="advertisement"
-              data-role="graphicdesignapado"
-              data-year="202410apado"
-            >
-              <a
-                href="#"
-                class="project__details js-accordion__trigger block__link"
-                data-img=""
-              >
-                <div class="project__details__inner">
-                  <header class="value__td value__td--title">
-                    <h3><em>PADO</em></h3>
-                  </header>
-
-                  <p class="value__td value__td--tag">Archive</p>
-                  <p class="value__td value__td--role">Web Design</p>
-                  <p class="value__td value__td--year">2024</p>
-                </div>
-              </a>
-
-              <div class="project__detail js-accordion__body">
-                <div class="js-accordion__inner">
-                  <div class="caption">
-                    <div class="caption__text scope-text">
-                      <div class="caption__text__content">
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Tag
-                        </p>
-                        <p>Archive, Graphic, Art</p>
-                        <p style="text-decoration: underline; margin-top: 1em">
-                          Role
-                        </p>
-                        <p>Web Design</p>
-                      </div>
-
-                      <div class="caption__text__content">
-                        <span class="badge"></span
-                        ><a
-                          style="margin-right: 0.75rem"
-                          class="caption__text__button"
-                          href="https://pado.sansuhwa.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >View Live Website</a
-                        >
-                      </div>
-                    </div>
-
-                    <div class="caption__image">
-                      <div class="caption__image__inner">
-                        <div class="media">
-                          <figure style="grid-template-columns: 1fr 1fr">
-                            <img
-                              style="grid-column-end: 2"
-                              src="https://ik.imagekit.io/11195/sansuhwa/public/1-1-poster-2.jpg"
-                            />
-
-                            <img
-                              src="https://ik.imagekit.io/11195/sansuhwa/public/1-1-poster-1.jpg"
-                            />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">028</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
               </div>
-            </article>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">029</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2021</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">030</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">031</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">032</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">033</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">034</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2024</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">035</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">036</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">037</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">038</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">039</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">040</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">041</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">042</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">043</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">044</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">045</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">046</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2020</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
+          </div>
+        </section>
+        <section class="accordion">
+          <article id="project" class="project graphic accordion-label">
+            <a>
+              <div class="number">047</div>
+              <div class="title">gyeon.org &#8211; upcoming</div>
+              <div class="category">graphic</div>
+              <div class="year">2023</div>
+              <div class="cover-popup">
+                <img
+                  class="lazy"
+                  src="./assets/images/bezel-cover-150.png"
+                  data-src="./assets/images/bezel-cover.png"
+                  alt="Reload to view the image."
+                />
+              </div>
+            </a>
+          </article>
+          <div class="accordion-content" tabindex="0">
+            <figure>
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+              <img src="./assets/images/bezel.png" alt="no" />
+            </figure>
+            <p>upcoming</p>
           </div>
         </section>
       </div>
-      <div class="project__details__length">
-        <span id="length" class="length"></span>
+
+      <div class="nav">
+        <div class="sp" tabindex="1">
+          <a>Park jeong-gyeon</a><span>INFO</span>
+        </div>
+        <div class="open-menu" tabindex="4">
+          <a>CLOSE MENU</a><span>OPEN MENU</span>
+        </div>
+        <div class="hidden">
+          <div class="sec">
+            <!-- <div class="pr active">
+              <a >PROJECTS</a>
+              <a class="count">47</a>
+            </div> -->
+            <li class="index" tabindex="2">
+              <p>Gallery</p>
+              <span>Index</span> <a class="count"></a>
+            </li>
+            <li class="contact" tabindex="2"><a>CONTACT</a></li>
+            <li class="rrss">
+              <a href="mailto:mail@gyeon.org">MAIL</a>
+            </li>
+            <li class="rrss">
+              <a href="https://www.instagram.com/jeong.gyeon">INSTAGRAM</a>
+            </li>
+          </div>
+          <div class="sec cat">
+            <li class="categorie" id="ui" tabindex="3">
+              <a>Web UX/UI</a>
+              <a class="count"></a>
+            </li>
+
+            <li class="categorie" id="graphic" tabindex="3">
+              <a>Graphic</a>
+              <a class="count"></a>
+            </li>
+            <li class="categorie" id="collabs" tabindex="3">
+              <a>COLLABS</a>
+              <a class="count">0</a>
+            </li>
+
+            <!-- <li class="categorie" id="interior">
+              <a>INTERIOR</a>
+              <a class="count">0</a>
+            </li> -->
+          </div>
+          <div class="sec">
+            <div id="mode" class="dark" tabindex="4">
+              <a>DARK MODE</a><span>LIGHT MODE</span>
+            </div>
+            <div id="grid" tabindex="4"><a>GRID</a><span>EXPAND</span></div>
+          </div>
+        </div>
+        <div class="about">
+          <p>박정견은 ...</p>
+        </div>
       </div>
-    </main>
+      <script>
+        let ordenAscendente = true;
 
-    <footer class="safe-bottom">
-      <div class="footer-wrapper">
-        <!-- <div class="footer-inner">
-          <iframe
-            width="480"
-            height="360"
-            style="max-width: 480px; height: 360px"
-            src="https://www.printedmatter.org/catalog/tables/33686/embed"
-            frameborder="0"
-          ></iframe>
-        </div> -->
-        <div class="footer-inner">
-          <a href="#" class="gototop">top</a>
-          <address><a href="mailto:mail@gyeon.org">mail@gyeon.org</a></address>
-        </div>
-        <div class="footer-inner">
-          <figure class="construction">
-            <img src="./assets/images/always2.gif" />
-          </figure>
-        </div>
+        function ordenarPor(criterio) {
+          const lista = document.getElementById("index-global");
+          const proyectos = Array.from(lista.children);
 
-        <div class="footer-inner">
-          <a href="#" class="gototop"
-            >© 2024. PARK JEONG GYEON all rights reserved.</a
-          >
-        </div>
-      </div>
-    </footer>
+          proyectos.sort((proyectoA, proyectoB) => {
+            const valorA = proyectoA.querySelector("." + criterio).textContent;
+            const valorB = proyectoB.querySelector("." + criterio).textContent;
+            return (ordenAscendente ? 1 : -1) * valorA.localeCompare(valorB);
+          });
 
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/charming.min.js"></script>
-    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="./assets/js/TweenMax.min.js"></script>
-    <script src="./assets/js/hover.js"></script>
-
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script type="text/javascript" src="./assets/js/loading.js"></script>
-
-    <script src="./assets/js/lightdark.js"></script>
-    <script>
-      $(document).ready(function () {
-        // intro-random img
-
-        // const imgs = [
-        //   "./assets/images/cloud/c1.jpg",
-        //   "./assets/images/cloud/c2.jpg",
-        //   "./assets/images/cloud/c3.jpg",
-        //   "./assets/images/cloud/c4.jpg",
-        //   "./assets/images/cloud/c5.jpg",
-        //   "./assets/images/cloud/c6.jpg",
-        //   "./assets/images/cloud/c7.jpg",
-        //   "./assets/images/cloud/c8.jpg",
-        //   "./assets/images/cloud/c9.jpg",
-        //   "./assets/images/cloud/c10.jpg",
-        //   "./assets/images/cloud/c11.jpg",
-        //   "./assets/images/cloud/c12.jpg",
-        //   "./assets/images/cloud/c13.jpg",
-        //   "./assets/images/cloud/c14.jpg",
-        //   "./assets/images/cloud/c15.jpg",
-        //   "./assets/images/cloud/c16.jpg",
-        //   "./assets/images/cloud/c17.jpg",
-        // ];
-
-        // const introimg = imgs[Math.floor(Math.random() * imgs.length)];
-
-        // const etImg = document.createElement("img");
-        // etImg.src = `${introimg}`;
-
-        // const homePage = document.querySelector(".intro-img");
-        // homePage.appendChild(etImg);
-
-        $("html").css("overflow-y", "hidden");
-        // $(".onload .line_text").css("scale", "1");
-
-        $("html, body").animate(
-          {
-            scrollTop: $(".onload").offset().top,
-          },
-          "fast"
-        );
-
-        var n = $("article").length;
-        $("#length").html("Total " + n);
-      });
-
-      setTimeout(function () {
-        $("html").css("overflow-y", "auto");
-      }, 3000);
-
-      $(".onload").click(function () {
-        $(this).hide();
-        $("html").css("overflow-y", "auto");
-        $("main, footer").css("opacity", "1");
-      });
-
-      //image preload
-      const images = [
-        "https://ik.imagekit.io/gyeon/hover-boom.jpg",
-        "https://ik.imagekit.io/gyeon/boooooom.jpg",
-        "https://ik.imagekit.io/gyeon/boooooom-1.jpg",
-        "https://ik.imagekit.io/gyeon/boooooom-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/boooooom-m-6.jpg",
-        "https://ik.imagekit.io/gyeon/hover-seoyoosuk.jpg?updatedAt=1703346958280",
-        "https://ik.imagekit.io/gyeon/seoyoosuk.jpg",
-        "https://ik.imagekit.io/gyeon/seoyoosuk-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/seoyoosuk-m-2.jpg",
-        "https://ik.imagekit.io/gyeon/seoyoosuk-1(1).jpg",
-        "https://ik.imagekit.io/gyeon/seoyoosuk-2(1).jpg",
-        "https://ik.imagekit.io/gyeon/hover-verythings.jpg?updatedAt=1703347879421",
-        "https://ik.imagekit.io/gyeon/verythings.jpg",
-        "https://ik.imagekit.io/gyeon/verythings.mp4?updatedAt=1707899814345",
-        "https://ik.imagekit.io/gyeon/verythings.webm?updatedAt=1707899814273",
-        "https://ik.imagekit.io/gyeon/verythings-m-2.jpg",
-        "https://ik.imagekit.io/gyeon/verythings-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/verythings-3.jpg",
-        "https://ik.imagekit.io/gyeon/release.webm?updatedAt=1707900716145",
-        "https://ik.imagekit.io/gyeon/release.mp4?updatedAt=1707900715276",
-        "https://ik.imagekit.io/gyeon/hover-release.jpg?updatedAt=1703346957783",
-        "https://ik.imagekit.io/gyeon/release-m-2.jpg?updatedAt=1697111909772",
-        "https://ik.imagekit.io/gyeon/release-m-3.jpg",
-        "https://ik.imagekit.io/gyeon/studiorelease-2.jpg",
-        "https://ik.imagekit.io/gyeon/studiorelease-4.jpg",
-        "https://ik.imagekit.io/gyeon/hover-elt.jpg?updatedAt=1703346514356",
-        "https://ik.imagekit.io/gyeon/elt.webm?updatedAt=1707900862256",
-        "https://ik.imagekit.io/gyeon/elt.mp4?updatedAt=1707900896331",
-        "https://ik.imagekit.io/gyeon/everylittlething-2.jpg",
-        "https://ik.imagekit.io/gyeon/everylittlething-m-1.jpg?updatedAt=1697366610496",
-        "https://ik.imagekit.io/gyeon/everylittlething-m-2.jpg?updatedAt=1697366610188",
-        "https://ik.imagekit.io/gyeon/everylittlething-m-3.jpg",
-        "https://ik.imagekit.io/gyeon/everylittlething-4.jpg",
-        "https://ik.imagekit.io/gyeon/everylittlething-3(1).jpg",
-        "https://ik.imagekit.io/gyeon/hover-bmca.jpg?updatedAt=1703347967867",
-        "https://ik.imagekit.io/gyeon/bmca-1.jpg",
-        "https://ik.imagekit.io/gyeon/bmca.jpg",
-        "https://ik.imagekit.io/gyeon/bmca-m-2.jpg",
-        "https://ik.imagekit.io/gyeon/natoo.jpg",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-4.jpg",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-5.jpg",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-7.jpg",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-8.jpg",
-        "https://ik.imagekit.io/gyeon/hover-nodl.jpg",
-
-        "https://ik.imagekit.io/gyeon/nodl-1.jpg",
-        "https://ik.imagekit.io/gyeon/30th-nodl-m-2.jpg",
-        "https://ik.imagekit.io/gyeon/30th-nodl-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/nodl-4.jpg",
-        "https://ik.imagekit.io/gyeon/nodl-2.jpg",
-        "https://ik.imagekit.io/gyeon/a-history-of-practice-4.jpg?updatedAt=1707724357696",
-        "https://ik.imagekit.io/gyeon/a-history-of-practice-3.jpg",
-        "https://ik.imagekit.io/gyeon/a-history-of-practice-3.jpg",
-
-        "https://ik.imagekit.io/gyeon/a-history-of-practice.jpg",
-        "https://ik.imagekit.io/gyeon/agshop.jpg",
-        "https://ik.imagekit.io/gyeon/hover-ahnshop.jpg?updatedAt=1707725569834",
-        "https://ik.imagekit.io/gyeon/hover-paju.jpg?updatedAt=1703347746838",
-        "https://ik.imagekit.io/gyeon/paju.webm?updatedAt=1707969611303",
-        "https://ik.imagekit.io/gyeon/paju.mp4?updatedAt=1707969611294",
-        "https://ik.imagekit.io/gyeon/architectural-paju-1.png",
-        "https://ik.imagekit.io/gyeon/architectural-paju-2.png",
-        "https://ik.imagekit.io/gyeon/architectural-paju-3.png",
-        "https://ik.imagekit.io/gyeon/document.jpg",
-        "https://ik.imagekit.io/gyeon/document-2.jpg",
-        "https://ik.imagekit.io/gyeon/document-4.jpg",
-        "https://ik.imagekit.io/gyeon/hover-team.jpg?updatedAt=1703347279788",
-        "https://ik.imagekit.io/gyeon/team2200.jpg",
-        "https://ik.imagekit.io/gyeon/team2200-2.jpg",
-        "https://ik.imagekit.io/gyeon/hover-color.jpg?updatedAt=1703347185944",
-        "https://ik.imagekit.io/gyeon/your-face.jpg?updatedAt=1708369217502",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-9.jpg",
-        "https://ik.imagekit.io/gyeon/thumbnail-natoo-10.jpg",
-        "https://ik.imagekit.io/gyeon/hover-kongnamul.jpg?updatedAt=1703346955936",
-        "https://ik.imagekit.io/gyeon/kongnamul-1.jpg?updatedAt=1703346492297",
-        "https://ik.imagekit.io/gyeon/kongnamul-2.jpg?updatedAt=1703346492268",
-        "https://ik.imagekit.io/gyeon/kongnamul-3.jpg?updatedAt=1703346493318",
-        "https://ik.imagekit.io/gyeon/hover-soon.png?updatedAt=1703346513006",
-        "https://ik.imagekit.io/gyeon/soon-2.jpg",
-        "https://ik.imagekit.io/gyeon/soon-4.jpg",
-        "https://ik.imagekit.io/gyeon/soon-5.jpg",
-        "https://ik.imagekit.io/gyeon/soon-3.png?updatedAt=1694838306451",
-        "https://ik.imagekit.io/gyeon/hover-ohoi.jpg?updatedAt=1703347744606",
-        "https://ik.imagekit.io/gyeon/ohoi-3.jpg",
-        "https://ik.imagekit.io/gyeon/ohoi-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/ohoi.jpg",
-        "https://ik.imagekit.io/gyeon/hover-num-jpg.jpg?updatedAt=1703347746721",
-        "https://ik.imagekit.io/gyeon/number.jpg",
-        "https://ik.imagekit.io/gyeon/num-1.jpg",
-        "https://ik.imagekit.io/gyeon/num-3.jpg",
-        "https://ik.imagekit.io/gyeon/num-2.jpg",
-        "https://ik.imagekit.io/gyeon/hover-document-2.jpg?updatedAt=1703346957182",
-        "https://ik.imagekit.io/gyeon/document19-3.jpg",
-        "https://ik.imagekit.io/gyeon/document19-2.jpg?updatedAt=1694847082972",
-        "https://ik.imagekit.io/gyeon/document19.jpg",
-        "https://ik.imagekit.io/gyeon/intimacycoordinator-1.jpg",
-        "https://ik.imagekit.io/gyeon/hover-ick.jpg",
-
-        "https://ik.imagekit.io/gyeon/intimacycoordinator-m-1.jpg",
-        "https://ik.imagekit.io/gyeon/intimacycoordinator-2.jpg",
-        "https://ik.imagekit.io/gyeon/intimacycoordinator-4.jpg",
-        "https://ik.imagekit.io/gyeon/hover-cadalogue.jpg?updatedAt=1707725922468",
-        "https://ik.imagekit.io/gyeon/cadalogue-1.jpg?updatedAt=1707901467906",
-        "https://ik.imagekit.io/gyeon/cadalogue-3.jpg?updatedAt=1707901466498",
-        "https://ik.imagekit.io/gyeon/cadalogue-4.jpg?updatedAt=1707901466495",
-        "https://ik.imagekit.io/gyeon/cadalogue-2.jpg?updatedAt=1707901465366",
-        "https://ik.imagekit.io/gyeon/sansuhwa-1.jpg?updatedAt=1712994358147",
-        "https://ik.imagekit.io/gyeon/sansuhwa-2.jpg?updatedAt=1712994358357",
-        "https://ik.imagekit.io/gyeon/sansuhwa-3.jpg?updatedAt=1712994359587",
-        "https://ik.imagekit.io/gyeon/sansuhwa-archive-1.jpg?updatedAt=1716456475986",
-        "https://ik.imagekit.io/gyeon/sansuhwa-archive-2.jpg?updatedAt=1716456480879",
-        "https://ik.imagekit.io/gyeon/sansuhwa-archive-3.jpg?updatedAt=1716456481181",
-        "https://ik.imagekit.io/gyeon/sansuhwa-archive-4.jpg?updatedAt=1716456482671",
-        "https://ik.imagekit.io/gyeon/archive.jpg?updatedAt=1716456539138",
-        "https://ik.imagekit.io/gyeon/jyddm.jpg?updatedAt=1724469078672",
-        "https://ik.imagekit.io/gyeon/annk.jpg?updatedAt=1724469442636",
-        "https://ik.imagekit.io/gyeon/cho.jpg?updatedAt=1724470536611",
-        "https://ik.imagekit.io/gyeon/jiji_1.jpg?updatedAt=1724470536812",
-        "https://ik.imagekit.io/gyeon/jiji_2.jpg?updatedAt=1724470537035",
-      ];
-
-      const preload = (images) => () => {
-        images.forEach((image) => {
-          const img = new Image();
-          img.src = image;
-        });
-      };
-
-      const addLoadEvent = (func) => {
-        const onloadEvent = window.onload;
-        if (typeof window.onload != "function") {
-          window.onload = func;
-        } else {
-          window.onload = function () {
-            if (onloadEvent) {
-              onloadEvent();
-            }
-            func();
-          };
+          proyectos.forEach((proyecto) => lista.appendChild(proyecto));
+          ordenAscendente = !ordenAscendente;
         }
-      };
 
-      addLoadEvent(preload(images));
-    </script>
+        function toggleOrden() {
+          const ordenToggleBtn = document.querySelector(
+            "#lista-botones button:nth-child(4)"
+          );
+          ordenToggleBtn.textContent =
+            "Orden " + (ordenAscendente ? "Descendente" : "Ascendente");
+        }
+      </script>
+      <div class="archive">
+        <div class="project collabs select">
+          <a class="link none">
+            <!-- src: load img, data-src: original img -->
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">01</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">collabs</div>
+            <div class="year">2019</div>
+            <br />
+          </div>
+        </div>
+
+        <div class="project collabs select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">02</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">collabs</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project collabs select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">03</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">collabs</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">04</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2019</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">05</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2019</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">06</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2019</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">07</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">08</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">09</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">010</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">011</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">012</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">013</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">014</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">015</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">016</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">017</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">018</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">019</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project ui select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">020</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">Web UX/UI</div>
+            <div class="year">2022</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">021</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">022</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">023</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">024</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">025</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">026</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">027</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">028</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">029</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2021</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">030</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">031</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">032</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">033</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">034</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2024</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">035</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">036</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2018</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">037</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2018</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">038</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">039</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">040</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">041</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">042</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">043</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">044</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">045</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">046</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2020</div>
+            <br />
+          </div>
+        </div>
+        <div class="project graphic select">
+          <a class="link none">
+            <img
+              class="lazy"
+              src="./assets/images/bezel-150.png"
+              data-src="./assets/images/bezel.png"
+              alt="Reload to view the image."
+            />
+          </a>
+          <div class="info-project">
+            <div class="number">047</div>
+            <div class="title">gyeon.org &#8211; upcoming</div>
+            <div class="category">graphic</div>
+            <div class="year">2023</div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-in">
+        <div class="copy">© All rights reserved, 2025.<br /></div>
+      </div>
+    </div>
   </body>
 </html>
