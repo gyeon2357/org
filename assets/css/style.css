@@ -74,12 +74,14 @@ html {
 }
 
 body {
+  counter-reset: footnotes;
+
   position: relative;
 
   font-family: "pretendard-comb-type";
   font-size: var(--main);
   line-height: 14px;
-  text-transform: uppercase;
+
   font-family: var(--font);
   width: 100%;
   height: 100%;
@@ -184,6 +186,37 @@ a {
 .active {
   background-color: lightgrey !important;
 }
+
+ruby {
+  --footnote-display: inline-block;
+}
+
+ruby::before {
+  counter-increment: footnotes;
+  /* The footnote is separated with a thin space. 🤓 */
+  content: "[" counter(footnotes) "] ";
+}
+
+ruby:focus {
+  outline: none;
+}
+
+ruby:focus rt {
+  display: var(--footnote-display);
+}
+
+sup {
+  vertical-align: text-top;
+  font-size: smaller;
+
+  color: darkgray;
+}
+
+sup > mark {
+  background-color: bisque;
+  color: marktext;
+}
+
 /* MENU
 ================================================== */
 
@@ -273,14 +306,17 @@ img.blend {
   top: 5px;
   padding: 5px;
   height: fit-content;
-  background: rgba(222, 222, 217, 0.5);
+  background: #deded980;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
+
   display: grid;
   grid-gap: 5px;
-  grid-column: 1 / span 3;
-  border-radius: 2px;
   grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / span 3;
+
+  text-transform: uppercase;
+  border-radius: 2px;
   z-index: 10002;
 }
 .categorie,
@@ -424,14 +460,15 @@ body.dark #index .filter-opacity {
 .archive {
   --gap: 0px;
   --line-offset: calc(var(--gap) / 2);
-  --line-thickness: 1px;
-  --line-color: red;
+  --line-thickness: 0.5px;
+  --line-color: lightsalmon;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column: span 12;
   grid-gap: 5px;
   gap: var(--gap);
+  color: ;
 }
 .archive.change {
   display: grid;
@@ -500,7 +537,7 @@ body.dark #index .filter-opacity {
   padding: 3px;
 }
 .index.active {
-  background-color: coral !important;
+  background-color: orange !important;
 }
 .pr:hover {
   background-color: blue !important;
@@ -635,6 +672,8 @@ body.dark #index-global .project:hover {
 }
 .category {
   grid-column: 7 / span 1 !important;
+
+  text-transform: capitalize;
 }
 .title {
   text-align: left;
@@ -752,7 +791,7 @@ accordion-content:focus {
 
   width: 100%;
   margin: 0 0 0.5rem;
-  padding: 0 0 0.25rem;
+  padding: 0.25rem 0 0.25rem;
 
   border-bottom: thin solid #efefef;
 }
@@ -1022,13 +1061,16 @@ accordion-content:focus {
 ================================================== */
 .footer {
   margin-top: auto;
-  padding: 10px;
-  font-size: var(--main);
+  padding: 20px 10px 10px;
+
   grid-template-columns: repeat(1, 1fr);
+  grid-column: span 4;
   grid-gap: 0px;
   position: relative;
-  grid-column: span 4;
   color: lightgrey !important;
+
+  font-size: var(--main);
+  text-transform: uppercase;
 }
 body.dark .footer {
   color: darkgrey !important;
@@ -1136,14 +1178,14 @@ li:hover {
     display: none !important;
   }
   .category {
-    display: none;
+    /* display: none; */
   }
   /* HOME
   ================================================== */
   .archive {
     margin-top: calc(var(--large) + 5px);
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
   }
   .nav {
@@ -1278,9 +1320,9 @@ li:hover {
   .archive.change {
     grid-template-columns: repeat(3, 1fr);
   }
-  #links > div {
+  /* #links > div {
     pointer-events: none;
-  }
+  } */
 }
 /* IPHONE LANDSCAPE
 ================================================== */
