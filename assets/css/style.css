@@ -213,8 +213,11 @@ sup {
 }
 
 sup > mark {
-  background-color: bisque;
+  background-color: transparent;
   color: marktext;
+  text-decoration: underline;
+  text-underline-position: from-font;
+  text-underline-offset: 1px;
 }
 
 /* MENU
