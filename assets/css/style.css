@@ -220,6 +220,10 @@ sup > mark {
   text-underline-offset: 1px;
 }
 
+img {
+  filter: blur(2px);
+}
+
 /* MENU
 ================================================== */
 
