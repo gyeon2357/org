@@ -281,7 +281,7 @@ img.blend {
   grid-column: 1 / span 3;
   border-radius: 2px;
   grid-template-columns: repeat(3, 1fr);
-  z-index: 10000;
+  z-index: 10002;
 }
 .categorie,
 .sp,

@@ -67,7 +67,7 @@ $(document).ready(function () {
   $("#graphic").find("a.count").html(graphicN);
   $("#collabs").find("a.count").html(collabsN);
 
-  //index, gallery button
+  //view button
   $(".index").click(function () {
     $(this).toggleClass("active");
     $(".archive, .subsection, .info-inside").toggle();
@@ -77,6 +77,7 @@ $(document).ready(function () {
 
     $(this).find("span").toggle();
     $(this).find("p").toggle();
+    $(".accordion").attr("data-accordion-state", "closed");
   });
 
   // initial button
