@@ -184,6 +184,7 @@ $(document).ready(function () {
   $(".categorie").on("click", function (e) {
     $(".project").addClass("filter-opacity");
     $(".categorie").not($(this)).removeClass("active");
+    
     if (!$(this).hasClass("active")) {
       $("." + e.currentTarget.id).removeClass("filter-opacity");
       $(this).addClass("active");

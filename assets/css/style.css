@@ -6,6 +6,7 @@
   --main: 12px;
   --gap: 10px;
   --lightgrey: #ebebec;
+  --darkgrey: #a6a2a0;
   --font: "pretendard-comb-type";
 }
 ::selection {
@@ -180,6 +181,12 @@ a {
   cursor: pointer;
   line-height: 120%;
 }
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 #index-container a {
   cursor: pointer !important;
 }
@@ -187,21 +194,23 @@ a {
   background-color: lightgrey !important;
 }
 
-ruby {
+cite {
   --footnote-display: inline-block;
   font-size: 87.5%;
+
+  margin-top: 15px;
 }
 
-ruby::before {
+cite::before {
   counter-increment: footnotes;
   content: "[" counter(footnotes) "] ";
 }
 
-ruby:focus {
+cite:focus {
   outline: none;
 }
 
-ruby:focus rt {
+cite:focus rt {
   display: var(--footnote-display);
 }
 
@@ -836,14 +845,12 @@ accordion-content:focus-visible {
   height: auto;
 }
 
-.accordion-content p > strong {
+.accordion-content p > em {
   font-weight: inherit;
+  font-style: inherit;
   background-color: antiquewhite;
 
   margin-right: 0.25rem;
-}
-
-.accordion-content p > strong::after {
 }
 
 .accordion-content p {
@@ -1127,12 +1134,13 @@ body.dark footer {
 .nav-title:hover {
   background-color: lightgrey;
 }
-li:hover {
+header li:hover {
   background-color: lightgrey !important;
 }
 .nav-section > div:hover {
   background-color: lightgrey;
 }
+
 /* FONTS
 ================================================== */
 @font-face {
@@ -1220,6 +1228,7 @@ li:hover {
     grid-column: span 4;
   }
 }
+
 /* IPHONE
 ================================================== */
 @media screen and (max-width: 600px) {
