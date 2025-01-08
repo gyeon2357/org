@@ -224,6 +224,10 @@ body.dark sup > mark {
   color: white;
 }
 
+/* .gallery-container > .project:nth-child(odd) > a {
+  background: #f8f8f8;
+} */
+
 /* MENU
 ================================================== */
 
@@ -355,13 +359,14 @@ img.blend {
 }
 .open-menu {
   grid-column: span 1;
-  background-color: white;
+  background-color: #d9d9d9;
   border-radius: 2px;
   padding: 3px;
 }
 .open-menu:hover {
   background-color: lightgrey;
 }
+
 .hidden {
   height: fit-content;
   grid-gap: 5px;
@@ -386,6 +391,11 @@ img.blend {
   border-radius: 2px;
   padding: 3px;
 }
+
+body.dark .hidden .nav-section li {
+  background-color: #fafafa;
+}
+
 #grid {
   height: fit-content;
   grid-column: span 1;
@@ -677,8 +687,7 @@ body.dark #index-container .project:hover {
   grid-column: span 1;
 }
 .category {
-  grid-column: 7 / span 1 !important;
-
+  grid-column: 7 / span 2;
   text-transform: capitalize;
 }
 .title {
@@ -695,15 +704,27 @@ body.dark #index-container .project:hover {
   border-radius: 2px;
   padding: 3px;
 }
+
 #index-container .cap {
   grid-column: span 1;
   color: black;
-  background: rgba(222, 222, 217);
+  background: #deded9;
   border-radius: 2px;
   padding: 3px;
 
   z-index: 10001;
 }
+
+#index-container .number.cap {
+  pointer-events: none;
+
+  background: rgba(222, 222, 217, 0.5);
+}
+
+#index-container .category.cap {
+  grid-column: 7 / span 1;
+}
+
 #index .project {
   top: 5px;
   grid-gap: 5px !important;
@@ -741,9 +762,13 @@ body.dark #index .cap {
 body.dark #index-container .cap {
   grid-column: span 1;
   color: black;
-  background-color: white;
+  background: white;
   border-radius: 2px;
   padding: 3px;
+}
+
+body.dark #index-container .number.cap {
+  opacity: 0.85;
 }
 
 /* Accordion
@@ -823,6 +848,7 @@ accordion-content:focus-visible {
 
 .accordion-content p {
   margin: 0 0 0.25rem;
+  max-width: 60ch;
 }
 
 .accordion[data-accordion-state="closed"] .accordion-content {
@@ -1149,6 +1175,15 @@ li:hover {
     grid-column: span 7;
     grid-gap: 5px;
   }
+
+  #index-container .category.cap {
+    grid-column: 6 / span 2;
+  }
+
+  #index-container .category {
+    grid-column: 6 / span 3;
+  }
+
   .nav {
     grid-column: 1 / span 5;
     grid-template-columns: repeat(3, 1fr);
