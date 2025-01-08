@@ -194,6 +194,32 @@ $(document).ready(function () {
   });
 });
 
+//keypress
+$(document).on("keyup", ".nav", function (e) {
+  if (e.which == 13) showNavTextConsole($(e.target).click());
+});
+
+$(document).on("keyup", "#index-global", function (e) {
+  if (e.which == 13)
+    
+    $(e.target).attr(
+      "data-accordion-state",
+      $(e.target).attr("data-accordion-state") === "opened"
+        ? "closed"
+        : "opened"
+    );
+
+  $(e.target).find(".accordion-content").focus();
+});
+
+function showNavTextConsole(text) {
+  console.log(text);
+}
+
+function showIndexTextConsole(text) {
+  console.log(text);
+}
+
 // setTimeout(function () {
 //   $(".accordion-content").addClass("accordion-content-property");
 // }, 250);

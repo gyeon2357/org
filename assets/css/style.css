@@ -214,10 +214,14 @@ sup {
 
 sup > mark {
   background-color: transparent;
-  color: marktext;
+  color: black;
   text-decoration: underline;
   text-underline-position: from-font;
   text-underline-offset: 1px;
+}
+
+body.dark sup > mark {
+  color: white;
 }
 
 /* MENU
@@ -464,14 +468,13 @@ body.dark #index .filter-opacity {
   --gap: 0px;
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 0.5px;
-  --line-color: lightsalmon;
+  --line-color: lightgray;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column: span 12;
   grid-gap: 5px;
   gap: var(--gap);
-  color: ;
 }
 .archive.change {
   display: grid;
@@ -648,7 +651,7 @@ body.dark #index-global .project.filter-opacity {
   background-color: lightgrey !important;
 }
 body.dark #index-global .project:hover {
-  background-color: white !important;
+  background-color: gray !important;
   color: black;
 }
 #index-global .project,
@@ -778,8 +781,12 @@ body.dark #index-global .cap {
 }
 
 accordion-content:focus {
-  border: 1px solid red;
   outline: 3px solid red;
+  outline-offset: 1px;
+}
+accordion-content:focus-visible {
+  outline: 3px solid red;
+  outline-offset: 1px;
 }
 
 .accordion-content-property {
@@ -1180,9 +1187,10 @@ li:hover {
   .filter {
     display: none !important;
   }
-  .category {
-    /* display: none; */
-  }
+  /* .category {
+    display: none;
+  } */
+
   /* HOME
   ================================================== */
   .archive {
