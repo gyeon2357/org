@@ -59,12 +59,12 @@ $(document).ready(function () {
   //Count
   var galleryN = $(".archive .project").length;
   var uiN = $(".archive .project.ui").length;
-  var graphicN = $(".archive .project.graphic").length;
+  var printingN = $(".archive .project.printing").length;
   var collabsN = $(".archive .project.collabs").length;
 
   $(".index").find("a.count").html(galleryN);
   $("#ui").find("a.count").html(uiN);
-  $("#graphic").find("a.count").html(graphicN);
+  $("#printing").find("a.count").html(printingN);
   $("#collabs").find("a.count").html(collabsN);
 
   //Accordion
