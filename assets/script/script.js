@@ -57,10 +57,10 @@ $(document).ready(function () {
   });
 
   //Count
-  var galleryN = $(".archive .project").length;
-  var uiN = $(".archive .project.ui").length;
-  var printingN = $(".archive .project.printing").length;
-  var collabsN = $(".archive .project.collabs").length;
+  var galleryN = $(".gallery-container .project").length;
+  var uiN = $(".gallery-container .project.ui").length;
+  var printingN = $(".gallery-container .project.printing").length;
+  var collabsN = $(".gallery-container .project.collabs").length;
 
   $(".index").find("a.count").html(galleryN);
   $("#ui").find("a.count").html(uiN);
@@ -113,8 +113,8 @@ $(document).ready(function () {
   //view button
   $(".index").click(function () {
     $(this).toggleClass("active");
-    $(".archive, .subsection, .info-inside").toggle();
-    $("#index-global").toggleClass("grid");
+    $(".gallery-container, .subsection, .info-inside").toggle();
+    $("#index-container").toggleClass("grid");
     $("#index, .gallery").toggle();
     $("#grid").toggleClass("on");
 
@@ -127,8 +127,8 @@ $(document).ready(function () {
   $(".link").each(function (i) {
     $(this).click(function () {
       $(".index").toggleClass("active");
-      $(".archive, .subsection, .info-inside").toggle();
-      $("#index-global").toggleClass("grid");
+      $(".gallery-container, .subsection, .info-inside").toggle();
+      $("#index-container").toggleClass("grid");
       $("#index, .gallery").toggle();
       $("#grid").toggleClass("on");
 
@@ -139,7 +139,7 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      // $("html, body").animate({ scrollTop: offset.top / 2 }, 200);
+      $("html, body").animate({ scrollTop: offset.top / 2 }, 200);
     });
   });
 
@@ -148,9 +148,9 @@ $(document).ready(function () {
     $(".rrss").toggle();
   });
 
-  $("#index-global .project").hover(function () {
+  $("#index-container .project").hover(function () {
     $(this).toggleClass("up");
-    $("#index-global .project").toggleClass("zindex");
+    $("#index-container .project").toggleClass("zindex");
   });
 
   // $(document).mousemove(function (e) {
@@ -164,14 +164,14 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $("#grid span").toggle();
     $("#grid a").toggle();
-    $(".archive").toggleClass("change");
+    $(".gallery-container").toggleClass("change");
     $(".subsection").toggleClass("change");
   });
 
-  $(".sp").click(function () {
+  $(".nav-title").click(function () {
     $(".about").toggle();
-    $(".sp span").toggle();
-    $(".sp a").toggle();
+    $(".nav-title span").toggle();
+    $(".nav-title a").toggle();
   });
 
   $(".open-menu").click(function () {
@@ -199,9 +199,12 @@ $(document).on("keyup", ".nav", function (e) {
   if (e.which == 13) showNavTextConsole($(e.target).click());
 });
 
-$(document).on("keyup", "#index-global", function (e) {
+function showNavTextConsole(text) {
+  console.log(text);
+}
+
+$(document).on("keyup", "#index-container", function (e) {
   if (e.which == 13)
-    
     $(e.target).attr(
       "data-accordion-state",
       $(e.target).attr("data-accordion-state") === "opened"
@@ -211,10 +214,6 @@ $(document).on("keyup", "#index-global", function (e) {
 
   $(e.target).find(".accordion-content").focus();
 });
-
-function showNavTextConsole(text) {
-  console.log(text);
-}
 
 function showIndexTextConsole(text) {
   console.log(text);

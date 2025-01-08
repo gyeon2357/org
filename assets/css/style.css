@@ -133,23 +133,23 @@ body.dark #index {
 body.dark #index a {
   color: white;
 }
-body.dark #index-global {
+body.dark #index-container {
   color: white;
 }
-body.dark #index-global a {
+body.dark #index-container a {
   color: white;
 }
-body.dark .footer {
+body.dark footer {
   color: white;
 }
-#index-global .project.zindex {
+#index-container .project.zindex {
   z-index: -1 !important;
 }
-#index-global .project.up {
+#index-container .project.up {
   z-index: 1000 !important;
 }
 
-#index-global .project.active {
+#index-container .project.active {
   border-color: blue;
 }
 
@@ -180,7 +180,7 @@ a {
   cursor: pointer;
   line-height: 120%;
 }
-#index-global a {
+#index-container a {
   cursor: pointer !important;
 }
 .active {
@@ -189,11 +189,11 @@ a {
 
 ruby {
   --footnote-display: inline-block;
+  font-size: 87.5%;
 }
 
 ruby::before {
   counter-increment: footnotes;
-  /* The footnote is separated with a thin space. 🤓 */
   content: "[" counter(footnotes) "] ";
 }
 
@@ -327,7 +327,7 @@ img.blend {
   z-index: 10002;
 }
 .categorie,
-.sp,
+.nav-title,
 .open-menu,
 .index,
 .contact {
@@ -339,14 +339,14 @@ img.blend {
   display: inline-block;
 }
 
-.hidden .sec .index {
+.hidden .nav-section .index {
   display: flex;
   justify-content: space-between;
 
   background: skyblue;
 }
 
-.sp {
+.nav-title {
   text-align: center;
   background-color: white;
   border-radius: 2px;
@@ -369,19 +369,19 @@ img.blend {
   grid-column: span 3;
   grid-template-columns: repeat(3, 1fr);
 }
-.hidden .sec {
+.hidden .nav-section {
   display: grid;
   row-gap: 5px;
   height: fit-content;
 }
 
-.hidden .sec.cat {
+.hidden .nav-section.nav-cate {
   display: grid;
   text-align: left;
   row-gap: 5px;
   height: fit-content;
 }
-.hidden .sec li {
+.hidden .nav-section li {
   background-color: white;
   border-radius: 2px;
   padding: 3px;
@@ -464,7 +464,7 @@ body.dark #index .filter-opacity {
   grid-gap: 5px;
   padding: 5px;
 }
-.archive {
+.gallery-container {
   --gap: 0px;
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 0.5px;
@@ -476,7 +476,7 @@ body.dark #index .filter-opacity {
   grid-gap: 5px;
   gap: var(--gap);
 }
-.archive.change {
+.gallery-container.change {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -577,7 +577,7 @@ body.dark #index .filter-opacity {
   height: fit-content;
   display: grid;
 }
-#index-global {
+#index-container {
   padding: 5px 5px 0px 5px;
   display: none;
   grid-column: span 9;
@@ -585,11 +585,11 @@ body.dark #index .filter-opacity {
 
   order: 2;
 }
-#index-global.grid {
+#index-container.grid {
   height: fit-content;
   display: grid;
 }
-#index-global .project {
+#index-container .project {
   grid-gap: 5px !important;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -598,7 +598,7 @@ body.dark #index .filter-opacity {
   border-radius: 2px;
   z-index: 10000 !important;
 }
-#index-global .project.active {
+#index-container .project.active {
   color: black;
 }
 #links {
@@ -621,7 +621,7 @@ body.dark #index .filter-opacity {
 #links .cap:hover {
   background-color: lightgrey;
 }
-body.dark #index-global #links .cap:hover {
+body.dark #index-container #links .cap:hover {
   background-color: lightgrey;
 }
 #index .project.filter-opacity {
@@ -638,42 +638,42 @@ body.dark #index-global #links .cap:hover {
   grid-column: span 1;
 }
 
-body.dark #index-global .project.filter-opacity {
+body.dark #index-container .project.filter-opacity {
   color: white;
   opacity: 0.2 !important;
 }
-#index-global .project.filter-opacity {
+#index-container .project.filter-opacity {
   color: black;
   opacity: 0.2 !important;
   pointer-events: none;
 }
-#index-global .project:hover {
+#index-container .project:hover {
   background-color: lightgrey !important;
 }
-body.dark #index-global .project:hover {
+body.dark #index-container .project:hover {
   background-color: gray !important;
   color: black;
 }
-#index-global .project,
-#index-global .project > a {
+#index-container .project,
+#index-container .project > a {
   grid-gap: 5px;
   grid-template-columns: repeat(9, 1fr);
   display: grid;
   opacity: 1 !important;
 }
 
-#index-global .project > a {
+#index-container .project > a {
   grid-column: span 9;
 }
 
-#index-global section {
+#index-container section {
   grid-column: span 9;
   grid-template-columns: repeat(9, 1fr);
 
   grid-gap: 5px !important;
 }
 
-#index-global .number {
+#index-container .number {
   grid-column: span 1;
 }
 .category {
@@ -695,7 +695,7 @@ body.dark #index-global .project:hover {
   border-radius: 2px;
   padding: 3px;
 }
-#index-global .cap {
+#index-container .cap {
   grid-column: span 1;
   color: black;
   background: rgba(222, 222, 217);
@@ -715,11 +715,11 @@ body.dark #index-global .project:hover {
   border-radius: 2px;
   position: sticky;
 }
-#index-global .project > div {
+#index-container .project > div {
   padding: 3px;
 }
 
-#index-global .project > a > div {
+#index-container .project > a > div {
   padding: 3px;
 }
 
@@ -738,7 +738,7 @@ body.dark #index .cap {
   border-radius: 2px;
   padding: 3px;
 }
-body.dark #index-global .cap {
+body.dark #index-container .cap {
   grid-column: span 1;
   color: black;
   background-color: white;
@@ -811,6 +811,16 @@ accordion-content:focus-visible {
   height: auto;
 }
 
+.accordion-content p > strong {
+  font-weight: inherit;
+  background-color: antiquewhite;
+
+  margin-right: 0.25rem;
+}
+
+.accordion-content p > strong::after {
+}
+
 .accordion-content p {
   margin: 0 0 0.25rem;
 }
@@ -876,7 +886,7 @@ accordion-content:focus-visible {
   color: grey;
   grid-column: span 5;
 }
-.credits .sect {
+.credits .nav-sectiont {
   grid-column: 1 / span 1;
 }
 .credits .data {
@@ -1069,7 +1079,7 @@ accordion-content:focus-visible {
 }
 /* FOOTER
 ================================================== */
-.footer {
+footer {
   margin-top: auto;
   padding: 20px 10px 10px;
 
@@ -1082,19 +1092,19 @@ accordion-content:focus-visible {
   font-size: var(--main);
   text-transform: uppercase;
 }
-body.dark .footer {
+body.dark footer {
   color: darkgrey !important;
 }
 #grid:hover {
   background-color: lightgrey;
 }
-.sp:hover {
+.nav-title:hover {
   background-color: lightgrey;
 }
 li:hover {
   background-color: lightgrey !important;
 }
-.sec > div:hover {
+.nav-section > div:hover {
   background-color: lightgrey;
 }
 /* FONTS
@@ -1125,7 +1135,7 @@ li:hover {
     row-gap: 5px;
     grid-column: span 8;
   }
-  #index-global {
+  #index-container {
     padding: 5px 5px 0px 5px;
     display: none;
     grid-column: span 8;
@@ -1133,7 +1143,7 @@ li:hover {
   }
 }
 @media only screen and (max-width: 900px) {
-  #index-global {
+  #index-container {
     padding: 5px 5px 0px 5px;
     display: none;
     grid-column: span 7;
@@ -1143,11 +1153,11 @@ li:hover {
     grid-column: 1 / span 5;
     grid-template-columns: repeat(3, 1fr);
   }
-  .archive {
+  .gallery-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .archive.change {
+  .gallery-container.change {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -1193,7 +1203,7 @@ li:hover {
 
   /* HOME
   ================================================== */
-  .archive {
+  .gallery-container {
     margin-top: calc(var(--large) + 5px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1236,7 +1246,7 @@ li:hover {
     display: none;
   }
 
-  #index-global .project.zindex {
+  #index-container .project.zindex {
     z-index: 1 !important;
   }
 
@@ -1280,7 +1290,7 @@ li:hover {
   .cover-popup {
     display: none !important;
   }
-  #index-global {
+  #index-container {
     padding: 5px 5px 0px 5px;
     display: none;
     grid-gap: 5px;
@@ -1308,32 +1318,33 @@ li:hover {
   #links {
     grid-column: span 12;
   }
-  #index-global .project {
+  #index-container .project {
     grid-column: span 12;
   }
 
-  #index-global section {
+  #index-container section {
     grid-column: span 12;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #index-global {
+  #index-container {
     grid-column: span 12;
   }
-  #index-global .project,
-  #index-global .project > a {
+  #index-container .project,
+  #index-container .project > a {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #index-global .project > a {
+  #index-container .project > a {
     grid-column: span 12;
+    grid-gap: 2px;
   }
 
-  .footer {
+  footer {
     grid-column: span 12;
     order: 2;
   }
-  .archive.change {
+  .gallery-container.change {
     grid-template-columns: repeat(3, 1fr);
   }
   /* #links > div {
