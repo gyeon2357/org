@@ -442,7 +442,7 @@ body.dark #index .filter-opacity {
   pointer-events: none;
 }
 .about {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: left;
   grid-column: span 3;
   background-color: white;
@@ -1244,6 +1244,10 @@ li:hover {
   } */
   .number {
     display: none;
+  }
+
+  .about {
+    margin-top: 10px;
   }
 
   #index-container .project.zindex {
