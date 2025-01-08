@@ -67,6 +67,49 @@ $(document).ready(function () {
   $("#graphic").find("a.count").html(graphicN);
   $("#collabs").find("a.count").html(collabsN);
 
+  //Accordion
+  $(function () {
+    const accordions = document.getElementsByClassName("accordion");
+
+    Array.from(accordions).forEach((accordion) => {
+      const label = accordion.querySelector(".accordion-label");
+      const content = accordion.querySelector(".accordion-content");
+
+      // content.style.setProperty(
+      //   "--content-height",
+      //   content.offsetHeight + "px"
+      // );
+
+      function getState() {
+        return accordion.getAttribute("data-accordion-state");
+      }
+
+      function setState(state) {
+        accordion.setAttribute("data-accordion-state", state);
+      }
+
+      setState("closed");
+
+      label.addEventListener("click", () => {
+        const holdState = getState();
+
+        closeAllAccordions();
+
+        if (holdState === "closed") {
+          setState("opened");
+        } else {
+          setState("closed");
+        }
+      });
+    });
+
+    function closeAllAccordions() {
+      Array.from(accordions).forEach((accordion) => {
+        accordion.setAttribute("data-accordion-state", "closed");
+      });
+    }
+  });
+
   //view button
   $(".index").click(function () {
     $(this).toggleClass("active");
@@ -96,7 +139,7 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      $("html, body").animate({ scrollTop: offset.top / 2 }, 200);
+      // $("html, body").animate({ scrollTop: offset.top / 2 }, 200);
     });
   });
 
@@ -149,46 +192,6 @@ $(document).ready(function () {
       $(this).removeClass("active");
     }
   });
-});
-
-//Accordion
-$(function () {
-  const accordions = document.getElementsByClassName("accordion");
-
-  Array.from(accordions).forEach((accordion) => {
-    const label = accordion.querySelector(".accordion-label");
-    const content = accordion.querySelector(".accordion-content");
-
-    content.style.setProperty("--content-height", content.offsetHeight + "px");
-
-    function getState() {
-      return accordion.getAttribute("data-accordion-state");
-    }
-
-    function setState(state) {
-      accordion.setAttribute("data-accordion-state", state);
-    }
-
-    setState("closed");
-
-    label.addEventListener("click", () => {
-      const holdState = getState();
-
-      closeAllAccordions();
-
-      if (holdState === "closed") {
-        setState("opened");
-      } else {
-        setState("closed");
-      }
-    });
-  });
-
-  function closeAllAccordions() {
-    Array.from(accordions).forEach((accordion) => {
-      accordion.setAttribute("data-accordion-state", "closed");
-    });
-  }
 });
 
 // setTimeout(function () {

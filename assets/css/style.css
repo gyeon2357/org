@@ -442,7 +442,7 @@ body.dark #index .filter-opacity {
   pointer-events: none;
 }
 .about {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: left;
   grid-column: span 3;
   background-color: white;
@@ -1225,12 +1225,17 @@ li:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-column: span 12;
   }
-  .year {
-    /* display: none; */
-  }
+  /* .year {
+    display: none;
+  } */
   .number {
     display: none;
   }
+
+  #index-global .project.zindex {
+    z-index: 1 !important;
+  }
+
   .info-inside.single {
     display: grid;
     grid-gap: 5px;
