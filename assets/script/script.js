@@ -180,11 +180,11 @@ $(document).ready(function () {
     $(".open-menu a").toggle();
   });
 
-  // Filters
+  //Filters
   $(".categorie").on("click", function (e) {
     $(".project").addClass("filter-opacity");
     $(".categorie").not($(this)).removeClass("active");
-    
+
     if (!$(this).hasClass("active")) {
       $("." + e.currentTarget.id).removeClass("filter-opacity");
       $(this).addClass("active");

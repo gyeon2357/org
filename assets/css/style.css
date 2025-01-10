@@ -360,7 +360,6 @@ img.blend {
 }
 
 .nav-title {
-  text-align: center;
   background-color: white;
   border-radius: 2px;
   padding: 3px;
@@ -850,7 +849,12 @@ accordion-content:focus-visible {
   font-style: inherit;
   background-color: antiquewhite;
 
+  padding: 0 0.125rem;
   margin-right: 0.25rem;
+}
+
+body.dark .accordion-content p > em {
+  color: black;
 }
 
 .accordion-content p {
