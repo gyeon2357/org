@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>kongnamul</title>
+
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
+
+    <link rel="preload" href="./assets/css/style.css" as="style" />
+    <link
+      href="./assets/css/style.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+      type="text/css"
+    />
+
+    <!-- Tags for social media links -->
+    <meta name="description" content="콩나물주택 주문서" />
+    <meta
+      name="keywords"
+      content="typography, web publishing, product design"
+    />
+    <meta itemprop="name" content="콩나물주택" />
+    <meta itemprop="description" content="" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title"><img src="./assets/images/kongnamul-11.svg" /></h1>
+
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span>
+            <div class="header-icon">
+              <a>
+                <img src="./assets/images/kongnamul-3.svg" />
+              </a></div
+          ></span>
+        </label>
+
+        <ol class="menu__box">
+          <article id="menu">
+            <div class="menu-header">
+              <h1>룸서비스 메뉴</h1>
+              <figure class="back-icon">
+                <a href="#order" rel="modal:open">
+                  <img src="./assets/images/kongnamul-6.svg"
+                /></a>
+              </figure>
+              <figure class="basket-icon-fixed">
+                <img src="./assets/images/kongnamul-6.svg" />
+              </figure>
+              <figure class="basket-icon">
+                <a onclick="totalNum()" href="#order" rel="modal:open">
+                  <img src="./assets/images/kongnamul-6.svg"
+                /></a>
+              </figure>
+            </div>
+
+            <ul class="products">
+              <li>
+                <button type="button" onclick="nogariValue()">
+                  <p>1</p>
+                  <h2>노가리</h2>
+                  <h2>3,000원</h2>
+                </button>
+
+                <img src="./assets/images/kongnamul-7.svg" />
+              </li>
+
+              <li>
+                <button type="button" onclick="beanValue()">
+                  <p>2</p>
+                  <h2>콩나물</h2>
+                  <h2>9,000원</h2>
+                </button>
+
+                <img
+                  src="./assets/images/kongnamul-13.svg"
+                  style="width: 7rem"
+                />
+              </li>
+
+              <li>
+                <button type="button" onclick="beerValue()">
+                  <p>3</p>
+                  <h2>맥주</h2>
+                  <h2>6,000원</h2>
+                </button>
+
+                <img src="./assets/images/kongnamul-7.svg" />
+              </li>
+              <li>
+                <button type="button" onclick="chickenValue()">
+                  <p>4</p>
+                  <h2>치킨</h2>
+                  <h2>12,000원</h2>
+                </button>
+
+                <img src="./assets/images/kongnamul-7.svg" />
+              </li>
+              <!-- <li>
+                <button type="button">
+                  <p>5</p>
+                  <h2>노가리 4개</h2>
+                  <h2>15,000원</h2>
+                </button>
+
+                <img src="./assets/images/kongnamul-7.svg" />
+              </li>
+              <li>
+                <button type="button">
+                  <p>6</p>
+                  <h2>노가리 4개</h2>
+                  <h2>15,000원</h2>
+                </button>
+
+                <img src="./assets/images/kongnamul-7.svg" />
+              </li> -->
+            </ul>
+          </article>
+        </ol>
+      </div>
+
+      <div class="header-icon">
+        <a href="#room" rel="modal:open">
+          <img src="./assets/images/kongnamul-4.svg" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2><mark>스탠다드룸에</mark> 오신 것을 환영합니다.</h2>
+        <br />
+        <p>
+          콩나물주택의 기준, 스탠다드룸을 시작으로 <br />여러가지 콘텐츠를 경험
+          해보세요.<br /><br />
+        </p>
+        <p>
+          콩나물주택의 새로운 경험을 사람들에게 숙박을 통해 <br />차별화된 감성,
+          디자인, 콘텐츠를 제안하며,<br />
+          삶에 영감을 불어넣으려해요.<br /><br />
+        </p>
+        <p>오늘 하루, 편히 머무시길 바랄게요.</p>
+
+        <figure>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+      </section>
+
+      <section id="order" class="modal">
+        <div class="order-header">
+          <h1>
+            201호<br />
+            콩나물 영수증
+          </h1>
+          <div id="current_date"></div>
+        </div>
+
+        <figure><img class="random" src="" /></figure>
+
+        <table align="center">
+          <form
+            class="gform"
+            method="POST"
+            data-email="yechan@spaceplanning.info"
+            action="https://script.google.com/macros/s/AKfycbyHZiJTxLWfUfc7c6cYCn3EUp1l-gBt4RwLKTvKoglQVLs4yplhsGzx2mRu4WINzdwTgw/exec"
+          >
+            <thead>
+              <tr>
+                <th width="40%">구매 품목</th>
+                <th width="10%">수량</th>
+                <th width="40%">가격(₩)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-title">노가리</td>
+                <td>
+                  <input
+                    id="nogari-num"
+                    class="total-num"
+                    type="text"
+                    name="노가리 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    id="nogari-price"
+                    class="total-price"
+                    type="text"
+                    name="노가리 총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">콩나물</td>
+                <td>
+                  <input
+                    id="bean-num"
+                    class="total-num"
+                    type="text"
+                    name="콩나물 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td class="price">
+                  <input
+                    id="bean-price"
+                    class="total-price"
+                    type="text"
+                    name="콩나물 총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td class="td-title">맥주</td>
+                <td>
+                  <input
+                    id="beer-num"
+                    class="total-num"
+                    type="text"
+                    name="맥주 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    id="beer-price"
+                    class="total-price"
+                    type="text"
+                    name="맥주 총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">치킨</td>
+                <td>
+                  <input
+                    id="chicken-num"
+                    class="total-num"
+                    type="text"
+                    name="치킨 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    id="chicken-price"
+                    class="total-price"
+                    type="text"
+                    name="치킨 총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">결제 금액</td>
+                <td>
+                  <input
+                    id="total-num"
+                    type="text"
+                    name="총 수량"
+                    value="0"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    id="total-price"
+                    type="text"
+                    name="총 가격"
+                    value="0"
+                    readonly
+                  />
+                </td>
+              </tr>
+            </tbody>
+
+            <tr class="order-submit">
+              <td colspan="3">
+                <input type="submit" value=" 주문하기 " />
+              </td>
+            </tr>
+          </form>
+        </table>
+
+        <div class="order-footer">
+          <p>
+            콩나물주택에서 맛있는 경험 느끼시고<br />
+            돌아가시길 바라겠습니다.<br /><br />
+          </p>
+          <p>감사합니다.</p>
+        </div>
+
+        <a href="#" rel="modal:close"></a>
+      </section>
+
+      <section id="room" class="modal">
+        <div class="room-header">
+          <h1>콩나물주택의 방</h1>
+        </div>
+
+        <figure class="room-gallery">
+          <div class="gallery-header">
+            <span>1</span>
+            <figcaption>노가리 1호</figcaption>
+          </div>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+        <figure class="room-gallery">
+          <div class="gallery-header">
+            <span>2</span>
+            <figcaption>노가리 2호</figcaption>
+          </div>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+        <figure class="room-gallery">
+          <div class="gallery-header">
+            <span>3</span>
+            <figcaption>노가리 3호</figcaption>
+          </div>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+        <figure class="room-gallery">
+          <div class="gallery-header">
+            <span>4</span>
+            <figcaption>노가리 4호</figcaption>
+          </div>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+        <figure class="room-gallery">
+          <div class="gallery-header">
+            <span>5</span>
+            <figcaption>노가리 5호</figcaption>
+          </div>
+          <img src="./assets/images/kongnamul-4.svg" />
+        </figure>
+
+        <a href="#" rel="modal:close"></a>
+      </section>
+    </main>
+
+    <footer>
+      <figure><img src="./assets/images/kongnamul-12.svg" /></figure>
+      <div class="footer-bean">
+        <img src="./assets/images/kongnamul-2.svg" />
+        <img src="./assets/images/kongnamul-2.svg" />
+      </div>
+    </footer>
+
+    <div class="fordesktop">
+      <div class="fordesktop-p">
+        모바일(세로형) 기기를 이용해 접속해주세요.<br /><br />
+        Please use this on a mobile devices.
+      </div>
+    </div>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.modal.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      function nogariValue() {
+        var value = parseInt(document.getElementById("nogari-num").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("nogari-num").value = value;
+
+        $("#nogari-price").val(function (i, v) {
+          return parseInt(v, 10) + 3000 || 0;
+        });
+      }
+
+      function beanValue() {
+        var value = parseInt(document.getElementById("bean-num").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("bean-num").value = value;
+
+        $("#bean-price").val(function (i, v) {
+          return parseInt(v, 10) + 9000 || 0;
+        });
+      }
+
+      function beerValue() {
+        var value = parseInt(document.getElementById("beer-num").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("beer-num").value = value;
+
+        $("#beer-price").val(function (i, v) {
+          return parseInt(v, 10) + 6000 || 0;
+        });
+      }
+
+      function chickenValue() {
+        var value = parseInt(document.getElementById("chicken-num").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("chicken-num").value = value;
+
+        $("#chicken-price").val(function (i, v) {
+          return parseInt(v, 10) + 12000 || 0;
+        });
+      }
+
+      // total
+      function totalNum() {
+        let num = 0;
+        let price = 0;
+        $("input.total-num").each(function () {
+          if (!isNaN($(this).val())) {
+            num += parseInt($(this).val());
+          }
+        });
+        $("input#total-num").val(num);
+
+        $("input.total-price").each(function () {
+          if (!isNaN($(this).val())) {
+            price += parseInt($(this).val());
+          }
+        });
+        $("input#total-price").val(price);
+      }
+
+      // order-complete
+      const signupForm = document.querySelector("form");
+      signupForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        alert("주문이 완료되었습니다.");
+      });
+    </script>
+
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"
+    ></script>
+  </body>
+</html>

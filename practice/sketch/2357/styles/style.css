@@ -1,0 +1,529 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+code,
+pre {
+  font-family: monospace;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Light";
+  src: url(../fonts/SpoqaHanSansNeo-Light.eot);
+  src: local(※), url(../fonts/SpoqaHanSansNeo-Light.woff) format("woff");
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3,
+    U+D7B0-D7FF;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url(../fonts/SpoqaHanSansNeo-Regular.eot);
+  src: local(※), url(../fonts/SpoqaHanSansNeo-Regular.woff) format("woff");
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3,
+    U+D7B0-D7FF;
+}
+@font-face {
+  font-family: "Arnold_Regular";
+  src: local(※), url(../fonts/Arnold_Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Arnold_Italic";
+  src: local(※), url(../fonts/Arnold_Italic.woff) format("woff");
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Arnold_Regular", "SpoqaHanSansNeo-Regular", sans-serif;
+  color: #000;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+
+  cursor: default;
+}
+
+body.fixed {
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/sign1.png");
+  background-color: white;
+  background-size: cover;
+  background-position: top center;
+}
+
+.header::after {
+  content: "쉬어가는 닻";
+  position: absolute;
+  z-index: 888;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.125rem 0.25rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.header .title {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.header .title div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 6vw;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-left: 27.5vw;
+}
+
+a {
+  color: #000;
+  display: block;
+  text-decoration: none;
+  text-underline-position: under;
+  cursor: pointer;
+  z-index: 1001;
+}
+a:hover {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+i {
+  transition: color 0.125s;
+  transition-delay: 0.05s;
+}
+
+i:hover {
+  color: silver;
+}
+
+i:active {
+  color: silver;
+}
+
+ul {
+  font-family: "Arnold_Regular", "SpoqaHanSansNeo-Regular";
+  width: 90%;
+  padding-top: 100px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+}
+li {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+ol {
+  position: absolute;
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 160px;
+}
+
+img {
+  position: absolute;
+  margin: 24px 24px auto;
+  width: 100%;
+}
+
+.summaryHead1 {
+  font-family: "SpoqaHanSansNeo-Regular", "Arnold_Italic", sans-serif;
+  position: absolute;
+  z-index: 1001;
+  margin-top: 12px;
+}
+
+.summaryHead1:hover {
+  border: none;
+}
+.summaryHead1:active {
+  border: none;
+}
+.summaryBody1 {
+  position: absolute;
+  z-index: 1001;
+}
+
+.nextText {
+  position: fixed;
+  width: 50%;
+  left: 75%;
+  text-align: left;
+  bottom: 18px;
+}
+summary {
+  cursor: pointer;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+.summarySpan {
+  font-family: "Arnold_Italic", sans-serif;
+  display: block;
+  margin-top: 2rem;
+  line-height: 1.75;
+}
+
+#defaultCanvas0 {
+  background-color: rgba(255, 255, 255);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ebcf_modal1 {
+  font-family: "Arnold_Regular", "SpoqaHanSansNeo-Regular", sans-serif;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 125px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.mark1 {
+  text-align: center;
+  cursor: zoom-in;
+  width: 100px;
+  bottom: 0;
+  left: 0;
+}
+.ebcf_modal-content1 {
+  cursor: initial;
+  margin: 0 auto;
+  padding: 18px;
+}
+.ebcf_close1:hover,
+.ebcf_close1:focus {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media all and (min-width: 201px) {
+  .ebcf_modal-content1 {
+    font-size: 1rem;
+    line-height: 1.75;
+    text-align: center;
+    word-break: normal;
+    width: 75%;
+    height: 24%;
+  }
+
+  ul {
+    text-align: right;
+    right: 120px;
+  }
+
+  li {
+    font-size: 2rem;
+    margin: 4rem 0 1rem 0;
+  }
+  ol {
+    margin-left: 16px;
+  }
+
+  .summaryHead1 {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .summaryBody1 {
+    font-size: 1rem;
+    line-height: 1.75;
+    word-break: keep-all;
+    width: 80%;
+    margin-top: 108px;
+    margin-left: 8px;
+  }
+
+  .summarySpan {
+    font-size: 0.75rem;
+    word-break: normal;
+  }
+
+  .nextText {
+    font-family: "Arnold_Italic", sans-serif;
+    font-size: 0.75rem;
+  }
+  strong {
+    font-family: "Arnold_Regular", "SpoqaHanSansNeo-Regular", sans-serif;
+    font-weight: 400;
+    text-decoration: underline dotted 2px #ff4500;
+  }
+  strong:hover {
+    text-decoration: none;
+  }
+  strong:active {
+    text-decoration: none;
+  }
+}
+
+@media all and (min-width: 450px) {
+  .ebcf_modal-content1 {
+    width: 35%;
+  }
+  .summaryBody1,
+  .summarySpan {
+    width: 85%;
+  }
+
+  .summarySpan {
+    width: 95%;
+  }
+}
+@media all and (min-width: 600px) {
+  .summaryBody1,
+  .summarySpan {
+    width: 90%;
+  }
+}
+@media all and (min-width: 900px) {
+  .ebcf_modal-content1 {
+    font-size: 1rem;
+    line-height: 1.85;
+    text-align: center;
+    word-break: keep-all;
+    width: 35%;
+    height: 30%;
+  }
+  ul {
+    text-align: center;
+    align-items: center;
+
+  }
+
+
+
+  ol {
+    text-align: center;
+    left: 25%;
+    width: 50%;
+  }
+
+  li {
+    font-size: 3rem;
+    margin: 5rem 0 2rem 0;
+  }
+
+  /* li:nth-child(3n+3) {margin: 3rem 0 1rem 0rem;} */
+
+  p,
+  summary {
+    text-align: center;
+  }
+
+  .summaryHead1 {
+    font-size: 1.5rem;
+    line-height: 1.85;
+  }
+  .summaryBody1 {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    width: 100%;
+    margin-top: 160px;
+  }
+
+  .summarySpan {
+    font-size: 1.25rem;
+    width: 100%;
+    word-break: keep-all;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .ebcf_modal-content1 {
+    font-size: 24px;
+  }
+  li {
+    font-size: 3rem;
+    margin: 3rem 0 2rem 0;
+  }
+  ol {
+    text-align: center;
+    left: 25%;
+    width: 50%;
+  }
+
+  p,
+  summary {
+    text-align: center;
+  }
+
+  .summaryHead1 {
+    font-size: 1.5rem;
+    line-height: 1.85;
+  }
+
+  .nextText {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+.formobile {
+  display: none;
+}
+@media screen and (max-width: 200px) {
+  .formobile {
+    display: block;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .formobile-p {
+    display: block;
+    z-index: 10001;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    line-height: 1.55;
+    background-color: white;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    text-decoration: none;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, width=device-width"
+    />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="cloud, web" />
+
+    <link
+      href="../styles/gain.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+  </head>
+
+  <body style="overflow: hidden">
+    
+
+    <script src="../scripts/p5.min.js"></script>
+    <script src="../scripts/14.js"></script>
+    <script src="../scripts/jquery.min.js">
+      function scrollDisable(){
+          $('body').addClass('scrollDisable').on('scroll touchmove mousewheel', function(e){
+              e.preventDefault();
+          });
+      }
+      function scrollAble(){
+          $('body').removeClass('scrollDisable').off('scroll touchmove mousewheel');
+      }
+    </script>
+  </body>
+</html>
