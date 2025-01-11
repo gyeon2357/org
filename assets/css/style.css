@@ -229,6 +229,10 @@ sup > mark {
   text-underline-offset: 1px;
 }
 
+sup > span {
+  margin: 0 0.125rem;
+}
+
 body.dark sup > mark {
   color: white;
 }
@@ -441,7 +445,8 @@ body.dark .hidden .nav-section li {
 .count {
   text-align: right;
   float: right;
-  top: 1px;
+
+  margin-left: 4px;
 }
 .filter-opacity img {
   opacity: 0.2;
@@ -460,14 +465,17 @@ body.dark #index .filter-opacity {
   pointer-events: none;
 }
 .about {
+  display: none;
   margin-top: 20px;
+
+  text-transform: capitalize;
   text-align: left;
   grid-column: span 3;
+
   background-color: white;
   color: black;
   border-radius: 2px;
   padding: 3px;
-  display: none;
 }
 #grid.on {
   opacity: 0.2;
@@ -844,22 +852,40 @@ accordion-content:focus-visible {
   height: auto;
 }
 
-.accordion-content p > em {
-  font-weight: inherit;
-  font-style: inherit;
+.accordion-content p {
+  margin: 0 0 0.25rem;
+  max-width: 60ch;
+
+  word-break: keep-all;
+}
+
+.accordion-content p::before {
+  content: attr(title) ".";
   background-color: antiquewhite;
 
   padding: 0 0.125rem;
   margin-right: 0.25rem;
 }
 
-body.dark .accordion-content p > em {
+body.dark .accordion-content p::before {
   color: black;
 }
 
-.accordion-content p {
-  margin: 0 0 0.25rem;
-  max-width: 60ch;
+.accordion-content p > a {
+  color: inherit;
+}
+
+.accordion-content p > a:hover {
+  opacity: 0.4;
+}
+
+.accordion-content p > a::before {
+  content: "□";
+  margin-right: 0.125rem;
+}
+
+.accordion-content p.bt-space {
+  padding-bottom: 10px;
 }
 
 .accordion[data-accordion-state="closed"] .accordion-content {
