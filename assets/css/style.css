@@ -854,14 +854,14 @@ accordion-content:focus-visible {
 
 .accordion-content p {
   margin: 0 0 0.25rem;
-  max-width: 60ch;
+  max-width: 72ch;
 
   word-break: keep-all;
 }
 
 .accordion-content p::before {
   content: attr(title) ".";
-  background-color: antiquewhite;
+  background-color: gainsboro;
 
   padding: 0 0.125rem;
   margin-right: 0.25rem;
@@ -870,22 +870,25 @@ accordion-content:focus-visible {
 body.dark .accordion-content p::before {
   color: black;
 }
+.accordion-content p[title="Contents"],
+.accordion-content p[title="Scope"] {
+  margin-bottom: 10px;
+}
 
 .accordion-content p > a {
   color: inherit;
+
+  text-decoration: underline;
+  text-underline-position: from-font;
 }
 
 .accordion-content p > a:hover {
   opacity: 0.4;
 }
 
-.accordion-content p > a::before {
-  content: "□";
+.accordion-content p[title="Link"] > a::before {
+  content: "→";
   margin-right: 0.125rem;
-}
-
-.accordion-content p.bt-space {
-  padding-bottom: 10px;
 }
 
 .accordion[data-accordion-state="closed"] .accordion-content {
