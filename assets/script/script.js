@@ -58,13 +58,15 @@ $(document).ready(function () {
 
   //Count
   var galleryN = $(".gallery-container .project").length;
-  var uiN = $(".gallery-container .project.ui").length;
+  var webN = $(".gallery-container .project.web").length;
   var printingN = $(".gallery-container .project.printing").length;
+  var plansN = $(".gallery-container .project.plans").length;
   var collabsN = $(".gallery-container .project.collabs").length;
 
   $(".index").find("a.count").html(galleryN);
-  $("#ui").find("a.count").html(uiN);
+  $("#web").find("a.count").html(webN);
   $("#printing").find("a.count").html(printingN);
+  $("#plans").find("a.count").html(plansN);
   $("#collabs").find("a.count").html(collabsN);
 
   //Accordion
