@@ -166,6 +166,7 @@ body.dark #mode a {
 }
 body.dark #mode span {
   display: block;
+  line-height: 120%;
 }
 ol,
 ul,
@@ -319,10 +320,10 @@ img.blend {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);
-  grid-column: 1 / span 3;
+  grid-column: 10 / span 3;
 
   font-size: 0.875rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-radius: 2px;
   z-index: 10002;
 }
@@ -444,6 +445,7 @@ body.dark .hidden .nav-section li {
 }
 .nav span {
   display: none;
+  line-height: 120%;
 }
 .count {
   text-align: right;
@@ -504,6 +506,8 @@ body.dark #index .filter-opacity {
   grid-column: span 12;
   grid-gap: 5px;
   gap: var(--gap);
+
+  font-size: 0.875rem;
 }
 .gallery-container.change {
   display: grid;
@@ -567,39 +571,45 @@ body.dark #index .filter-opacity {
 } */
 
 .gallery-container .project.mark > a::before {
-  content: "Selected";
+  content: " ";
   position: absolute;
+
+  width: 1rem;
+  height: 1rem;
+
   top: 0.625rem;
   left: 0;
-  padding: 3px 6px;
+
   border-radius: 999px;
 
-  font-size: 9px;
-  line-height: 1.1;
-  letter-spacing: 0.2px;
-  background: mistyrose;
+  background-color:lightcoral;
+  color: var(--smokeblack);
 }
 
 #index-container .project.mark > a > div.title::before {
   content: "Selected";
 
   position: relative;
-  padding: 3px 6px;
+  padding: 2px 4px;
   margin-right: 0.375rem;
-  border-radius: 999px;
+  border-radius: 2px;
 
-  font-size: 8px;
-  
-  vertical-align: 4%;
+  font-size: 0.5rem;
+
+  vertical-align: 1%;
   letter-spacing: 0.2px;
-  background: mistyrose;
+  background: lightcoral;
+  color: white
 }
 
 @media screen and (max-width: 600px) {
-
-.gallery-container .project.mark > a::before {
-  scale: .7;
-}
+  .gallery-container .project.mark > a::before {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  #index-container .project.mark > a > div.title::before {
+    margin-right: 0.25rem;
+  }
 }
 
 .pr {
@@ -650,6 +660,8 @@ body.dark .index.active {
   padding: 5px 5px 0px 5px;
   display: none;
   grid-column: span 9;
+  grid-row: 1;
+
   grid-gap: 5px;
 
   order: 2;
@@ -663,7 +675,7 @@ body.dark .index.active {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-column: span 9;
-  background: rgba(222, 222, 217, 0.4);
+  background: rgba(222, 222, 217, 0.5);
   border-radius: 2px;
   z-index: 10000 !important;
 }
@@ -766,17 +778,15 @@ body.dark #index-container .project:hover {
 
 #index-container .cap {
   grid-column: span 1;
-  color: black;
-  background: #deded9;
+
+  background: rgba(222, 222, 217);
   border-radius: 2px;
   padding: 3px;
 
-  z-index: 10001;
-}
-
-#index-container .number.cap {
   pointer-events: none;
   color: gray;
+
+  z-index: 10001;
 }
 
 #index-container .category.cap {
@@ -818,15 +828,10 @@ body.dark #index .cap {
   padding: 3px;
 }
 body.dark #index-container .cap {
-  grid-column: span 1;
-  color: white;
+  color: silver;
   background: rgba(222, 222, 217, 0.4);
   border-radius: 2px;
   padding: 3px;
-}
-
-body.dark #index-container .number.cap {
-  color: silver;
 }
 
 /* Accordion
@@ -1187,7 +1192,7 @@ p[title="caption"] a {
   position: fixed !important;
 
   transform: translateY(-50%);
-  left: 0;
+  right: 0;
   top: 50%;
 
   width: fit-content;
@@ -1292,17 +1297,36 @@ body.dark .nav-title:hover {
 }
 /* IMAC PRO
 ================================================== */
-@media only screen and (max-width: 3920px) and (min-width: 1540px) {
+@media only screen and (max-width: 3920px) and (min-width: 1820px) {
   :root {
-    --main: 16px;
-    --small: 14px;
+    --main: calc(12px + 0.5vw);
+    --small: 16px;
     --big: 20px;
     --gap: 12px;
   }
 }
+
+@media only screen and (max-width: 1440px) {
+  #index-container {
+    grid-column: span 8;
+  }
+
+  .nav {
+    grid-column: 9 / span 4;
+  }
+
+  #index-container .category.cap {
+    grid-column: 6 / span 2;
+  }
+
+  #index-container .category {
+    grid-column: 6 / span 3;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .nav {
-    grid-column: 1 / span 4;
+    grid-column: 9 / span 4;
   }
   .gallery {
     height: fit-content;
@@ -1314,7 +1338,7 @@ body.dark .nav-title:hover {
   #index-container {
     padding: 5px 5px 0px 5px;
     display: none;
-    grid-column: span 8;
+
     grid-gap: 5px;
   }
 }
@@ -1326,16 +1350,8 @@ body.dark .nav-title:hover {
     grid-gap: 5px;
   }
 
-  #index-container .category.cap {
-    grid-column: 6 / span 2;
-  }
-
-  #index-container .category {
-    grid-column: 6 / span 3;
-  }
-
   .nav {
-    grid-column: 1 / span 5;
+    grid-column: 8 / span 5;
     grid-template-columns: repeat(3, 1fr);
   }
   .gallery-container {
@@ -1494,6 +1510,9 @@ body.dark .nav-title:hover {
   #index-container {
     padding: 5px 5px 0px 5px;
     display: none;
+
+    grid-column: span 12;
+    grid-row: 2;
     grid-gap: 5px;
     order: 1;
   }
@@ -1533,9 +1552,6 @@ body.dark .nav-title:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #index-container {
-    grid-column: span 12;
-  }
   #index-container .project,
   #index-container .project > a {
     grid-template-columns: repeat(3, 1fr);
