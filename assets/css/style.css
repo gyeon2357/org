@@ -5,8 +5,12 @@
 :root {
   --main: 12px;
   --gap: 10px;
-  --lightgrey: #ebebec;
-  --darkgrey: #a6a2a0;
+
+  --smokeblack: #111;
+
+  --lightgray: #ebebec;
+  --darkgray: #a6a2a0;
+
   --font: "pretendard-comb-type";
 }
 ::selection {
@@ -100,7 +104,7 @@ body {
   letter-spacing: 0.5px;
 }
 body.dark {
-  background-color: black;
+  background-color: var(--smokeblack);
   transition: 0.4s;
 }
 body.dark .nav {
@@ -114,10 +118,10 @@ body.dark .gallery {
   color: white;
 }
 body.dark .project {
-  color: grey;
+  color: white;
 }
 body.dark .project:hover {
-  color: white;
+  color: lightgray;
 }
 .project:hover {
   color: grey;
@@ -192,7 +196,7 @@ figure {
 }
 
 .active {
-  background-color: lightgrey !important;
+  background-color: bisque !important;
 }
 
 sup {
@@ -344,20 +348,34 @@ img.blend {
   background: skyblue;
 }
 
+body.dark .hidden .nav-section .index {
+  background: deepskyblue;
+}
+
 .nav-title {
   background-color: white;
   border-radius: 2px;
   padding: 3px;
   grid-column: span 2;
 }
+
+body.dark .nav-title {
+  background-color: #dadada;
+}
+
 .open-menu {
   grid-column: span 1;
-  background-color: #d9d9d9;
+  background-color: lightgray;
   border-radius: 2px;
   padding: 3px;
 }
+
+body.dark .open-menu {
+  background-color: #b3b3b3;
+}
+
 .open-menu:hover {
-  background-color: lightgrey;
+  background-color: silver;
 }
 
 .hidden {
@@ -391,19 +409,20 @@ img.blend {
 }
 
 body.dark .hidden .nav-section li {
-  background-color: #fafafa;
+  background-color: #dadada;
 }
 
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color: bisque;
+  background-color: khaki;
   color: black;
   border-radius: 2px;
   padding: 3px;
 
   cursor: pointer;
 }
+
 #mode {
   height: fit-content;
   grid-column: span 1;
@@ -549,13 +568,41 @@ body.dark #index .filter-opacity {
   inset-inline-end: calc(var(--line-offset) * -1);
 } */
 
+.gallery-container .project.mark > a::before {
+  content: "Select";
+  position: absolute;
+  top: 0.625rem;
+  left: 0;
+  padding: 2px 6px;
+  border-radius: 999px;
+
+  font-size: 75%;
+  background: plum;
+}
+
+#index-container .project.mark > a > div.title::before {
+  content: "Select";
+
+  position: relative;
+  padding: 2px 6px;
+  margin-right: 0.25rem;
+  border-radius: 999px;
+
+  font-size: 75%;
+  background: plum;
+}
+
 .pr {
   background-color: white;
   border-radius: 2px;
   padding: 3px;
 }
 .index.active {
-  background-color: orange !important;
+  background-color: gold !important;
+}
+
+body.dark .index.active {
+  background-color: goldenrod !important;
 }
 .pr:hover {
   background-color: blue !important;
@@ -606,7 +653,7 @@ body.dark #index .filter-opacity {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-column: span 9;
-  background: rgba(222, 222, 217, 0.5);
+  background: rgba(222, 222, 217, 0.4);
   border-radius: 2px;
   z-index: 10000 !important;
 }
@@ -719,8 +766,7 @@ body.dark #index-container .project:hover {
 
 #index-container .number.cap {
   pointer-events: none;
-
-  background: rgba(222, 222, 217, 0.5);
+  color: gray;
 }
 
 #index-container .category.cap {
@@ -756,21 +802,21 @@ body.dark #index-container .project:hover {
 
 body.dark #index .cap {
   grid-column: span 1;
-  color: black;
-  background-color: white;
+  color: white;
+  background: rgba(222, 222, 217, 0.4);
   border-radius: 2px;
   padding: 3px;
 }
 body.dark #index-container .cap {
   grid-column: span 1;
-  color: black;
-  background: white;
+  color: white;
+  background: rgba(222, 222, 217, 0.4);
   border-radius: 2px;
   padding: 3px;
 }
 
 body.dark #index-container .number.cap {
-  opacity: 0.85;
+  color: silver;
 }
 
 /* Accordion
@@ -1130,9 +1176,9 @@ p[title="caption"] a {
   transition: ease 0s;
   position: fixed !important;
 
-  /* transform: translateY(-50%); */
+  transform: translateY(-50%);
   left: 0;
-  bottom: 10px;
+  top: 50%;
 
   width: fit-content;
 
@@ -1146,15 +1192,15 @@ p[title="caption"] a {
   width: calc(24.97vw - 12rem);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
   .cover-popup img {
-    width: calc(33.33vw - 12rem);
+    width: calc(33.33vw - 6rem);
   }
 }
 
 @media only screen and (max-width: 900px) {
   .cover-popup img {
-    width: calc(41.67vw - 12rem);
+    width: calc(41.67vw - 6rem);
   }
 }
 
@@ -1210,6 +1256,13 @@ body.dark footer {
 header li:hover {
   background-color: lightgrey !important;
 }
+
+body.dark header li:hover,
+body.dark #grid:hover,
+body.dark .nav-title:hover {
+  background-color: #9c9c9c !important;
+}
+
 .nav-section > div:hover {
   background-color: lightgrey;
 }
@@ -1328,7 +1381,18 @@ header li:hover {
   }
   .nav {
     grid-column: span 12;
+
+    font-size: 90%;
   }
+
+  .hidden .nav-section li,
+  .nav-title,
+  #grid,
+  .open-menu,
+  #mode {
+    padding: 2px 3px;
+  }
+
   #index {
     order: -1;
     position: relative;
