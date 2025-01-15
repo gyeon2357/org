@@ -584,30 +584,8 @@ body.dark .gallery-container {
   padding-left: 0.5rem;
 } */
 
-.gallery-container .project > a > img {
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid #ddd;
-}
-
-.gallery-container .project.mark > a::before {
-  content: " ";
-  position: absolute;
-
-  width: 0.625rem;
-  height: 0.625rem;
-
-  bottom: 0.5rem;
-  left: 0;
-
-  border-radius: 2px;
-
-  background-color: plum;
-  color: var(--smokeblack);
-}
-
-.filter-opacity.project.mark > a::before {
-  opacity: 0.2;
+.gallery-container .project > a.mark > img {
+  background: #d2d2d2;
 }
 
 #index-container .project.mark > a > div.title::before {
@@ -629,12 +607,6 @@ body.dark .gallery-container {
 }
 
 @media screen and (max-width: 600px) {
-  .gallery-container .project.mark > a::before {
-    width: 0.5rem;
-    height: 0.5rem;
-
-    bottom: 0.25rem;
-  }
   #index-container .project.mark > a > div.title::before {
     margin-right: 0.25rem;
   }
