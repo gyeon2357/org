@@ -61,7 +61,7 @@ function checkStatus() {
 
     printButton.style.display = "block";
     printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-1.pdf",
+    printable: "https://gyeon.org/practice/basic/duroo10th/type/assets/print/dr-1.pdf",
     type: "pdf",
     showModal: false,
   });
@@ -128,7 +128,7 @@ function buttonChange(text) {
 
 printButton.addEventListener("click", () => {
   printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-3.pdf",
+    printable: "https://gyeon.org/practice/basic/duroo10th/type/assets/print/dr-3.pdf",
     type: "pdf",
     showModal: false,
   });
@@ -136,7 +136,7 @@ printButton.addEventListener("click", () => {
 
 printButton2.addEventListener("click", () => {
   printJS({
-    printable: "https://gyeon.org/practice/basic/dr/type/assets/print/dr-3.pdf",
+    printable: "https://gyeon.org/practice/basic/duroo10th/type/assets/print/dr-3.pdf",
     type: "pdf",
     showModal: false,
   });
