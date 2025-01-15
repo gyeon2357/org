@@ -584,8 +584,24 @@ body.dark .gallery-container {
   padding-left: 0.5rem;
 } */
 
-.gallery-container .project > a.mark > img {
-  background: #d2d2d2;
+.gallery-container .project.mobile > a {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.gallery-container .project.mark > a::before {
+  content: " ";
+  position: absolute;
+
+  width: 0.75rem;
+  height: 0.75rem;
+
+  bottom: 0.5rem;
+  left: 0;
+
+  border-radius: 999px;
+
+  background: plum;
 }
 
 #index-container .project.mark > a > div.title::before {
@@ -607,6 +623,13 @@ body.dark .gallery-container {
 }
 
 @media screen and (max-width: 600px) {
+  .gallery-container .project.mark > a::before {
+    width: 0.5rem;
+    height: 0.5rem;
+
+    bottom: 0.25rem;
+  }
+
   #index-container .project.mark > a > div.title::before {
     margin-right: 0.25rem;
   }
@@ -1003,6 +1026,13 @@ p[title="caption"] a {
 }
 
 @media screen and (max-width: 600px) {
+  .accordion-content figure {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    column-gap: 5px;
+
+    margin: 0 0 0.375rem;
+  }
+
   .accordion-content p[title="Contents"],
   .accordion-content p[title="Scope"],
   .accordion-content p[title="Link"] {
@@ -1206,7 +1236,7 @@ p[title="caption"] a {
 
 .cover-popup img {
   top: 0;
-  width: 3rem;
+  width: 10rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1219,7 +1249,7 @@ p[title="caption"] a {
 @media only screen and (max-width: 900px) {
   .cover-popup img {
     width: calc(41.67vw - 6rem);
-    width: 5rem;
+    width: 8rem;
   }
 }
 
