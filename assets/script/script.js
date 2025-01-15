@@ -155,12 +155,12 @@ $(document).ready(function () {
     $("#index-container .project").toggleClass("zindex");
   });
 
-  // $(document).mousemove(function (e) {
-  //   $(".cover-popup").css({
-  //     left: e.pageX,
-  //     top: e.pageY,
-  //   });
-  // });
+  $(document).mousemove(function (e) {
+    $(".cover-popup").css({
+      left: e.pageX,
+      top: e.pageY,
+    });
+  });
 
   $("#grid").click(function () {
     $(this).toggleClass("active");

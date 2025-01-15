@@ -497,7 +497,7 @@ body.dark #index .filter-opacity {
 .content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 5px;
+  grid-gap: 15px;
   padding: 5px;
 }
 .gallery-container {
@@ -554,7 +554,7 @@ body.dark .gallery-container {
   position: relative;
   height: fit-content;
   line-height: 1.2;
-  row-gap: 10px;
+  row-gap: 15px;
   cursor: auto;
 }
 
@@ -583,6 +583,12 @@ body.dark .gallery-container {
 .project .info-project {
   padding-left: 0.5rem;
 } */
+
+.gallery-container .project > a > img {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
 
 .gallery-container .project.mark > a::before {
   content: " ";
@@ -907,7 +913,9 @@ accordion-content:focus-visible {
 
 .accordion-content figure {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(25% - 30px), 1fr));
+
+  column-gap: 10px;
 
   width: 100%;
   margin: 0 0 0.5rem;
@@ -1226,18 +1234,20 @@ p[title="caption"] a {
 
 .cover-popup img {
   top: 0;
-  width: calc(24.97vw - 12rem);
+  width: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
   .cover-popup img {
     width: calc(33.33vw - 6rem);
+    width: 3rem;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .cover-popup img {
     width: calc(41.67vw - 6rem);
+    width: 5rem;
   }
 }
 
