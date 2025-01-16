@@ -925,17 +925,17 @@ accordion-content:focus-visible {
 }
 
 .accordion-content p {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.35rem;
   max-width: 72ch;
 
   word-break: keep-all;
 }
 
 .accordion-content p::before {
-  content: attr(title) ":";
+  content: "[" attr(title) "]";
 
-  text-decoration: underline;
-  text-underline-position: from-font;
+  /* text-decoration: underline;
+  text-underline-position: from-font; */
 
   padding: 0 0.125rem;
   margin-right: 0.125rem;
@@ -1218,7 +1218,8 @@ p[title="caption"] a {
   grid-column: span 9;
 }
 .cover-popup {
-  /* padding-left: 20px !important; */
+  padding-left: 15px !important;
+
   box-sizing: border-box;
   transition: ease 0s;
   position: fixed !important;
@@ -1236,22 +1237,26 @@ p[title="caption"] a {
 
 .cover-popup img {
   top: 0;
-  width: 10rem;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
   .cover-popup img {
     width: calc(33.33vw - 6rem);
-    width: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
 
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
   .cover-popup img {
     width: calc(41.67vw - 6rem);
-    width: 8rem;
+    width: 6rem;
+    height: 6rem;
   }
-}
+} */
 
 #project:hover .cover-popup {
   opacity: 1;
