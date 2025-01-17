@@ -585,7 +585,7 @@ body.dark .gallery-container {
 } */
 
 .gallery-container .project.mobile > a {
-  width: 50%;
+  width: 33.333%;
   margin: 0 auto;
 }
 
