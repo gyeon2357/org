@@ -102,8 +102,19 @@ $(document).ready(function () {
         } else {
           setState("closed");
         }
+
+        // scrollOffset();
       });
     });
+
+    // function scrollOffset() {
+    //   Array.from(accordions).forEach((accordion) => {
+    //     var offset = accordion.offset();
+    //     $("html, body").animate({ scrollTop: offset.top - 200 }, 200);
+
+    //     label.focus();
+    //   });
+    // }
 
     function closeAllAccordions() {
       Array.from(accordions).forEach((accordion) => {
@@ -141,7 +152,7 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      $("html, body").animate({ scrollTop: offset.top / 2 }, 200);
+      $("html, body").animate({ scrollTop: offset.top - 200 }, 200);
     });
   });
 
