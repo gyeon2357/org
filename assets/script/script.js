@@ -102,19 +102,8 @@ $(document).ready(function () {
         } else {
           setState("closed");
         }
-
-        // scrollOffset();
       });
     });
-
-    // function scrollOffset() {
-    //   Array.from(accordions).forEach((accordion) => {
-    //     var offset = accordion.offset();
-    //     $("html, body").animate({ scrollTop: offset.top - 200 }, 200);
-
-    //     label.focus();
-    //   });
-    // }
 
     function closeAllAccordions() {
       Array.from(accordions).forEach((accordion) => {
@@ -123,7 +112,7 @@ $(document).ready(function () {
     }
   });
 
-  //view button
+  //view btn
   $(".index").click(function () {
     $(this).toggleClass("active");
     $(".gallery-container, .subsection, .info-inside").toggle();
@@ -136,7 +125,7 @@ $(document).ready(function () {
     $(".accordion").attr("data-accordion-state", "closed");
   });
 
-  // initial button
+  // gallery -> index btn
   $(".link").each(function (i) {
     $(this).click(function () {
       $(".index").toggleClass("active");
@@ -154,6 +143,15 @@ $(document).ready(function () {
 
       $("html, body").animate({ scrollTop: offset.top - 200 }, 200);
     });
+  });
+
+  // index -> index btn
+  $(".accordion-label").bind("click", function () {
+    var self = this;
+    setTimeout(function () {
+      theOffset = $(self).offset();
+      $("body,html").animate({ scrollTop: theOffset.top - 200 }, 200);
+    }, 50);
   });
 
   $(".contact").click(function () {
