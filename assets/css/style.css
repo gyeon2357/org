@@ -243,11 +243,11 @@ body.dark sup > mark {
 }
 
 body.dark .intro {
-  background: #161616;
+  background: #171717;
 }
 
 .intro-text {
-  color: #161616;
+  color: #363636;
 
   font-size: 1rem;
   line-height: 1.4;
