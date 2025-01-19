@@ -455,6 +455,11 @@ body.dark .hidden .nav-section li {
 
   margin-left: 4px;
 }
+
+.filter-opacity {
+  display: none !important;
+}
+
 .filter-opacity img {
   opacity: 0.2;
   pointer-events: none;
