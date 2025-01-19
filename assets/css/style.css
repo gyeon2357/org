@@ -228,34 +228,48 @@ body.dark sup > mark {
 ================================================== */
 
 .intro {
-  background: var(--smokeblack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: whitesmoke;
 
-  z-index: 10009 !important;
+  z-index: 100000 !important;
+}
+
+body.dark .intro {
+  background: #161616;
 }
 
 .intro-text {
-  color: silver;
+  color: #161616;
 
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+body.dark .intro-text {
+  color: silver;
 }
 
 .intro-hide {
-  background: var(--smokeblack);
   overflow: hidden;
 }
 
 .intro-hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .intro-text {
+    font-size: 0.875rem;
+  }
 }
 
 /* ------- */
