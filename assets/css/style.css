@@ -455,7 +455,7 @@ body.dark .open-menu {
 
 .hidden .nav-section li#plans,
 .hidden .nav-section li#collabs {
-  width: 100%;
+  width: 87.5%;
   justify-self: end;
 }
 
@@ -673,8 +673,13 @@ body.dark .gallery-container {
 }
 
 .gallery-container .project.mobile.mark > a::before {
-  bottom: 1.25rem;
-  left: 1.25rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.gallery-container.change .project.mobile.mark > a::before {
+  bottom: 0.75rem;
+  left: 0.75rem;
 }
 
 #index-container .project.mark > a > div.title::before {
@@ -713,6 +718,11 @@ body.dark .gallery-container {
   .gallery-container .project.mobile.mark > a::before {
     bottom: 0.5rem;
     left: 0.5rem;
+  }
+
+  .gallery-container.change .project.mobile.mark > a::before {
+    bottom: 0.375rem;
+    left: 0.375rem;
   }
 
   #index-container .project.mark > a > div.title::before {
@@ -1004,6 +1014,10 @@ body.dark #index-container .cap {
   height: auto;
 
   border: thin solid #efefef;
+}
+
+body.dark .accordion-content figure img {
+  border: thin solid #333;
 }
 
 .accordion-content p {
