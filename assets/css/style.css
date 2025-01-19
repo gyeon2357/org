@@ -1381,19 +1381,19 @@ p[title="caption"] a {
 ================================================== */
 footer {
   margin-top: auto;
-  padding: 20px 10px 10px;
+  padding: 3rem 10px 1rem;
 
   grid-template-columns: repeat(1, 1fr);
   grid-column: span 4;
   grid-gap: 0px;
   position: relative;
-  color: lightgrey !important;
+  color: gray !important;
 
   font-size: var(--main);
   text-transform: uppercase;
 }
 body.dark footer {
-  color: darkgrey !important;
+  color: darkgray !important;
 }
 
 /* HOVER
