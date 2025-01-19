@@ -1028,10 +1028,11 @@ body.dark .accordion-content figure img {
 }
 
 .accordion-content p::before {
-  content: "[" attr(title) "]";
+  /* content: "[" attr(title) "]"; */
+  content: attr(title);
 
-  /* text-decoration: underline;
-  text-underline-position: from-font; */
+  text-decoration: underline;
+  text-underline-position: from-font;
 
   padding: 0 0.125rem;
   margin-right: 0.125rem;
