@@ -963,11 +963,11 @@ body.dark #index-container .cap {
 }
 
 .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 2px 1px goldenrod;
+  box-shadow: 0 0 2px 1px slategray;
 }
 
 body.dark .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 2px 1px gold;
+  box-shadow: 0 0 2px 1px ghostwhite;
 }
 
 /* .accordion-label::before {
