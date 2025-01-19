@@ -224,6 +224,42 @@ body.dark sup > mark {
   background: #f8f8f8;
 } */
 
+/* INTRO
+================================================== */
+
+.intro {
+  background: var(--smokeblack);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10009 !important;
+}
+
+.intro-text {
+  color: silver;
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.intro-hide {
+  background: var(--smokeblack);
+  overflow: hidden;
+}
+
+.intro-hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+/* ------- */
+
 /* MENU
 ================================================== */
 
@@ -641,6 +677,10 @@ body.dark .gallery-container {
 }
 
 @media screen and (max-width: 600px) {
+  .gallery-container .project.mobile > a {
+    width: 40%;
+  }
+
   .gallery-container .project.mark > a::before {
     width: 0.75rem;
     height: 0.75rem;
@@ -652,8 +692,8 @@ body.dark .gallery-container {
   }
 
   .gallery-container .project.mobile.mark > a::before {
-    bottom: 0.625rem;
-    left: 0.625rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
   }
 
   #index-container .project.mark > a > div.title::before {
@@ -1174,7 +1214,7 @@ p[title="caption"] a {
   grid-column: span 10 !important;
   position: relative;
   height: 100vh;
-  z-index: 1000000 !important;
+  z-index: 10002 !important;
   display: flex;
   column-gap: 10px;
   align-items: flex-end;
