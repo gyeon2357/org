@@ -1064,11 +1064,24 @@ body.dark .accordion-content p::before {
   margin: 2rem 0;
 }
 
+.accordion-content p[title="Link"] > a {
+  display: block;
+
+  line-height: 1.6;
+
+  width: fit-content;
+  margin: 0 auto;
+
+  padding: 1.5px 6px;
+
+  margin-top: 0.25rem;
+
+  background: #6a8e2335;
+  border-radius: 2px;
+}
+
 .accordion-content p > a {
   color: inherit;
-
-  text-decoration: underline;
-  text-underline-position: from-font;
 }
 
 .accordion-content p > a:hover {
@@ -1077,13 +1090,6 @@ body.dark .accordion-content p::before {
 
 .accordion-content p[title="Scope"] > sup {
   padding-right: 0.375rem;
-}
-
-.accordion-content p[title="Link"] > a {
-  line-height: 1.6;
-}
-
-.accordion-content p[title="Link"] > a::before {
 }
 
 p[title="caption"] {
