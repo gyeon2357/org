@@ -1024,6 +1024,8 @@ body.dark .accordion-content figure img {
   margin: 0 0 0.35rem;
   max-width: 72ch;
 
+  font-size: 0.875rem;
+
   word-break: keep-all;
 }
 
@@ -1035,18 +1037,18 @@ body.dark .accordion-content figure img {
   text-underline-position: from-font;
 
   padding: 0 0.125rem;
-  margin-right: 0.125rem;
+  margin-right: 0.25rem;
 }
 
 body.dark .accordion-content p::before {
   /* color: black; */
 }
 
-.accordion-content p[title="Contents"] {
+.accordion-content p[title="Description"] {
   line-height: 1.4;
 }
 
-.accordion-content p[title="Contents"] > a {
+.accordion-content p[title="Description"] > a {
   font-size: 90%;
   vertical-align: text-top;
 
@@ -1054,7 +1056,7 @@ body.dark .accordion-content p::before {
   padding-right: 0.25rem;
 }
 
-.accordion-content p[title="Contents"],
+.accordion-content p[title="Description"],
 .accordion-content p[title="Scope"],
 .accordion-content p[title="Link"] {
   margin-bottom: 0.875rem;
@@ -1068,17 +1070,22 @@ body.dark .accordion-content p::before {
 .accordion-content p[title="Link"] > a {
   display: block;
 
+  font-size: 0.75rem;
   line-height: 1.6;
 
   width: fit-content;
   margin: 0 auto;
 
-  padding: 1.5px 6px;
+  padding: 1px 6px;
 
-  margin-top: 0.25rem;
+  margin-top: 0.375rem;
 
   background: #6a8e2335;
   border-radius: 2px;
+}
+
+.accordion-content p[title="Link"] > a:nth-child(1) {
+  margin-top: 0.625rem;
 }
 
 .accordion-content p > a {
@@ -1146,7 +1153,11 @@ p[title="caption"] a {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% - 10px), 1fr));
   }
 
-  .accordion-content p[title="Contents"],
+  .accordion-content p {
+    font-size: inherit;
+  }
+
+  .accordion-content p[title="Description"],
   .accordion-content p[title="Scope"],
   .accordion-content p[title="Link"] {
     margin-bottom: 0.5rem;
@@ -1154,6 +1165,10 @@ p[title="caption"] a {
 
   .accordion-content p[title="Link"] {
     margin: 1rem 0;
+  }
+
+  .accordion-content p[title="Link"] > a {
+    font-size: 0.625rem;
   }
 }
 
