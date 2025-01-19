@@ -398,10 +398,9 @@ img.blend {
   background: lightskyblue;
 }
 
-/* 
 body.dark .hidden .nav-section .index {
-  background: skyblue;
-} */
+  background: lightskyblue;
+}
 
 .nav-title {
   background-color: white;
@@ -461,13 +460,13 @@ body.dark .open-menu {
 }
 
 body.dark .hidden .nav-section li {
-  background-color: #dadada;
+  background-color: #eeeeee;
 }
 
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color: darkkhaki;
+  background-color: khaki;
   color: black;
   border-radius: 2px;
   padding: 3px;
