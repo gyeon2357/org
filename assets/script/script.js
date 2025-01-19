@@ -59,15 +59,15 @@ $(document).ready(function () {
   //Count
   var galleryN = $(".gallery-container .project").length;
   var webN = $(".gallery-container .project.web").length;
-  var printingN = $(".gallery-container .project.printing").length;
-  var plansN = $(".gallery-container .project.plans").length;
-  var collabsN = $(".gallery-container .project.collabs").length;
+  var pressworkN = $(".gallery-container .project.presswork").length;
+  var planningN = $(".gallery-container .project.planning").length;
+  var collabN = $(".gallery-container .project.collab").length;
 
   $(".index").find("a.count").html(galleryN);
   $("#web").find("a.count").html(webN);
-  $("#printing").find("a.count").html(printingN);
-  $("#plans").find("a.count").html(plansN);
-  $("#collabs").find("a.count").html(collabsN);
+  $("#presswork").find("a.count").html(pressworkN);
+  $("#planning").find("a.count").html(planningN);
+  $("#collab").find("a.count").html(collabN);
 
   //Accordion
   $(function () {

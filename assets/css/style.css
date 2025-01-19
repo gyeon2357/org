@@ -441,8 +441,8 @@ body.dark .open-menu {
   padding: 3px;
 }
 
-.hidden .nav-section li#plans,
-.hidden .nav-section li#collabs {
+.hidden .nav-section li#planning,
+.hidden .nav-section li#collab {
   width: 87.5%;
   justify-self: end;
 }
@@ -1035,9 +1035,8 @@ body.dark .accordion-content p::before {
 }
 
 .accordion-content p[title="Description"],
-.accordion-content p[title="Scope"],
-.accordion-content p[title="Link"] {
-  margin-bottom: 0.875rem;
+.accordion-content p[title="Scope"]{
+  margin-bottom: 2rem;
 }
 
 .accordion-content p[title="Link"] {
@@ -1135,9 +1134,8 @@ p[title="caption"] a {
   }
 
   .accordion-content p[title="Description"],
-  .accordion-content p[title="Scope"],
-  .accordion-content p[title="Link"] {
-    margin-bottom: 0.5rem;
+  .accordion-content p[title="Scope"] {
+    margin-bottom: 1.5rem;
   }
 
   .accordion-content p[title="Link"] {
