@@ -492,10 +492,6 @@ body.dark .hidden .nav-section li {
   margin-left: 4px;
 }
 
-.filter-opacity {
-  display: none !important;
-}
-
 .filter-opacity img {
   opacity: 0.2;
   pointer-events: none;
@@ -504,6 +500,15 @@ body.dark .hidden .nav-section li {
   color: lightgrey;
   pointer-events: none;
 }
+
+.gallery-container .filter-opacity {
+  display: none !important;
+}
+
+#index-container .accordion:has(.filter-opacity) {
+  display: none !important;
+}
+
 body.dark .filter-opacity {
   color: grey;
   pointer-events: none;
@@ -808,15 +813,16 @@ body.dark #index-container #links .cap:hover {
   grid-column: span 1;
 }
 
-body.dark #index-container .project.filter-opacity {
-  color: white;
-  opacity: 0.2 !important;
-}
 #index-container .project.filter-opacity {
   color: black;
-  opacity: 0.2 !important;
+  opacity: 0 !important;
   pointer-events: none;
 }
+
+body.dark #index-container .project.filter-opacity {
+  color: white;
+}
+
 #index-container .project:hover {
   background-color: lightgrey !important;
 }
