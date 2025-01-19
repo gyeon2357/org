@@ -1762,3 +1762,15 @@ body.dark footer {
 ================================================== */
 @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 600px) {
 }
+
+/* MOBILE COPY
+================================================== */
+
+@media screen and (hover: none) and (pointer: coarse) {
+  img {
+    -webkit-user-select: none !important;
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+}
