@@ -197,7 +197,7 @@ figure {
 }
 
 .active {
-  background-color: bisque !important;
+  background-color: khaki !important;
 }
 
 sup {
@@ -395,12 +395,13 @@ img.blend {
   display: flex;
   justify-content: space-between;
 
-  background: skyblue;
+  background: lightskyblue;
 }
 
+/* 
 body.dark .hidden .nav-section .index {
-  background: deepskyblue;
-}
+  background: skyblue;
+} */
 
 .nav-title {
   background-color: white;
@@ -466,7 +467,7 @@ body.dark .hidden .nav-section li {
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color: khaki;
+  background-color: darkkhaki;
   color: black;
   border-radius: 2px;
   padding: 3px;
@@ -739,9 +740,6 @@ body.dark .gallery-container {
   background-color: gold !important;
 }
 
-body.dark .index.active {
-  background-color: goldenrod !important;
-}
 .pr:hover {
   background-color: blue !important;
   color: white !important;
@@ -797,6 +795,11 @@ body.dark .index.active {
   border-radius: 2px;
   z-index: 10000 !important;
 }
+
+body.dark #index-container .project {
+  background: rgba(222, 222, 217, 0.4);
+}
+
 #index-container .project.active {
   color: black;
 }
@@ -942,13 +945,13 @@ body.dark #index-container .project:hover {
 body.dark #index .cap {
   grid-column: span 1;
   color: white;
-  background: rgba(222, 222, 217, 0.4);
+  background: rgba(222, 222, 217, 0.3);
   border-radius: 2px;
   padding: 3px;
 }
 body.dark #index-container .cap {
   color: silver;
-  background: rgba(222, 222, 217, 0.4);
+  background: rgba(222, 222, 217, 0.3);
   border-radius: 2px;
   padding: 3px;
 }
@@ -961,7 +964,11 @@ body.dark #index-container .cap {
 }
 
 .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 2px 1px olivedrab;
+  box-shadow: 0 0 2px 1px goldenrod;
+}
+
+body.dark .accordion[data-accordion-state="opened"] .accordion-label {
+  box-shadow: 0 0 2px 1px gold;
 }
 
 /* .accordion-label::before {
@@ -1080,8 +1087,12 @@ body.dark .accordion-content p::before {
 
   margin-top: 0.375rem;
 
-  background: #6a8e2335;
+  background: #556b2f40;
   border-radius: 2px;
+}
+
+body.dark .accordion-content p[title="Link"] > a {
+  background: #556b2fc0;
 }
 
 .accordion-content p[title="Link"] > a:nth-child(1) {
