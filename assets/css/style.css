@@ -120,14 +120,6 @@ body.dark .gallery {
 body.dark .project {
   color: white;
 }
-body.dark .project:hover {
-  color: lightgray;
-}
-.project:hover {
-  color: grey;
-  opacity: 0.6;
-  /* box-shadow: 0 0 1px 1px #b3b3b37d; */
-}
 
 body.dark .info-inside {
   color: white;
@@ -424,10 +416,6 @@ body.dark .open-menu {
   background-color: #b3b3b3;
 }
 
-.open-menu:hover {
-  background-color: silver;
-}
-
 .hidden {
   height: fit-content;
   grid-gap: 5px;
@@ -466,7 +454,7 @@ body.dark .hidden .nav-section li {
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color:moccasin;
+  background-color: moccasin;
   color: black;
   border-radius: 2px;
   padding: 3px;
@@ -739,13 +727,6 @@ body.dark .gallery-container {
   background-color: gold !important;
 }
 
-.pr:hover {
-  background-color: blue !important;
-  color: white !important;
-}
-.pr:hover a {
-  color: white !important;
-}
 .pr.active a {
   color: white !important;
 }
@@ -819,12 +800,7 @@ body.dark #index-container .project {
 #links > div {
   cursor: pointer;
 }
-#links .cap:hover {
-  background-color: lightgrey;
-}
-body.dark #index-container #links .cap:hover {
-  background-color: lightgrey;
-}
+
 #index .project.filter-opacity {
   color: lightgrey;
   pointer-events: none;
@@ -849,13 +825,6 @@ body.dark #index-container .project.filter-opacity {
   color: white;
 }
 
-#index-container .project:hover {
-  background-color: lightgrey !important;
-}
-body.dark #index-container .project:hover {
-  background-color: gray !important;
-  color: black;
-}
 #index-container .project,
 #index-container .project > a {
   grid-gap: 5px;
@@ -935,10 +904,6 @@ body.dark #index-container .project:hover {
 
 .info-inside > div {
   padding: 3px;
-}
-#index .project:hover {
-  color: grey;
-  cursor: pointer;
 }
 
 body.dark #index .cap {
@@ -1086,12 +1051,12 @@ body.dark .accordion-content p::before {
 
   margin-top: 0.375rem;
 
-  background: #556b2f40;
+  background: #70809045;
   border-radius: 2px;
 }
 
 body.dark .accordion-content p[title="Link"] > a {
-  background: #556b2fc0;
+  background: #708090a0;
 }
 
 .accordion-content p[title="Link"] > a:nth-child(1) {
@@ -1100,10 +1065,6 @@ body.dark .accordion-content p[title="Link"] > a {
 
 .accordion-content p > a {
   color: inherit;
-}
-
-.accordion-content p > a:hover {
-  opacity: 0.4;
 }
 
 .accordion-content p[title="Scope"] > sup {
@@ -1145,8 +1106,7 @@ p[title="caption"] a {
   transform: rotate(135deg);
 }
 
-.accordion[data-accordion-state="opened"] .accordion-label,
-.accordion-label:hover {
+.accordion[data-accordion-state="opened"] .accordion-label {
   background-size: 100% 0.1em;
 }
 
@@ -1175,10 +1135,6 @@ p[title="caption"] a {
 
   .accordion-content p[title="Link"] {
     margin: 1rem 0;
-  }
-
-  .accordion-content p[title="Link"] > a {
-    font-size: 0.625rem;
   }
 }
 
@@ -1345,10 +1301,7 @@ p[title="caption"] a {
   opacity: 1;
   transition: 0s;
 }
-.gallery-thumbs .swiper-slide:hover {
-  opacity: 1 !important;
-  cursor: pointer;
-}
+
 /* ABOUT
 ================================================== */
 /* SINGLE
@@ -1400,12 +1353,6 @@ p[title="caption"] a {
   }
 } */
 
-#project:hover .cover-popup {
-  opacity: 1;
-  z-index: 10000;
-  transition-delay: 0s;
-}
-
 .rrss {
   text-align: left;
   display: none;
@@ -1443,24 +1390,81 @@ footer {
 body.dark footer {
   color: darkgrey !important;
 }
-#grid:hover {
-  background-color: lightgrey;
-}
-.nav-title:hover {
-  background-color: lightgrey;
-}
-header li:hover {
-  background-color: lightgrey !important;
-}
 
-body.dark header li:hover,
-body.dark #grid:hover,
-body.dark .nav-title:hover {
-  background-color: #9c9c9c !important;
-}
+/* HOVER
+================================================== */
 
-.nav-section > div:hover {
-  background-color: lightgrey;
+@media (hover: hover) and (pointer: fine) {
+  body.dark .project:hover {
+    color: lightgray;
+  }
+  .project:hover {
+    color: grey;
+    opacity: 0.6;
+    /* box-shadow: 0 0 1px 1px #b3b3b37d; */
+  }
+  .open-menu:hover {
+    background-color: silver;
+  }
+  .pr:hover {
+    background-color: blue !important;
+    color: white !important;
+  }
+  .pr:hover a {
+    color: white !important;
+  }
+  #links .cap:hover {
+    background-color: lightgrey;
+  }
+  body.dark #index-container #links .cap:hover {
+    background-color: lightgrey;
+  }
+  #index-container .project:hover {
+    background-color: lightgrey !important;
+  }
+  body.dark #index-container .project:hover {
+    background-color: gray !important;
+    color: black;
+  }
+  #index .project:hover {
+    color: grey;
+    cursor: pointer;
+  }
+  .accordion-content p > a:hover {
+    opacity: 0.4;
+  }
+  .accordion-label:hover {
+    background-size: 100% 0.1em;
+  }
+  .gallery-thumbs .swiper-slide:hover {
+    opacity: 1 !important;
+    cursor: pointer;
+  }
+  #project:hover .cover-popup {
+    opacity: 1;
+    z-index: 10000;
+    transition-delay: 0s;
+  }
+
+  #grid:hover {
+    background-color: lightgrey;
+  }
+  .nav-title:hover {
+    background-color: lightgrey;
+  }
+  header li:hover {
+    background-color: lightgrey !important;
+  }
+
+  .nav-section > div:hover {
+    background-color: lightgrey;
+  }
+
+  body.dark header li:hover,
+  body.dark #grid:hover,
+  body.dark .nav-title:hover {
+    background-color: #9c9c9c !important;
+  }
 }
 
 /* FONTS
