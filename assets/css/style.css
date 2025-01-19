@@ -1721,7 +1721,7 @@ body.dark footer {
     grid-column: 3 / span 1 !important;
   }
   .title.cap {
-    grid-column: span 1 !important;
+    grid-column: span 3 !important;
   }
   .info-inside {
     grid-template-columns: repeat(3, 1fr);
@@ -1732,7 +1732,13 @@ body.dark footer {
   }
 
   #index-container .category.cap {
-    grid-column: span 1 !important;
+    grid-column: span 2 !important;
+    grid-row: 2;
+  }
+
+    #index-container .year.cap {
+    grid-column: 3 / span 1 !important;
+    grid-row: 2;
   }
 
   .title {
