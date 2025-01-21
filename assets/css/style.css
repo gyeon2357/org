@@ -443,7 +443,7 @@ body.dark .open-menu {
 
 .hidden .nav-section li#planning,
 .hidden .nav-section li#collab {
-  width: 87.5%;
+  width: 95%;
   justify-self: end;
 }
 
