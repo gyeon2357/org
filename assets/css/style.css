@@ -995,6 +995,10 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
 }
 
+.accordion-content figure.landscape.expand {
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+
 .accordion-content figure img {
   width: 100%;
   height: auto;
