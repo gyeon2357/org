@@ -1399,12 +1399,16 @@ footer {
   grid-column: span 4;
   grid-gap: 0px;
   position: relative;
-  color: gray !important;
 
   font-size: var(--main);
   text-transform: uppercase;
 }
-body.dark footer {
+
+footer a {
+  color: gray !important;
+}
+
+body.dark footer a {
   color: darkgray !important;
 }
 
@@ -1740,7 +1744,7 @@ body.dark footer {
     grid-row: 2;
   }
 
-    #index-container .year.cap {
+  #index-container .year.cap {
     grid-column: 3 / span 1 !important;
     grid-row: 2;
   }
