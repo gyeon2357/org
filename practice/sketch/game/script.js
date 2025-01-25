@@ -10,19 +10,19 @@ var WEPON_DEFAULT = {
   name: "Normal Beam",
 
   // Damage dealt 0 ~ 1
-  power: 0.5,
+  power: 0.4,
 
   // Bullet speed
   speed: 5,
 
   // Bullet length
-  length: 10,
+  length: 12,
 
   // Bullet width
   width: 1,
 
   // The color of the bullet, in the case of special weapons, reflected in the color of the item, specified by CSS color
-  color: "yellow",
+  color: "skyblue",
 
   // Fire rate
   shootingInterval: 1000 * 0.35,
@@ -82,7 +82,7 @@ var WEPON_SPECIAL = [
     speed: 15,
     length: 10,
     width: 2,
-    color: "rgb(255, 153, 0)",
+    color: "rgb(255, 170, 0)",
     shootingInterval: 1000 * 0.5,
     through: false,
     explosion: {
@@ -112,7 +112,7 @@ var ASTEROID_MIN_SIZE = 5;
 var ASTEROID_MAX_NUM = 75;
 var ASTEROID_SPAWN_TIME = 350;
 var SHIP_SPEED = 1.5;
-var UFO_SPEED = 2;
+var UFO_SPEED = 1.85;
 var ITEM_SPEED = 0.5;
 
 var UFO_INCIDENCE = 0.0035;
@@ -333,7 +333,6 @@ function loop() {
   }
 
   // Draw
-
   context.beginPath();
   context.strokeStyle = "rgb(255, 255, 255)";
   context.lineWidth = 1;
@@ -385,7 +384,7 @@ function play() {
 function gameOver() {
   ship.destroy();
   isPlay = false;
-  dom.title.innerHTML = "GAME OVER!";
+  dom.title.innerHTML = "Game Over";
   dom.message.innerHTML = "Your Score " + score + " Points<br />";
   // dom.message.appendChild(tweetLink());
   dom.menu.style.display = "block";
