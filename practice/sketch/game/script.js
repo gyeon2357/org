@@ -7,13 +7,13 @@
 // Default weapon
 var WEPON_DEFAULT = {
   // Weapon name
-  name: "NORMAL BEAM",
+  name: "Normal Beam",
 
   // Damage dealt 0 ~ 1
   power: 0.5,
 
   // Bullet speed
-  speed: 4,
+  speed: 5,
 
   // Bullet length
   length: 10,
@@ -387,7 +387,7 @@ function gameOver() {
   isPlay = false;
   dom.title.innerHTML = "GAME OVER!";
   dom.message.innerHTML = "Your Score " + score + " Points<br />";
-		// dom.message.appendChild(tweetLink());
+  // dom.message.appendChild(tweetLink());
   dom.menu.style.display = "block";
 }
 
@@ -430,7 +430,6 @@ function hitDetection(a, b) {
 
   return false;
 }
-
 
 // Straight line intersection detection used in hitDetection
 // True if they intersect
@@ -766,7 +765,7 @@ Range.prototype = {
  */
 function Ship(x, y, size) {
   Point.call(this, x, y);
-  this.size = size; 
+  this.size = size;
   this.currentWepon = WEPON_DEFAULT;
 
   // Calculate the speed at the time of the previous position and bullet firing
@@ -794,7 +793,7 @@ Ship.prototype = extend(new Point(), {
   angle: 0,
   possibleShooting: true,
   specialWeponSetTime: 0,
-	died: false,
+  died: false,
   splinter: null,
 
   setSpecialWepon: function (wepon) {
