@@ -10,7 +10,7 @@ var WEPON_DEFAULT = {
   name: "NORMAL BEAM",
 
   // Damage dealt 0 ~ 1
-  power: 0.3,
+  power: 0.5,
 
   // Bullet speed
   speed: 4,
