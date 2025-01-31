@@ -18,10 +18,10 @@ const fontOptions = {
 const params = {
   // edit
 
-  fontName: "Times New Roman",
+  fontName: "Garamond",
   isBold: true,
-  fontSize: window.innerWidth / 17.5,
-  text1: `Stay`,
+  fontSize: window.innerWidth / 15,
+  text1: `Stay\n`,
   text2: `Palette`,
   pointerSize: null,
   color: { r: 1, g: 0.85, b: 0.3 },
@@ -93,6 +93,7 @@ function updateTextCanvas() {
   textureCtx.font =
     (params.isBold ? "bold" : "normal") +
     " " +
+    // edit
     params.fontSize * devicePixelRatio +
     "px " +
     fontOptions[params.fontName];
