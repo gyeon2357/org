@@ -16,12 +16,14 @@ const fontOptions = {
 };
 
 const params = {
+  // edit
   fontName: "Garamond",
   isBold: true,
-  fontSize: 40,
-  text: "Stay Palette",
+  fontSize: window.innerWidth / 17.5,
+  text1: `Stay`,
+  text2: `Palette`,
   pointerSize: null,
-  color: { r: 1, g: 0.8, b: 0 },
+  color: { r: 1, g: 0.85, b: 0 },
 };
 
 const pointer = {
@@ -98,11 +100,26 @@ function updateTextCanvas() {
 
   textureCtx.filter = "blur(3px)";
 
-  const textBox = textureCtx.measureText(params.text);
+  // edit
+  // const textBox = textureCtx.measureText(params.text);
+  // textureCtx.fillText(
+  //   params.text,
+  //   0.5 * textureEl.width,
+  //   0.5 * textureEl.height + 0.5 * textBox.actualBoundingBoxAscent
+  // );
+
+  const textBox1 = textureCtx.measureText(params.text1);
   textureCtx.fillText(
-    params.text,
+    params.text1,
     0.5 * textureEl.width,
-    0.5 * textureEl.height + 0.5 * textBox.actualBoundingBoxAscent
+    0.33 * textureEl.height + 0.5 * textBox1.actualBoundingBoxAscent
+  );
+
+  const textBox2 = textureCtx.measureText(params.text2);
+  textureCtx.fillText(
+    params.text2,
+    0.5 * textureEl.width,
+    0.33 * textureEl.height + 2 * textBox2.actualBoundingBoxAscent
   );
 
   gl.activeTexture(gl.TEXTURE0);
@@ -257,10 +274,14 @@ function render(t) {
   // edit
   const dt = 1 / 60;
 
+  // edit
   if (t && isPreview) {
     updateMousePosition(
-      (0.5 - 0.45 * Math.sin(0.003 * t - 2)) * window.innerWidth,
-      (0.5 + 0.1 * Math.sin(0.0025 * t) + 0.1 * Math.cos(0.002 * t)) *
+      // (0.5 - 0.45 * Math.cos(0.003 * t - 2)) * window.innerWidth,
+      //     (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.1 * Math.cos(0.002 * t)) *
+
+      (0.5 - 0.45 * Math.tan(0.003 * t - 2)) * window.innerWidth,
+      (0.5 + 0.1 * Math.tan(0.0025 * t) + 0.2 * Math.sin(0.002 * t)) *
         window.innerHeight
     );
   }
@@ -404,6 +425,7 @@ function render(t) {
 }
 
 function resizeCanvas() {
+  // edit 4-2
   params.pointerSize = 4 / window.innerHeight;
   canvasEl.width = textureEl.width = window.innerWidth;
   canvasEl.height = textureEl.height = window.innerHeight;
