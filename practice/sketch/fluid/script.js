@@ -17,13 +17,14 @@ const fontOptions = {
 
 const params = {
   // edit
-  fontName: "Garamond",
+
+  fontName: "Times New Roman",
   isBold: true,
   fontSize: window.innerWidth / 17.5,
   text1: `Stay`,
   text2: `Palette`,
   pointerSize: null,
-  color: { r: 1, g: 0.85, b: 0 },
+  color: { r: 1, g: 0.85, b: 0.3 },
 };
 
 const pointer = {
@@ -454,19 +455,19 @@ function updateMousePosition(eX, eY) {
   pointer.y = eY;
 }
 
-function createControls() {
-  const gui = new GUI();
-  gui.close();
+// function createControls() {
+//   const gui = new GUI();
+//   gui.close();
 
-  gui.add(params, "text").onChange(updateTextCanvas);
-  gui
-    .add(params, "fontSize", 10, 300)
-    .onChange(updateTextCanvas)
-    .name("font size, px");
-  gui.add(params, "isBold").onChange(updateTextCanvas).name("bold");
-  gui
-    .add(params, "fontName", Object.keys(fontOptions))
-    .onChange(updateTextCanvas)
-    .name("font");
-  gui.addColor(params, "color");
-}
+//   gui.add(params, "text").onChange(updateTextCanvas);
+//   gui
+//     .add(params, "fontSize", 10, 300)
+//     .onChange(updateTextCanvas)
+//     .name("font size, px");
+//   gui.add(params, "isBold").onChange(updateTextCanvas).name("bold");
+//   gui
+//     .add(params, "fontName", Object.keys(fontOptions))
+//     .onChange(updateTextCanvas)
+//     .name("font");
+//   gui.addColor(params, "color");
+// }
