@@ -278,7 +278,7 @@ window.onload = function () {
   function render(t) {
     // edit
     // const dt = 1 / 60;
-    const dt = 1 / 20;
+    const dt = 1 / 40;
 
     // edit
     if (t && isPreview) {
@@ -455,8 +455,8 @@ window.onload = function () {
   function updateMousePosition(eX, eY) {
     pointer.moved = true;
     // edit
-    pointer.dx = 3 * (eX - pointer.x);
-    pointer.dy = 3 * (eY - pointer.y);
+    pointer.dx = 5 * (eX - pointer.x);
+    pointer.dy = 5 * (eY - pointer.y);
     pointer.x = eX;
     pointer.y = eY;
   }
