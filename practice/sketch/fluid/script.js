@@ -5,6 +5,7 @@ const textureEl = document.createElement("canvas");
 const textureCtx = textureEl.getContext("2d");
 
 const fontOptions = {
+  "Josefin Sans": "Josefin Sans",
   Arial: "Arial, sans-serif",
   Verdana: "Verdana, sans-serif",
   Tahoma: "Tahoma, sans-serif",
@@ -13,15 +14,15 @@ const fontOptions = {
   Garamond: "Garamond, serif",
   "Courier New": "Courier New, monospace",
   "Brush Script MT": "Brush Script MT, cursive",
+  KulminoituvaRegular: "KulminoituvaRegular",
 };
 
 const params = {
   // edit
-
-  fontName: "Garamond",
+  fontName: "Josefin Sans",
   isBold: true,
   fontSize: window.innerWidth / 15,
-  text1: `Stay\n`,
+  text1: `스테이 Stay\n`,
   text2: `Palette`,
   pointerSize: null,
   color: { r: 1, g: 0.85, b: 0.3 },
