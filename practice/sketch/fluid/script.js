@@ -5,7 +5,7 @@ window.onload = function () {
   const textureCtx = textureEl.getContext("2d");
 
   const fontOptions = {
-    "Cormorant": "Cormorant",
+    Cormorant: "Cormorant",
     Arial: "Arial, sans-serif",
     Verdana: "Verdana, sans-serif",
     Tahoma: "Tahoma, sans-serif",
@@ -22,8 +22,9 @@ window.onload = function () {
     fontName: "Cormorant",
     isBold: true,
     fontSize: window.innerWidth / 15,
-    text1: `Stay\n`,
+    text1: `Stay`,
     text2: `Palette`,
+    // text3: `Magazine`,
     pointerSize: null,
     color: { r: 1, g: 0.85, b: 0.3 },
   };
@@ -284,8 +285,8 @@ window.onload = function () {
         // (0.5 - 0.45 * Math.cos(0.003 * t - 2)) * window.innerWidth,
         //     (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.1 * Math.cos(0.002 * t)) *
 
-        (0.5 - 0.45 * Math.tan(0.003 * t - 2)) * window.innerWidth,
-        (0.5 + 0.1 * Math.tan(0.0025 * t) + 0.2 * Math.sin(0.002 * t)) *
+        (0.5 - 0.45 * Math.cos(0.003 * t - 2)) * window.innerWidth,
+        (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.2 * Math.tan(0.002 * t)) *
           window.innerHeight
       );
     }
@@ -429,7 +430,7 @@ window.onload = function () {
   }
 
   function resizeCanvas() {
-    // edit 4-2
+    // edit
     params.pointerSize = 4 / window.innerHeight;
     canvasEl.width = textureEl.width = window.innerWidth;
     canvasEl.height = textureEl.height = window.innerHeight;
@@ -452,8 +453,9 @@ window.onload = function () {
 
   function updateMousePosition(eX, eY) {
     pointer.moved = true;
-    pointer.dx = 5 * (eX - pointer.x);
-    pointer.dy = 5 * (eY - pointer.y);
+    // edit
+    pointer.dx = 1 * (eX - pointer.x);
+    pointer.dy = 1 * (eY - pointer.y);
     pointer.x = eX;
     pointer.y = eY;
   }

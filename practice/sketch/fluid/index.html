@@ -201,7 +201,7 @@
           vec3 C = texture2D(u_output_texture, vUv).rgb;
           float text = texture2D(u_text_texture, vec2(vUv.x, 1. - vUv.y)).r;
           // edit
-          gl_FragColor = vec4(vec3(0.9) - C, 1.);
+          gl_FragColor = vec4(vec3(0.85) - C, 1.);
       }
     </script>
 
