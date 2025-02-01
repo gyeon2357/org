@@ -278,7 +278,7 @@ window.onload = function () {
   function render(t) {
     // edit
     // const dt = 1 / 60;
-    const dt = 1 / 60;
+    const dt = 1 / 20;
 
     // edit
     if (t && isPreview) {
@@ -287,7 +287,7 @@ window.onload = function () {
         //     (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.1 * Math.cos(0.002 * t)) *
 
         (0.5 - 0.45 * Math.cos(0.003 * t - 2)) * window.innerWidth,
-        (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.2 * Math.tan(0.002 * t)) *
+        (0.5 + 0.1 * Math.cos(0.0025 * t) + 0.2 * Math.cos(0.002 * t)) *
           window.innerHeight
       );
     }
@@ -455,8 +455,8 @@ window.onload = function () {
   function updateMousePosition(eX, eY) {
     pointer.moved = true;
     // edit
-    pointer.dx = 1 * (eX - pointer.x);
-    pointer.dy = 1 * (eY - pointer.y);
+    pointer.dx = 3 * (eX - pointer.x);
+    pointer.dy = 3 * (eY - pointer.y);
     pointer.x = eX;
     pointer.y = eY;
   }
