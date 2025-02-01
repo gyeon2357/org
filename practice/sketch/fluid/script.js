@@ -5,7 +5,7 @@ window.onload = function () {
   const textureCtx = textureEl.getContext("2d");
 
   const fontOptions = {
-    "Poppins": "Poppins",
+    "Cormorant": "Cormorant",
     Arial: "Arial, sans-serif",
     Verdana: "Verdana, sans-serif",
     Tahoma: "Tahoma, sans-serif",
@@ -19,7 +19,7 @@ window.onload = function () {
 
   const params = {
     // edit
-    fontName: "Poppins",
+    fontName: "Cormorant",
     isBold: true,
     fontSize: window.innerWidth / 15,
     text1: `Stay\n`,
