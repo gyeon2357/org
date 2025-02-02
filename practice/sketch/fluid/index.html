@@ -128,7 +128,9 @@
           float C = texture2D(u_pressure_texture, vUv).x;
           float divergence = texture2D(u_divergence_texture, vUv).x;
 
-          float pressure = (L + R + B + T - divergence) * 0.25;
+          // edit
+          // float pressure = (L + R + B + T - divergence) * 0.25;
+          float pressure = (L + R + B + T - divergence) * 0.125;
 
           // edit
           pressure += (.2 * text);
