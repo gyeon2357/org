@@ -59,13 +59,13 @@ $(document).ready(function () {
   //Count
   var galleryN = $(".gallery-container .project").length;
   var webN = $(".gallery-container .project.web").length;
-  var pressworkN = $(".gallery-container .project.presswork").length;
+  var printN = $(".gallery-container .project.print").length;
   var planningN = $(".gallery-container .project.planning").length;
   var collabN = $(".gallery-container .project.collab").length;
 
   $(".index").find("a.count").html(galleryN);
   $("#web").find("a.count").html(webN);
-  $("#presswork").find("a.count").html(pressworkN);
+  $("#print").find("a.count").html(printN);
   $("#planning").find("a.count").html(planningN);
   $("#collab").find("a.count").html(collabN);
 

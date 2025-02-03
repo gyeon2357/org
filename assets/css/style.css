@@ -387,11 +387,11 @@ img.blend {
   display: flex;
   justify-content: space-between;
 
-  background: lightskyblue;
+  background: deepskyblue;
 }
 
 body.dark .hidden .nav-section .index {
-  background: lightskyblue;
+  background: deepskyblue;
 }
 
 .nav-title {
@@ -443,7 +443,7 @@ body.dark .open-menu {
 
 .hidden .nav-section li#planning,
 .hidden .nav-section li#collab {
-  width: 95%;
+  width: 100%;
   justify-self: end;
 }
 
@@ -1026,8 +1026,8 @@ body.dark .accordion-content figure img {
   text-decoration: underline;
   text-underline-position: from-font;
 
-  padding: 0 0.125rem;
-  margin-right: 0.25rem;
+  /* padding: 0 0.125rem; */
+  margin-right: 0.375rem;
 }
 
 body.dark .accordion-content p::before {
@@ -1065,7 +1065,7 @@ body.dark .accordion-content p::before {
   width: fit-content;
   margin: 0 auto;
 
-  padding: 1px 6px;
+  padding: 0.2rem 0.4rem;
 
   margin-top: 0.375rem;
 
@@ -1505,10 +1505,92 @@ body.dark footer a {
 ================================================== */
 @media only screen and (max-width: 3920px) and (min-width: 1820px) {
   :root {
-    --main: calc(12px + 0.5vw);
+    --main: calc(8px + 0.5vw);
     --small: 16px;
     --big: 20px;
     --gap: 12px;
+  }
+
+  #index-container {
+    padding: 0.375rem 0.375rem 0 0.375rem;
+    grid-gap: 0.375rem;
+  }
+
+  .gallery-container {
+    grid-gap: 0.375rem;
+  }
+
+  .nav,
+  .hidden {
+    grid-gap: 0.375rem;
+  }
+
+  #index-container .cap,
+  #index-container .project > a > div {
+    padding: 0.375rem;
+  }
+
+  .hidden .nav-section li,
+  .nav-title,
+  .open-menu,
+  #mode,
+  #grid {
+  padding: .3rem;
+  }
+
+  .intro-text {
+    font-size: 2rem;
+  }
+
+  header.nav {
+    font-size: 1.25rem;
+  }
+
+  div.info-project {
+    font-size: 1.25rem;
+  }
+
+  .accordion-content p {
+    font-size: 1.25rem;
+  }
+
+  .gallery-container .project.mobile.mark > a::before {
+    font-size: 1rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  #index-container .project.mark > a > div.title::before {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.75rem;
+
+    margin-right: 0.75rem;
+  }
+
+  .accordion-content figure {
+    width: 62.5%;
+
+    margin: 0 0 1.5rem;
+  }
+
+  .accordion-content p::before {
+    margin-right: 0.5rem;
+  }
+
+  .accordion-content p[title="Link"] > a {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+
+    padding: 0.25rem 0.5rem;
+  }
+
+  .accordion-content p[title="Link"] > a:nth-child(1) {
+    margin-top: 1rem;
   }
 }
 
