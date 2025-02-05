@@ -658,6 +658,8 @@ body.dark .gallery-container {
   border-radius: 50%;
   background: orange;
   color: whitesmoke;
+
+  display: none;
 }
 
 .gallery-container .project.mobile.mark > a::before {
@@ -684,6 +686,7 @@ body.dark .gallery-container {
   justify-content: center;
   width: 0.75rem;
   height: 0.75rem;
+
   text-align: center;
 
   font-size: 0.5rem;
@@ -693,6 +696,8 @@ body.dark .gallery-container {
   border-radius: 50%;
   background: orange;
   color: whitesmoke;
+
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -1535,7 +1540,7 @@ body.dark footer a {
   .open-menu,
   #mode,
   #grid {
-  padding: .3rem;
+    padding: 0.3rem;
   }
 
   .intro-text {
