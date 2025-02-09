@@ -8834,9 +8834,9 @@ while loading this video:
 
       //gyeon 4
 
-        vec3 k = vec3(0.27735, 0.27735, 0.77735);
+        vec3 k = vec3(0.27735, 0.97735, 0.37735);
         float cosAngle = cos(hue);
-        return col * cosAngle + cross(k, col) * sin(hue) + k * dot(k, col) * (1.0 - cosAngle);
+        return col * cosAngle + cross(k, col) * sin(hue) + k * dot(k, col) * (2.0 - cosAngle);
     }
 
     vec3 saturate(vec3 rgb, float adjustment) {
@@ -9300,8 +9300,8 @@ while loading this video:
 
           //@gyeon 2
 
-          viscosity: { name: "uViscosity", type: "1f", value: 20.75 },
-          speed: { name: "uSpeed", type: "1f", value: 6.75 },
+          viscosity: { name: "uViscosity", type: "1f", value: 25.75 },
+          speed: { name: "uSpeed", type: "1f", value: 4.75 },
           size: { name: "uSize", type: "1f", value: 2 },
           dissipation: {
             name: "uDissipation",

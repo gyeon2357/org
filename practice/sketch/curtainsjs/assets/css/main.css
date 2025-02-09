@@ -415,7 +415,7 @@
     flex-basis: 100%;
   }
   .project-thumb {
-    width: calc(100% * 8 / 12);
+    width: calc(100% * 6 / 12);
     position: relative;
     z-index: 1;
     overflow: hidden;
