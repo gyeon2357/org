@@ -445,7 +445,7 @@ img.blend {
   display: flex;
   justify-content: space-between;
 
-  background: lightblue;
+  background: lightskyblue;
 }
 
 body.dark .hidden .nav-section .index {
@@ -1006,11 +1006,11 @@ body.dark #index-container .cap {
 }
 
 .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 2px 1px slategray;
+  box-shadow: 0 0 0px 1px slategray;
 }
 
 body.dark .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 2px 1px ghostwhite;
+  box-shadow: 0 0 0px 1px lightblue;
 }
 
 /* .accordion-label::before {
@@ -1137,7 +1137,7 @@ body.dark .accordion-content p::before {
 }
 
 body.dark .accordion-content p[title="Link"] > a {
-  background: #708090a0;
+  background: #add8e684
 }
 
 .accordion-content p[title="Link"] > a:nth-child(1) {
