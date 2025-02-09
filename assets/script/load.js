@@ -10,20 +10,20 @@ const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 tl.to(".line", {
   width: "120px",
     opacity: "1",
-  duration: 0.6,
-  stagger: 0.15,
+  duration: 0.4,
+  stagger: 0.125,
 });
 tl.to(".line-text", {
   opacity: "1",
-  duration: 0.25,
-  stagger: 0.15,
+  duration: 0.2,
+  stagger: 0.125,
 });
 
 tl.to(".text", {
   y: "0%",
-  duration: 0.95,
+  duration: 0.875,
   stagger: 0.15,
-  delay: 0.5,
+  delay: 0.4,
 });
 /* SLIDER OPTIONAL */
 
