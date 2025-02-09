@@ -445,11 +445,11 @@ img.blend {
   display: flex;
   justify-content: space-between;
 
-  background: deepskyblue;
+  background: lightblue;
 }
 
 body.dark .hidden .nav-section .index {
-  background: deepskyblue;
+  background: lightskyblue;
 }
 
 .nav-title {
