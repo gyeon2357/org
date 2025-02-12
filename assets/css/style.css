@@ -235,7 +235,6 @@ body.dark sup > mark {
 }
 
 body.dark .intro {
-
   background: #000;
 }
 
@@ -251,11 +250,11 @@ body.dark .intro {
 }
 
 body.dark .intro-text {
-color: lightgray;
+  color: lightgray;
 }
 
 .intro-title {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
 
@@ -285,9 +284,10 @@ color: lightgray;
   display: flex;
   align-items: center;
   width: 80px;
-  height: 20px;
+  height: 16px;
 
-  box-shadow: 0 0 1px 1px dimgray;
+  /* background: khaki; */
+  box-shadow: 0 0 0 1px silver;
   color: dimgray;
 
   padding: 2px 3px;
@@ -298,12 +298,11 @@ color: lightgray;
   text-transform: capitalize;
 
   transform: translateY(30%);
-
   opacity: 0;
 }
 
 body.dark .line {
-  box-shadow: 0 0 1px 1px silver;
+  box-shadow: 0 0 0 1px gray;
   color: silver;
 }
 
@@ -712,8 +711,10 @@ body.dark .gallery-container {
   text-align: center;
 
   border-radius: 50%;
-  background: orange;
   color: whitesmoke;
+  background: orange;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.125);
+  
 }
 
 .gallery-container .project.mobile.mark > a::before {
@@ -1077,6 +1078,7 @@ body.dark .accordion-content figure img {
   max-width: 72ch;
 
   font-size: 0.875rem;
+  line-height: 1.5;
 
   word-break: keep-all;
 }
@@ -1085,19 +1087,17 @@ body.dark .accordion-content figure img {
   /* content: "[" attr(title) "]"; */
   content: attr(title);
 
+  display: block;
+
   text-decoration: underline;
   text-underline-position: from-font;
 
   /* padding: 0 0.125rem; */
-  margin-right: 0.375rem;
+  margin-bottom: 0.1rem;
 }
 
 body.dark .accordion-content p::before {
   /* color: black; */
-}
-
-.accordion-content p[title="Description"] {
-  line-height: 1.5;
 }
 
 .accordion-content p[title="Description"] > a {
