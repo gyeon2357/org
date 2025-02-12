@@ -146,6 +146,10 @@ textarea {
     Segoe UI Emoji, Segoe UI Symbol;
 }
 
+b {
+  font-weight: 400;
+}
+
 @font-face {
   font-family: "AGChoiJeongHoStd-Regular-SW";
   src: local(※), url(../fonts/AGChoiJeongHoStd-Regular-SW.woff) format("woff"),
@@ -237,7 +241,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
 }
 
@@ -275,7 +279,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
 }
 
@@ -372,11 +376,12 @@ input[type="checkbox"] + label {
   position: absolute;
   background: var(--background);
   border-radius: 50%;
-  cursor: pointer;
   transition: opacity 0.2s;
   animation: blink-effect 0.5s step-end infinite;
   right: 5vw;
   top: 1.1vw;
+
+  cursor: pointer;
 }
 .circle2 {
   width: 24px;
@@ -384,12 +389,13 @@ input[type="checkbox"] + label {
   position: absolute;
   background: var(--background);
   border-radius: 50%;
-  cursor: pointer;
   transition: opacity 0.2s;
   animation: blink-effect 0.5s step-end infinite;
 
   right: 5vw;
   top: 1.1vw;
+
+  cursor: pointer;
 }
 
 @keyframes blink-effect {
@@ -553,7 +559,7 @@ div .sticky {
 ul {
   width: 90%;
   margin-left: 2vw;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   z-index: 1001 !important;
 }
 
@@ -718,6 +724,11 @@ img.t-img {
   display: block;
   margin: 1.75vw 0 0 2vw;
 }
+
+img.t-img:last-of-type {
+  margin-bottom: 2rem;
+}
+
 img.t-img:first-of-type {
   margin: 0 0 0 2vw;
 }
@@ -1090,6 +1101,11 @@ video.video-2 {
     margin: 3vw 0 0 1vw;
     padding-left: 5vw;
   }
+
+  img.t-img:last-of-type {
+    padding-bottom: 1.5rem;
+  }
+
   img.t-img:first-of-type {
     margin: 0vw 0 0 1vw;
   }
