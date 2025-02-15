@@ -286,7 +286,7 @@ body.dark .intro-text {
   width: 80px;
   height: 16px;
 
-  /* background: khaki; */
+  background: whitesmoke;
   box-shadow: 0 0 0 1px silver;
   color: dimgray;
 
@@ -294,14 +294,15 @@ body.dark .intro-text {
   border-radius: 2px;
   margin: 0 auto 7px;
 
-  font-size: 0.625rem;
+  font-size: 0.65rem;
   text-transform: capitalize;
 
-  transform: translateY(30%);
+  transform: translateY(15%);
   opacity: 0;
 }
 
 body.dark .line {
+  background: #1f1f1f;
   box-shadow: 0 0 0 1px gray;
   color: silver;
 }
@@ -613,7 +614,7 @@ body.dark #index .filter-opacity {
   grid-template-columns: repeat(4, 1fr);
   grid-column: span 12;
   grid-gap: 5px;
-  gap: var(--gap);
+  /* gap: var(--gap); */
 
   font-size: 0.875rem;
 }
@@ -714,7 +715,6 @@ body.dark .gallery-container {
   color: whitesmoke;
   background: orange;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.125);
-  
 }
 
 .gallery-container .project.mobile.mark > a::before {
@@ -850,7 +850,7 @@ body.dark .gallery-container {
 }
 
 body.dark #index-container .project {
-  background: rgba(222, 222, 217, 0.4);
+  background: rgba(222, 222, 217, 0.25);
 }
 
 #index-container .project.active {
@@ -1195,7 +1195,7 @@ p[title="caption"] a {
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
     grid-gap: 5px;
 
-    width: 75%;
+    width: 80%;
     margin: 0 0 0.5rem;
   }
 

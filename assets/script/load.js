@@ -20,12 +20,12 @@ tl.to(".line", {
 tl.fromTo(
   ".text",
   {
-    x: 10,
+    x: 5,
     opacity: 0,
   },
   {
     // delay: 2,
-    duration: 1,
+    duration: .625,
     x: 0,
     opacity: 1,
     stagger: {
@@ -45,8 +45,8 @@ tl.fromTo(
 
 tl.to(".intro", {
   opacity: "0",
-  delay: 0.35,
-  duration: 0.6,
+  delay: 0.125,
+  duration: 0.5,
   display: "none",
 }); /* ,  */
 
