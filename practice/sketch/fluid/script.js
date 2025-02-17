@@ -22,7 +22,7 @@ window.onload = function () {
     fontName: "Cormorant",
     isBold: true,
     fontSize: window.innerWidth / 15,
-    text1: `Stay`,
+    text1: `Palette`,
     text2: `Palette`,
     // text3: `Magazine`,
     pointerSize: null,
