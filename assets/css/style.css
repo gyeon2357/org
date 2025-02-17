@@ -1098,7 +1098,7 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 
   grid-gap: 0.5rem;
 
-  width: 50%;
+  width: 80%;
   margin: 0 0 0.75rem;
 }
 
@@ -1247,7 +1247,7 @@ p[title="caption"] a {
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
     grid-gap: 5px;
 
-    width: 80%;
+    width: 100%;
     margin: 0 0 0.5rem;
   }
 
@@ -1687,7 +1687,7 @@ body.dark footer a {
   }
 
   .accordion-content figure {
-    width: 62.5%;
+    width: 75%;
 
     margin: 0 0 1.5rem;
   }
