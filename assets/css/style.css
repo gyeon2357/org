@@ -297,7 +297,7 @@ body.dark .intro-text {
   font-size: 0.65rem;
   text-transform: capitalize;
 
-  transform: translateY(25%);
+  transform: translateY(10%);
   opacity: 0;
 }
 
@@ -311,6 +311,7 @@ body.dark .line {
   display: block;
   width: 4rem;
   height: 4rem;
+  
   margin: 0 auto;
   background: url(../images/favicon-keepdry-3@0.1x.png) 0 0 no-repeat;
   background-size: 600%;
@@ -524,6 +525,8 @@ body.dark .open-menu {
 
 .hidden .nav-section li.rrss {
   display: none;
+
+  text-transform: lowercase;
 }
 
 .hidden .nav-section li {
@@ -534,18 +537,19 @@ body.dark .open-menu {
 
 .hidden .nav-section li#web,
 .hidden .nav-section li#print {
-  box-shadow: 0 0 0 1px silver;
 }
 
 body.dark .hidden .nav-section li#web,
 body.dark .hidden .nav-section li#print {
-  box-shadow: 0 0 0 1px dimgray;
+  
 }
 
 .hidden .nav-section li#planning,
 .hidden .nav-section li#collab {
   width: 100%;
   justify-self: end;
+
+  
 }
 
 body.dark .hidden .nav-section li {
