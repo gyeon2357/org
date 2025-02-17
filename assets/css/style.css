@@ -547,9 +547,7 @@ body.dark .hidden .nav-section li#print {
 .hidden .nav-section li#planning,
 .hidden .nav-section li#collab {
   width: 100%;
-  justify-self: end;
-
-  
+  justify-self: end;  
 }
 
 body.dark .hidden .nav-section li {
