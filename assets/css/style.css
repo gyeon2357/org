@@ -158,7 +158,7 @@ body.dark #mode a {
 }
 body.dark #mode span {
   display: block;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 ol,
 ul,
@@ -176,7 +176,7 @@ a {
   color: black;
   text-decoration: none;
   cursor: pointer;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 figure {
@@ -283,21 +283,21 @@ body.dark .intro-text {
 .line {
   display: flex;
   align-items: center;
-  width: 80px;
-  height: 16px;
+  width: 4rem;
+  height: 4rem;
 
-  background: whitesmoke;
+  /* background: whitesmoke;
   box-shadow: 0 0 0 1px silver;
-  color: dimgray;
+  color: dimgray; */
 
-  padding: 2px 3px;
-  border-radius: 2px;
-  margin: 0 auto 7px;
+  /* padding: 2px 3px;
+  border-radius: 2px; */
+  margin: 0 auto 2rem;
 
   font-size: 0.65rem;
   text-transform: capitalize;
 
-  transform: translateY(15%);
+  transform: translateY(25%);
   opacity: 0;
 }
 
@@ -305,6 +305,25 @@ body.dark .line {
   background: #1f1f1f;
   box-shadow: 0 0 0 1px gray;
   color: silver;
+}
+
+.line > .keepdry {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  background: url(../images/favicon-keepdry-3@0.1x.png) 0 0 no-repeat;
+  background-size: 600%;
+  animation: gif steps(5) 1.5s infinite both;
+}
+
+@keyframes gif {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 .line-text {
@@ -421,6 +440,7 @@ img.blend {
   grid-column: 10 / span 3;
 
   font-size: 0.875rem;
+  letter-spacing: -0.15px;
   text-transform: capitalize;
   border-radius: 2px;
   z-index: 10002;
@@ -436,7 +456,7 @@ img.blend {
 .index > p,
 .index > span {
   display: inline-block;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .hidden .nav-section .index {
@@ -491,10 +511,35 @@ body.dark .open-menu {
   row-gap: 5px;
   height: fit-content;
 }
+
+.hidden .nav-section li,
+.nav-title,
+#grid,
+.open-menu,
+#mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden .nav-section li.rrss {
+  display: none;
+}
+
 .hidden .nav-section li {
   background-color: white;
   border-radius: 2px;
   padding: 3px;
+}
+
+.hidden .nav-section li#web,
+.hidden .nav-section li#print {
+  box-shadow: 0 0 0 1px silver;
+}
+
+body.dark .hidden .nav-section li#web,
+body.dark .hidden .nav-section li#print {
+  box-shadow: 0 0 0 1px dimgray;
 }
 
 .hidden .nav-section li#planning,
@@ -541,7 +586,7 @@ body.dark .hidden .nav-section li {
 }
 .nav span {
   display: none;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 .count {
   text-align: right;
@@ -580,6 +625,7 @@ body.dark #index .filter-opacity {
   margin-top: 20px;
 
   line-height: 1.4;
+  letter-spacing: 0;
   text-transform: capitalize;
   word-break: keep-all;
   text-align: left;
@@ -687,6 +733,10 @@ body.dark .gallery-container {
 .project .info-project {
   padding-left: 0.5rem;
 } */
+
+.gallery-container .project > a {
+  width: 87.5%;
+}
 
 .gallery-container .project.mobile > a {
   width: 33.333%;
