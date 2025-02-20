@@ -673,7 +673,7 @@ body.dark #index .filter-opacity {
 .content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 15px;
+  grid-gap: 1px;
   padding: 5px;
 }
 .gallery-container {
@@ -1543,7 +1543,8 @@ footer {
   position: relative;
 
   font-size: var(--main);
-  text-transform: uppercase;
+  line-height: 1.4;
+
 }
 
 footer a {
