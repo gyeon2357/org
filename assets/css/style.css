@@ -562,7 +562,8 @@ body.dark .hidden .nav-section li {
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color: moccasin;
+  background-color:papayawhip;
+  background-color:wheat;
   color: black;
   border-radius: 2px;
   padding: 3px;
