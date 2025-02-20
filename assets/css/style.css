@@ -157,7 +157,8 @@ body.dark #mode a {
   display: none;
 }
 body.dark #mode span {
-  display: block;
+  display: flex;
+  align-items: center;
   line-height: 1.2;
 }
 ol,
@@ -460,7 +461,8 @@ img.blend {
 
 .index > p,
 .index > span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   line-height: 1.2;
 }
 
@@ -599,6 +601,24 @@ body.dark .hidden .nav-section li {
 
   margin-left: 4px;
 }
+
+.nav a, .hidden .nav-section li {
+display: flex;
+align-items: center;
+}
+
+.nav .flex {
+display: flex;
+align-items: center;
+}
+
+.nav img {
+display: inline-block;
+width: 1rem;
+margin-right: .5rem;
+
+}
+
 
 .filter-opacity img {
   opacity: 0.2;

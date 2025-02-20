@@ -120,7 +120,7 @@ $(document).ready(function () {
     $("#index, .gallery").toggle();
     $("#grid").toggleClass("on");
 
-    $(this).find("span").toggle();
+    $(this).find("span").toggleClass("flex");
     $(this).find("p").toggle();
     $(".accordion").attr("data-accordion-state", "closed");
   });
@@ -134,7 +134,7 @@ $(document).ready(function () {
       $("#index, .gallery").toggle();
       $("#grid").toggleClass("on");
 
-      $(".index").find("span").toggle();
+      $(".index").find("span").toggleClass("flex");
       $(".index").find("p").toggle();
 
       var offset = $(".accordion").eq(i).offset();
@@ -173,7 +173,7 @@ $(document).ready(function () {
 
   $("#grid").click(function () {
     $(this).toggleClass("active");
-    $("#grid span").toggle();
+    $("#grid span").toggleClass("flex");
     $("#grid a").toggle();
     $(".gallery-container").toggleClass("change");
     $(".subsection").toggleClass("change");
@@ -181,13 +181,13 @@ $(document).ready(function () {
 
   $(".nav-title").click(function () {
     $(".about").toggle();
-    $(".nav-title span").toggle();
+    $(".nav-title span").toggleClass("flex");
     $(".nav-title a").toggle();
   });
 
   $(".open-menu").click(function () {
     $(".hidden").toggle();
-    $(".open-menu span").toggle();
+    $(".open-menu span").toggleClass("flex");
     $(".open-menu a").toggle();
   });
 
