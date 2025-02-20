@@ -435,6 +435,7 @@ rel="noopener noreferrer"
 <figure>
 <img
 src="https://ik.imagekit.io/11195/img/ssh-m-1.jpg?updatedAt=1739854419560"
+data-src="https://ik.imagekit.io/11195/img/ssh-m-1-25x.jpg"
 alt="Reload to view"
 />
 
@@ -2858,4 +2859,48 @@ alt="Reload to view"
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="./assets/script/load.js"></script>
+
+
+
+<script>
+  // image preload
+      const images = ["./assets/images/option/info.svg",
+"./assets/images/option/close.svg",
+"./assets/images/option/open.svg",
+"./assets/images/option/list.svg",
+"./assets/images/option/image.svg",
+"./assets/images/option/expand-grid.svg",
+"./assets/images/option/basic-grid.svg",
+"./assets/images/option/web.svg",
+"./assets/images/option/print.svg",
+"./assets/images/option/plan.svg",
+"./assets/images/option/collab.svg",
+"./assets/images/option/dark-mode.svg",
+"./assets/images/option/light-mode.svg",
+"./assets/images/option/mail.svg",
+      ];
+
+      const preload = images => () => {
+        images.forEach(image => {
+          const img = new Image();
+          img.src = image;
+        });
+      };
+
+      const addLoadEvent = func => {
+        const onloadEvent = window.onload;
+        if (typeof window.onload != "function") {
+          window.onload = func;
+        } else {
+          window.onload = function () {
+            if (onloadEvent) {
+              onloadEvent();
+            }
+            func();
+          };
+        }
+      };
+
+      addLoadEvent(preload(images));
+</script>
 </html>
