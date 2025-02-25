@@ -297,7 +297,7 @@ body.dark .intro-text {
 
   padding: 2px 3px;
   border-radius: 2px;
-  margin: 0 auto .5rem;
+  margin: 0 auto 0.5rem;
 
   font-size: 0.725rem;
   text-transform: capitalize;
@@ -455,8 +455,29 @@ img.blend {
 .nav-title,
 .open-menu,
 .index,
+#lang,
 .contact {
   cursor: pointer;
+}
+
+#lang {
+
+text-decoration: line-through;
+}
+
+#lang a,
+#lang span {
+  pointer-events: none;
+}
+
+body.eng .en,
+body.kor .ko {
+  display: inline-block;
+}
+
+body.eng .ko,
+body.kor .en {
+  display: none;
 }
 
 .index > p,
@@ -562,8 +583,8 @@ body.dark .hidden .nav-section li {
 #grid {
   height: fit-content;
   grid-column: span 1;
-  background-color:papayawhip;
-  background-color:wheat;
+  background-color: papayawhip;
+  background-color: wheat;
   color: black;
   border-radius: 2px;
   padding: 3px;
@@ -603,23 +624,22 @@ body.dark .hidden .nav-section li {
   margin-left: 4px;
 }
 
-.nav a, .hidden .nav-section li {
-display: flex;
-align-items: center;
+.nav a,
+.hidden .nav-section li {
+  display: flex;
+  align-items: center;
 }
 
 .nav .flex {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav img {
-display: inline-block;
-width: 0.875rem;
-margin-right: .5rem;
-
+  display: inline-block;
+  width: 0.875rem;
+  margin-right: 0.5rem;
 }
-
 
 .filter-opacity img {
   opacity: 0.2;
@@ -730,6 +750,7 @@ body.dark .gallery-container {
   position: relative;
   height: fit-content;
   line-height: 1.2;
+  text-transform: capitalize;
   row-gap: 15px;
   cursor: auto;
 }
@@ -1157,6 +1178,21 @@ body.dark .accordion-content figure img {
   line-height: 1.5;
 
   word-break: keep-all;
+  text-wrap: pretty;
+}
+
+.accordion-content p.en {
+  text-align: left;
+  line-height: 1.4;
+
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .accordion-content p::before {
@@ -1165,6 +1201,7 @@ body.dark .accordion-content figure img {
 
   display: block;
 
+  line-height: 1.5;
   text-decoration: underline;
   text-underline-position: from-font;
 
@@ -1178,10 +1215,12 @@ body.dark .accordion-content p::before {
 
 .accordion-content p[title="Description"] > a {
   font-size: 90%;
+  text-decoration: underline;
+  
   vertical-align: text-top;
+  padding: 0 0.125rem;
 
-  text-decoration: none;
-  padding-right: 0.25rem;
+  opacity: .7;
 }
 
 /* .accordion-content p[title="Description"],
@@ -1544,7 +1583,6 @@ footer {
 
   font-size: var(--main);
   line-height: 1.4;
-
 }
 
 footer a {

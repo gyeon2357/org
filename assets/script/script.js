@@ -48,13 +48,42 @@ function onResizeFunction(e) {
 }
 
 //Local storage
+//theme
 $(document).ready(function () {
-  $("body").addClass(localStorage.getItem("body-class") || "white");
+  $("body").addClass(localStorage.getItem("body-theme") || "white");
   $("#mode.dark").click(function (e) {
     var name = e.target.className;
     $("body").removeClass("white dark").toggleClass(name);
-    localStorage.setItem("body-class", name);
+    localStorage.setItem("body-theme", name);
   });
+
+  //lang
+  const langButton = document.querySelector("#lang");
+  const body = document.body;
+  let lang = localStorage.getItem("lang") || "kor";
+  $("body").addClass(lang);
+
+  langButton.addEventListener("click", function () {
+    lang == "kor" ? (lang = "eng") : (lang = "kor");
+    $("body").removeClass("kor eng").addClass(lang);
+    localStorage.setItem("lang", lang);
+  });
+
+  //eng-button-fnc
+  $("body.eng").find("#lang").children("a").hide();
+  $("body.eng").find("#lang").children("span").addClass("flex");
+
+  //   $("body").addClass(localStorage.getItem("body-lang") || "kor");;
+  // // $("body").removeClass("kor eng").addClass(lang);
+  //   $("#lang").click(function (j) {
+
+  //     var lang = j.target.className;
+  //     $("body").removeClass("kor eng").toggleClass(lang);
+  //     localStorage.setItem("body-lang", lang);
+  //   });
+
+  //   $("body.eng").find("#lang").children("a").hide();
+  //   $("body.eng").find("#lang").children("span").addClass("flex");
 
   //Count
   var galleryN = $(".gallery-container .project").length;
@@ -152,6 +181,11 @@ $(document).ready(function () {
       theOffset = $(self).offset();
       $("body,html").animate({ scrollTop: theOffset.top - 200 }, 200);
     }, 50);
+  });
+
+  $("#lang").click(function () {
+    $(this).find("a").toggle();
+    $(this).find("span").toggleClass("flex");
   });
 
   $(".contact").click(function () {
