@@ -480,6 +480,8 @@ body.kor .en {
   display: none;
 }
 
+
+
 .index > p,
 .index > span {
   display: inline-flex;
@@ -497,6 +499,19 @@ body.kor .en {
 body.dark .hidden .nav-section .index {
   background: lightskyblue;
 }
+
+.nav mark {
+background-color: initial;
+color: inherit;
+}
+
+/* body.eng .hidden .nav-section .index p.ko {
+display: none;
+}
+
+body.eng .hidden .nav-section .index p.en {
+display: inline-flex;
+} */
 
 .nav-title {
   background-color: white;
