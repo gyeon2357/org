@@ -1259,6 +1259,10 @@ body.dark .accordion-content p[title="Link"] > a {
   color: inherit;
 }
 
+.accordion-content p[title="Scope"] {
+text-transform: capitalize;
+}
+
 .accordion-content p[title="Scope"] > sup {
   padding-right: 0.375rem;
 }
