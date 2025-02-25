@@ -1884,6 +1884,7 @@ body.dark footer a {
   }
   .nav {
     grid-column: span 12;
+    margin-bottom: 1rem;
   }
 
   .hidden .nav-section li,
