@@ -462,7 +462,7 @@ img.blend {
 }
 
 #lang {
-  text-decoration: line-through;
+  
 }
 
 #lang a,
@@ -1114,11 +1114,11 @@ body.dark #index-container .cap {
 }
 
 .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 0px 1px slategray;
+  box-shadow: 0 0 0px 1px goldenrod;
 }
 
 body.dark .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 0px 1px lightblue;
+  box-shadow: 0 0 0px 1px khaki;
 }
 
 /* .accordion-label::before {
@@ -1243,30 +1243,30 @@ body.dark .accordion-content p::before {
   margin-bottom: 1.25rem;
 } */
 
-.accordion-content p[title="Link"] {
+.accordion-content p[title="Related Link"] {
   margin: 1rem 0 2rem;
 }
 
-.accordion-content p[title="Link"] > a {
+.accordion-content p[title="Related Link"] > a {
   display: block;
 
-  font-size: 0.75rem;
-  line-height: 1.6;
+  font-size: 90%;
+  line-height: 1.5;
 
   width: fit-content;
   padding: 0.2rem 0.4rem;
 
   margin-top: 0.375rem;
 
-  background: #70809045;
+  background: #70809017;
   border-radius: 2px;
 }
 
-body.dark .accordion-content p[title="Link"] > a {
-  background: #add8e684;
+body.dark .accordion-content p[title="Related Link"] > a {
+  background: #add8e626;
 }
 
-.accordion-content p[title="Link"] > a:nth-child(1) {
+.accordion-content p[title="Related Link"] > a:nth-child(1) {
   margin-top: 0.375rem;
 }
 
@@ -1350,7 +1350,11 @@ p[title="caption"] a {
     font-size: inherit;
   }
 
-  /* .accordion-content p[title="Link"] {
+  .accordion-content p[title="Related Link"] > a {
+  padding: 0.15rem 0.3rem;
+}
+
+  /* .accordion-content p[title="Related Link"] {
     margin: 1rem 0 .75rem;
   } */
 }
@@ -1782,14 +1786,14 @@ body.dark footer a {
     margin-right: 0.5rem;
   }
 
-  .accordion-content p[title="Link"] > a {
+  .accordion-content p[title="Related Link"] > a {
     font-size: 1.25rem;
     margin-top: 0.5rem;
 
     padding: 0.25rem 0.5rem;
   }
 
-  .accordion-content p[title="Link"] > a:nth-child(1) {
+  .accordion-content p[title="Related Link"] > a:nth-child(1) {
     margin-top: 1rem;
   }
 }
