@@ -3,19 +3,12 @@ const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 /* TEXT ANIMATION */
 
 tl.to(".line", {
-  // width: "120px",
   y: "0",
   opacity: "1",
-  delay: 0.25,
-  duration: 0.5,
-  stagger: 0.15,
+  delay: 0.15,
+  duration: 0.4,
+  stagger: 0.1,
 });
-
-// tl.to(".line-text", {
-//   opacity: "1",
-//   duration: 0.1,
-//   stagger: 0.125,
-// });
 
 tl.fromTo(
   ".text",
@@ -24,8 +17,7 @@ tl.fromTo(
     opacity: 0,
   },
   {
-    // delay: 2,
-    duration: .625,
+    duration: 0.5,
     x: 0,
     opacity: 1,
     stagger: {
@@ -35,20 +27,47 @@ tl.fromTo(
   }
 );
 
-// tl.to(".text", {
-//   y: "0%",
-//   duration: 0.75,
-//   stagger: 0.15,
-//   delay: 0.15,
-// });
-/* SLIDER OPTIONAL */
-
 tl.to(".intro", {
   opacity: "0",
   delay: 0.125,
   duration: 0.5,
   display: "none",
-}); /* ,  */
+});
 
-/* HOME PAGE CONTENT ANIMATION */
-// tl.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+/* GRID ANIMATION */
+
+// .to(".gallery-container .project::after", {
+//   opacity: "1",
+//   delay: 0.25,
+//   duration: 0.25,
+// });
+
+
+
+tl.add("start")
+
+  .to(
+    ".gallery-container .project > a",
+    {
+      opacity: "1",
+      duration: 0.5,
+      stagger: 0.12,
+    },
+    "start"
+  )
+
+  .to(
+    ".gallery-container .project > .info-project > div",
+    {
+      opacity: "1",
+      duration: 0.5,
+      stagger: 0.03,
+    },
+    "start"
+  );
+
+tl.to(".gallery-container", {
+  "--grid-length": "0%",
+  delay: 0.5,
+  duration: 0.5,
+});
