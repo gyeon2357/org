@@ -825,7 +825,7 @@ body.dark .gallery-container {
 
   border-radius: 50%;
   color: whitesmoke;
-  background: orange;
+  background-color:dodgerblue;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.125);
 }
 
@@ -861,7 +861,7 @@ body.dark .gallery-container {
   letter-spacing: 0.2px;
 
   border-radius: 50%;
-  background: orange;
+  background-color:dodgerblue;
   color: whitesmoke;
 }
 
