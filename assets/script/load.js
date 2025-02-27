@@ -31,12 +31,12 @@ $(".card-btn").on("click", function () {
   $(".loading").fadeOut();
 });
 
-// tl.to(".loading", {
-//   opacity: "0",
-//   duration: 0.8,
-//   delay: 1.25,
-//   display: "none",
-// });
+tl.to(".loading", {
+  opacity: "0",
+  duration: 0.8,
+  delay: 1.25,
+  display: "none",
+});
 
 /* GRID ANIMATION */
 
