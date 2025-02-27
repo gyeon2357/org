@@ -565,11 +565,11 @@ body.dark .open-menu {
 }
 
 .hidden .nav-section li#web,
-.hidden .nav-section li#print {
+.hidden .nav-section li#printing {
 }
 
 body.dark .hidden .nav-section li#web,
-body.dark .hidden .nav-section li#print {
+body.dark .hidden .nav-section li#printing {
 }
 
 .hidden .nav-section li#planning,
@@ -801,10 +801,6 @@ body.dark .gallery-container {
 /* .gallery-container .project > a, */
 .gallery-container .project > .info-project > div {
   opacity: 0;
-}
-
-.project .info-project {
-  padding-left: 0.5rem;
 }
 
 .gallery-container .project > a {
