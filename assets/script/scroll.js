@@ -50,7 +50,7 @@ ScrollTrigger.matchMedia({
         autoAlpha: 1,
         scrollTrigger: {
           trigger: text,
-          start: "top 150%",
+          start: "top 140%",
           scrub: true,
           end: "bottom bottom",
         },
