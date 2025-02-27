@@ -35,40 +35,39 @@ const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
 /* GRID ANIMATION */
 
-tl.add("start")
+// tl.add("start")
+// .to(
+//   ".nav",
+//   {
+//     opacity: 1,
+//     duration: 0.5,
+//   },
+//   "start"
+// );
+// .to(
+//   ".gallery-container .project > a",
+//   {
+//     opacity: "1",
+//     duration: 0.5,
+//     delay: 0.5,
+//     stagger: 0.12,
+//   },
+//   "start"
+// )
 
-  .to(
-    ".nav",
-    {
-      opacity: 1,
-      duration: 0.5,
-    },
-    "start"
-  )
-  .to(
-    ".gallery-container .project > a",
-    {
-      opacity: "1",
-      duration: 0.5,
-      delay: 0.5,
-      stagger: 0.12,
-    },
-    "start"
-  )
+// .to(
+//   ".gallery-container .project > .info-project > div",
+//   {
+//     opacity: "1",
+//     duration: 0.5,
+//           delay: 0.5,
+//     stagger: 0.03,
+//   },
+//   "start"
+// );
 
-  .to(
-    ".gallery-container .project > .info-project > div",
-    {
-      opacity: "1",
-      duration: 0.5,
-            delay: 0.5,
-      stagger: 0.03,
-    },
-    "start"
-  );
-
-tl.to(".gallery-container", {
-  "--grid-length": "0%",
-  delay: 0.5,
-  duration: 0.5,
-});
+// tl.to(".gallery-container", {
+//   "--grid-length": "0%",
+//   delay: 0.5,
+//   duration: 0.5,
+// });
