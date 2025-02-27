@@ -50,6 +50,17 @@ function onResizeFunction(e) {
 //Local storage
 //theme
 $(document).ready(function () {
+  //load
+
+  setTimeout(function () {
+    $(".card-btn").fadeIn(200);
+  }, 750);
+
+  $(".card-btn").on("click", function () {
+    $(".loading").fadeOut();
+  });
+
+  //theme
   $("body").addClass(localStorage.getItem("body-theme") || "white");
   $("#mode.dark").click(function (e) {
     var name = e.target.className;

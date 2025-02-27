@@ -9,6 +9,7 @@ tl.fromTo(
     opacity: 0,
   },
   {
+    delay: 0.25,
     duration: 0.5,
     x: 0,
     opacity: 1,
@@ -27,13 +28,11 @@ tl.to(".i-project", {
   stagger: 0.1,
 });
 
-$(".card-btn").on("click", function () {
-  $(".loading").fadeOut();
-});
+
 
 tl.to(".loading", {
   opacity: "0",
-  duration: 0.8,
+  duration: 0.6,
   delay: 1.25,
   display: "none",
 });
