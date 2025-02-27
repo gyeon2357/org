@@ -60,6 +60,7 @@ name="twitter:image"
 content="https://gyeon.org/assets/images/og-image.jpg"
 />
 
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
 <link rel="preload" href="./assets/css/font.css" as="style" />
 <link
 href="./assets/css/font.css"
@@ -339,19 +340,12 @@ src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 <body>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
-<!-- <section class="loading">
+<section class="loading">
 <div class="card">
-
-<div class="intro-project-wrap">
-  <div class="i-project">Web · App</div>
-  <div class="i-project">Print</div>
-  <div class="i-project">Planing</div>
-  <div class="i-project">Collabs</div>
-</div>
 
 <div class="i-name">
 <h1 class="i-name-row">
-<span class="split">P</span>
+<span class="split">p</span>
 <span class="split">a</span>
 <span class="split">r</span>
 <span class="split">k</span>
@@ -370,8 +364,33 @@ src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 </h1>
 </div>
 
+<div class="intro-project-wrap">
+  <div class="justify-between">
+    <div class="i-project">Web&thinsp;·&thinsp;App</div>
+    <div class="i-project">Planing</div>
+  </div>
+
+<div class="justify-between">
+ <div class="i-project">Print</div>
+    <div class="i-project">Collabs</div>
 </div>
-</section> -->
+
+<div class="justify-between">
+    <div class="i-project align-end justify-end">&nbsp;</div>
+</div>
+<div class="justify-between">
+    <div class="i-project card-btn align-end justify-end">Close</div>
+ <div class="i-project keepdry"></div>
+    <div class="i-project align-end justify-end"><a href="mailto:mail@gyeon.org">Contact</a></div>
+
+       <!-- <div class="i-project align-end justify-end"><img src="./assets/images/option/star-w.svg"/></div> -->
+</div>
+
+
+</div>
+
+</div>
+</section>
 
 <main class="content">
 <div id="index-container" class="">
@@ -2899,24 +2918,24 @@ const images = ["./assets/images/option/info.svg",
       ];
 
       const preload = images => () => {
-        images.forEach(image => {
-          const img = new Image();
-          img.src = image;
-        });
+ images.forEach(image => {
+   const img = new Image();
+   img.src = image;
+ });
       };
 
       const addLoadEvent = func => {
-        const onloadEvent = window.onload;
-        if (typeof window.onload != "function") {
-          window.onload = func;
-        } else {
-          window.onload = function () {
-            if (onloadEvent) {
-              onloadEvent();
-            }
-            func();
-          };
-        }
+ const onloadEvent = window.onload;
+ if (typeof window.onload != "function") {
+   window.onload = func;
+ } else {
+   window.onload = function () {
+     if (onloadEvent) {
+onloadEvent();
+     }
+     func();
+   };
+ }
       };
 
       addLoadEvent(preload(images));
