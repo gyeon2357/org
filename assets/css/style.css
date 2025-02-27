@@ -224,7 +224,7 @@ body.dark sup > mark {
 /* INTRO
 ================================================== */
 
-.intro {
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,42 +234,43 @@ body.dark sup > mark {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #000;
 
   z-index: 100000 !important;
 }
 
-body.dark .intro {
-  background: #000;
-}
-
-.intro-text {
+.card {
   position: absolute;
   transform: translate(-50%, -50%);
 
+  width: 60vw;
+  height: 33.333vw;
+
   left: 50%;
-  top: calc(50% - 2rem);
-  color: dimgray;
-
-  font-size: 1rem;
-}
-
-body.dark .intro-text {
+  top: calc(50%);
   color: lightgray;
+
+  border: 0.5px solid #fff;
+  padding: 0.5rem;
+
+  font-size: 1.25rem;
 }
 
-.intro-title {
-  margin-top: 1.5rem;
-  text-align: center;
+.i-name {
+  margin: 1rem 0 0 0.1rem;
 }
 
-.intro-hide {
+.i-name-row {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+
   font-size: 0;
   overflow: hidden;
   /* margin-bottom: 4px; */
 }
 
-.intro-hide span.text {
+.i-name-row span.split {
   /* transform: translateY(100%); */
   display: inline-block;
 
@@ -285,34 +286,25 @@ body.dark .intro-text {
   margin-right: 2px; */
 }
 
-.line {
+.i-project {
   display: flex;
   align-items: center;
-  width: 7rem;
-  height: 1.25rem;
 
-  background: whitesmoke;
-  box-shadow: 0 0 0 1px silver;
-  color: dimgray;
+  /* background: whitesmoke;
+  box-shadow: 0 0 0 1px silver; */
+  color: silver;
 
-  padding: 2px 3px;
   border-radius: 2px;
-  margin: 0 auto 0.5rem;
 
   font-size: 0.75rem;
+  line-height: 1.4;
   text-transform: capitalize;
 
-  transform: translateY(20%);
+  transform: translateY(15%);
   opacity: 0;
 }
 
-body.dark .line {
-  background: #1f1f1f;
-  box-shadow: 0 0 0 1px gray;
-  color: silver;
-}
-
-.line > .keepdry {
+.i-project > .keepdry {
   display: block;
   width: 4rem;
   height: 4rem;
@@ -334,13 +326,10 @@ body.dark .line {
 
 .line-text {
   opacity: 1;
-
-  font-size: 75%;
-  line-height: 20px;
 }
 
 @media screen and (max-width: 600px) {
-  .intro-text {
+  .card {
     font-size: 0.875rem;
   }
 }
@@ -433,6 +422,7 @@ img.blend {
 }
 .nav {
   position: sticky;
+
   top: 5px;
   padding: 5px;
   margin-bottom: 1rem;
@@ -451,6 +441,8 @@ img.blend {
   text-transform: capitalize;
   border-radius: 2px;
   z-index: 10002;
+
+  opacity: 0;
 }
 .categorie,
 .nav-title,
@@ -711,9 +703,9 @@ body.dark #index .filter-opacity {
 .gallery-container {
   --gap: 4px;
   --grid-length: 2%;
-  --line-offset: 0;
+  --line-offset: 0.125rem;
   --line-thickness: 1px;
-  --line-color: gray;
+  --line-color: silver;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -722,7 +714,6 @@ body.dark #index .filter-opacity {
   /* gap: var(--gap); */
 
   font-size: 0.875rem;
-
 }
 
 body.dark .gallery-container {
@@ -780,30 +771,30 @@ body.dark .gallery-container {
   content: "";
   position: absolute;
   background-color: var(--line-color);
-  z-index: 1;
+  z-index: 100001 !important;
 }
 
 .gallery-container .project::after {
   block-size: var(--line-thickness);
   inline-size: var(--grid-length);
 
-  inset-inline-start: -0.75rem;
+  inset-inline-start: 0;
   inset-block-start: calc(var(--line-offset) * -1);
 }
 
 .gallery-container .project::before {
   inline-size: var(--line-thickness);
   block-size: var(--grid-length);
-  inset-block-start: -0.75rem;
+  inset-block-start: 0;
   inset-inline-start: calc(var(--line-offset) * -1);
 }
 
 @media screen and (max-width: 600px) {
   .gallery-container .project::after {
-    inset-inline-start: -5px;
+    inset-inline-start: 0;
   }
   .gallery-container .project::before {
-    inset-block-start: -5px;
+    inset-block-start: 0;
   }
 }
 
@@ -1764,7 +1755,7 @@ body.dark footer a {
     padding: 0.3rem;
   }
 
-  .intro-text {
+  .card {
     font-size: 2rem;
   }
 
