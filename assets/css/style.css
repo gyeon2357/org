@@ -320,7 +320,7 @@ body.dark sup > mark {
 .i-project > a {
   font-family: "SUIT", sans-serif;
   color: inherit;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   transition: color 0.125s;
 }
@@ -328,7 +328,7 @@ body.dark sup > mark {
 .intro-project-wrap .card-btn {
   display: none;
 
-  text-transform: capitalize;
+  text-transform: uppercase;
   transition: color 0.125s;
   cursor: pointer;
 }
