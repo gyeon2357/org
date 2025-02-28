@@ -103,6 +103,7 @@ $(document).ready(function () {
   var planningN = $(".gallery-container .project.planning").length;
   var collabN = $(".gallery-container .project.collab").length;
 
+  $(".intro-project-wrap").find("a.count").html(galleryN);
   $(".index").find("a.count").html(galleryN);
   $("#web").find("a.count").html(webN);
   $("#printing").find("a.count").html(printingN);
