@@ -277,12 +277,12 @@ body.dark sup > mark {
 }
 
 .i-name-row span.split {
-  font-family: "SUIT", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: inline-block;
 
   font-size: 100%;
   font-size: 1rem;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   line-height: 1.4;
 
   opacity: 0;
@@ -296,7 +296,7 @@ body.dark sup > mark {
 }
 
 .i-project {
-  font-family: "SUIT", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   align-items: center;
 
@@ -307,6 +307,7 @@ body.dark sup > mark {
   border-radius: 2px;
 
   font-size: 0.75rem;
+  letter-spacing: 1px;
   line-height: 1.4;
   text-transform: capitalize;
 
@@ -318,9 +319,10 @@ body.dark sup > mark {
 }
 
 .i-project > a {
-  font-family: "SUIT", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: inherit;
   text-transform: uppercase;
+  letter-spacing: 1px;
 
   transition: color 0.125s;
 }
@@ -477,7 +479,7 @@ img.blend {
 .nav li,
 .nav p,
 .nav a {
-  /* font-family: "SUIT", sans-serif; */
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 
 .categorie,
@@ -911,6 +913,10 @@ body.dark .gallery-container {
 }
 
 @media screen and (max-width: 600px) {
+  .gallery-container .project > .info-project > div {
+    opacity: 1;
+  }
+
   .gallery-container .project.mobile > a {
     width: 40%;
   }
@@ -1649,7 +1655,9 @@ footer {
   grid-gap: 0px;
   position: relative;
 
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: var(--main);
+  letter-spacing: 1px;
   line-height: 1.4;
 }
 

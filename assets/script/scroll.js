@@ -43,29 +43,29 @@ ScrollTrigger.matchMedia({
     });
   },
   "(max-width: 599px)": function () {
-    // items.forEach((item) => {
-    //   gsap.to(item, {
-    //     autoAlpha: 0,
-    //     y: -5,
-    //     scrollTrigger: {
-    //       trigger: item,
-    //       start: "bottom center+=120",
-    //       scrub: true,
-    //       end: "bottom center",
-    //     },
-    //   });
-    // });
-
-    texts.forEach((text) => {
-      gsap.to(text, {
-        autoAlpha: 1,
+    items.forEach((item) => {
+      gsap.to(item, {
+        autoAlpha: 0,
+        y: -5,
         scrollTrigger: {
-          trigger: text,
-          start: "top 110%",
+          trigger: item,
+          start: "bottom center+=120",
           scrub: true,
-          end: "bottom bottom",
+          end: "bottom center",
         },
       });
+    });
+
+    texts.forEach((text) => {
+      // gsap.to(text, {
+      //   autoAlpha: 1,
+      //   scrollTrigger: {
+      //     trigger: text,
+      //     start: "top 110%",
+      //     scrub: true,
+      //     end: "bottom bottom",
+      //   },
+      // });
     });
   },
 });
