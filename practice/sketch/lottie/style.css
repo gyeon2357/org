@@ -1,0 +1,17 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 800vh; /* Aumenta la altura de la página para habilitar el scroll */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+    }
+    #statue-container {
+      width: 400px;
+      height: 400px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }

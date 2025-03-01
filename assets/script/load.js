@@ -30,12 +30,12 @@ tl.to(".i-project", {
 
 
 
-tl.to(".loading", {
-  opacity: "0",
-  duration: 0.6,
-  delay: 1.25,
-  display: "none",
-});
+// tl.to(".loading", {
+//   opacity: "0",
+//   duration: 0.6,
+//   delay: 1.25,
+//   display: "none",
+// });
 
 /* GRID ANIMATION */
 

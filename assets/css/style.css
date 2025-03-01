@@ -221,6 +221,7 @@ body.dark sup > mark {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .justify-end {
@@ -263,6 +264,9 @@ body.dark sup > mark {
   top: calc(50%);
   color: lightgray;
 
+  padding: 1rem 1.25rem;
+  border-radius: 2.5px;
+box-shadow: rgba(162, 162, 162, 0.25) 0px 0.0625em 0.0625em, rgba(162, 162, 162, 0.25) 0px 0.125em 0.5em, rgba(96, 96, 96, 0.1) 0px 0px 0px 1px inset;
   /* font-kerning: none; */
 }
 
@@ -336,14 +340,14 @@ body.dark sup > mark {
 }
 
 .i-project > a:hover,
-.i-project.card-btn:hover {
+.card-btn:hover {
   color: white;
 }
 
 .i-project.keepdry {
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 
   background: url(../images/favicon-keepdry-3@0.1x.jpg) 0 0 no-repeat;
   background-size: 600%;
