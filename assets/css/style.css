@@ -850,11 +850,11 @@ body.dark .gallery-container {
 }
 
 .gallery-container .project > a {
-  width: 87.5%;
+  width: 92.5%;
 }
 
 .gallery-container .project.mobile > a {
-  width: 33.333%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -907,7 +907,7 @@ body.dark .gallery-container {
   }
 
   .gallery-container .project.mobile > a {
-    width: 40%;
+    width: 50%;
   }
 
   .gallery-container .project.mark > a::before {

@@ -20,7 +20,7 @@ ScrollTrigger.matchMedia({
   "(min-width: 600px)": function () {
     items.forEach((item) => {
       gsap.to(item, {
-        autoAlpha: 0,
+        autoAlpha: 0.5,
         y: -5,
         scrollTrigger: {
           trigger: item,
@@ -45,7 +45,7 @@ ScrollTrigger.matchMedia({
   "(max-width: 599px)": function () {
     items.forEach((item) => {
       gsap.to(item, {
-        autoAlpha: 0,
+        autoAlpha: 0.5,
         y: -5,
         scrollTrigger: {
           trigger: item,
