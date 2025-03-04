@@ -599,7 +599,6 @@ body.dark .open-menu {
   justify-content: space-between;
 
   font-size: 0.825rem;
-  
 }
 
 .hidden .nav-section li.rrss {
@@ -893,8 +892,8 @@ body.dark .gallery-container {
   content: url("../images/option/check.svg");
 
   position: relative;
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 0.75rem;
+  height: 0.75rem;
 
   right: 0;
   bottom: 0;
@@ -907,13 +906,18 @@ body.dark .gallery-container {
 }
 
 @media screen and (max-width: 600px) {
-  .gallery-container .project > .info-project > div {
-    opacity: 1 !important;
-    visibility: inherit !important;
+  .gallery-container .project > a {
+    width: 100%;
   }
 
   .gallery-container .project.mobile > a {
     width: 50%;
+    margin: 0 auto;
+  }
+
+  .gallery-container .project > .info-project > div {
+    opacity: 1 !important;
+    visibility: inherit !important;
   }
 
   .gallery-container .project.mark > a::before {
@@ -935,6 +939,9 @@ body.dark .gallery-container {
     width: 0.725rem;
     height: 0.725rem;
     font-size: 0.6rem;
+
+    margin-top: 1px;
+    margin-left: 1px;
 
     vertical-align: 10%;
   }
@@ -1165,10 +1172,12 @@ body.dark #index-container .cap {
 
 .accordion[data-accordion-state="opened"] .accordion-label {
   box-shadow: 0 0 0px 1px goldenrod;
+  background: rgba(222, 222, 217, 0.8) !important;
 }
 
 body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   box-shadow: 0 0 0px 1px khaki;
+  background: rgba(222, 222, 217, 0.35) !important;
 }
 
 /* .accordion-label::before {
@@ -1186,11 +1195,14 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 } */
 
 .accordion-content {
-  display: block;
+  grid-gap: 5px;
+  grid-template-columns: repeat(9, 1fr);
+  display: grid;
+
   position: relative;
   height: fit-content;
 
-  margin: 0.5rem 0 0.5rem;
+  margin: 2rem 0 2rem;
   /* height: var(--content-height); */
 
   overflow: hidden;
@@ -1204,16 +1216,17 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 
 .accordion-content figure {
   display: grid;
+  grid-column: 2 / span 9;
   grid-template-columns: repeat(auto-fill, minmax(calc(25% - 30px), 1fr));
 
   grid-gap: 0.5rem;
 
   width: 75%;
-  margin: 0 auto 0.75rem;
+  margin: 0 0 0.75rem;
 }
 
 .accordion-content figure:last-of-type {
-  margin: 0 auto 3rem;
+  margin: 0 0 3rem;
 }
 
 .accordion-content figure.landscape {
@@ -1235,7 +1248,20 @@ body.dark .accordion-content figure img {
   border: thin solid #333;
 }
 
+.accordion-content h1 {
+  grid-column: 2 / span 9;
+  margin: 0 0 1rem;
+
+  font-size: 1rem;
+  line-height: 1.2;
+
+  max-width: 72ch;
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+
 .accordion-content p {
+  grid-column: 2 / span 9;
   margin: 0 0 1rem;
   max-width: 72ch;
 
@@ -1378,18 +1404,32 @@ p[title="caption"] a {
 }
 
 @media only screen and (max-width: 900px) {
+  .accordion-content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .accordion-content h1,
+  .accordion-content p {
+    grid-column: 1 / span 5;
+  }
+
   .accordion-content figure {
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    grid-column: 1 / span 6;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .accordion-content {
+    margin: 1.5rem 0 1rem;
+  }
+
   .accordion-content figure {
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
     grid-gap: 5px;
 
     width: 100%;
-    margin: 0 auto 0.5rem;
+    margin: 0 0 0.5rem;
   }
 
   .accordion-content figure.landscape {
@@ -1397,7 +1437,7 @@ p[title="caption"] a {
   }
 
   .accordion-content p {
-    font-size: inherit;
+    line-height: 1.45;
   }
 
   .accordion-content p[title="Related Link"] > a {
@@ -1673,10 +1713,10 @@ body.dark footer a {
 
 @media (hover: hover) and (pointer: fine) {
   .project > a > img {
-    transition: opacity 0.125s;
+    transition: filter 0.125s;
   }
   .project:hover > a > img {
-    opacity: 0.6;
+    filter: grayscale(1) brightness(0.8);
   }
 
   .open-menu:hover {
@@ -1756,9 +1796,9 @@ body.dark footer a {
 ================================================== */
 @media only screen and (max-width: 1540px) and (min-width: 1440px) {
 }
-/* IMAC PRO
+/* IMAC PRO 
 ================================================== */
-@media only screen and (max-width: 3920px) and (min-width: 1820px) {
+@media only screen and (min-width: 1820px) {
   :root {
     --main: calc(8px + 0.5vw);
     --small: 16px;
@@ -1793,40 +1833,51 @@ body.dark footer a {
     padding: 0.3rem;
   }
 
-  header.nav {
-    font-size: 1.25rem;
+  header.nav,
+  .hidden .nav-section li,
+  .nav-title,
+  #grid,
+  .open-menu,
+  #mode {
+    font-size: 1.5rem;
+  }
+
+  .nav img {
+    width: 1.5rem;
   }
 
   div.info-project {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
-  .accordion-content p {
-    font-size: 1.25rem;
+  .gallery-container .project.mark > a::before {
+    left: 1.25rem;
+    bottom: 1.25rem;
+
+    scale: 2;
   }
 
   .gallery-container .project.mobile.mark > a::before {
-    font-size: 1rem;
-
-    width: 1.5rem;
-    height: 1.5rem;
-
-    left: 1.5rem;
-    bottom: 1.5rem;
+    left: 2rem;
+    bottom: 2rem;
   }
 
   #index-container .project.mark > a > div.title::before {
-    width: 1rem;
-    height: 1rem;
-    font-size: 0.75rem;
-
     margin-right: 0.75rem;
+  }
+
+  .accordion-content h1 {
+    font-size: 1.625rem;
+  }
+
+  .accordion-content p {
+    font-size: 1.375rem;
   }
 
   .accordion-content figure {
     width: 85%;
 
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem;
   }
 
   .accordion-content p::before {
@@ -1999,7 +2050,7 @@ body.dark footer a {
   /* .year {
     display: none;
   } */
-  .number {
+  #index-container .project > a > div.number {
     display: none;
   }
 
