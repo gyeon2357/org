@@ -28,12 +28,28 @@ tl.to(".i-project", {
   stagger: 0.1,
 });
 
-tl.to(".loading", {
-  opacity: "0",
-  duration: 0.6,
-  delay: 1.25,
-  display: "none",
-});
+tl.add("close")
+  .to(
+    ".card",
+    {
+      y: "-5%",
+      opacity: "0",
+      duration: 0.8,
+      delay: 1,
+    },
+    "close"
+  )
+
+  .to(
+    ".loading",
+    {
+      y: "-100%",
+      duration: 0.6,
+      delay: 1.25,
+      display: "none",
+    },
+    "close"
+  );
 
 /* GRID ANIMATION */
 

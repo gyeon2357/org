@@ -253,7 +253,7 @@ body.dark sup > mark {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #060606;
 
   z-index: 100000 !important;
 }
@@ -264,12 +264,13 @@ body.dark sup > mark {
 
   left: 50%;
   top: calc(50%);
+  background: #000;
   color: lightgray;
 
   padding: 1rem 1.25rem;
   border-radius: 2.5px;
-  box-shadow: rgba(162, 162, 162, 0.25) 0px 0.0625em 0.0625em,
-    rgba(162, 162, 162, 0.25) 0px 0.125em 0.5em,
+  box-shadow: rgba(133, 133, 133, 0.25) 0px 0.0625em 0.0625em,
+    rgba(133, 133, 133, 0.25) 0px 0.125em 0.5em,
     rgba(96, 96, 96, 0.1) 0px 0px 0px 1px inset;
   /* font-kerning: none; */
 }
@@ -279,7 +280,7 @@ body.dark sup > mark {
 }
 
 .i-name-row {
-  min-width: 210px;
+  min-width: 220px;
   font-size: 0;
   overflow: hidden;
 }
@@ -722,7 +723,7 @@ body.dark #index .filter-opacity {
   margin-top: 20px;
 
   line-height: 1.4;
-  letter-spacing: 0;
+  letter-spacing: .125px;
   text-transform: capitalize;
   word-break: keep-all;
   text-align: left;
@@ -876,6 +877,8 @@ body.dark .gallery-container {
 
   bottom: 0.5rem;
   left: 0.5rem;
+
+  z-index: 1;
 }
 
 .gallery-container .project.mobile.mark > a::before {
@@ -1202,7 +1205,7 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   position: relative;
   height: fit-content;
 
-  margin: 2rem 0 2rem;
+  margin: 1.5rem 0 1.5rem;
   /* height: var(--content-height); */
 
   overflow: hidden;
@@ -1250,7 +1253,7 @@ body.dark .accordion-content figure img {
 
 .accordion-content h1 {
   grid-column: 2 / span 9;
-  margin: 0 0 1rem;
+  margin: 0 0 .5rem;
 
   font-size: 1rem;
   line-height: 1.2;
@@ -1262,7 +1265,7 @@ body.dark .accordion-content figure img {
 
 .accordion-content p {
   grid-column: 2 / span 9;
-  margin: 0 0 1rem;
+  margin: 0 0 .5rem;
   max-width: 72ch;
 
   font-size: 0.875rem;
@@ -1320,7 +1323,7 @@ body.dark .accordion-content p::before {
 } */
 
 .accordion-content p[title="Related Link"] {
-  margin: 1rem 0 2rem;
+  margin: 0 0 2rem;
 }
 
 .accordion-content p[title="Related Link"] > a {
@@ -1804,6 +1807,31 @@ body.dark footer a {
     --small: 16px;
     --big: 20px;
     --gap: 12px;
+  }
+
+  .card {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .i-name {
+    margin: 0 0 0.75rem;
+  }
+
+  .i-name-row {
+    min-width: 400px;
+  }
+
+  .i-project {
+    font-size: 1.375rem;
+  }
+
+  .i-name-row span.split {
+    font-size: 1.75rem;
+  }
+
+  .i-project.keepdry {
+  width: 2rem;
+    height: 2rem;
   }
 
   #index-container {
