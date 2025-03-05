@@ -277,6 +277,6 @@ function showIndexTextConsole(text) {
   console.log(text);
 }
 
-// setTimeout(function () {
-//   $(".accordion-content").addClass("accordion-content-property");
-// }, 250);
+setTimeout(function () {
+  $(".accordion-content").addClass("accordion-content-property");
+}, 250);

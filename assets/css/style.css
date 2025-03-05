@@ -1214,7 +1214,8 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 .accordion-content-property {
   opacity: 1;
   transition-property: height, margin, filter, opacity;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.860, 0.205, 0.145, 0.915);
 }
 
 .accordion-content figure {
@@ -1390,6 +1391,11 @@ p[title="caption"] a {
   margin-block: 0;
   filter: blur(4px);
   opacity: 0;
+}
+
+.accordion[data-accordion-state="opened"] .accordion-content {
+  height: fit-content;
+  opacity: 1;
 }
 
 .accordion[data-accordion-state="opened"] .accordion-label::before {
