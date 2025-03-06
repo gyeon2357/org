@@ -468,7 +468,7 @@ img.blend {
 
   top: 5px;
   padding: 5px;
-  margin-bottom: 1rem;
+
   height: fit-content;
   background: #deded980;
   backdrop-filter: blur(25px);
@@ -620,11 +620,9 @@ body.dark .open-menu {
   display: none;
 
   text-transform: lowercase;
-
 }
 
 .rrss > address {
-
 }
 
 .hidden .nav-section li {
@@ -938,8 +936,8 @@ body.dark .gallery-container {
   }
 
   .gallery-container .project > .info-project > div {
-    opacity: 1 !important;
-    visibility: inherit !important;
+    /* opacity: 1 !important;
+    visibility: inherit !important; */
   }
 
   .gallery-container .project.mark > a::before {
@@ -2219,6 +2217,8 @@ body.dark footer a {
     grid-column: span 1;
   }
   #links {
+    position: relative;
+    top: 0;
     grid-column: span 12;
   }
   #index-container .project {

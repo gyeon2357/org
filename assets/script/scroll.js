@@ -45,27 +45,26 @@ ScrollTrigger.matchMedia({
   "(max-width: 599px)": function () {
     items.forEach((item) => {
       gsap.to(item, {
-        autoAlpha: 0.5,
-        y: -5,
+        autoAlpha: 1,
         scrollTrigger: {
-          trigger: item,
-          start: "bottom center+=120",
-          scrub: true,
-          end: "bottom center",
+          // trigger: item,
+          // start: "bottom center+=120",
+          // scrub: true,
+          // end: "bottom center",
         },
       });
     });
 
     texts.forEach((text) => {
-      // gsap.to(text, {
-      //   autoAlpha: 1,
-      //   scrollTrigger: {
-      //     trigger: text,
-      //     start: "top 110%",
-      //     scrub: true,
-      //     end: "bottom bottom",
-      //   },
-      // });
+      gsap.to(text, {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: text,
+          start: "top 150%",
+          scrub: true,
+          end: "bottom bottom",
+        },
+      });
     });
   },
 });
