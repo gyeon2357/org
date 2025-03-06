@@ -720,19 +720,19 @@ body.dark .hidden .nav-section li {
 }
 
 .gallery-container .filter-opacity {
-  display: none !important;
+  /* display: none !important; */
 }
 
 #index-container .accordion:has(.filter-opacity) {
-  display: none !important;
+  /* display: none !important; */
 }
 
 body.dark .filter-opacity {
-  color: grey;
+  color: #363636;
   pointer-events: none;
 }
 body.dark #index .filter-opacity {
-  color: grey;
+  color: #363636;
   pointer-events: none;
 }
 .about {
@@ -1082,7 +1082,7 @@ body.dark #index-container .project {
 
 #index-container .project.filter-opacity {
   color: black;
-  opacity: 0 !important;
+  opacity: 0.2 !important;
   pointer-events: none;
 }
 

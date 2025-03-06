@@ -249,10 +249,27 @@ $(document).ready(function () {
       $(".project").removeClass("filter-opacity");
       $(this).removeClass("active");
     }
+
+    //Filter-position
+    if ($("#index-container").hasClass("grid")) {
+      var positionI = $(
+        "#index-container .accordion:not(:has(.filter-opacity))"
+      ).offset();
+      // console.log(positionI);
+
+      $("html, body").animate({ scrollTop: positionI.top - 200 }, 200);
+    } else {
+      var positionG = $(".gallery-container .project")
+        .not("[class*='filter-opacity']")
+        .offset();
+
+      // console.log(positionG);
+      $("html, body").animate({ scrollTop: positionG.top - 200 }, 200);
+    }
   });
 });
 
-//keypress
+//Keypress
 $(document).on("keyup", ".nav", function (e) {
   if (e.which == 13) showNavTextConsole($(e.target).click());
 });
