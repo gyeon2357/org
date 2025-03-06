@@ -11,11 +11,11 @@
   --lightgray: #ebebec;
   --darkgray: #a6a2a0;
 
-  --font: "pretendard-comb-type";
+  --font: "national", "SUIT", "pretendard", sans-serif;
 }
 ::selection {
   background-color: transparent;
-  color: #bdbdbd;
+  color: #363636;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -68,12 +68,14 @@ audio {
 html {
   padding: env(safe-area-inset);
 }
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -83,15 +85,16 @@ body {
 
   position: relative;
 
-  font-family: "pretendard-comb-type";
+  font-family: var(--font);
   font-size: var(--main);
   line-height: var(--main);
+  letter-spacing: 0.3px;
 
-  font-family: var(--font);
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -101,18 +104,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
-  letter-spacing: 0.375px;
 }
+
 body.dark {
   background-color: var(--smokeblack);
-  transition: 0.4s;
+  transition: background-color 0.5s;
 }
 body.dark .nav {
   color: inherit !important;
 }
 body.white {
   background-color: white;
-  transition: 0.4s;
+  transition: background-color 0.5s;
 }
 body.dark .gallery {
   color: white;
@@ -480,14 +483,25 @@ img.blend {
   letter-spacing: -0.1px;
   text-transform: capitalize;
   border-radius: 2px;
+
   z-index: 10002;
 }
 
 .nav span,
 .nav li,
 .nav p,
-.nav a {
+.nav a,
+.nav .nav-title,
+.nav .open-menu,
+.nav mark {
   /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+
+  transition: background-color 0.125s;
 }
 
 .categorie,
@@ -606,6 +620,11 @@ body.dark .open-menu {
   display: none;
 
   text-transform: lowercase;
+
+}
+
+.rrss > address {
+
 }
 
 .hidden .nav-section li {
@@ -723,7 +742,7 @@ body.dark #index .filter-opacity {
   margin-top: 20px;
 
   line-height: 1.4;
-  letter-spacing: .125px;
+  letter-spacing: 0.125px;
   text-transform: capitalize;
   word-break: keep-all;
   text-align: left;
@@ -1209,13 +1228,14 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   /* height: var(--content-height); */
 
   overflow: hidden;
+  will-change: height, margin, filter, opacity;
 }
 
 .accordion-content-property {
   opacity: 1;
   transition-property: height, margin, filter, opacity;
   transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.860, 0.205, 0.145, 0.915);
+  transition-timing-function: cubic-bezier(0.86, 0.205, 0.145, 0.915);
 }
 
 .accordion-content figure {
@@ -1254,7 +1274,7 @@ body.dark .accordion-content figure img {
 
 .accordion-content h1 {
   grid-column: 2 / span 9;
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
 
   font-size: 1rem;
   line-height: 1.2;
@@ -1266,7 +1286,7 @@ body.dark .accordion-content figure img {
 
 .accordion-content p {
   grid-column: 2 / span 9;
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
   max-width: 72ch;
 
   font-size: 0.875rem;
@@ -1291,6 +1311,7 @@ body.dark .accordion-content figure img {
 }
 
 .accordion-content p::before {
+  font-family: "national", "pretendard", sans-serif;
   /* content: "[" attr(title) "]"; */
   content: attr(title);
 
@@ -1721,11 +1742,39 @@ body.dark footer a {
 ================================================== */
 
 @media (hover: hover) and (pointer: fine) {
+  header.nav li:hover,
+  #grid:hover,
+  .nav-title:hover,
+  .nav-section > div:hover {
+    background-color: lightgrey !important;
+  }
+
+  header.nav li:active,
+  #grid:active,
+  .nav-title:active,
+  .nav-section > div:active {
+    background-color: silver !important;
+  }
+
+  body.dark header.nav li:hover,
+  body.dark #grid:hover,
+  body.dark .nav-title:hover,
+  .nav-section > div:hover {
+    background-color: #c1c1c1 !important;
+  }
+
+  body.dark header.nav li:active,
+  body.dark #grid:active,
+  body.dark .nav-title:active,
+  .nav-section > div:active {
+    background-color: #929292 !important;
+  }
+
   .project > a > img {
-    transition: filter 0.125s;
+    transition: box-shadow 0.125s;
   }
   .project:hover > a > img {
-    filter: grayscale(1) brightness(0.8);
+    box-shadow: 0 0 6px 2px khaki;
   }
 
   .open-menu:hover {
@@ -1739,16 +1788,25 @@ body.dark footer a {
     color: white !important;
   }
   #links .cap:hover {
-    background-color: lightgrey;
+    background-color: lightgray;
   }
   body.dark #index-container #links .cap:hover {
-    background-color: lightgrey;
+    background-color: lightgray;
   }
   #index-container .project:hover {
-    background-color: lightgrey !important;
+    background-color: lightgray !important;
   }
+
+  #index-container .project:active {
+    background-color: silver !important;
+  }
+
   body.dark #index-container .project:hover {
     background-color: gray !important;
+    color: black;
+  }
+  body.dark #index-container .project:active {
+    background-color: dimgray !important;
     color: black;
   }
   #index .project:hover {
@@ -1769,26 +1827,6 @@ body.dark footer a {
     opacity: 1;
     z-index: 10000;
     transition-delay: 0s;
-  }
-
-  #grid:hover {
-    background-color: lightgrey;
-  }
-  .nav-title:hover {
-    background-color: lightgrey;
-  }
-  header li:hover {
-    background-color: lightgrey !important;
-  }
-
-  .nav-section > div:hover {
-    background-color: lightgrey;
-  }
-
-  body.dark header li:hover,
-  body.dark #grid:hover,
-  body.dark .nav-title:hover {
-    background-color: #9c9c9c !important;
   }
 }
 
@@ -1836,7 +1874,7 @@ body.dark footer a {
   }
 
   .i-project.keepdry {
-  width: 2rem;
+    width: 2rem;
     height: 2rem;
   }
 
@@ -1950,7 +1988,7 @@ body.dark footer a {
 
 @media only screen and (max-width: 1000px) {
   .nav {
-    grid-column: 9 / span 4;
+    grid-column: 8 / span 5;
   }
   .gallery {
     height: fit-content;
@@ -1975,7 +2013,7 @@ body.dark footer a {
   }
 
   .nav {
-    grid-column: 8 / span 5;
+    grid-column: 7 / span 6;
     grid-template-columns: repeat(3, 1fr);
   }
   .gallery-container {
@@ -2084,6 +2122,11 @@ body.dark footer a {
   /* .year {
     display: none;
   } */
+
+  #index-container .number {
+    display: none;
+  }
+
   #index-container .project > a > div.number {
     display: none;
   }
