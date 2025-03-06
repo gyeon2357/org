@@ -896,6 +896,11 @@ body.dark .gallery-container {
   left: 0.5rem;
 
   z-index: 1;
+
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gallery-container .project.mobile.mark > a::before {
@@ -923,6 +928,11 @@ body.dark .gallery-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -2267,6 +2277,13 @@ body.dark footer a {
 
 @media screen and (hover: none) and (pointer: coarse) {
   img {
+    -webkit-user-select: none !important;
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+
+  .nav * {
     -webkit-user-select: none !important;
     -moz-user-select: -moz-none !important;
     -ms-user-select: none !important;
