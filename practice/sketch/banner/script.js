@@ -207,7 +207,7 @@ Ammo().then(function (Ammo) {
     cloth.receiveShadow = true;
     scene.add(cloth);
     textureLoader.load(
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/253981/banner.jpg",
+      "https://ik.imagekit.io/11195/sansuhwa/exhibition/cheongnak_1.jpg?updatedAt=1716264342589",
       function (texture) {
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;

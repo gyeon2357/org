@@ -118,10 +118,10 @@ $(document).ready(function () {
       const label = accordion.querySelector(".accordion-label");
       const content = accordion.querySelector(".accordion-content");
 
-      // content.style.setProperty(
-      //   "--content-height",
-      //   content.offsetHeight + "px"
-      // );
+      content.style.setProperty(
+        "--content-height",
+        content.offsetHeight + "px"
+      );
 
       function getState() {
         return accordion.getAttribute("data-accordion-state");
@@ -252,19 +252,19 @@ $(document).ready(function () {
 
     //Filter-position
     if ($("#index-container").hasClass("grid")) {
-      var positionI = $(
+      var offsetIndex = $(
         "#index-container .accordion:not(:has(.filter-opacity))"
       ).offset();
-      // console.log(positionI);
+      // console.log(offsetIndex);
 
-      $("html, body").animate({ scrollTop: positionI.top - 200 }, 200);
+      $("html, body").animate({ scrollTop: offsetIndex.top - 200 }, 200);
     } else {
-      var positionG = $(".gallery-container .project")
+      var offsetGallery = $(".gallery-container .project")
         .not("[class*='filter-opacity']")
         .offset();
 
-      // console.log(positionG);
-      $("html, body").animate({ scrollTop: positionG.top - 200 }, 200);
+      // console.log(offsetGallery);
+      $("html, body").animate({ scrollTop: offsetGallery.top - 200 }, 200);
     }
   });
 });
