@@ -18,18 +18,18 @@ var texts = gsap.utils.toArray(
 
 ScrollTrigger.matchMedia({
   "(min-width: 600px)": function () {
-    items.forEach((item) => {
-      gsap.to(item, {
-        autoAlpha: 0.5,
+    // items.forEach((item) => {
+    //   gsap.to(item, {
+    //     autoAlpha: 0.5,
 
-        scrollTrigger: {
-          trigger: item,
-          start: "bottom center+=25",
-          scrub: true,
-          end: "+=800",
-        },
-      });
-    });
+    //     scrollTrigger: {
+    //       trigger: item,
+    //       start: "bottom center+=25",
+    //       scrub: true,
+    //       end: "+=1000",
+    //     },
+    //   });
+    // });
     texts.forEach((text) => {
       gsap.to(text, {
         autoAlpha: 1,
@@ -43,17 +43,17 @@ ScrollTrigger.matchMedia({
     });
   },
   "(max-width: 599px)": function () {
-    items.forEach((item) => {
-      gsap.to(item, {
-        autoAlpha: 1,
-        scrollTrigger: {
-          // trigger: item,
-          // start: "bottom center+=120",
-          // scrub: true,
-          // end: "bottom center",
-        },
-      });
-    });
+    // items.forEach((item) => {
+    //   gsap.to(item, {
+    //     autoAlpha: 1,
+    //     scrollTrigger: {
+    //       // trigger: item,
+    //       // start: "bottom center+=120",
+    //       // scrub: true,
+    //       // end: "bottom center",
+    //     },
+    //   });
+    // });
 
     texts.forEach((text) => {
       gsap.to(text, {
