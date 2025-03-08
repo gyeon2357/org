@@ -191,7 +191,7 @@ $(document).ready(function () {
     var self = this;
     setTimeout(function () {
       theOffset = $(self).offset();
-      $("body,html").animate({ scrollTop: theOffset.top - 200 }, 200);
+      $("body,html").animate({ scrollTop: theOffset.top - 200 }, 400);
     }, 50);
   });
 

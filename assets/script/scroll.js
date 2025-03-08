@@ -21,12 +21,12 @@ ScrollTrigger.matchMedia({
     items.forEach((item) => {
       gsap.to(item, {
         autoAlpha: 0.5,
-        y: -5,
+
         scrollTrigger: {
           trigger: item,
           start: "bottom center+=25",
           scrub: true,
-          end: "+=1000",
+          end: "+=800",
         },
       });
     });
