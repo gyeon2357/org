@@ -18,17 +18,17 @@ var texts = gsap.utils.toArray(
 
 ScrollTrigger.matchMedia({
   "(min-width: 600px)": function () {
-    items.forEach((item) => {
-      gsap.to(item, {
-        autoAlpha: 0.5,
-        scrollTrigger: {
-          trigger: item,
-          start: "bottom center+=25",
-          scrub: true,
-          end: "+=200",
-        },
-      });
-    });
+    // items.forEach((item) => {
+    //   gsap.to(item, {
+    //     autoAlpha: 0.5,
+    //     scrollTrigger: {
+    //       trigger: item,
+    //       start: "bottom center+=25",
+    //       scrub: true,
+    //       end: "+=200",
+    //     },
+    //   });
+    // });
 
     // texts.forEach((text) => {
     //   gsap.to(text, {

@@ -99,14 +99,14 @@ $(document).ready(function () {
   //Count
   var galleryN = $(".gallery-container .project").length;
   var webN = $(".gallery-container .project.web").length;
-  var printingN = $(".gallery-container .project.printing").length;
+  var printN = $(".gallery-container .project.print").length;
   var planningN = $(".gallery-container .project.planning").length;
   var collabN = $(".gallery-container .project.collab").length;
 
   $(".intro-project-wrap").find("a.count").html(galleryN);
   $(".index").find("a.count").html(galleryN);
   $("#web").find("a.count").html(webN);
-  $("#printing").find("a.count").html(printingN);
+  $("#print").find("a.count").html(printN);
   $("#planning").find("a.count").html(planningN);
   $("#collab").find("a.count").html(collabN);
 
