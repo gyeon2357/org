@@ -277,6 +277,13 @@ $(document).ready(function () {
       // console.log(offsetGallery);
       $("html, body").animate({ scrollTop: offsetGallery.top - 200 }, 200);
     }
+
+    //reset unabled
+    if ($(".categorie").hasClass("active") === true) {
+      //
+    } else {
+      $("#reset").hide();
+    }
   });
 
   $("#reset").on("click", function (e) {
@@ -285,6 +292,10 @@ $(document).ready(function () {
     $(".project").removeClass("filter-opacity");
     $(".categorie").removeClass("active");
     $(".project").parent().attr("data-accordion-state", "closed");
+
+     $(".about").hide();
+    $(".nav-title span").removeClass("flex");
+    $(".nav-title a").show();
 
     $("html, body").animate({ scrollTop: 0 }, 200);
   });

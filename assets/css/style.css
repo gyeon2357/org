@@ -649,7 +649,7 @@ body.dark .hidden .nav-section li {
 
 #reset {
   display: none;
-  background-color: papayawhip;
+  background-color: transparent;
 }
 
 #grid {
@@ -753,7 +753,7 @@ body.dark #index .filter-opacity {
   letter-spacing: 0.125px;
   text-transform: capitalize;
   word-break: keep-all;
-  text-align: left;
+  text-align: center;
 
   grid-column: span 3;
 
@@ -765,8 +765,22 @@ body.dark #index .filter-opacity {
   cursor: pointer;
 }
 
+.about p {
+  width: 32ch;
+}
+
+.about p.en {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .about figure {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1rem;
 }
 
 .about img {
@@ -774,12 +788,27 @@ body.dark #index .filter-opacity {
 }
 
 .about figure.under {
-  margin-top: 2rem;
+display: flex;
+  margin: 2rem 0 0;
 }
 
 .about figure.under img {
   width: 100%;
 }
+
+.about .copy {
+  width: 100%;
+  margin-top: 0.25rem;
+
+  color: dimgray;
+  font-size: 80%;
+  text-align: center;
+}
+
+/* .about .copy::before {
+  content: "\2191";
+  margin-right: .25rem;
+} */
 
 #grid.on {
   opacity: 0.2;
@@ -1799,10 +1828,14 @@ footer {
   grid-gap: 0px;
   position: relative;
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: var(--main);
-  letter-spacing: 1px;
+
   line-height: 1.4;
+}
+
+.copy {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
 }
 
 footer a {
@@ -2154,7 +2187,6 @@ body.dark footer a {
   /* HOME
   ================================================== */
   .gallery-container {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
@@ -2217,7 +2249,7 @@ body.dark footer a {
   }
 
   .about {
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   #index-container .project.zindex {
