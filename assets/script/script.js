@@ -212,8 +212,8 @@ $(document).ready(function () {
 
   $(document).mousemove(function (e) {
     $(".cover-popup").css({
-      left: e.pageX,
-      top: e.pageY,
+      // left: e.pageX,
+      // top: e.pageY,
     });
   });
 

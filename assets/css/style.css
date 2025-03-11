@@ -784,11 +784,11 @@ body.dark #index .filter-opacity {
 }
 
 .about img {
-  width: 75%;
+  width: 50%;
 }
 
 .about figure.under {
-display: flex;
+  display: flex;
   margin: 2rem 0 0;
 }
 
@@ -800,8 +800,8 @@ display: flex;
   width: 100%;
   margin-top: 0.25rem;
 
-  color: dimgray;
-  font-size: 80%;
+  font-size: 82.5%;
+  text-transform: lowercase;
   text-align: center;
 }
 
@@ -1179,12 +1179,12 @@ body.dark #index-container .project.filter-opacity {
   grid-column: span 1;
 }
 .category {
-  grid-column: 7 / span 2;
+  grid-column: 5 / span 2;
   text-transform: capitalize;
 }
 .title {
   text-align: left;
-  grid-column: span 4;
+  grid-column: span 3;
 }
 .year {
   grid-column: 9 / span 1 !important;
@@ -1211,7 +1211,7 @@ body.dark #index-container .project.filter-opacity {
 }
 
 #index-container .category.cap {
-  grid-column: 7 / span 1;
+  grid-column: 5 / span 1;
 }
 
 #index .project {
@@ -1762,27 +1762,28 @@ p[title="caption"] a {
 
   box-sizing: border-box;
   transition: ease 0s;
-  position: fixed !important;
+  position: absolute !important;
 
   transform: translateY(-50%);
-  right: 0;
+  right: 0.5rem;
   top: 50%;
 
   width: fit-content;
 
-  z-index: 100;
-  pointer-events: none;
   opacity: 0;
+  transition-delay: .25s;
+  z-index: 10002;
+  pointer-events: none;
 }
 
 .cover-popup img {
   top: 0;
-  width: 6rem;
-  height: 6rem;
-  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .cover-popup img {
     width: calc(33.33vw - 6rem);
     width: 4rem;
@@ -2093,6 +2094,7 @@ body.dark footer a {
   .nav {
     grid-column: 1 / span 4;
   }
+  
 
   #index-container .category.cap {
     grid-column: 6 / span 2;
@@ -2100,6 +2102,10 @@ body.dark footer a {
 
   #index-container .category {
     grid-column: 6 / span 3;
+  }
+
+  .title {
+  grid-column: span 4;
   }
 }
 
