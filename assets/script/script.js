@@ -231,6 +231,12 @@ $(document).ready(function () {
     $(".nav-title a").toggle();
   });
 
+  $(".about").click(function () {
+    $(".about").hide();
+    $(".nav-title span").removeClass("flex");
+    $(".nav-title a").show();
+  });
+
   $(".open-menu").click(function () {
     $(".hidden").toggle();
     $(".open-menu span").toggleClass("flex");
@@ -239,6 +245,7 @@ $(document).ready(function () {
 
   //Filters
   $(".categorie").on("click", function (e) {
+    $("#reset").show();
     $(".project").addClass("filter-opacity");
 
     $(".categorie").not($(this)).removeClass("active");
@@ -270,6 +277,16 @@ $(document).ready(function () {
       // console.log(offsetGallery);
       $("html, body").animate({ scrollTop: offsetGallery.top - 200 }, 200);
     }
+  });
+
+  $("#reset").on("click", function (e) {
+    $(this).hide();
+
+    $(".project").removeClass("filter-opacity");
+    $(".categorie").removeClass("active");
+    $(".project").parent().attr("data-accordion-state", "closed");
+
+    $("html, body").animate({ scrollTop: 0 }, 200);
   });
 });
 

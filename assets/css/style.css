@@ -618,8 +618,6 @@ body.dark .open-menu {
 
 .hidden .nav-section li.rrss {
   display: none;
-
-  text-transform: lowercase;
 }
 
 .rrss > address {
@@ -647,6 +645,11 @@ body.dark .hidden .nav-section li#printing {
 
 body.dark .hidden .nav-section li {
   background-color: #eeeeee;
+}
+
+#reset {
+  display: none;
+  background-color: papayawhip;
 }
 
 #grid {
@@ -745,7 +748,6 @@ body.dark #index .filter-opacity {
 
 .about {
   display: none;
-  margin-top: 20px;
 
   line-height: 1.4;
   letter-spacing: 0.125px;
@@ -759,7 +761,26 @@ body.dark #index .filter-opacity {
   color: black;
   border-radius: 2px;
   padding: 3px;
+
+  cursor: pointer;
 }
+
+.about figure {
+  margin: 0.5rem 0;
+}
+
+.about img {
+  width: 75%;
+}
+
+.about figure.under {
+  margin-top: 2rem;
+}
+
+.about figure.under img {
+  width: 100%;
+}
+
 #grid.on {
   opacity: 0.2;
   pointer-events: none;
@@ -1284,12 +1305,15 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   margin: 0 0 3rem;
 }
 
-.accordion-content figure.landscape {
+.accordion-content figure.expand {
   grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
 }
 
-.accordion-content figure.landscape.poster {
+.accordion-content figure.expand.poster {
   margin-bottom: 3rem;
+}
+
+.accordion-content figure.column {
 }
 
 .accordion-content figure img {
@@ -1305,6 +1329,10 @@ body.dark .accordion-content figure img {
 
 figure figcaption {
   grid-column: span 4;
+}
+
+.accordion-content figure.column img {
+  border: none;
 }
 
 figure figcaption::before {
@@ -1509,7 +1537,7 @@ p[title="caption"] a {
     margin: 0 0 0.5rem;
   }
 
-  .accordion-content figure.landscape {
+  .accordion-content figure.expand {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% - 10px), 1fr));
   }
 
