@@ -712,11 +712,11 @@ body.dark .hidden .nav-section li {
 
 .filter-opacity img {
   opacity: 0.4;
-  filter: grayscale(1);
+  filter: grayscale(1) contrast(0.5);
   pointer-events: none;
 }
 .filter-opacity {
-  color: lightgrey;
+  color: #eeeeee;
   pointer-events: none;
 }
 
@@ -878,7 +878,7 @@ body.dark .gallery-container {
 
 /* .gallery-container .project > a, */
 .gallery-container .project > .info-project > div {
-  opacity: 0;
+  opacity: 1;
 }
 
 .gallery-container .project > a {
@@ -1088,7 +1088,7 @@ body.dark #index-container .project.filter-opacity {
 }
 
 #index .project.filter-opacity {
-  color: lightgrey;
+  color: lightgray;
   pointer-events: none;
 }
 #index .project {
@@ -1781,7 +1781,7 @@ body.dark footer a {
   #grid:hover,
   .nav-title:hover,
   .nav-section > div:hover {
-    background-color: lightgrey !important;
+    background-color: lightgray !important;
   }
 
   header.nav li:active,
@@ -1806,10 +1806,13 @@ body.dark footer a {
   }
 
   .project > a > img {
-    transition: box-shadow 0.125s;
+    transition: opacity 0.125s;
   }
   .project:hover > a > img {
-    box-shadow: 0 0 6px 2px khaki;
+    opacity: 0.4;
+  }
+  body.dark .project:hover > a > img {
+    opacity: 0.4;
   }
 
   .open-menu:hover {

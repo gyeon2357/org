@@ -240,6 +240,7 @@ $(document).ready(function () {
   //Filters
   $(".categorie").on("click", function (e) {
     $(".project").addClass("filter-opacity");
+
     $(".categorie").not($(this)).removeClass("active");
 
     if (!$(this).hasClass("active")) {
@@ -249,6 +250,9 @@ $(document).ready(function () {
       $(".project").removeClass("filter-opacity");
       $(this).removeClass("active");
     }
+
+    //opened-filter-fnc
+    $(".filter-opacity").parent().attr("data-accordion-state", "closed");
 
     //Filter-position
     if ($("#index-container").hasClass("grid")) {
