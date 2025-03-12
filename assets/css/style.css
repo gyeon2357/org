@@ -1360,7 +1360,8 @@ figure figcaption {
   grid-column: span 4;
 }
 
-.accordion-content figure.column img {
+.accordion-content figure.column img,
+body.dark .accordion-content figure.column img {
   border: none;
 }
 
@@ -1771,7 +1772,7 @@ p[title="caption"] a {
   width: fit-content;
 
   opacity: 0;
-  transition-delay: .25s;
+  transition-delay: 0.25s;
   z-index: 10002;
   pointer-events: none;
 }
@@ -2094,7 +2095,6 @@ body.dark footer a {
   .nav {
     grid-column: 1 / span 4;
   }
-  
 
   #index-container .category.cap {
     grid-column: 6 / span 2;
@@ -2105,7 +2105,7 @@ body.dark footer a {
   }
 
   .title {
-  grid-column: span 4;
+    grid-column: span 4;
   }
 }
 

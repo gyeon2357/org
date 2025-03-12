@@ -51,6 +51,10 @@ tl.add("close")
     "close"
   );
 
+$(document).on("keyup", "body", function (j) {
+  if (j.which == 32) $(".loading").fadeOut();
+});
+
 /* GRID ANIMATION */
 
 // tl.add("start")
