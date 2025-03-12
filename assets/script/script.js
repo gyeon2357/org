@@ -40,28 +40,41 @@ function onResizeFunction(e) {
     h = window.innerHeight;
   document.documentElement.style.setProperty("--h", h + "px");
 
-  s = document.getElementById("header").offsetHeight;
-  document.documentElement.style.setProperty("--large", s + "px");
+  // s = document.getElementById("header").offsetHeight;
+  // document.documentElement.style.setProperty("--large", s + "px");
 
-  n = document.getElementById("index").offsetHeight;
-  document.documentElement.style.setProperty("--l", n + "px");
+  // n = document.getElementById("index").offsetHeight;
+  // document.documentElement.style.setProperty("--l", n + "px");
 }
 
-//Local storage
-//theme
 $(document).ready(function () {
   //load
+  $(window).scroll(function () {
+    var top = $(window).scrollTop();
+
+    if (top > 200) {
+      $(".loading").fadeOut();
+    }
+  });
 
   setTimeout(function () {
     $(".card-btn").fadeIn(200);
-  }, 750);
+  }, 850);
+  setTimeout(function () {
+    $(".scroll").fadeIn(600);
+  }, 1450);
 
+  //load disabled
   $(".card-btn").on("click", function () {
     $(".loading").fadeOut();
   });
 
   //theme
-  $("body").addClass(localStorage.getItem("body-theme") || "white");
+  let theme = localStorage.getItem("body-theme") || "white";
+  $("body").addClass(theme);
+
+  // $("body").addClass(localStorage.getItem("body-theme") || "white");
+
   $("#mode.dark").click(function (e) {
     var name = e.target.className;
     $("body").removeClass("white dark").toggleClass(name);
@@ -191,7 +204,7 @@ $(document).ready(function () {
     var selfwrap = $(this).parent();
     setTimeout(function () {
       theOffset = $(selfwrap).offset();
-      $("body,html").animate({ scrollTop: theOffset.top - 180 }, 300);
+      $("body,html").animate({ scrollTop: theOffset.top - 180 }, 0);
     }, 50);
   });
 
@@ -301,9 +314,8 @@ $(document).ready(function () {
   });
 
   // load mobile height
-  const desktop = window.matchMedia("(min-width: 600px)").matches;
 
-  if (desktop) {
+  if (device.desktop()) {
     return false;
   } else {
     // mobile
@@ -312,12 +324,12 @@ $(document).ready(function () {
 });
 
 window.addEventListener("resize", function () {
-  const desktop = window.matchMedia("(min-width: 600px)").matches;
   const resizeEvent = () => {
-    if (desktop) {
+    if (device.desktop()) {
       $(".accordion .project").css("top", "10px");
-    } else {
-      // mobile
+    }
+
+    if (device.mobile()) {
       $(".accordion .project").css(
         "top",
         $("header").innerHeight() + 10 + "px"
@@ -356,3 +368,6 @@ function showIndexTextConsole(text) {
 setTimeout(function () {
   $(".accordion-content").addClass("accordion-content-property");
 }, 250);
+
+console.log("device.mobile() == %s", device.mobile());
+console.log("device.desktop() == %s", device.desktop());

@@ -166,6 +166,11 @@ body.dark #mode span {
   width: 100%;
   line-height: 1.2;
 }
+
+body.dark #mode span > mark {
+  pointer-events: none;
+}
+
 ol,
 ul,
 li {
@@ -278,8 +283,19 @@ body.dark sup > mark {
   /* font-kerning: none; */
 }
 
+.scroll {
+  display: none;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 12.5%;
+
+  color: #fff;
+}
+
 .i-name {
-  margin: 0 0 0.625rem;
+  margin: 0 0 0.75rem;
 }
 
 .i-name-row {
@@ -289,13 +305,12 @@ body.dark sup > mark {
 }
 
 .i-name-row span.split {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif;
   display: inline-block;
 
   font-size: 100%;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  line-height: 1.4;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
 
   opacity: 0;
 }
@@ -317,7 +332,7 @@ body.dark sup > mark {
 
   border-radius: 2px;
 
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   letter-spacing: 1px;
   line-height: 1.4;
   text-transform: capitalize;
@@ -330,16 +345,26 @@ body.dark sup > mark {
 }
 
 .i-project > a {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: inherit;
-  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif;
+  font-size: 0.675rem;
   letter-spacing: 1px;
+  text-transform: uppercase;
 
+  color: inherit;
   transition: color 0.125s;
+}
+
+.i-project > a.count {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .intro-project-wrap .card-btn {
   display: none;
+
+  font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif;
+  font-size: 0.675rem;
+  letter-spacing: 1px;
 
   text-transform: uppercase;
   transition: color 0.125s;
@@ -494,7 +519,7 @@ img.blend {
 .nav .nav-title,
 .nav .open-menu,
 .nav mark {
-  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  /* font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif; */
 
   -webkit-user-select: all;
   -moz-user-select: all;
@@ -650,6 +675,11 @@ body.dark .hidden .nav-section li {
 #reset {
   display: none;
   background-color: transparent;
+}
+
+#reset a {
+  transform: scale(0.8);
+  transform-origin: 0;
 }
 
 #grid {
@@ -1127,7 +1157,7 @@ body.dark #index-container .project.filter-opacity {
   order: -10000;
   grid-column: span 9;
   position: relative;
-  
+
   z-index: 1;
   grid-gap: 5px;
   grid-template-columns: repeat(9, 1fr);
@@ -1313,7 +1343,7 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
   opacity: 1;
   transition-property: height, margin, filter, opacity;
   transition-duration: 0.5s;
-  transition-delay: 0.15s;
+  transition-delay: 0.25s;
   transition-timing-function: cubic-bezier(0.46, 0.205, 0.145, 0.915);
 }
 
@@ -1840,7 +1870,7 @@ footer {
 }
 
 .copy {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif;
   letter-spacing: 1px;
 }
 
