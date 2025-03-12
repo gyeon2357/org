@@ -143,7 +143,7 @@ body.dark footer {
   color: white;
 }
 #index-container .project.zindex {
-  z-index: -1 !important;
+  z-index: 1 !important;
 }
 #index-container .project.up {
   z-index: 1000 !important;

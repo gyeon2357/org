@@ -166,7 +166,7 @@ $(document).ready(function () {
     $(".accordion").attr("data-accordion-state", "closed");
   });
 
-  // gallery -> index btn
+  // gallery → index btn
   $(".link").each(function (i) {
     $(this).click(function () {
       $(".index").toggleClass("active");
@@ -186,7 +186,7 @@ $(document).ready(function () {
     });
   });
 
-  // index -> index btn
+  // index → index btn
   $(".accordion-label").bind("click", function () {
     var selfwrap = $(this).parent();
     setTimeout(function () {
