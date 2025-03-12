@@ -182,16 +182,16 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      $("html, body").animate({ scrollTop: offset.top - 200 }, 200);
+      $("html, body").animate({ scrollTop: offset.top - 180 }, 200);
     });
   });
 
   // index -> index btn
   $(".accordion-label").bind("click", function () {
-    var self = this;
+    var selfwrap = $(this).parent();
     setTimeout(function () {
-      theOffset = $(self).offset();
-      $("body,html").animate({ scrollTop: theOffset.top - 200 }, 400);
+      theOffset = $(selfwrap).offset();
+      $("body,html").animate({ scrollTop: theOffset.top - 180 }, 300);
     }, 50);
   });
 
@@ -293,12 +293,39 @@ $(document).ready(function () {
     $(".categorie").removeClass("active");
     $(".project").parent().attr("data-accordion-state", "closed");
 
-     $(".about").hide();
+    $(".about").hide();
     $(".nav-title span").removeClass("flex");
     $(".nav-title a").show();
 
     $("html, body").animate({ scrollTop: 0 }, 200);
   });
+
+  // load mobile height
+  const desktop = window.matchMedia("(min-width: 600px)").matches;
+
+  if (desktop) {
+    return false;
+  } else {
+    // mobile
+    $(".accordion .project").css("top", $("header").innerHeight() + 10 + "px");
+  }
+});
+
+window.addEventListener("resize", function () {
+  const desktop = window.matchMedia("(min-width: 600px)").matches;
+  const resizeEvent = () => {
+    if (desktop) {
+      $(".accordion .project").css("top", "10px");
+    } else {
+      // mobile
+      $(".accordion .project").css(
+        "top",
+        $("header").innerHeight() + 10 + "px"
+      );
+    }
+  };
+
+  resizeEvent();
 });
 
 //Keypress

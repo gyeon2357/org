@@ -1093,6 +1093,9 @@ body.dark .gallery-container {
   display: grid;
 }
 #index-container .project {
+  position: sticky;
+  top: 10px;
+
   grid-gap: 5px !important;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -1119,11 +1122,12 @@ body.dark #index-container .project.filter-opacity {
 #index-container .project.active {
   color: black;
 }
+
 #links {
   order: -10000;
   grid-column: span 9;
-  position: sticky;
-  top: 10px;
+  position: relative;
+  
   z-index: 1;
   grid-gap: 5px;
   grid-template-columns: repeat(9, 1fr);
@@ -1268,12 +1272,12 @@ body.dark #index-container .cap {
 
 .accordion[data-accordion-state="opened"] .accordion-label {
   box-shadow: 0 0 0px 1px goldenrod;
-  background: rgba(222, 222, 217, 0.8) !important;
+  background: rgba(222, 222, 217, 0.95) !important;
 }
 
 body.dark .accordion[data-accordion-state="opened"] .accordion-label {
-  box-shadow: 0 0 0px 1px khaki;
-  background: rgba(222, 222, 217, 0.35) !important;
+  box-shadow: 0 0 0px 1px gold;
+  background: rgba(58, 58, 56, 0.95) !important;
 }
 
 /* .accordion-label::before {
@@ -2348,9 +2352,6 @@ body.dark footer a {
     top: 0;
     grid-column: span 12;
   }
-  #index-container .project {
-    grid-column: span 12;
-  }
 
   #index-container section {
     grid-column: span 12;
@@ -2360,6 +2361,12 @@ body.dark footer a {
   #index-container .project,
   #index-container .project > a {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #index-container .project {
+    top: var(--height);
+
+    grid-column: span 12;
   }
 
   #index-container .project > a {
