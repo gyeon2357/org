@@ -47,6 +47,8 @@ function onResizeFunction(e) {
   // document.documentElement.style.setProperty("--l", n + "px");
 }
 
+var window_width = $(window).width();
+
 $(document).ready(function () {
   //load
   $(window).scroll(function () {
@@ -288,7 +290,7 @@ $(document).ready(function () {
         .offset();
 
       // console.log(offsetGallery);
-      $("html, body").animate({ scrollTop: offsetGallery.top - 200 }, 200);
+      $("html, body").scrollTop(offsetGallery.top - 200);
     }
 
     //reset unabled
@@ -315,9 +317,10 @@ $(document).ready(function () {
 
   // load mobile height
 
-  if (device.desktop()) {
-    return false;
-  } else {
+  if (device.desktop() || window_width > 600) {
+    $(".accordion .project").css("top", "10px");
+  }
+  if (device.mobile() || window_width <= 600) {
     // mobile
     $(".accordion .project").css("top", $("header").innerHeight() + 10 + "px");
   }
@@ -325,11 +328,11 @@ $(document).ready(function () {
 
 window.addEventListener("resize", function () {
   const resizeEvent = () => {
-    if (device.desktop()) {
+    if (device.desktop() || window_width > 600) {
       $(".accordion .project").css("top", "10px");
     }
 
-    if (device.mobile()) {
+    if (device.mobile() || window_width <= 600) {
       $(".accordion .project").css(
         "top",
         $("header").innerHeight() + 10 + "px"
