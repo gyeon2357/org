@@ -264,6 +264,11 @@ body.dark sup > mark {
   background: #060606;
 
   z-index: 100000 !important;
+  filter: invert(1);
+}
+
+body.dark .loading {
+  filter: none;
 }
 
 .card {
@@ -271,9 +276,9 @@ body.dark sup > mark {
   transform: translate(-50%, -50%);
 
   left: 50%;
-  top: calc(50%);
+  top: calc(50% -3rem);
   background: #000;
-  color: lightgray;
+  color: snow;
 
   padding: 1rem 1.25rem;
   border-radius: 2.5px;
@@ -291,7 +296,7 @@ body.dark sup > mark {
   left: 50%;
   bottom: 12.5%;
 
-  color: #fff;
+  color: snow;
 }
 
 .i-name {
@@ -310,7 +315,7 @@ body.dark sup > mark {
 
   font-size: 100%;
   font-size: 0.875rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.25px;
 
   opacity: 0;
 }
@@ -350,13 +355,14 @@ body.dark sup > mark {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  color: inherit;
+  color: snow;
   transition: color 0.125s;
 }
 
 .i-project > a.count {
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
 }
 
 .intro-project-wrap .card-btn {
@@ -383,7 +389,7 @@ body.dark sup > mark {
 
   background: url(../images/favicon-keepdry-3@0.1x.jpg) 0 0 no-repeat;
   background-size: 600%;
-  animation: gif steps(5) 1.5s infinite both;
+  animation: gif steps(5) 1.5s 10 both;
 }
 
 @keyframes gif {
