@@ -206,8 +206,9 @@ $(document).ready(function () {
     var selfwrap = $(this).parent();
     setTimeout(function () {
       theOffset = $(selfwrap).offset();
-      $("body,html").animate({ scrollTop: theOffset.top - 180 }, 0);
-    }, 50);
+      $("body,html").scrollTop(theOffset.top - 180);
+      100;
+    });
   });
 
   $("#lang").click(function () {
