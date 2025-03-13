@@ -651,6 +651,7 @@ body.dark .open-menu {
   padding: 3px;
 }
 
+/* 
 .hidden .nav-section li#web {
   background-color: #add8e68d;
 }
@@ -663,7 +664,7 @@ body.dark .open-menu {
 }
 .hidden .nav-section li#collab {
   background-color: #99cd3254;
-}
+} */
 
 body.dark .hidden .nav-section li {
   background-color: #eeeeee;

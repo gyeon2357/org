@@ -54,7 +54,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
     var top = $(window).scrollTop();
 
-    if (top > 200) {
+    if (top > 150) {
       $(".loading").fadeOut();
     }
   });
