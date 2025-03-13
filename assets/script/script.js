@@ -197,7 +197,7 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      $("html, body").animate({ scrollTop: offset.top - 180 }, 200);
+      $("html, body").animate({ scrollTop: offset.top - $("header").innerHeight() - $(".accordion").innerHeight() - 15 }, 200);
     });
   });
 
@@ -206,8 +206,7 @@ $(document).ready(function () {
     var selfwrap = $(this).parent();
     setTimeout(function () {
       theOffset = $(selfwrap).offset();
-      $("body,html").scrollTop(theOffset.top - 180);
-      100;
+      $("body, html").animate({ scrollTop: theOffset.top - $("header").innerHeight() }, 200), 50;
     });
   });
 
