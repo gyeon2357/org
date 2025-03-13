@@ -1182,7 +1182,7 @@ body.dark #index-container .project.filter-opacity {
 }
 
 .gallery-container .category p.web {
-  background-color: lightblue;
+  background-color: lightsteelblue;
 }
 .gallery-container .category p.print {
   background-color: peachpuff;
@@ -1388,9 +1388,9 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 }
 
 .accordion[data-accordion-state="closed"] .accordion-content-property {
-  transition-duration: 0s;
-  transition-delay: 0s;
-  transition-timing-function: none;
+  transition-duration: .25s;
+  transition-delay: 0.125s;
+
 }
 
 .accordion-content figure {
