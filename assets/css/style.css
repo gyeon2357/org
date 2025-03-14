@@ -264,7 +264,6 @@ body.dark sup > mark {
   background: #060606;
 
   z-index: 100000 !important;
-  filter: invert(1);
 }
 
 body.dark .loading {
@@ -1308,6 +1307,7 @@ body.dark #index-container .cap {
 
   .gallery-container .category p {
     padding: 0.2rem 0.25rem;
+    margin-bottom: 0.25rem;
   }
 
   .gallery-container .project.mark > a::before {
@@ -1407,11 +1407,9 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 .accordion-content figure {
   display: grid;
   grid-column: 2 / span 9;
-  grid-template-columns: repeat(auto-fill, minmax(calc(25% - 30px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(25% - 15px), 1fr));
 
   grid-gap: 0.5rem;
-
-  width: 75%;
   margin: 0 0 0.75rem;
 }
 
@@ -1420,7 +1418,7 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 }
 
 .accordion-content figure.expand {
-  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
+  grid-template-columns: 1fr;
 }
 
 .accordion-content figure.expand.poster {
@@ -1667,6 +1665,8 @@ p[title="caption"] a {
   }
 
   .accordion-content p {
+    grid-column: 1 / span 6;
+
     margin: 0 0 0.75rem;
     line-height: 1.45;
   }
@@ -2298,7 +2298,7 @@ body.dark footer a {
 
   .gallery-container .project {
     row-gap: 0.375rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
   }
 
   .gallery-container .project:nth-child(2n) {
