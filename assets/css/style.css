@@ -386,7 +386,7 @@ body.dark .loading {
   width: 1.25rem;
   height: 1.25rem;
 
-  background: url(../images/favicon-keepdry-3@0.1x.jpg) 0 0 no-repeat;
+  background: url(../images/option/favicon-keepdry-3@0.1x.jpg) 0 0 no-repeat;
   background-size: 600%;
   animation: gif steps(5) 1.5s 10 both;
 }
@@ -1302,6 +1302,7 @@ body.dark #index-container .cap {
   }
 
   .gallery-container .project .category {
+    font-size: 75%;
     padding: 0.2rem 0 0 0;
   }
 
