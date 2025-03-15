@@ -308,6 +308,10 @@ body.dark .loading {
   overflow: hidden;
 }
 
+.error .i-name-row {
+  opacity: 0.3;
+}
+
 .i-name-row span.split {
   font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif;
   display: inline-block;
@@ -423,6 +427,7 @@ body.dark .loading {
 .error .i-project.keepdry {
   width: 2rem;
   height: 2rem;
+  animation: gif steps(5) 1.5s infinite both;
 }
 
 .line-text {
