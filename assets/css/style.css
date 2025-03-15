@@ -319,6 +319,10 @@ body.dark .loading {
   opacity: 0;
 }
 
+.error .i-name-row span.split {
+  opacity: 1;
+}
+
 .intro-project-wrap {
   display: flex;
   flex-direction: column;
@@ -344,6 +348,12 @@ body.dark .loading {
   transform: translateY(15%);
   opacity: 0;
 }
+
+.error .i-project {
+  opacity: 1;
+  transform: none;
+}
+
 .i-project > img {
   width: 1rem;
 }
@@ -356,6 +366,10 @@ body.dark .loading {
 
   color: snow;
   transition: color 0.125s;
+}
+
+.error .i-project > a {
+  font-size: 1rem;
 }
 
 .i-project > a.count {
@@ -374,6 +388,12 @@ body.dark .loading {
   text-transform: uppercase;
   transition: color 0.125s;
   cursor: pointer;
+}
+
+.error .intro-project-wrap .card-btn {
+  display: block;
+
+  font-size: 1rem;
 }
 
 .i-project > a:hover,
@@ -398,6 +418,11 @@ body.dark .loading {
   100% {
     background-position: 100%;
   }
+}
+
+.error .i-project.keepdry {
+  width: 2rem;
+  height: 2rem;
 }
 
 .line-text {
