@@ -275,7 +275,7 @@ body.dark .loading {
   transform: translate(-50%, -50%);
 
   left: 50%;
-  top: calc(50% -3rem);
+  top: calc(50% - 3rem);
   background: #000;
   color: snow;
 
@@ -306,10 +306,6 @@ body.dark .loading {
   min-width: 220px;
   font-size: 0;
   overflow: hidden;
-}
-
-.error .i-name-row {
-  opacity: 0.3;
 }
 
 .i-name-row span.split {
@@ -1449,7 +1445,7 @@ body.dark .accordion[data-accordion-state="opened"] .accordion-label {
 }
 
 .accordion-content figure.expand {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% - 15px), 1fr));
 }
 
 .accordion-content figure.expand.poster {
