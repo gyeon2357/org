@@ -120,7 +120,7 @@
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({"gtm.start": new Date().getTime(), event: "gtm.js"});
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
@@ -750,7 +750,9 @@
           <h2 class="serif bold">위치안내</h2>
 
           <div class="map__wrapper">
-            <div id="map" style="width: 100%; margin: auto"></div>
+            <div style="width: 100%; margin: auto">
+              <img src="./assets/images/map.jpg" />
+            </div>
             <div class="map__info">
               <h3>&nbsp;</h3>
               <h3>
@@ -819,14 +821,14 @@
         "./assets/images/standard_A_1.jpg",
       ];
 
-      const preload = images => () => {
-        images.forEach(image => {
+      const preload = (images) => () => {
+        images.forEach((image) => {
           const img = new Image();
           img.src = image;
         });
       };
 
-      const addLoadEvent = func => {
+      const addLoadEvent = (func) => {
         const onloadEvent = window.onload;
         if (typeof window.onload != "function") {
           window.onload = func;
