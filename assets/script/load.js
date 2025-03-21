@@ -35,7 +35,7 @@ tl.add("close")
       y: "-5%",
       opacity: "0",
       duration: 0.8,
-      delay: 2,
+      delay: 1.75,
     },
     "close"
   )
@@ -45,7 +45,7 @@ tl.add("close")
     {
       y: "-100%",
       duration: 0.6,
-      delay: 2.25,
+      delay: 2,
       display: "none",
     },
     "close"
