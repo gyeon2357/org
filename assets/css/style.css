@@ -549,7 +549,8 @@ img.blend {
 .nav a,
 .nav .nav-title,
 .nav .open-menu,
-.nav mark {
+.nav mark,
+.nav #mode {
   /* font-family: "Gill Sans", "Gill Sans MT", "national", "pretendard", sans-serif; */
 
   -webkit-user-select: all;
@@ -1528,10 +1529,11 @@ figure figcaption::before {
   display: block;
   font-family: "national", "pretendard", sans-serif;
   content: attr(title);
-  content: "｢" attr(title) "｣";
+  content: "[" attr(title) "]";
 
   line-height: 1.5;
-  opacity: 0.7;
+  letter-spacing: 0;
+  color: gray;
   /* text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-position: from-font; */
@@ -1541,7 +1543,7 @@ figure figcaption::before {
 }
 
 body.dark .accordion-content p::before {
-  opacity: 0.6;
+  color: silver;
 }
 
 .accordion-content p[title="Description"] > a {
