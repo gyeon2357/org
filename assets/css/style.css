@@ -2374,6 +2374,11 @@ body.dark footer a {
     margin-left: 10px;
   }
 
+  .hidden .nav-section.nav-cate li mark {
+    width: max-content;
+    text-wrap: nowrap;
+  }
+
   #index {
     order: -1;
     position: relative;
