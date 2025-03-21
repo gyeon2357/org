@@ -1219,17 +1219,17 @@ body.dark #index-container .project.filter-opacity {
 }
 
 .gallery-container .category p.web {
-  background-color: lightsteelblue;
+  background-color: rgb(200, 227, 250);
 }
 .gallery-container .category p.print {
-  background-color: peachpuff;
+  background-color: thistle;
 }
 .gallery-container .category p.planning {
-  background-color: lightpink;
+  background-color: blanchedalmond;
 }
 .gallery-container .category p.collab {
   /* background: radial-gradient(circle, beige, khaki); */
-  background-color: #99cd329f;
+  background-color: #99cd3271;
 }
 
 .gallery-container .project.filter-opacity .category p {
@@ -1242,7 +1242,7 @@ body.dark .gallery-container .category p {
 }
 
 body.dark .gallery-container .category p.collab {
-  background-color: yellowgreen;
+  background-color: #b5df61;
 }
 
 .title {
@@ -2366,6 +2366,8 @@ body.dark footer a {
 
   .hidden .nav-section.nav-cate li {
     grid-row: 1;
+
+    text-wrap: nowrap;
   }
 
   .hidden .nav-section.nav-cate li > a.count {
