@@ -2405,6 +2405,11 @@ body.dark footer a {
 
   .hidden .nav-section.cate li > a.count {
     margin-left: 10px;
+
+    font-size: 90%;
+    background: #dbdbdb;
+    border-radius: 1.5px;
+    padding: 1px 2px;
   }
 
   .hidden .nav-section.cate li mark {
