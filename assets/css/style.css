@@ -654,10 +654,12 @@ body.dark .open-menu {
   height: fit-content;
 }
 
-display: grid;
-text-align: left;
-row-gap: 5px;
-height: fit-content;
+.hidden .nav-section.cate {
+  display: grid;
+  text-align: left;
+  row-gap: 5px;
+  height: fit-content;
+}
 
 /* background-color: #fff;
   background: linear-gradient(
@@ -2342,6 +2344,22 @@ body.dark footer a {
     grid-column: span 12;
   }
 
+  .hidden {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hidden .nav-section.menu {
+    grid-column: span 4;
+  }
+
+  .hidden .nav-section {
+    grid-column: span 5;
+  }
+
+  .hidden .nav-section.aside {
+    grid-column: span 3;
+  }
+
   .hidden .nav-section li,
   .nav-title,
   #grid,
@@ -2350,7 +2368,7 @@ body.dark footer a {
     padding: 2px 3px;
   }
 
-  .hidden .nav-section.nav-cate {
+  .hidden .nav-section.cate {
     column-gap: 5px;
     width: 100%;
     overflow: auto;
@@ -2360,21 +2378,21 @@ body.dark footer a {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    mask-image: linear-gradient(to left, transparent, black 30px);
-    -webkit-mask-image: linear-gradient(to left, transparent, black 30px);
+    mask-image: linear-gradient(to left, transparent, black 40px);
+    -webkit-mask-image: linear-gradient(to left, transparent, black 40px);
   }
 
-  .hidden .nav-section.nav-cate li {
+  .hidden .nav-section.cate li {
     grid-row: 1;
 
     text-wrap: nowrap;
   }
 
-  .hidden .nav-section.nav-cate li > a.count {
+  .hidden .nav-section.cate li > a.count {
     margin-left: 10px;
   }
 
-  .hidden .nav-section.nav-cate li mark {
+  .hidden .nav-section.cate li mark {
     width: max-content;
     text-wrap: nowrap;
   }
