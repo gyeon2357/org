@@ -1261,17 +1261,17 @@ body.dark #index-container .project.filter-opacity {
 }
 
 .gallery-container .category p.web {
-  background-color: rgb(200, 227, 250);
+  background-color: rgb(202, 221, 238);
 }
 .gallery-container .category p.print {
-  background-color: thistle;
+  background-color: rgb(232, 207, 232);
 }
 .gallery-container .category p.planning {
-  background-color: blanchedalmond;
+  background-color: rgb(241, 224, 197);
 }
 .gallery-container .category p.collab {
   /* background: radial-gradient(circle, beige, khaki); */
-  background-color: #99cd3271;
+  background-color: rgb(212, 228, 181);
 }
 
 .gallery-container .project.filter-opacity .category p {
@@ -1283,9 +1283,9 @@ body.dark .gallery-container .category p {
   color: #121212;
 }
 
-body.dark .gallery-container .category p.collab {
+/* body.dark .gallery-container .category p.collab {
   background-color: #b5df61;
-}
+} */
 
 .title {
   text-align: left;
@@ -1377,7 +1377,7 @@ body.dark #index-container .cap {
 
   .gallery-container .project .category {
     font-size: 75%;
-    padding: 0.2rem 0 0 0;
+    padding: 0.325rem 0 0 0;
   }
 
   .gallery-container .category p {
@@ -2378,7 +2378,7 @@ body.dark footer a {
 
   .gallery-container .project {
     row-gap: 0.375rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.625rem;
   }
 
   .gallery-container .project:nth-child(2n) {
