@@ -1062,6 +1062,8 @@ body.dark .gallery-container {
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   user-select: none;
+
+  display: none;
 }
 
 .gallery-container .project.mark.filter-opacity > a::before {
@@ -1098,6 +1100,8 @@ body.dark .gallery-container {
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   user-select: none;
+
+  display: none;
 }
 
 .pr {
