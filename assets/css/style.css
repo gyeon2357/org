@@ -900,7 +900,7 @@ body.dark #index .filter-opacity {
   justify-content: center;
   align-items: center;
 
-  margin-top: 2rem;
+  margin: 2rem 0 1rem;
   font-size: 87.5%;
 }
 
@@ -1934,7 +1934,7 @@ p[title="caption"] a {
   position: absolute !important;
 
   transform: translateY(-50%);
-  right: 0.5rem;
+  left: 0.5rem;
   top: 50%;
 
   width: fit-content;
@@ -1947,12 +1947,16 @@ p[title="caption"] a {
 
 .cover-popup img {
   top: 0;
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
   object-fit: contain;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
+  .cover-popup {
+    left: -1rem;
+  }
+
   .cover-popup img {
     width: calc(33.33vw - 6rem);
     width: 4rem;

@@ -132,6 +132,7 @@ body {
 }
 #inputBtn {
   display: inline-block;
+  text-wrap: nowrap;
 }
 
 button {
@@ -153,7 +154,8 @@ button:hover {
   color: black;
 }
 
-a:focus, button:focus {
+a:focus,
+button:focus {
   outline: 4px solid orangered;
 }
 
@@ -335,7 +337,7 @@ p.body {
 /* Print Styles */
 @media print {
   /* 	Hide everything that doesn't have the '.print' class */
-    body {
+  body {
     padding: 0;
     margin: 0;
   }

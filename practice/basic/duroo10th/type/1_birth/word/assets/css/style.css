@@ -131,7 +131,7 @@ body {
   background: white;
 }
 #inputBtn {
-  display: inline-block;
+  display: inline-block;text-wrap: nowrap;
 }
 
 button {
