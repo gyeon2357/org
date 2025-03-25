@@ -1183,6 +1183,40 @@ body.dark #index-container .project.filter-opacity {
   color: black;
 }
 
+#index-container aside {
+  position: fixed;
+
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 100001 !important;
+}
+
+#index-container aside > .index-btn {
+  display: flex;
+
+  align-items: center;
+  position: relative;
+
+  border-radius: 2px;
+  padding: 6px 10px;
+
+  background-color: gold !important;
+
+  width: fit-content;
+  cursor: pointer;
+}
+
+#index-container aside > .index-btn img {
+  display: inline-block;
+  width: 0.875rem;
+  margin-right: 0.75rem;
+}
+
+#index-container aside > .index-btn p {
+  color: #000;
+}
+
 #links {
   order: -10000;
   grid-column: span 9;

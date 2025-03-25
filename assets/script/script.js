@@ -201,6 +201,18 @@ $(document).ready(function () {
     });
   });
 
+  $(".index-btn").click(function () {
+      $(".index").toggleClass("active");
+      $(".gallery-container, .subsection, .info-inside").toggle();
+      $("#index-container").toggleClass("grid");
+      $("#index, .gallery").toggle();
+      $("#grid").toggleClass("on");
+
+      $(".index").find("span").toggleClass("flex");
+      $(".index").find("p").toggle();
+  $("html, body").animate({ scrollTop: 0 }, 200);
+  });
+
   // index → index btn
   $(".accordion-label").bind("click", function () {
     var selfwrap = $(this).parent();
