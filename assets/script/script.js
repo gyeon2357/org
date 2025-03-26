@@ -51,20 +51,18 @@ var window_width = $(window).width();
 
 $(document).ready(function () {
   //load
-  $(window).scroll(function () {
-    var top = $(window).scrollTop();
 
-    if (top > 150) {
-      $(".loading").fadeOut();
-    }
+  $(".loading").click(function () {
+    $(this).fadeOut();
   });
 
+    setTimeout(function () {
+    $(".scroll").fadeIn(200);
+  }, 250);
   setTimeout(function () {
     $(".card-btn").fadeIn(200);
   }, 850);
-  setTimeout(function () {
-    $(".scroll").fadeIn(600);
-  }, 1450);
+
 
   //load disabled
   $(".card-btn").on("click", function () {
@@ -197,20 +195,29 @@ $(document).ready(function () {
       $(".accordion").eq(i).attr("data-accordion-state", "opened");
       $(".accordion").eq(i).find(".accordion-content").focus();
 
-      $("html, body").animate({ scrollTop: offset.top - $("header").innerHeight() - $(".accordion").innerHeight() - 15 }, 200);
+      $("html, body").animate(
+        {
+          scrollTop:
+            offset.top -
+            $("header").innerHeight() -
+            $(".accordion").innerHeight() -
+            15,
+        },
+        200
+      );
     });
   });
 
   $(".index-btn").click(function () {
-      $(".index").toggleClass("active");
-      $(".gallery-container, .subsection, .info-inside").toggle();
-      $("#index-container").toggleClass("grid");
-      $("#index, .gallery").toggle();
-      $("#grid").toggleClass("on");
+    $(".index").toggleClass("active");
+    $(".gallery-container, .subsection, .info-inside").toggle();
+    $("#index-container").toggleClass("grid");
+    $("#index, .gallery").toggle();
+    $("#grid").toggleClass("on");
 
-      $(".index").find("span").toggleClass("flex");
-      $(".index").find("p").toggle();
-  $("html, body").animate({ scrollTop: 0 }, 200);
+    $(".index").find("span").toggleClass("flex");
+    $(".index").find("p").toggle();
+    $("html, body").animate({ scrollTop: 0 }, 200);
   });
 
   // index → index btn
@@ -218,7 +225,11 @@ $(document).ready(function () {
     var selfwrap = $(this).parent();
     setTimeout(function () {
       theOffset = $(selfwrap).offset();
-      $("body, html").animate({ scrollTop: theOffset.top - $("header").innerHeight() }, 200), 50;
+      $("body, html").animate(
+        { scrollTop: theOffset.top - $("header").innerHeight() },
+        200
+      ),
+        50;
     });
   });
 
