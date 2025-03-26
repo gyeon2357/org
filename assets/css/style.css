@@ -1198,10 +1198,10 @@ body.dark #index-container .project.filter-opacity {
   align-items: center;
   position: relative;
 
-  border-radius: 2px;
-  padding: 6px 10px;
+  border-radius: 2.5px;
+  padding: 6px 8px;
 
-  background-color: gold !important;
+  background-color: goldenrod !important;
 
   width: fit-content;
   cursor: pointer;
@@ -1210,7 +1210,7 @@ body.dark #index-container .project.filter-opacity {
 #index-container aside > .index-btn img {
   display: inline-block;
   width: 0.875rem;
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
 }
 
 #index-container aside > .index-btn p {
