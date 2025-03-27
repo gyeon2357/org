@@ -418,7 +418,6 @@ body.dark .loading {
 }
 
 .intro-project-wrap .contact {
-
 }
 
 .i-project > a:hover,
@@ -1206,7 +1205,7 @@ body.dark #index-container .project.filter-opacity {
 }
 
 #index-container aside > .index-btn {
-  display: flex;
+  display: none;
 
   align-items: center;
   position: relative;
@@ -1459,6 +1458,10 @@ body.dark #index-container .cap {
 }
 
 @media screen and (max-width: 600px) {
+  #index-container aside > .index-btn {
+    display: flex;
+  }
+
   .gallery-container .project > a {
     width: 100%;
   }
