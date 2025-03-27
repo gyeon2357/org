@@ -1200,7 +1200,7 @@ body.dark #index-container .project.filter-opacity {
 #index-container aside {
   position: fixed;
   left: 1rem;
-  bottom: 1rem;
+  bottom: 3rem;
   z-index: 99999 !important;
 }
 
@@ -1241,7 +1241,7 @@ body.dark #index-container .project.filter-opacity {
 
   position: fixed;
   right: 1rem;
-  bottom: 1rem;
+  bottom: 3rem;
   z-index: 99999 !important;
 }
 
@@ -1676,7 +1676,7 @@ figure figcaption::before {
 
   line-height: 1.5;
   letter-spacing: 0;
-  color: silver;
+  color: gray;
   text-decoration: underline;
   text-decoration-style: dashed;
   text-underline-position: from-font;
@@ -1686,7 +1686,7 @@ figure figcaption::before {
 }
 
 body.dark .accordion-content p::before {
-  color: gray;
+  color: silver;
 }
 
 .accordion-content p[title="Description"] > a {
