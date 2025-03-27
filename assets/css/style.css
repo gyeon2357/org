@@ -1048,7 +1048,7 @@ body.dark .gallery-container {
 }
 
 .tab {
-  filter: contrast(2);
+  filter: contrast(2) brightness(1.5);
 }
 
 .gallery-container .project.mobile > a {
@@ -1473,7 +1473,7 @@ body.dark #index-container .cap {
 
   .gallery-container .project .category {
     font-size: 0.625rem;
-    padding: 0.325rem 0 0 0;
+    padding: 0.25rem 0 0 0;
   }
 
   .gallery-container .category p {
