@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>toys</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/console.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  
+  </head>
+  <body>
+    <!--
+			Press 'f' to toggle fullscreen
+		-->
+    <main class="invisible">
+      <div>jeong.gyeon</div>
+      <div>Semigraphics</div>
+    
+    </main>
+    <pre aria-hidden="true"></pre>
+    <script src="./assets/js/boot.js"></script>
+    <script>
+      // Parse location
+      const url = new URL(location);
+      const src = url.searchParams;
+      // if mode is set to 'screensaver' the navigation will be hidden
+      const mode = (src.get("mode") || "").toLowerCase();
+      // color can be set to 'true' for color cycle,
+      // or 'white' for full contrast;
+      // othewrise gray is used
+      const color = (src.get("color") || "").toLowerCase();
+      // word can be any alphanumeirc string, but must be of length 3
+      // othwerwise a randomised internal dict will be used
+      const word = (url.hash.substr(1) || src.get("word") || "").toLowerCase();
+
+      // Boot
+      ertdfgcvb.boot({ word, mode, color });
+
+      // Old “tiroir” code
+      const s = shuffle([
+        // ---- cheers
+        "Hi",
+        "Yo",
+        "Ciao",
+        "Viva",
+        "Salut",
+        "Hello",
+        "Grüezi",
+        "Cheers",
+        "Prosit",
+        "Oooooh",
+        "Olà olà",
+        "Bonjour",
+        "Namaste",
+        "Guten Tag",
+        "Shaba-daba",
+        "Go to hell",
+        "Buona notte",
+        "Buenas dias",
+        "Hasta la victoria",
+        // ---- love
+        "I love you",
+        "I hate you",
+        // '“I ♥ ♠ ♦ ♣”',
+        "I love my cat",
+        "I love my dog",
+        "I want to be your slave",
+        // ---- thats
+        "Life is life",
+        "I liked my dinner",
+        "Gilgamesh is my father",
+        "I don’t want to write you",
+        "It’s time for a new haircut",
+        "Sex or fox are better than fax",
+        "It’s common to say it’s common",
+        "Aaaah is not the same as ooooh",
+        // ---- colors
+        "Blue is my favourite color",
+        "Pink is my favourite color",
+        "Gray is my favourite color",
+        "Ocra is my favourite color",
+        // ---- numbers
+        "Two has three letters",
+        "Three has five letters",
+        "Five has four letters",
+        "Four has four letters",
+        "π is close to, but not exactly 3.1415",
+        // 'that 1 one stays to 2 twos like 3 trees stay to 4 Fords',
+        // ---- animals
+        "Slick worms eat silk",
+        "Sheep sings while ship sinks",
+        "Gold is fish and golf is dish",
+        "I saw a cat sleeping in a box",
+        "The fly flies and the flies fly",
+        // 'that a bird’s burden is the weight of a feather',
+        // 'that bird is feather’s father but not vice-versa',
+      ]);
+
+      let c = 0;
+      const e = document.querySelector(".tiroir");
+      function swap() {
+        c = ++c % s.length;
+        e.href = "mailto:andreas@ertdfgcvb.xyz?subject=" + s[c];
+        e.innerText = s[c];
+      }
+      swap();
+      setInterval(swap, 9000);
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * i);
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+    </script>
+  </body>
+</html>

@@ -349,7 +349,7 @@
     <meta name="LTF_verify" content="3f2030f52359d416bf16f69a31a0649e" />
   </head>
 
-  <body>
+  <body ontouchstart>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
     <section class="loading">
@@ -403,7 +403,7 @@
         </div>
       </div>
 
-      <p class="scroll">Tap to skip</p>
+      <div class="alert"><p class="scroll">Tap to skip</p></div>
     </section>
 
     <main class="content">
@@ -2869,10 +2869,26 @@
             <figure>
               <img
                 src="https://ik.imagekit.io/11195/img/calendar-g-1.jpg"
+                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//calendar-g-1.jpg"
+                alt="Reload to view"
                 alt="Reload to view"
               />
               <img
                 src="https://ik.imagekit.io/11195/img/calendar-g-2.jpg"
+                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//calendar-g-2.jpg"
+                alt="Reload to view"
+                alt="Reload to view"
+              />
+              <img
+                src="https://ik.imagekit.io/11195/img/calendar-g-3.jpg"
+                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//calendar-g-3.jpg"
+                alt="Reload to view"
+                alt="Reload to view"
+              />
+              <img
+                src="https://ik.imagekit.io/11195/img/calendar-g-4.jpg"
+                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//calendar-g-4.jpg"
+                alt="Reload to view"
                 alt="Reload to view"
               />
             </figure>
@@ -2895,8 +2911,8 @@
               <div class="cover-popup">
                 <img
                   class="lazy"
-                  src="https://ik.imagekit.io/11195/img/history-g-1-25x.jpg"
-                  data-src="https://ik.imagekit.io/11195/img/history-g-1-25x.jpg"
+                  src="https://ik.imagekit.io/11195/img/history-cover.jpg"
+                  data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img/history-cover.jpg"
                   alt="Reload to view"
                 />
               </div>
@@ -2936,12 +2952,7 @@
                 >https://everyday-practice.com/a-history-of-practice/</a
               >
             </p>
-            <figure>
-              <img
-                src="https://ik.imagekit.io/11195/img/history-g-1.jpg"
-                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//history-g-1.jpg"
-                alt="Reload to view"
-              />
+            <figure class="expand">
               <img
                 src="https://ik.imagekit.io/11195/img/history-g-2.jpg"
                 data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//history-g-2.jpg"
@@ -2955,9 +2966,16 @@
                 alt="Reload to view"
               />
             </figure>
+            <!-- <figure class="expand">
+            <img
+                src="https://ik.imagekit.io/11195/img/history-g-1.jpg"
+                data-src="https://ik.imagekit.io/11195/tr:w-108,h-192/img//history-g-1.jpg"
+                alt="Reload to view"
+              />
+            </figure> -->
           </div>
         </section>
-        <section class="accordion" tabindex="0">
+        <!-- <section class="accordion" tabindex="0">
           <ol
             id="project"
             class="project print planning collab accordion-label"
@@ -3002,7 +3020,6 @@
               compilation, aligning with the unique aspirations of each
               contributor.
             </p>
-            <!-- <p title="Contribution(%)">기획 50 디자인 80</p> -->
 
             <p title="Tool">Indesign, Photoshop</p>
             <p title="Scope">
@@ -3019,7 +3036,7 @@
               />
             </figure>
           </div>
-        </section>
+        </section> -->
 
         <section class="accordion" tabindex="0">
           <ol id="project" class="project web accordion-label">
@@ -3232,8 +3249,7 @@
         <aside>
           <div class="index-btn">
             <img src="./assets/images/option/image.svg" />
-            <p class="ko">이미지로 보기</p>
-            <p class="en">Image View</p>
+      
           </div>
         </aside>
       </div>
@@ -3258,8 +3274,8 @@
             ><mark class="en">close</mark></a
           ><span
             ><img src="./assets/images/option/open.svg" /><mark class="ko"
-              >열기</mark
-            ><mark class="en">open</mark></span
+              >Menu</mark
+            ><mark class="en">Menu</mark></span
           >
         </div>
         <div class="hidden">
@@ -3340,6 +3356,11 @@
             </li>
           </div>
           <div class="nav-section aside">
+            <li id="lang" tabindex="2">
+              <a><img src="./assets/images/option/lang-en.svg" />ENG</a
+              ><span><img src="./assets/images/option/lang-ko.svg" />KOR</span>
+            </li>
+
             <div id="mode" class="dark" tabindex="4">
               <a
                 ><img src="./assets/images/option/dark-mode.svg" /><mark
@@ -3353,10 +3374,7 @@
                 ><mark class="en">light</mark></span
               >
             </div>
-            <li id="lang" tabindex="2">
-              <a><img src="./assets/images/option/lang-en.svg" />ENG</a
-              ><span><img src="./assets/images/option/lang-ko.svg" />KOR</span>
-            </li>
+
             <!-- <li class="contact" tabindex="2">
               <a
                 ><img src="./assets/images/option/mail.svg" /><mark class="ko"
@@ -3963,8 +3981,8 @@ Publishing, Print-based Graphic Design, Editorial Design
           <a class="link none">
             <img
               class="lazy"
-              src="https://ik.imagekit.io/11195/img/soon-g-1-25x.jpg"
-              data-src="https://ik.imagekit.io/11195/img/soon-g-1.jpg"
+              src="https://ik.imagekit.io/11195/tr:w-108,h-192/img/soon-cover.jpg"
+              data-src="https://ik.imagekit.io/11195/img/soon-cover.jpg"
               alt="Reload to view"
             />
           </a>
@@ -3985,8 +4003,8 @@ Publishing, Print-based Graphic Design, Editorial Design
           <a class="link none">
             <img
               class="lazy"
-              src="https://ik.imagekit.io/11195/img/document-g-1-25x.jpg"
-              data-src="https://ik.imagekit.io/11195/img/document-g-1.jpg"
+              src="https://ik.imagekit.io/11195/tr:w-108,h-192/img/document-cover.jpg?updatedAt=1742971533794"
+              data-src="https://ik.imagekit.io/11195/img/document-cover.jpg?updatedAt=1742971533794"
               alt="Reload to view"
             />
           </a>
@@ -4012,8 +4030,8 @@ Publishing, Print-based Graphic Design, Editorial Design
           <a class="link none">
             <img
               class="lazy"
-              src="https://ik.imagekit.io/11195/img/calendar-g-1-25x.jpg"
-              data-src="https://ik.imagekit.io/11195/img/calendar-g-1.jpg"
+              src="https://ik.imagekit.io/11195/tr:w-108,h-192/img/calendar-cover.jpg"
+              data-src="https://ik.imagekit.io/11195/img/calendar-cover.jpg"
               alt="Reload to view"
             />
           </a>
@@ -4037,8 +4055,8 @@ Publishing, Print-based Graphic Design, Editorial Design
           <a class="link none">
             <img
               class="lazy"
-              src="https://ik.imagekit.io/11195/img/history-g-2-25x.jpg"
-              data-src="https://ik.imagekit.io/11195/img/history-g-2.jpg"
+              src="https://ik.imagekit.io/11195/tr:w-108,h-192/img/history-cover.jpg"
+              data-src="https://ik.imagekit.io/11195/img/history-cover.jpg"
               alt="Reload to view"
             />
           </a>
@@ -4055,7 +4073,7 @@ Publishing, Print-based Graphic Design, Editorial Design
             <!-- <div class="year">2020</div> -->
           </div>
         </div>
-        <div class="project print planning collab select">
+        <!-- <div class="project print planning collab select">
           <a class="link none">
             <img
               class="lazy"
@@ -4065,7 +4083,7 @@ Publishing, Print-based Graphic Design, Editorial Design
             />
           </a>
           <div class="info-project">
-            <!-- <div class="number">26</div> -->
+            
             <div class="title">
               <p class="ko">졸업작품집</p>
               <p class="en">graduation work collection</p>
@@ -4078,9 +4096,9 @@ Publishing, Print-based Graphic Design, Editorial Design
               <p class="en planning">planning</p>
               <p class="en collab">collab</p>
             </div>
-            <!-- <div class="year">2019</div> -->
+          
           </div>
-        </div>
+        </div> -->
 
         <div class="project web select">
           <a class="link none">
@@ -4143,6 +4161,7 @@ Publishing, Print-based Graphic Design, Editorial Design
         </div>
       </div>
     </footer>
+    <div class="screensaver"></div>
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -4150,6 +4169,7 @@ Publishing, Print-based Graphic Design, Editorial Design
 
   <script src="./assets/script/load.js"></script>
   <script src="./assets/script/scroll.js"></script>
+  <script src="http://p-i-e.kr/assets/js/flickity.pkgd.min.js"></script>
 
   <script>
     // image preload

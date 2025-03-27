@@ -11,7 +11,9 @@
   --lightgray: #ebebec;
   --darkgray: #a6a2a0;
 
-  --font: "national", "SUIT", "pretendard", sans-serif;
+  --font: "national", "SUIT", "pretendard", BlinkMacSystemFont, -apple-system,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ::selection {
   background-color: transparent;
@@ -64,6 +66,7 @@ audio {
   font-size: 100%;
   vertical-align: baseline;
   font-family: var(--font);
+  touch-action: manipulation;
 }
 html {
   padding: env(safe-area-inset);
@@ -104,6 +107,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
+
+  cursor: default;
 }
 
 body.dark {
@@ -255,6 +260,23 @@ body.dark sup > mark {
   background: #f8f8f8;
 } */
 
+.screensaver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.screensaver.is-hidden {
+  display: none;
+}
+
 /* INTRO
 ================================================== */
 
@@ -287,6 +309,8 @@ body.dark .loading {
   background: #000;
   color: snow;
 
+  min-width: 15%;
+
   padding: 1rem 1.25rem;
   border-radius: 2.5px;
   box-shadow: rgba(133, 133, 133, 0.25) 0px 0.0625em 0.0625em,
@@ -295,14 +319,17 @@ body.dark .loading {
   /* font-kerning: none; */
 }
 
-.scroll {
-  display: none;
+.alert {
   position: absolute;
-
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 12.5%;
+  top: calc(50% + 12.5vh);
+}
 
+.alert > .scroll {
+  display: none;
+
+  position: relative;
   color: snow;
 }
 
@@ -311,7 +338,6 @@ body.dark .loading {
 }
 
 .i-name-row {
-  min-width: 220px;
   font-size: 0;
   overflow: hidden;
 }
@@ -439,6 +465,9 @@ body.dark .loading {
 }
 
 @media screen and (max-width: 600px) {
+  .card {
+    min-width: 220px;
+  }
 }
 
 /* ------- */
@@ -1189,7 +1218,7 @@ body.dark #index-container .project.filter-opacity {
 
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 1.5rem;
+  bottom: 0.75rem;
   z-index: 100001 !important;
 }
 
@@ -1199,10 +1228,10 @@ body.dark #index-container .project.filter-opacity {
   align-items: center;
   position: relative;
 
-  border-radius: 2.5px;
-  padding: 6px 8px;
+  border-radius: 2px;
+  padding: 5px 7px;
 
-  background-color: goldenrod !important;
+  background-color: #ffd900d6 !important;
 
   width: fit-content;
   cursor: pointer;
@@ -1210,8 +1239,7 @@ body.dark #index-container .project.filter-opacity {
 
 #index-container aside > .index-btn img {
   display: inline-block;
-  width: 0.875rem;
-  margin-right: 0.5rem;
+  width: 1rem;
 }
 
 #index-container aside > .index-btn p {
@@ -1611,21 +1639,21 @@ figure figcaption::before {
   display: block;
   font-family: "national", "pretendard", sans-serif;
   content: attr(title);
-  content: "[" attr(title) "]";
+  /* content: "[" attr(title) "]"; */
 
   line-height: 1.5;
   letter-spacing: 0;
-  color: gray;
-  /* text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-position: from-font; */
+  color: silver;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: from-font;
 
   /* padding: 0 0.125rem; */
   margin-bottom: 0.1rem;
 }
 
 body.dark .accordion-content p::before {
-  color: silver;
+  color: gray;
 }
 
 .accordion-content p[title="Description"] > a {

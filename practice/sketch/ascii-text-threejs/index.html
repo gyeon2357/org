@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - ASCII Text | Threejs</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <script id="vertex" type="x-shader/x-vertex">
+      varying vec2 vUv;
+      uniform float uTime;
+      uniform float mouse;
+
+      void main() {
+          vUv = uv;
+          float time = uTime * 5.;
+          vec3 transformed = position;
+
+          transformed.x += sin(time + position.y) * .5;
+          transformed.y += cos(time + position.z) * .15;
+          transformed.z += sin(time + position.x);
+
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(transformed, 1.0);
+      }
+    </script>
+    <script id="frag" type="x-shader/x-fragment">
+      varying vec2 vUv;
+      uniform float mouse;
+      uniform float uTime;
+      uniform sampler2D uTexture;
+
+      void main() {
+          float time = uTime;
+          vec2 pos = vUv;
+
+          float move = sin(time + mouse) * 0.01;
+          float r = texture2D(uTexture, pos + cos(time * 2. - time + pos.x) * .01).r;
+          float g = texture2D(uTexture, pos + tan(time * .5 + pos.x - time) * .01).g;
+          float b = texture2D(uTexture, pos - cos(time * 2. + time + pos.y) * .01).b;
+          float a = texture2D(uTexture, pos).a;
+          gl_FragColor = vec4(r, g, b, a);
+      }
+    </script>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

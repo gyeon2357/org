@@ -50,8 +50,7 @@ function onResizeFunction(e) {
 var window_width = $(window).width();
 
 $(document).ready(function () {
-  //load
-
+  //load fnc
   $(".loading").click(function () {
     $(this).fadeOut();
   });
@@ -68,6 +67,22 @@ $(document).ready(function () {
   $(".card-btn").on("click", function () {
     $(".loading").fadeOut();
   });
+
+  //screnn
+    (function screensaver() {
+    var timer;
+    var $screensaver = $('.screensaver');
+    
+    function resetTimer() {
+      clearTimeout(timer);
+      $screensaver.addClass('is-hidden');
+      timer = setTimeout(function() {
+        $screensaver.removeClass('is-hidden');
+      }, 1000 * 60);
+    }
+    $(document).on('mousemove keypress click scroll resize', resetTimer);
+    resetTimer();
+  })();
 
   //theme
   let theme = localStorage.getItem("body-theme") || "white";

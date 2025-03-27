@@ -35,7 +35,7 @@ tl.add("close")
       y: "-5%",
       opacity: "0",
       duration: 0.8,
-      delay: 1.75,
+      delay: 1.65,
     },
     "close"
   )
@@ -43,9 +43,10 @@ tl.add("close")
   .to(
     ".loading",
     {
-      y: "-100%",
+      // y: "-20%",
+      opacity: "0",
       duration: 0.6,
-      delay: 2,
+      delay: 1.8,
       display: "none",
     },
     "close"
