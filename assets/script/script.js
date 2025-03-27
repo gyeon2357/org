@@ -55,34 +55,17 @@ $(document).ready(function () {
     $(this).fadeOut();
   });
 
-    setTimeout(function () {
+  setTimeout(function () {
     $(".scroll").fadeIn(200);
   }, 250);
   setTimeout(function () {
     $(".card-btn").fadeIn(200);
   }, 850);
 
-
   //load disabled
   $(".card-btn").on("click", function () {
     $(".loading").fadeOut();
   });
-
-  //screnn
-    (function screensaver() {
-    var timer;
-    var $screensaver = $('.screensaver');
-    
-    function resetTimer() {
-      clearTimeout(timer);
-      $screensaver.addClass('is-hidden');
-      timer = setTimeout(function() {
-        $screensaver.removeClass('is-hidden');
-      }, 1000 * 60);
-    }
-    $(document).on('mousemove keypress click scroll resize', resetTimer);
-    resetTimer();
-  })();
 
   //theme
   let theme = localStorage.getItem("body-theme") || "white";
@@ -336,9 +319,22 @@ $(document).ready(function () {
       //
     } else {
       $("#reset").hide();
+      $(".cate").animate({ scrollLeft: "0" }, 0);
     }
   });
 
+  //mobile hover
+
+  $(".gallery-container .project a").on("touchstart mousedown", function () {
+    $(this).addClass("tab");
+
+    var self = this;
+    setTimeout(function () {
+      $(self).removeClass("tab");
+    }, 500);
+  });
+
+  //reset
   $("#reset").on("click", function (e) {
     $(this).hide();
 
@@ -351,6 +347,7 @@ $(document).ready(function () {
     $(".nav-title a").show();
 
     $("html, body").animate({ scrollTop: 0 }, 200);
+    $(".cate").animate({ scrollLeft: "0" }, 0);
   });
 
   // load mobile height

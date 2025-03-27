@@ -28,7 +28,7 @@ tl.to(".i-project", {
   stagger: 0.1,
 });
 
-tl.add("close")
+tl.add("hidden")
   .to(
     ".card",
     {
@@ -37,7 +37,7 @@ tl.add("close")
       duration: 0.8,
       delay: 1.65,
     },
-    "close"
+    "hidden"
   )
 
   .to(
@@ -49,9 +49,72 @@ tl.add("close")
       delay: 1.8,
       display: "none",
     },
-    "close"
+    "hidden"
   );
 
+tl.add("visible")
+  .to(
+    ".alert",
+    {
+      delay: 5,
+      display: "none",
+    },
+    "visible"
+  )
+  .to(
+    ".card-btn",
+    {
+      delay: 5,
+      display: "none",
+    },
+    "visible"
+  )
+  .to(
+    ".card-ct",
+    {
+      delay: 5,
+      display: "none",
+    },
+    "visible"
+  )
+
+  .to(
+    ".card",
+    {
+      delay: 5,
+      opacity: "1",
+    },
+    "visible"
+  )
+
+  .to(
+    ".loading",
+    {
+      delay: 5,
+      opacity: "1",
+      onComplete: screensaver,
+    },
+    "visible"
+  );
+
+//screensaver
+function screensaver() {
+  var timer;
+  var $screensaver = $(".loading");
+
+  function resetTimer() {
+    clearTimeout(timer);
+
+    $screensaver.removeClass("is-visible");
+    timer = setTimeout(function () {
+      $screensaver.addClass("is-visible");
+    }, 1000 * 30);
+  }
+  $(document).on("mousemove keypress click scroll resize", resetTimer);
+  resetTimer();
+}
+
+//keyup to skip
 $(document).on("keyup", "body", function (j) {
   if (j.which == 32) $(".loading").fadeOut();
 });
