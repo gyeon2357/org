@@ -2533,14 +2533,19 @@ body.dark footer a {
 
   .hidden .nav-section.cate li {
     grid-row: 1;
+    flex-direction: column;
 
     text-wrap: nowrap;
     padding: 2px 9px 2px 7px;
+    padding: 3px 6px;
   }
 
   .hidden .nav-section.cate li > a.count {
-    margin-left: 0.5rem;
-    padding: 1px 2px;
+    /* margin-left: 0.5rem; */
+    margin-left: 0;
+    align-self: flex-end;
+
+    padding: 1px 6px;
 
     font-size: 90%;
     background: #deded985;
