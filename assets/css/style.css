@@ -795,6 +795,7 @@ body.dark .hidden .nav-section li {
   line-height: 1.2;
 }
 .count {
+  letter-spacing: 0.02rem;
   text-align: right;
   float: right;
 
