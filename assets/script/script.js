@@ -47,8 +47,6 @@ function onResizeFunction(e) {
   // document.documentElement.style.setProperty("--l", n + "px");
 }
 
-var window_width = $(window).width();
-
 $(document).ready(function () {
   //load fnc
   $(".loading").click(function () {
@@ -350,32 +348,47 @@ $(document).ready(function () {
     $(".cate").animate({ scrollLeft: "0" }, 0);
   });
 
-  // load mobile height
+  // load nav height
+  // if (device.desktop() || window_width > 600) {
+  //   $(".accordion .project").css("top", "10px");
+  // }
+  // if (device.mobile() || window_width <= 600) {
+  //   $(".accordion .project").css("top", $("header").innerHeight() + 10 + "px");
+  // }
 
-  if (device.desktop() || window_width > 600) {
-    $(".accordion .project").css("top", "10px");
-  }
-  if (device.mobile() || window_width <= 600) {
-    // mobile
+  if (device.mobile() || $(window).width() <= 600) {
     $(".accordion .project").css("top", $("header").innerHeight() + 10 + "px");
+  } else {
+    $(".accordion .project").css("top", "10px");
   }
 });
 
-window.addEventListener("resize", function () {
-  const resizeEvent = () => {
-    if (device.desktop() || window_width > 600) {
-      $(".accordion .project").css("top", "10px");
-    }
+let delay = 200;
+let timer = null;
 
-    if (device.mobile() || window_width <= 600) {
+// resize nav height
+$(window).on("resize", function () {
+  clearTimeout(timer);
+
+  const resizeEvent = () => {
+    // if (device.desktop() || window_width > 600) {
+    //   $(".accordion .project").css("top", "10px");
+    // }
+
+    if (device.mobile() || $(window).width() <= 600) {
       $(".accordion .project").css(
         "top",
         $("header").innerHeight() + 10 + "px"
       );
+    } else {
+      $(".accordion .project").css("top", "10px");
     }
   };
 
-  resizeEvent();
+  timer = setTimeout(function () {
+    resizeEvent();
+    console.log("window resize!");
+  }, delay);
 });
 
 //Keypress

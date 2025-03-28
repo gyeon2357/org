@@ -2598,6 +2598,10 @@ body.dark footer a {
     display: none;
   } */
 
+  #index-container .project > a > div.title {
+  font-size: 0.75rem;
+  }
+
   #index-container .number {
     display: none;
   }
@@ -2693,9 +2697,6 @@ body.dark footer a {
     grid-row: 2;
   }
 
-  .title {
-    grid-column: span 1;
-  }
   #links {
     display: none;
 
@@ -2720,7 +2721,7 @@ body.dark footer a {
 
   #index-container .project > a {
     grid-column: span 12;
-    grid-gap: 0.25rem;
+    grid-gap: 0.1rem;
   }
 
   footer {
