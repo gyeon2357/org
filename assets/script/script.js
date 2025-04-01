@@ -49,9 +49,12 @@ function onResizeFunction(e) {
 
 $(document).ready(function () {
   //load fnc
-  $(".loading").click(function () {
-    $(this).fadeOut();
-  });
+  // $(".loading").click(function () {
+  //   $(this).fadeOut();
+  // });
+  // $(".card-btn").on("click", function () {
+  //   $(".loading").fadeOut();
+  // });
 
   setTimeout(function () {
     $(".scroll").fadeIn(200);
@@ -60,10 +63,7 @@ $(document).ready(function () {
     $(".card-btn").fadeIn(200);
   }, 850);
 
-  //load disabled
-  $(".card-btn").on("click", function () {
-    $(".loading").fadeOut();
-  });
+ 
 
   //theme
   let theme = localStorage.getItem("body-theme") || "white";

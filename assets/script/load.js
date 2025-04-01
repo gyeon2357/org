@@ -28,74 +28,74 @@ tl.to(".i-project", {
   stagger: 0.1,
 });
 
-tl.add("hidden")
-  .to(
-    ".card",
-    {
-      y: "-5%",
-      opacity: "0",
-      duration: 0.8,
-      delay: 1.65,
-    },
-    "hidden"
-  )
+// tl.add("hidden")
+//   .to(
+//     ".card",
+//     {
+//       y: "-5%",
+//       opacity: "0",
+//       duration: 0.8,
+//       delay: 1.65,
+//     },
+//     "hidden"
+//   )
 
-  .to(
-    ".loading",
-    {
-      // y: "-20%",
-      opacity: "0",
-      duration: 0.6,
-      delay: 1.8,
-      display: "none",
-    },
-    "hidden"
-  );
+//   .to(
+//     ".loading",
+//     {
+//       // y: "-20%",
+//       opacity: "0",
+//       duration: 0.6,
+//       delay: 1.8,
+//       display: "none",
+//     },
+//     "hidden"
+//   );
 
-tl.add("visible")
-  .to(
-    ".alert",
-    {
-      delay: 5,
-      display: "none",
-    },
-    "visible"
-  )
-  .to(
-    ".card-btn",
-    {
-      delay: 5,
-      display: "none",
-    },
-    "visible"
-  )
-  .to(
-    ".card-ct",
-    {
-      delay: 5,
-      display: "none",
-    },
-    "visible"
-  )
+// tl.add("visible")
+//   .to(
+//     ".alert",
+//     {
+//       delay: 5,
+//       display: "none",
+//     },
+//     "visible"
+//   )
+//   .to(
+//     ".card-btn",
+//     {
+//       delay: 5,
+//       display: "none",
+//     },
+//     "visible"
+//   )
+//   .to(
+//     ".card-ct",
+//     {
+//       delay: 5,
+//       display: "none",
+//     },
+//     "visible"
+//   )
 
-  .to(
-    ".card",
-    {
-      delay: 5,
-      opacity: "1",
-    },
-    "visible"
-  )
+//   .to(
+//     ".card",
+//     {
+//       delay: 5,
+//       opacity: "1",
+//     },
+//     "visible"
+//   )
 
-  .to(
-    ".loading",
-    {
-      delay: 5,
-      opacity: "1",
-      onComplete: screensaver,
-    },
-    "visible"
-  );
+//   .to(
+//     ".loading",
+//     {
+//       delay: 5,
+//       opacity: "1",
+//       onComplete: screensaver,
+//     },
+//     "visible"
+//   );
 
 //screensaver
 function screensaver() {
